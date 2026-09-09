@@ -8,6 +8,118 @@ It maps high-level product features to their exact implementations, APIs, databa
 
 ---
 
+## AI & Intelligence
+
+- **Confidence**: `DETECTED` (85%)
+- **Tags**: `ai`, `llm`, `agents`
+
+### Services & Business Logic
+- `scripts/check-package-hygiene.js:21-21` — **failed** (variable)
+  - *Evidence: Symbol 'failed' matches 'ai' domain vocabulary*
+- `packages/trace/src/agent/skill-generator.ts:4-91` — **generateAgentSkillMarkdown** (function)
+  - *Evidence: Symbol 'generateAgentSkillMarkdown' matches 'llm' domain vocabulary*
+- `packages/trace/src/core/graph.ts:354-440` — **explain** (method)
+  - *Evidence: Symbol 'explain' matches 'ai' domain vocabulary*
+- `packages/trace/src/detector/auto-detector.ts:23-82` — **DOMAIN_KEYWORDS** (variable)
+  - *Evidence: Symbol 'DOMAIN_KEYWORDS' matches 'ai' domain vocabulary*
+- `packages/trace/src/detector/auto-detector.ts:126-126` — **domain** (variable)
+  - *Evidence: Symbol 'domain' matches 'ai' domain vocabulary*
+- `packages/trace/src/graph-ui/server.ts:97-109` — **details** (variable)
+  - *Evidence: Symbol 'details' matches 'ai' domain vocabulary*
+- `packages/trace/src/indexer/incremental.ts:87-87` — **remainingAdded** (variable)
+  - *Evidence: Symbol 'remainingAdded' matches 'ai' domain vocabulary*
+- `packages/trace/src/indexer/incremental.ts:88-88` — **remainingDeleted** (variable)
+  - *Evidence: Symbol 'remainingDeleted' matches 'ai' domain vocabulary*
+- `packages/trace/src/indexer/indexer.ts:276-276` — **agentSkillDir** (variable)
+  - *Evidence: Symbol 'agentSkillDir' matches 'agent' domain vocabulary*
+- `packages/trace/src/intelligence/cycles.ts:122-129` — **detailedNodes** (variable)
+  - *Evidence: Symbol 'detailedNodes' matches 'ai' domain vocabulary*
+- `packages/trace/src/intelligence/rules.ts:126-126` — **failedCount** (variable)
+  - *Evidence: Symbol 'failedCount' matches 'ai' domain vocabulary*
+- `packages/trace/src/renderers/llm-context.ts:7-9` — **LLMContextOptions** (interface)
+  - *Evidence: Symbol 'LLMContextOptions' matches 'llm' domain vocabulary*
+- `packages/trace/src/renderers/llm-context.ts:11-114` — **generateLLMContext** (function)
+  - *Evidence: Symbol 'generateLLMContext' matches 'llm' domain vocabulary*
+
+### Tests
+- `tests/fixtures/all-fixtures.test.ts:294` — **distinguishes EXPLICIT from DETECTED and explains evidence**
+  - *Evidence: Test suite/case 'distinguishes EXPLICIT from DETECTED and explains evidence' targets 'AI & Intelligence' functionality*
+- `tests/fixtures/vertical-slice.test.ts:69` — **generates token-bounded context for LLM**
+  - *Evidence: Test suite/case 'generates token-bounded context for LLM' targets 'AI & Intelligence' functionality*
+- `tests/unit/analyzer.test.ts:153` — **sanitizes route domains and ignores static metadata extensions**
+  - *Evidence: Test suite/case 'sanitizes route domains and ignores static metadata extensions' targets 'AI & Intelligence' functionality*
+
+---
+
+## Analytics & Reporting
+
+- **Confidence**: `DETECTED` (85%)
+- **Tags**: `reporting`, `bi`, `telemetry`, `metrics`, `monitoring`
+
+### Services & Business Logic
+- `tests/fixtures/all-fixtures.test.ts:247-247` — **deadReport** (variable)
+  - *Evidence: Symbol 'deadReport' matches 'report' domain vocabulary*
+- `tests/fixtures/vertical-slice.test.ts:84-84` — **report** (variable)
+  - *Evidence: Symbol 'report' matches 'report' domain vocabulary*
+- `tests/unit/intelligence.test.ts:372-372` — **report** (variable)
+  - *Evidence: Symbol 'report' matches 'report' domain vocabulary*
+- `tests/unit/intelligence.test.ts:310-310` — **reports** (variable)
+  - *Evidence: Symbol 'reports' matches 'report' domain vocabulary*
+- `packages/trace/src/cli/index.ts:852-852` — **report** (variable)
+  - *Evidence: Symbol 'report' matches 'report' domain vocabulary*
+- `packages/trace/src/cli/index.ts:826-826` — **reports** (variable)
+  - *Evidence: Symbol 'reports' matches 'report' domain vocabulary*
+- `packages/trace/src/core/types.ts:153-168` — **DriftReport** (interface)
+  - *Evidence: Symbol 'DriftReport' matches 'report' domain vocabulary*
+- `packages/trace/src/indexer/validator.ts:17-22` — **ValidationReport** (interface)
+  - *Evidence: Symbol 'ValidationReport' matches 'report' domain vocabulary*
+- `packages/trace/src/intelligence/architectural-diff.ts:9-30` — **ArchitecturalDiffReport** (interface)
+  - *Evidence: Symbol 'ArchitecturalDiffReport' matches 'report' domain vocabulary*
+- `packages/trace/src/intelligence/coverage.ts:17-22` — **FeatureCoverageReport** (interface)
+  - *Evidence: Symbol 'FeatureCoverageReport' matches 'report' domain vocabulary*
+- `packages/trace/src/intelligence/coverage.ts:35-35` — **reports** (variable)
+  - *Evidence: Symbol 'reports' matches 'report' domain vocabulary*
+- `packages/trace/src/intelligence/cycles.ts:19-23` — **CycleReport** (interface)
+  - *Evidence: Symbol 'CycleReport' matches 'report' domain vocabulary*
+- `packages/trace/src/intelligence/dead-code.ts:17-23` — **DeadCodeReport** (interface)
+  - *Evidence: Symbol 'DeadCodeReport' matches 'report' domain vocabulary*
+- `packages/trace/src/intelligence/hotspots.ts:8-19` — **HotspotMetrics** (interface)
+  - *Evidence: Symbol 'HotspotMetrics' matches 'metric' domain vocabulary*
+- `packages/trace/src/intelligence/hotspots.ts:21-27` — **HotspotsReport** (interface)
+  - *Evidence: Symbol 'HotspotsReport' matches 'report' domain vocabulary*
+- `packages/trace/src/intelligence/hotspots.ts:43-43` — **metricsList** (variable)
+  - *Evidence: Symbol 'metricsList' matches 'metric' domain vocabulary*
+- `packages/trace/src/intelligence/rules.ts:29-35` — **RuleCheckReport** (interface)
+  - *Evidence: Symbol 'RuleCheckReport' matches 'report' domain vocabulary*
+- `packages/trace/src/renderers/terminal.ts:161-184` — **renderValidationReport** (function)
+  - *Evidence: Symbol 'renderValidationReport' matches 'report' domain vocabulary*
+- `packages/trace/src/renderers/terminal.ts:202-220` — **renderCyclesReport** (function)
+  - *Evidence: Symbol 'renderCyclesReport' matches 'report' domain vocabulary*
+- `packages/trace/src/renderers/terminal.ts:222-234` — **renderHotspotsReport** (function)
+  - *Evidence: Symbol 'renderHotspotsReport' matches 'report' domain vocabulary*
+- `packages/trace/src/renderers/terminal.ts:236-284` — **renderDeadCodeReport** (function)
+  - *Evidence: Symbol 'renderDeadCodeReport' matches 'report' domain vocabulary*
+- `packages/trace/src/renderers/terminal.ts:286-340` — **renderArchitecturalDiffReport** (function)
+  - *Evidence: Symbol 'renderArchitecturalDiffReport' matches 'report' domain vocabulary*
+- `packages/trace/src/renderers/terminal.ts:342-376` — **renderTaskMapReport** (function)
+  - *Evidence: Symbol 'renderTaskMapReport' matches 'report' domain vocabulary*
+- `packages/trace/src/renderers/terminal.ts:378-411` — **renderTaskPlanReport** (function)
+  - *Evidence: Symbol 'renderTaskPlanReport' matches 'report' domain vocabulary*
+- `packages/trace/src/renderers/terminal.ts:413-426` — **renderCoverageReports** (function)
+  - *Evidence: Symbol 'renderCoverageReports' matches 'report' domain vocabulary*
+- `packages/trace/src/renderers/terminal.ts:428-452` — **renderRuleCheckReport** (function)
+  - *Evidence: Symbol 'renderRuleCheckReport' matches 'report' domain vocabulary*
+
+### Tests
+- `tests/unit/intelligence.test.ts:194` — **reports zero retired node references after incremental update retires a node**
+  - *Evidence: Test suite/case 'reports zero retired node references after incremental update retires a node' targets 'Analytics & Reporting' functionality*
+- `tests/unit/intelligence.test.ts:318` — **reports forbidden import boundaries deterministically**
+  - *Evidence: Test suite/case 'reports forbidden import boundaries deterministically' targets 'Analytics & Reporting' functionality*
+- `tests/unit/intelligence.test.ts:379` — **Intelligence Engine: Local Token Telemetry**
+  - *Evidence: Test suite/case 'Intelligence Engine: Local Token Telemetry' targets 'Analytics & Reporting' functionality*
+
+---
+
 ## Authentication
 
 - **Confidence**: `DETECTED` (85%)
@@ -41,7 +153,7 @@ It maps high-level product features to their exact implementations, APIs, databa
 - `fixtures/07-monorepo/packages/shared-types/src/index.ts:1-4` — **SharedAuthUser** (interface)
   - *Evidence: Symbol 'SharedAuthUser' matches 'auth' domain vocabulary*
 - `fixtures/11-ambiguous-features/src/features/auth/login.js:1-4` — **authenticateUser** (function)
-  - *Evidence: File path 'fixtures/11-ambiguous-features/src/features/auth/login.js' clusters in 'auth' directory*
+  - *Evidence: File path 'fixtures/11-ambiguous-features/src/features/auth/login.js' clusters in 'auth' feature directory*
 
 ### Tests
 - `tests/unit/intelligence.test.ts:391` — **records session usage locally and aggregates by command and date**
@@ -50,6 +162,21 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Test suite/case 'Authentication' targets 'Authentication' functionality*
 - `fixtures/01-small-js/tests/auth.test.js:4` — **authenticates valid credentials**
   - *Evidence: Test suite/case 'authenticates valid credentials' targets 'Authentication' functionality*
+
+---
+
+## Billing & Subscriptions
+
+- **Confidence**: `DETECTED` (85%)
+- **Tags**: `billing`, `recurring`
+
+### Services & Business Logic
+- `fixtures/10-shared-services/src/features/subscription/subscriptionService.js:3-8` — **SubscriptionManager** (class)
+  - *Evidence: File path 'fixtures/10-shared-services/src/features/subscription/subscriptionService.js' clusters in 'subscription' feature directory*
+- `fixtures/10-shared-services/src/features/subscription/subscriptionService.js:4-7` — **renewSubscription** (method)
+  - *Evidence: File path 'fixtures/10-shared-services/src/features/subscription/subscriptionService.js' clusters in 'subscription' feature directory*
+- `fixtures/10-shared-services/src/features/subscription/subscriptionService.js:5-5` — **charge** (variable)
+  - *Evidence: File path 'fixtures/10-shared-services/src/features/subscription/subscriptionService.js' clusters in 'subscription' feature directory*
 
 ---
 
@@ -78,17 +205,28 @@ It maps high-level product features to their exact implementations, APIs, databa
 - `fixtures/05-fullstack-app/src/services/checkoutService.ts:2-10` — **processCheckout** (method)
   - *Evidence: Symbol 'processCheckout' matches 'checkout' domain vocabulary*
 - `fixtures/10-shared-services/src/features/checkout/checkoutService.js:3-8` — **CheckoutManager** (class)
-  - *Evidence: File path 'fixtures/10-shared-services/src/features/checkout/checkoutService.js' clusters in 'checkout' directory*
+  - *Evidence: File path 'fixtures/10-shared-services/src/features/checkout/checkoutService.js' clusters in 'checkout' feature directory*
 - `fixtures/10-shared-services/src/features/checkout/checkoutService.js:4-7` — **completeCheckout** (method)
-  - *Evidence: File path 'fixtures/10-shared-services/src/features/checkout/checkoutService.js' clusters in 'checkout' directory*
+  - *Evidence: File path 'fixtures/10-shared-services/src/features/checkout/checkoutService.js' clusters in 'checkout' feature directory*
 - `fixtures/10-shared-services/src/features/checkout/checkoutService.js:5-5` — **charge** (variable)
-  - *Evidence: File path 'fixtures/10-shared-services/src/features/checkout/checkoutService.js' clusters in 'checkout' directory*
+  - *Evidence: File path 'fixtures/10-shared-services/src/features/checkout/checkoutService.js' clusters in 'checkout' feature directory*
 
 ### Tests
 - `fixtures/05-fullstack-app/tests/checkout.test.ts:3` — **Checkout Flow**
   - *Evidence: Test suite/case 'Checkout Flow' targets 'Checkout' functionality*
 - `fixtures/05-fullstack-app/tests/checkout.test.ts:4` — **calculates checkout totals correctly**
   - *Evidence: Test suite/case 'calculates checkout totals correctly' targets 'Checkout' functionality*
+
+---
+
+## Deprecated
+
+- **Confidence**: `DETECTED` (85%)
+- **Tags**: `deprecated`
+
+### Services & Business Logic
+- `fixtures/09-deleted-features/src/features/deprecated/cryptoPayment.js:1-3` — **processCryptoPayment** (function)
+  - *Evidence: File path 'fixtures/09-deleted-features/src/features/deprecated/cryptoPayment.js' clusters in 'deprecated' feature directory*
 
 ---
 
@@ -99,11 +237,11 @@ It maps high-level product features to their exact implementations, APIs, databa
 
 ### Services & Business Logic
 - `fixtures/10-shared-services/src/features/invoice/invoiceService.js:3-8` — **InvoiceManager** (class)
-  - *Evidence: File path 'fixtures/10-shared-services/src/features/invoice/invoiceService.js' clusters in 'invoice' directory*
+  - *Evidence: File path 'fixtures/10-shared-services/src/features/invoice/invoiceService.js' clusters in 'invoice' feature directory*
 - `fixtures/10-shared-services/src/features/invoice/invoiceService.js:4-7` — **payInvoice** (method)
-  - *Evidence: File path 'fixtures/10-shared-services/src/features/invoice/invoiceService.js' clusters in 'invoice' directory*
+  - *Evidence: File path 'fixtures/10-shared-services/src/features/invoice/invoiceService.js' clusters in 'invoice' feature directory*
 - `fixtures/10-shared-services/src/features/invoice/invoiceService.js:5-5` — **charge** (variable)
-  - *Evidence: File path 'fixtures/10-shared-services/src/features/invoice/invoiceService.js' clusters in 'invoice' directory*
+  - *Evidence: File path 'fixtures/10-shared-services/src/features/invoice/invoiceService.js' clusters in 'invoice' feature directory*
 
 ---
 
@@ -213,8 +351,6 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'paymentService' matches 'payment' domain vocabulary*
 - `fixtures/07-monorepo/packages/shared-types/src/index.ts:6-9` — **SharedPaymentToken** (interface)
   - *Evidence: Symbol 'SharedPaymentToken' matches 'payment' domain vocabulary*
-- `fixtures/09-deleted-features/src/features/deprecated/cryptoPayment.js:1-3` — **processCryptoPayment** (function)
-  - *Evidence: Symbol 'processCryptoPayment' matches 'payment' domain vocabulary*
 
 ### Database Models
 - `Payment` model in `fixtures/05-fullstack-app/prisma/schema.prisma:24`
@@ -253,18 +389,28 @@ It maps high-level product features to their exact implementations, APIs, databa
 
 ---
 
-## Subscriptions
+## Settings & Config
 
 - **Confidence**: `DETECTED` (85%)
-- **Tags**: `billing`, `recurring`
+- **Tags**: `preferences`, `config`
 
 ### Services & Business Logic
-- `fixtures/10-shared-services/src/features/subscription/subscriptionService.js:3-8` — **SubscriptionManager** (class)
-  - *Evidence: File path 'fixtures/10-shared-services/src/features/subscription/subscriptionService.js' clusters in 'subscription' directory*
-- `fixtures/10-shared-services/src/features/subscription/subscriptionService.js:4-7` — **renewSubscription** (method)
-  - *Evidence: File path 'fixtures/10-shared-services/src/features/subscription/subscriptionService.js' clusters in 'subscription' directory*
-- `fixtures/10-shared-services/src/features/subscription/subscriptionService.js:5-5` — **charge** (variable)
-  - *Evidence: File path 'fixtures/10-shared-services/src/features/subscription/subscriptionService.js' clusters in 'subscription' directory*
+- `packages/trace/src/core/config.ts:6-17` — **TraceConfig** (interface)
+  - *Evidence: Symbol 'TraceConfig' matches 'config' domain vocabulary*
+- `packages/trace/src/core/config.ts:19-52` — **DEFAULT_CONFIG** (variable)
+  - *Evidence: Symbol 'DEFAULT_CONFIG' matches 'config' domain vocabulary*
+- `packages/trace/src/core/config.ts:54-80` — **loadConfig** (function)
+  - *Evidence: Symbol 'loadConfig' matches 'config' domain vocabulary*
+- `packages/trace/src/core/config.ts:60-60` — **configPath** (variable)
+  - *Evidence: Symbol 'configPath' matches 'config' domain vocabulary*
+- `packages/trace/src/indexer/drift.ts:14-14` — **config** (variable)
+  - *Evidence: Symbol 'config' matches 'config' domain vocabulary*
+- `packages/trace/src/indexer/indexer.ts:39-39` — **config** (variable)
+  - *Evidence: Symbol 'config' matches 'config' domain vocabulary*
+- `packages/trace/src/intelligence/dead-code.ts:56-61` — **isTestOrConfig** (variable)
+  - *Evidence: Symbol 'isTestOrConfig' matches 'config' domain vocabulary*
+- `packages/trace/src/intelligence/watcher.ts:30-30` — **config** (variable)
+  - *Evidence: Symbol 'config' matches 'config' domain vocabulary*
 
 ---
 

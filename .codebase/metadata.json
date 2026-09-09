@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "generator": "Amvelt TRACE v0.1.0",
-  "generatedAt": "2026-09-09T15:55:25.319Z",
-  "gitCommit": "cedaecb",
+  "generatedAt": "2026-09-09T20:32:40.346Z",
+  "gitCommit": "4854986",
   "stats": {
-    "nodeCount": 1295,
-    "edgeCount": 1566,
-    "featureCount": 9,
-    "symbolCount": 1068,
-    "fileCount": 130
+    "nodeCount": 1352,
+    "edgeCount": 1383,
+    "featureCount": 13,
+    "symbolCount": 1114,
+    "fileCount": 133
   }
 }

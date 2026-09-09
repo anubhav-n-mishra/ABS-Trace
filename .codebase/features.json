@@ -2,6 +2,32 @@
   "schemaVersion": 1,
   "features": [
     {
+      "urn": "urn:trace:feature:ai-intelligence",
+      "name": "ai-intelligence",
+      "displayName": "AI & Intelligence",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "ai",
+        "llm",
+        "agents"
+      ]
+    },
+    {
+      "urn": "urn:trace:feature:analytics-reporting",
+      "name": "analytics-reporting",
+      "displayName": "Analytics & Reporting",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "reporting",
+        "bi",
+        "telemetry",
+        "metrics",
+        "monitoring"
+      ]
+    },
+    {
       "urn": "urn:trace:feature:authentication",
       "name": "authentication",
       "displayName": "Authentication",
@@ -13,6 +39,17 @@
       ]
     },
     {
+      "urn": "urn:trace:feature:billing-subscriptions",
+      "name": "billing-subscriptions",
+      "displayName": "Billing & Subscriptions",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "billing",
+        "recurring"
+      ]
+    },
+    {
       "urn": "urn:trace:feature:checkout",
       "name": "checkout",
       "displayName": "Checkout",
@@ -21,6 +58,16 @@
       "tags": [
         "order",
         "ecommerce"
+      ]
+    },
+    {
+      "urn": "urn:trace:feature:deprecated",
+      "name": "deprecated",
+      "displayName": "Deprecated",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "deprecated"
       ]
     },
     {
@@ -79,14 +126,14 @@
       ]
     },
     {
-      "urn": "urn:trace:feature:subscriptions",
-      "name": "subscriptions",
-      "displayName": "Subscriptions",
+      "urn": "urn:trace:feature:settings-config",
+      "name": "settings-config",
+      "displayName": "Settings & Config",
       "confidence": "DETECTED",
       "confidenceScore": 0.85,
       "tags": [
-        "billing",
-        "recurring"
+        "preferences",
+        "config"
       ]
     },
     {

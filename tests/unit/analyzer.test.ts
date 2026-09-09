@@ -137,3 +137,91 @@ describe('SecretFilter', () => {
     expect(filter.isIgnored('src/services/payment.ts')).toBe(false);
   });
 });
+
+describe('Standard Builtins & Route Sanitization', () => {
+  it('identifies standard methods and Node built-ins accurately', async () => {
+    const { isStandardBuiltin } = await import('../../packages/trace/src/indexer/builtins.js');
+    expect(isStandardBuiltin('filter')).toBe(true);
+    expect(isStandardBuiltin('map')).toBe(true);
+    expect(isStandardBuiltin('slice')).toBe(true);
+    expect(isStandardBuiltin('path')).toBe(true);
+    expect(isStandardBuiltin('fs')).toBe(true);
+    expect(isStandardBuiltin('processPayment')).toBe(false);
+    expect(isStandardBuiltin('calculateTotal')).toBe(false);
+  });
+
+  it('sanitizes route domains and ignores static metadata extensions', async () => {
+    const { FeatureDetector } = await import('../../packages/trace/src/detector/auto-detector.js');
+    const detector = new FeatureDetector(process.cwd());
+
+    const facts = [
+      {
+        filePath: 'src/app/api/contact/route.ts',
+        symbols: [],
+        routes: [
+          {
+            urn: 'urn:trace:route:src/app/api/contact/route.ts#POST./api/contact',
+            kind: 'route' as const,
+            name: 'POST /api/contact',
+            path: 'src/app/api/contact/route.ts',
+            status: 'active' as const,
+            aliases: [],
+            httpMethod: 'POST' as const,
+            routePath: '/api/contact',
+            startLine: 1,
+            endLine: 10,
+            handlerSymbol: 'POST',
+            metadata: {},
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+          },
+          {
+            urn: 'urn:trace:route:src/app/api/rss.xml/route.ts#GET./api/rss.xml',
+            kind: 'route' as const,
+            name: 'GET /api/rss.xml',
+            path: 'src/app/api/rss.xml/route.ts',
+            status: 'active' as const,
+            aliases: [],
+            httpMethod: 'GET' as const,
+            routePath: '/api/rss.xml',
+            startLine: 1,
+            endLine: 5,
+            handlerSymbol: 'GET',
+            metadata: {},
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+          }
+        ],
+        models: [],
+        tests: [],
+        imports: [],
+        calls: []
+      }
+    ];
+
+    const { features } = detector.detectFeatures(facts);
+    expect(features.some((f) => f.name === 'contact')).toBe(true);
+    expect(features.some((f) => f.name.includes('rss'))).toBe(false);
+  });
+
+  it('renders PASSED WITH WARNINGS when rule check has only warnings', async () => {
+    const { renderRuleCheckReport } = await import('../../packages/trace/src/renderers/terminal.js');
+    const rendered = renderRuleCheckReport({
+      totalRules: 2,
+      passedRules: 2,
+      failedRules: 0,
+      isCompliant: true,
+      violations: [
+        {
+          ruleName: 'Require Service Tests',
+          severity: 'WARNING',
+          message: 'Missing test coverage',
+          evidence: 'Target requires test relationships'
+        }
+      ]
+    });
+
+    expect(rendered).toContain('PASSED WITH WARNINGS: 1 architectural warning(s) detected.');
+    expect(rendered).not.toContain('FAILED: 0 rule violation(s)');
+  });
+});

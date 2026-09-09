@@ -428,13 +428,17 @@ export function renderCoverageReports(reports: import('../intelligence/coverage.
 export function renderRuleCheckReport(report: import('../intelligence/rules.js').RuleCheckReport): string {
   let out = `\n${pc.bold('ARCHITECTURE RULES VALIDATION')}\n\n`;
 
-  if (report.isCompliant && report.violations.length === 0) {
-    out += `${pc.green(pc.bold('PASSED: All architecture rules satisfied.'))}\n`;
-    out += `${pc.dim(`${report.passedRules}/${report.totalRules} rule(s) checked with zero violations.`)}\n`;
-    return out;
+  if (report.isCompliant) {
+    if (report.violations.length === 0) {
+      out += `${pc.green(pc.bold('PASSED: All architecture rules satisfied.'))}\n`;
+      out += `${pc.dim(`${report.passedRules}/${report.totalRules} rule(s) checked with zero violations.`)}\n`;
+      return out;
+    } else {
+      out += `${pc.yellow(pc.bold(`PASSED WITH WARNINGS: ${report.violations.length} architectural warning(s) detected.`))}\n\n`;
+    }
+  } else {
+    out += `${pc.red(pc.bold(`FAILED: ${report.failedRules} rule violation(s) detected.`))}\n\n`;
   }
-
-  out += `${pc.red(pc.bold(`FAILED: ${report.failedRules} rule violation(s) detected.`))}\n\n`;
 
   report.violations.forEach((v, idx) => {
     const sevColor = v.severity === 'ERROR' ? pc.red : pc.yellow;

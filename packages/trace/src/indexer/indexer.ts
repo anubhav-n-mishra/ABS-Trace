@@ -16,9 +16,10 @@ import { calculateDrift } from './drift.js';
 import { getGitStatus } from '../git/git-status.js';
 import { normalizeRepoPath } from '../core/urn.js';
 import type { StructuralFacts } from '../analyzer/base.js';
-import type { IndexMetadata, DriftReport } from '../core/types.js';
+import type { IndexMetadata, DriftReport, SymbolNode } from '../core/types.js';
 import { generateFeatureIndexMarkdown } from '../renderers/markdown.js';
 import { generateAgentSkillMarkdown } from '../agent/skill-generator.js';
+import { isStandardBuiltin, resolveImportTargetFile } from './builtins.js';
 
 export class CodebaseIndexer {
   private repoRoot: string;
@@ -121,17 +122,57 @@ export class CodebaseIndexer {
     }
 
     // 5. Connect imports and calls between symbols and tests
-    const symbolMap = new Map(
-      graph.getActiveNodes()
-        .filter((n) => n.kind === 'symbol')
-        .map((n) => [n.name, n])
-    );
+    const activeSymbols = graph
+      .getActiveNodes()
+      .filter((n): n is SymbolNode => n.kind === 'symbol');
 
+    const symbolsByFile = new Map<string, Map<string, SymbolNode>>();
+    const allSymbolsByName = new Map<string, SymbolNode[]>();
+
+    for (const sym of activeSymbols) {
+      if (!symbolsByFile.has(sym.path)) {
+        symbolsByFile.set(sym.path, new Map());
+      }
+      symbolsByFile.get(sym.path)!.set(sym.name, sym);
+
+      if (!allSymbolsByName.has(sym.name)) {
+        allSymbolsByName.set(sym.name, []);
+      }
+      allSymbolsByName.get(sym.name)!.push(sym);
+    }
+
+    const knownFiles = new Set(allFiles);
     let structuralEdgeCount = 1;
+
     for (const facts of factsList) {
       for (const imp of facts.imports) {
+        const targetFile = resolveImportTargetFile(facts.filePath, imp.moduleSpecifier, knownFiles);
+
         for (const symName of imp.importedSymbols) {
-          const targetSym = symbolMap.get(symName);
+          let targetSym: SymbolNode | undefined;
+
+          if (targetFile && symbolsByFile.has(targetFile)) {
+            targetSym = symbolsByFile.get(targetFile)!.get(symName);
+          }
+
+          if (!targetSym) {
+            const isNodeBuiltin = imp.moduleSpecifier.startsWith('node:') || isStandardBuiltin(imp.moduleSpecifier);
+            if (!isNodeBuiltin) {
+              const candidates = allSymbolsByName.get(symName);
+              if (candidates && candidates.length > 0) {
+                const matchingCand = candidates.find((c) => {
+                  const base = path.posix.basename(c.path, path.posix.extname(c.path));
+                  return imp.moduleSpecifier.includes(base) || c.path.includes(imp.moduleSpecifier);
+                });
+                if (matchingCand) {
+                  targetSym = matchingCand;
+                } else if (imp.moduleSpecifier.startsWith('.') || imp.moduleSpecifier.startsWith('@/')) {
+                  targetSym = candidates.length === 1 ? candidates[0] : candidates.find((c) => c.path !== facts.filePath);
+                }
+              }
+            }
+          }
+
           if (targetSym && targetSym.path !== facts.filePath) {
             // Edge from importing file to imported symbol
             graph.addEdge({
@@ -183,7 +224,23 @@ export class CodebaseIndexer {
           ? call.calleeName.split('.').pop()!
           : call.calleeName;
 
-        const targetSym = symbolMap.get(cleanName);
+        // Skip standard built-in methods (filter, map, slice, etc.) to prevent false cross-module edges
+        if (isStandardBuiltin(cleanName)) continue;
+
+        const candidates = allSymbolsByName.get(cleanName);
+        if (!candidates || candidates.length === 0) continue;
+
+        // Prefer candidate from a file directly imported by this file
+        const importedFilePaths = new Set(
+          facts.imports
+            .map((i) => resolveImportTargetFile(facts.filePath, i.moduleSpecifier, knownFiles))
+            .filter(Boolean) as string[]
+        );
+
+        const targetSym =
+          candidates.find((c) => importedFilePaths.has(c.path)) ||
+          (candidates.length === 1 ? candidates[0] : undefined);
+
         if (targetSym && targetSym.path !== facts.filePath) {
           graph.addEdge({
             id: `edge-struct-call-${structuralEdgeCount++}`,

@@ -1717,8 +1717,8 @@
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "function",
       "startLine": 40,
-      "endLine": 916,
-      "contentHash": "4a14ec10126fc8a1",
+      "endLine": 918,
+      "contentHash": "dd1562704f91533f",
       "status": "active"
     },
     {
@@ -1736,8 +1736,8 @@
       "name": "debounceMs",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 870,
-      "endLine": 870,
+      "startLine": 872,
+      "endLine": 872,
       "contentHash": "e1bdecd0c5fd06a4",
       "status": "active"
     },
@@ -1816,8 +1816,8 @@
       "name": "graph",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 842,
-      "endLine": 842,
+      "startLine": 844,
+      "endLine": 844,
       "contentHash": "082a218c74043e03",
       "status": "active"
     },
@@ -1826,8 +1826,8 @@
       "name": "handleError",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "function",
-      "startLine": 918,
-      "endLine": 924,
+      "startLine": 920,
+      "endLine": 926,
       "contentHash": "93f1e565a40dcb08",
       "status": "active"
     },
@@ -1856,8 +1856,8 @@
       "name": "indexer",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 869,
-      "endLine": 869,
+      "startLine": 871,
+      "endLine": 871,
       "contentHash": "0aaf8d2e8b06b210",
       "status": "active"
     },
@@ -1866,8 +1866,8 @@
       "name": "ledger",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 895,
-      "endLine": 895,
+      "startLine": 897,
+      "endLine": 897,
       "contentHash": "7536305ebd970cf8",
       "status": "active"
     },
@@ -1876,8 +1876,8 @@
       "name": "limit",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 723,
-      "endLine": 723,
+      "startLine": 725,
+      "endLine": 725,
       "contentHash": "df5c2264fa086041",
       "status": "active"
     },
@@ -1906,8 +1906,8 @@
       "name": "payload",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 607,
-      "endLine": 611,
+      "startLine": 608,
+      "endLine": 612,
       "contentHash": "a82c61d42339d489",
       "status": "active"
     },
@@ -1916,8 +1916,8 @@
       "name": "program",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 927,
-      "endLine": 927,
+      "startLine": 929,
+      "endLine": 929,
       "contentHash": "f3a45d608d04ed80",
       "status": "active"
     },
@@ -1936,8 +1936,8 @@
       "name": "repoRoot",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 894,
-      "endLine": 894,
+      "startLine": 896,
+      "endLine": 896,
       "contentHash": "0fb742ab7be882bb",
       "status": "active"
     },
@@ -1946,8 +1946,8 @@
       "name": "report",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 850,
-      "endLine": 850,
+      "startLine": 852,
+      "endLine": 852,
       "contentHash": "52fc5d2f293e76d7",
       "status": "active"
     },
@@ -1956,8 +1956,8 @@
       "name": "reports",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 824,
-      "endLine": 824,
+      "startLine": 826,
+      "endLine": 826,
       "contentHash": "f96c30c790df641b",
       "status": "active"
     },
@@ -1966,8 +1966,8 @@
       "name": "result",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 799,
-      "endLine": 799,
+      "startLine": 801,
+      "endLine": 801,
       "contentHash": "9f49b03b869b5cca",
       "status": "active"
     },
@@ -1986,8 +1986,8 @@
       "name": "runCLI",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "function",
-      "startLine": 926,
-      "endLine": 929,
+      "startLine": 928,
+      "endLine": 931,
       "contentHash": "1010a86d99fef74d",
       "status": "active"
     },
@@ -2026,8 +2026,8 @@
       "name": "summary",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 903,
-      "endLine": 906,
+      "startLine": 905,
+      "endLine": 908,
       "contentHash": "00978989ba748fbb",
       "status": "active"
     },
@@ -2066,8 +2066,8 @@
       "name": "watcher",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 872,
-      "endLine": 872,
+      "startLine": 874,
+      "endLine": 874,
       "contentHash": "a4a90542e808c45d",
       "status": "active"
     },
@@ -3796,8 +3796,8 @@
       "name": "cand",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 222,
-      "endLine": 222,
+      "startLine": 307,
+      "endLine": 307,
       "contentHash": "05b6f9dd733b31d4",
       "status": "active"
     },
@@ -3806,9 +3806,19 @@
       "name": "candidates",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 53,
-      "endLine": 53,
+      "startLine": 95,
+      "endLine": 95,
       "contentHash": "aca58754870b0888",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/detector/auto-detector.ts#cleanPart",
+      "name": "cleanPart",
+      "path": "packages/trace/src/detector/auto-detector.ts",
+      "symbolKind": "variable",
+      "startLine": 132,
+      "endLine": 132,
+      "contentHash": "bf793792573018df",
       "status": "active"
     },
     {
@@ -3816,9 +3826,9 @@
       "name": "domain",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 80,
-      "endLine": 80,
-      "contentHash": "67ce18b706f665af",
+      "startLine": 126,
+      "endLine": 126,
+      "contentHash": "8a8f2cd5f2c6fc66",
       "status": "active"
     },
     {
@@ -3827,8 +3837,8 @@
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
       "startLine": 23,
-      "endLine": 40,
-      "contentHash": "861ee73bbe00adee",
+      "endLine": 82,
+      "contentHash": "aac7ea0182683e1c",
       "status": "active"
     },
     {
@@ -3836,8 +3846,8 @@
       "name": "edgeIndex",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 185,
-      "endLine": 185,
+      "startLine": 270,
+      "endLine": 270,
       "contentHash": "2ba1958545eac557",
       "status": "active"
     },
@@ -3846,8 +3856,8 @@
       "name": "edges",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 184,
-      "endLine": 184,
+      "startLine": 269,
+      "endLine": 269,
       "contentHash": "bf6988236de98feb",
       "status": "active"
     },
@@ -3856,8 +3866,8 @@
       "name": "existing",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 67,
-      "endLine": 67,
+      "startLine": 109,
+      "endLine": 109,
       "contentHash": "ce422b47130c3528",
       "status": "active"
     },
@@ -3866,8 +3876,8 @@
       "name": "explicitFeat",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 189,
-      "endLine": 189,
+      "startLine": 274,
+      "endLine": 274,
       "contentHash": "ee614330a1b6a7ca",
       "status": "active"
     },
@@ -3876,9 +3886,19 @@
       "name": "facts",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 192,
-      "endLine": 192,
+      "startLine": 277,
+      "endLine": 277,
       "contentHash": "ea9e7e422c1d3615",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/detector/auto-detector.ts#featMatch",
+      "name": "featMatch",
+      "path": "packages/trace/src/detector/auto-detector.ts",
+      "symbolKind": "variable",
+      "startLine": 193,
+      "endLine": 193,
+      "contentHash": "10913497b9b2e0c8",
       "status": "active"
     },
     {
@@ -3886,9 +3906,9 @@
       "name": "FeatureDetector",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "class",
-      "startLine": 42,
-      "endLine": 270,
-      "contentHash": "883fadff25335fde",
+      "startLine": 84,
+      "endLine": 355,
+      "contentHash": "eb7a25e806cb137c",
       "status": "active"
     },
     {
@@ -3896,8 +3916,8 @@
       "name": "constructor",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "method",
-      "startLine": 45,
-      "endLine": 47,
+      "startLine": 87,
+      "endLine": 89,
       "contentHash": "7d7cd12018018f6c",
       "status": "active"
     },
@@ -3906,9 +3926,9 @@
       "name": "detectFeatures",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "method",
-      "startLine": 49,
-      "endLine": 269,
-      "contentHash": "9378889c30bbbdd1",
+      "startLine": 91,
+      "endLine": 354,
+      "contentHash": "0517a07562d777e2",
       "status": "active"
     },
     {
@@ -3916,9 +3936,9 @@
       "name": "featureName",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 84,
-      "endLine": 84,
-      "contentHash": "cd79bb4c9ae981a2",
+      "startLine": 194,
+      "endLine": 196,
+      "contentHash": "70ae8edbc925911c",
       "status": "active"
     },
     {
@@ -3926,8 +3946,8 @@
       "name": "featureNode",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 224,
-      "endLine": 224,
+      "startLine": 309,
+      "endLine": 309,
       "contentHash": "01c702c24b80a438",
       "status": "active"
     },
@@ -3936,8 +3956,8 @@
       "name": "finalFeatures",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 183,
-      "endLine": 183,
+      "startLine": 268,
+      "endLine": 268,
       "contentHash": "16c02fa27cafb7d5",
       "status": "active"
     },
@@ -3946,8 +3966,8 @@
       "name": "getOrCreateCandidate",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "function",
-      "startLine": 55,
-      "endLine": 73,
+      "startLine": 97,
+      "endLine": 115,
       "contentHash": "b140a33736c9210b",
       "status": "active"
     },
@@ -3966,8 +3986,8 @@
       "name": "inPath",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 131,
-      "endLine": 131,
+      "startLine": 216,
+      "endLine": 216,
       "contentHash": "a2f2752f97f4a83d",
       "status": "active"
     },
@@ -3976,8 +3996,8 @@
       "name": "inSymbol",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 132,
-      "endLine": 132,
+      "startLine": 217,
+      "endLine": 217,
       "contentHash": "1a1a7e63132951f7",
       "status": "active"
     },
@@ -3986,8 +4006,8 @@
       "name": "isDir",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 136,
-      "endLine": 136,
+      "startLine": 221,
+      "endLine": 221,
       "contentHash": "380f884b8fe59768",
       "status": "active"
     },
@@ -3996,8 +4016,8 @@
       "name": "item",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 246,
-      "endLine": 246,
+      "startLine": 331,
+      "endLine": 331,
       "contentHash": "430f202968a92cf8",
       "status": "active"
     },
@@ -4006,8 +4026,8 @@
       "name": "lowerName",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 158,
-      "endLine": 158,
+      "startLine": 243,
+      "endLine": 243,
       "contentHash": "8c50eb778eeee430",
       "status": "active"
     },
@@ -4016,8 +4036,8 @@
       "name": "lowerPath",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 159,
-      "endLine": 159,
+      "startLine": 244,
+      "endLine": 244,
       "contentHash": "563905733934d07a",
       "status": "active"
     },
@@ -4026,8 +4046,8 @@
       "name": "lowerSym",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 127,
-      "endLine": 127,
+      "startLine": 187,
+      "endLine": 187,
       "contentHash": "453c47b0797fbbe1",
       "status": "active"
     },
@@ -4036,8 +4056,8 @@
       "name": "match",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 83,
-      "endLine": 83,
+      "startLine": 143,
+      "endLine": 143,
       "contentHash": "1e60febea299bbd4",
       "status": "active"
     },
@@ -4046,9 +4066,29 @@
       "name": "model",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 103,
-      "endLine": 103,
+      "startLine": 163,
+      "endLine": 163,
       "contentHash": "a2e7cee79b7ed015",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/detector/auto-detector.ts#part",
+      "name": "part",
+      "path": "packages/trace/src/detector/auto-detector.ts",
+      "symbolKind": "variable",
+      "startLine": 127,
+      "endLine": 127,
+      "contentHash": "0a4bd28b3ea1f8af",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/detector/auto-detector.ts#rawFeat",
+      "name": "rawFeat",
+      "path": "packages/trace/src/detector/auto-detector.ts",
+      "symbolKind": "variable",
+      "startLine": 192,
+      "endLine": 192,
+      "contentHash": "27cd36d453b3a73c",
       "status": "active"
     },
     {
@@ -4056,8 +4096,8 @@
       "name": "route",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 77,
-      "endLine": 77,
+      "startLine": 119,
+      "endLine": 119,
       "contentHash": "b1e1ebec7be15390",
       "status": "active"
     },
@@ -4066,9 +4106,9 @@
       "name": "routeParts",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 79,
-      "endLine": 79,
-      "contentHash": "c65c9948f9cc55e8",
+      "startLine": 121,
+      "endLine": 124,
+      "contentHash": "cbfc496331a750bc",
       "status": "active"
     },
     {
@@ -4076,9 +4116,19 @@
       "name": "slug",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 56,
-      "endLine": 56,
+      "startLine": 98,
+      "endLine": 98,
       "contentHash": "db54faefcae429e4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/detector/auto-detector.ts#structMatch",
+      "name": "structMatch",
+      "path": "packages/trace/src/detector/auto-detector.ts",
+      "symbolKind": "variable",
+      "startLine": 190,
+      "endLine": 190,
+      "contentHash": "516121e5f82c9a42",
       "status": "active"
     },
     {
@@ -4086,8 +4136,8 @@
       "name": "sym",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 193,
-      "endLine": 193,
+      "startLine": 278,
+      "endLine": 278,
       "contentHash": "1919645678d87acd",
       "status": "active"
     },
@@ -4096,8 +4146,8 @@
       "name": "symbol",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 125,
-      "endLine": 125,
+      "startLine": 185,
+      "endLine": 185,
       "contentHash": "18439c763d082bfb",
       "status": "active"
     },
@@ -4106,8 +4156,8 @@
       "name": "tag",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 68,
-      "endLine": 68,
+      "startLine": 110,
+      "endLine": 110,
       "contentHash": "ecb793a80702d907",
       "status": "active"
     },
@@ -4116,9 +4166,9 @@
       "name": "tags",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 85,
-      "endLine": 85,
-      "contentHash": "ff3132cf8455d865",
+      "startLine": 197,
+      "endLine": 197,
+      "contentHash": "33ead31503918ace",
       "status": "active"
     },
     {
@@ -4126,8 +4176,8 @@
       "name": "test",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 157,
-      "endLine": 157,
+      "startLine": 242,
+      "endLine": 242,
       "contentHash": "d268917c217140e1",
       "status": "active"
     },
@@ -4136,8 +4186,8 @@
       "name": "urn",
       "path": "packages/trace/src/detector/auto-detector.ts",
       "symbolKind": "variable",
-      "startLine": 223,
-      "endLine": 223,
+      "startLine": 308,
+      "endLine": 308,
       "contentHash": "c78efec84bdb94a2",
       "status": "active"
     },
@@ -4667,8 +4717,8 @@
       "path": "packages/trace/src/graph-ui/html-template.ts",
       "symbolKind": "function",
       "startLine": 4,
-      "endLine": 1409,
-      "contentHash": "3369f5c19ed5c5b8",
+      "endLine": 1808,
+      "contentHash": "1f6bd400a876fc38",
       "status": "active"
     },
     {
@@ -4676,8 +4726,8 @@
       "name": "cmd",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 156,
-      "endLine": 156,
+      "startLine": 163,
+      "endLine": 163,
       "contentHash": "ae566f6278778c1a",
       "status": "active"
     },
@@ -4686,8 +4736,8 @@
       "name": "details",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 90,
-      "endLine": 102,
+      "startLine": 97,
+      "endLine": 109,
       "contentHash": "0479a16ae3da0f60",
       "status": "active"
     },
@@ -4696,8 +4746,8 @@
       "name": "exp",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 87,
-      "endLine": 87,
+      "startLine": 94,
+      "endLine": 94,
       "contentHash": "f095cdf7065744db",
       "status": "active"
     },
@@ -4706,8 +4756,8 @@
       "name": "GraphServerInstance",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "interface",
-      "startLine": 17,
-      "endLine": 22,
+      "startLine": 18,
+      "endLine": 23,
       "contentHash": "39c9a5ffc62a27ae",
       "status": "active"
     },
@@ -4717,8 +4767,8 @@
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "interface",
       "startLine": 9,
-      "endLine": 15,
-      "contentHash": "934b10a84fc1a675",
+      "endLine": 16,
+      "contentHash": "8356d64eedc8e50d",
       "status": "active"
     },
     {
@@ -4726,8 +4776,8 @@
       "name": "impact",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 88,
-      "endLine": 88,
+      "startLine": 95,
+      "endLine": 95,
       "contentHash": "113351b806c1c074",
       "status": "active"
     },
@@ -4736,8 +4786,8 @@
       "name": "node",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 80,
-      "endLine": 80,
+      "startLine": 87,
+      "endLine": 87,
       "contentHash": "640c303ba53c6d42",
       "status": "active"
     },
@@ -4746,8 +4796,8 @@
       "name": "openBrowser",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "function",
-      "startLine": 154,
-      "endLine": 168,
+      "startLine": 161,
+      "endLine": 175,
       "contentHash": "8e1a3d60de2c95c4",
       "status": "active"
     },
@@ -4756,8 +4806,8 @@
       "name": "payload",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 63,
-      "endLine": 67,
+      "startLine": 70,
+      "endLine": 74,
       "contentHash": "cf757d4dbf14b5f7",
       "status": "active"
     },
@@ -4766,8 +4816,8 @@
       "name": "platform",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 155,
-      "endLine": 155,
+      "startLine": 162,
+      "endLine": 162,
       "contentHash": "279efa84dd5f8790",
       "status": "active"
     },
@@ -4776,8 +4826,8 @@
       "name": "reqUrl",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 36,
-      "endLine": 36,
+      "startLine": 37,
+      "endLine": 37,
       "contentHash": "ed7eb8f37b459318",
       "status": "active"
     },
@@ -4786,9 +4836,29 @@
       "name": "server",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 35,
-      "endLine": 111,
-      "contentHash": "57264d2d4e58b4bd",
+      "startLine": 36,
+      "endLine": 118,
+      "contentHash": "31c2ef117b31861b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#showModels",
+      "name": "showModels",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 51,
+      "endLine": 53,
+      "contentHash": "7054bb91936a583e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#showModelsParam",
+      "name": "showModelsParam",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 50,
+      "endLine": 50,
+      "contentHash": "a34b1beadc8fcd72",
       "status": "active"
     },
     {
@@ -4796,8 +4866,8 @@
       "name": "socket",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 144,
-      "endLine": 144,
+      "startLine": 151,
+      "endLine": 151,
       "contentHash": "1ac027cb5393fcd8",
       "status": "active"
     },
@@ -4806,8 +4876,8 @@
       "name": "sockets",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 113,
-      "endLine": 113,
+      "startLine": 120,
+      "endLine": 120,
       "contentHash": "9b4a6c539eb35641",
       "status": "active"
     },
@@ -4816,9 +4886,9 @@
       "name": "startGraphServer",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "function",
-      "startLine": 28,
-      "endLine": 152,
-      "contentHash": "38d8eb02f880ee45",
+      "startLine": 29,
+      "endLine": 159,
+      "contentHash": "ac86cec7f7b89a57",
       "status": "active"
     },
     {
@@ -4826,8 +4896,8 @@
       "name": "targetPort",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 33,
-      "endLine": 33,
+      "startLine": 34,
+      "endLine": 34,
       "contentHash": "d65b644c614f7f6b",
       "status": "active"
     },
@@ -4836,8 +4906,8 @@
       "name": "url",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 130,
-      "endLine": 130,
+      "startLine": 137,
+      "endLine": 137,
       "contentHash": "406cc49868f00f86",
       "status": "active"
     },
@@ -4846,9 +4916,129 @@
       "name": "urn",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 73,
-      "endLine": 73,
+      "startLine": 80,
+      "endLine": 80,
       "contentHash": "4f29e2cc44618735",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#candidate",
+      "name": "candidate",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "variable",
+      "startLine": 270,
+      "endLine": 270,
+      "contentHash": "4118c19b23de5739",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#clean",
+      "name": "clean",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "variable",
+      "startLine": 253,
+      "endLine": 253,
+      "contentHash": "92c8799e95a89767",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#dir",
+      "name": "dir",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "variable",
+      "startLine": 269,
+      "endLine": 269,
+      "contentHash": "e9bc539ff8d0ebfc",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#direct",
+      "name": "direct",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "variable",
+      "startLine": 307,
+      "endLine": 307,
+      "contentHash": "eae699373a621589",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#ext",
+      "name": "ext",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "variable",
+      "startLine": 306,
+      "endLine": 306,
+      "contentHash": "67e16684a413daf6",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#extensions",
+      "name": "extensions",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "variable",
+      "startLine": 293,
+      "endLine": 305,
+      "contentHash": "e4c203efcc99d66d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#full",
+      "name": "full",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "variable",
+      "startLine": 285,
+      "endLine": 285,
+      "contentHash": "b11d418acf55c107",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#isStandardBuiltin",
+      "name": "isStandardBuiltin",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "function",
+      "startLine": 251,
+      "endLine": 255,
+      "contentHash": "6a0e076e59a8d2f8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#JS_TS_STANDARD_BUILTINS",
+      "name": "JS_TS_STANDARD_BUILTINS",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "variable",
+      "startLine": 12,
+      "endLine": 246,
+      "contentHash": "a686d87efb473f9c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#resolveImportTargetFile",
+      "name": "resolveImportTargetFile",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "function",
+      "startLine": 260,
+      "endLine": 318,
+      "contentHash": "ca904e8476de4e46",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#trimmed",
+      "name": "trimmed",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "variable",
+      "startLine": 292,
+      "endLine": 292,
+      "contentHash": "829422ae9a27d86f",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/builtins.ts#withSrc",
+      "name": "withSrc",
+      "path": "packages/trace/src/indexer/builtins.ts",
+      "symbolKind": "variable",
+      "startLine": 309,
+      "endLine": 309,
+      "contentHash": "6d76eff34dbb5125",
       "status": "active"
     },
     {
@@ -5092,12 +5282,22 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#activeSymbols",
+      "name": "activeSymbols",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 188,
+      "endLine": 190,
+      "contentHash": "4ba72c9dfe0dcd8e",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#added",
       "name": "added",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 63,
-      "endLine": 63,
+      "startLine": 65,
+      "endLine": 65,
       "contentHash": "1da864f8ad118f9e",
       "status": "active"
     },
@@ -5106,9 +5306,19 @@
       "name": "addedHash",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 65,
-      "endLine": 65,
+      "startLine": 67,
+      "endLine": 67,
       "contentHash": "a3e1ff6d7f138882",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#allSymbolsByName",
+      "name": "allSymbolsByName",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 193,
+      "endLine": 193,
+      "contentHash": "0fcae16089431894",
       "status": "active"
     },
     {
@@ -5116,9 +5326,49 @@
       "name": "analyzer",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 110,
-      "endLine": 110,
+      "startLine": 112,
+      "endLine": 112,
       "contentHash": "7639fe0279683207",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#base",
+      "name": "base",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 243,
+      "endLine": 243,
+      "contentHash": "e5c16a6a0f1f4ef8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#call",
+      "name": "call",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 299,
+      "endLine": 299,
+      "contentHash": "67c06e60e59a1c66",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#candidates",
+      "name": "candidates",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 306,
+      "endLine": 306,
+      "contentHash": "e1637952f4e0c470",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#cleanName",
+      "name": "cleanName",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 300,
+      "endLine": 302,
+      "contentHash": "2099bd760844fc7c",
       "status": "active"
     },
     {
@@ -5126,8 +5376,8 @@
       "name": "content",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 95,
-      "endLine": 95,
+      "startLine": 97,
+      "endLine": 97,
       "contentHash": "06808d17c32dbbe6",
       "status": "active"
     },
@@ -5136,8 +5386,8 @@
       "name": "deleted",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 68,
-      "endLine": 68,
+      "startLine": 70,
+      "endLine": 70,
       "contentHash": "5be0e6c1597b59ff",
       "status": "active"
     },
@@ -5146,8 +5396,8 @@
       "name": "detector",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 180,
-      "endLine": 180,
+      "startLine": 182,
+      "endLine": 182,
       "contentHash": "f6649e5c952a8eb5",
       "status": "active"
     },
@@ -5156,8 +5406,8 @@
       "name": "edge",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 204,
-      "endLine": 204,
+      "startLine": 220,
+      "endLine": 220,
       "contentHash": "7db61451b448676e",
       "status": "active"
     },
@@ -5166,8 +5416,8 @@
       "name": "existingOutEdges",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 196,
-      "endLine": 196,
+      "startLine": 212,
+      "endLine": 212,
       "contentHash": "339be5a068659082",
       "status": "active"
     },
@@ -5176,8 +5426,8 @@
       "name": "existingTestEdges",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 203,
-      "endLine": 203,
+      "startLine": 219,
+      "endLine": 219,
       "contentHash": "c6e3310ef496907a",
       "status": "active"
     },
@@ -5186,8 +5436,8 @@
       "name": "facts",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 194,
-      "endLine": 194,
+      "startLine": 210,
+      "endLine": 210,
       "contentHash": "ea9e7e422c1d3615",
       "status": "active"
     },
@@ -5196,8 +5446,8 @@
       "name": "factsList",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 141,
-      "endLine": 141,
+      "startLine": 143,
+      "endLine": 143,
       "contentHash": "aeba5b636ac9ab3a",
       "status": "active"
     },
@@ -5206,8 +5456,8 @@
       "name": "file",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 261,
-      "endLine": 261,
+      "startLine": 344,
+      "endLine": 344,
       "contentHash": "799453fa16918a14",
       "status": "active"
     },
@@ -5216,8 +5466,8 @@
       "name": "FileChangeDiff",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "interface",
-      "startLine": 13,
-      "endLine": 18,
+      "startLine": 15,
+      "endLine": 20,
       "contentHash": "ace34912383fcb23",
       "status": "active"
     },
@@ -5226,8 +5476,8 @@
       "name": "fileNode",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 151,
-      "endLine": 151,
+      "startLine": 153,
+      "endLine": 153,
       "contentHash": "a3af0d1a52fb036d",
       "status": "active"
     },
@@ -5236,8 +5486,8 @@
       "name": "fileNodes",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 262,
-      "endLine": 262,
+      "startLine": 345,
+      "endLine": 345,
       "contentHash": "14f5d43a0efbd0c5",
       "status": "active"
     },
@@ -5246,8 +5496,8 @@
       "name": "filesToParse",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 140,
-      "endLine": 140,
+      "startLine": 142,
+      "endLine": 142,
       "contentHash": "44d708e929bf50b4",
       "status": "active"
     },
@@ -5256,8 +5506,8 @@
       "name": "fileUrn",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 195,
-      "endLine": 195,
+      "startLine": 211,
+      "endLine": 211,
       "contentHash": "9187bc5b759d8018",
       "status": "active"
     },
@@ -5266,8 +5516,8 @@
       "name": "fullPath",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 92,
-      "endLine": 92,
+      "startLine": 94,
+      "endLine": 94,
       "contentHash": "8c7e176da65bfcaa",
       "status": "active"
     },
@@ -5276,8 +5526,8 @@
       "name": "git",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 50,
-      "endLine": 50,
+      "startLine": 52,
+      "endLine": 52,
       "contentHash": "990018dcc953d2f2",
       "status": "active"
     },
@@ -5286,9 +5536,19 @@
       "name": "imp",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 211,
-      "endLine": 211,
+      "startLine": 227,
+      "endLine": 227,
       "contentHash": "a073bec5d85ce2c0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#importedFilePaths",
+      "name": "importedFilePaths",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 309,
+      "endLine": 313,
+      "contentHash": "de5feaf46eac6b79",
       "status": "active"
     },
     {
@@ -5296,9 +5556,9 @@
       "name": "IncrementalReconciler",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "class",
-      "startLine": 20,
-      "endLine": 271,
-      "contentHash": "8e50c61d2c9c934d",
+      "startLine": 22,
+      "endLine": 354,
+      "contentHash": "fd2ef43ab6a17cd4",
       "status": "active"
     },
     {
@@ -5306,9 +5566,9 @@
       "name": "applyIncrementalUpdate",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "method",
-      "startLine": 119,
-      "endLine": 270,
-      "contentHash": "222396478e4bf42c",
+      "startLine": 121,
+      "endLine": 353,
+      "contentHash": "2f000258f71062bd",
       "status": "active"
     },
     {
@@ -5316,8 +5576,8 @@
       "name": "computeFileHash",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "method",
-      "startLine": 29,
-      "endLine": 34,
+      "startLine": 31,
+      "endLine": 36,
       "contentHash": "a66a0856bc86fe74",
       "status": "active"
     },
@@ -5326,8 +5586,8 @@
       "name": "constructor",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "method",
-      "startLine": 24,
-      "endLine": 27,
+      "startLine": 26,
+      "endLine": 29,
       "contentHash": "aca8e1221ef927b3",
       "status": "active"
     },
@@ -5336,8 +5596,8 @@
       "name": "detectRenames",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "method",
-      "startLine": 36,
-      "endLine": 89,
+      "startLine": 38,
+      "endLine": 91,
       "contentHash": "402cd59e9fef9c29",
       "status": "active"
     },
@@ -5346,9 +5606,29 @@
       "name": "extractFactsForFile",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "method",
-      "startLine": 91,
-      "endLine": 117,
+      "startLine": 93,
+      "endLine": 119,
       "contentHash": "f64327c9220edc48",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#isNodeBuiltin",
+      "name": "isNodeBuiltin",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 238,
+      "endLine": 238,
+      "contentHash": "b287116a9aa21135",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#knownFiles",
+      "name": "knownFiles",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 207,
+      "endLine": 207,
+      "contentHash": "326e465c6c37f69c",
       "status": "active"
     },
     {
@@ -5356,8 +5636,8 @@
       "name": "matchedAdded",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 46,
-      "endLine": 46,
+      "startLine": 48,
+      "endLine": 48,
       "contentHash": "bbe4663e06f55f53",
       "status": "active"
     },
@@ -5366,9 +5646,19 @@
       "name": "matchedDeleted",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 47,
-      "endLine": 47,
+      "startLine": 49,
+      "endLine": 49,
       "contentHash": "780678e446c30769",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#matchingCand",
+      "name": "matchingCand",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 242,
+      "endLine": 245,
+      "contentHash": "ac2114dbe20f9878",
       "status": "active"
     },
     {
@@ -5376,8 +5666,8 @@
       "name": "models",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 98,
-      "endLine": 98,
+      "startLine": 100,
+      "endLine": 100,
       "contentHash": "558c4c0eb24ac283",
       "status": "active"
     },
@@ -5386,8 +5676,8 @@
       "name": "newHash",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 150,
-      "endLine": 150,
+      "startLine": 152,
+      "endLine": 152,
       "contentHash": "35c7076d021e0b62",
       "status": "active"
     },
@@ -5396,8 +5686,8 @@
       "name": "newNodes",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 171,
-      "endLine": 171,
+      "startLine": 173,
+      "endLine": 173,
       "contentHash": "666937a71e18665e",
       "status": "active"
     },
@@ -5406,8 +5696,8 @@
       "name": "newUrn",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 130,
-      "endLine": 130,
+      "startLine": 132,
+      "endLine": 132,
       "contentHash": "63fb3c9d0e8e3ccc",
       "status": "active"
     },
@@ -5416,8 +5706,8 @@
       "name": "node",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 263,
-      "endLine": 263,
+      "startLine": 346,
+      "endLine": 346,
       "contentHash": "2f3d83380e6108ad",
       "status": "active"
     },
@@ -5426,8 +5716,8 @@
       "name": "oldHash",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 70,
-      "endLine": 70,
+      "startLine": 72,
+      "endLine": 72,
       "contentHash": "1f8094e8781ea3dc",
       "status": "active"
     },
@@ -5436,8 +5726,8 @@
       "name": "oldNode",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 129,
-      "endLine": 129,
+      "startLine": 131,
+      "endLine": 131,
       "contentHash": "82deb5ba148dab89",
       "status": "active"
     },
@@ -5446,8 +5736,8 @@
       "name": "oldNodes",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 128,
-      "endLine": 128,
+      "startLine": 130,
+      "endLine": 130,
       "contentHash": "2536d2148d2d6001",
       "status": "active"
     },
@@ -5456,8 +5746,8 @@
       "name": "r",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 127,
-      "endLine": 127,
+      "startLine": 129,
+      "endLine": 129,
       "contentHash": "9cb457f06677f411",
       "status": "active"
     },
@@ -5466,8 +5756,8 @@
       "name": "remainingAdded",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 85,
-      "endLine": 85,
+      "startLine": 87,
+      "endLine": 87,
       "contentHash": "daf9c4168f51ea7a",
       "status": "active"
     },
@@ -5476,8 +5766,8 @@
       "name": "remainingDeleted",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 86,
-      "endLine": 86,
+      "startLine": 88,
+      "endLine": 88,
       "contentHash": "7628087fd55ecdfb",
       "status": "active"
     },
@@ -5486,8 +5776,8 @@
       "name": "renamed",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 45,
-      "endLine": 45,
+      "startLine": 47,
+      "endLine": 47,
       "contentHash": "c4f7439d867cee30",
       "status": "active"
     },
@@ -5496,8 +5786,8 @@
       "name": "result",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 172,
-      "endLine": 172,
+      "startLine": 174,
+      "endLine": 174,
       "contentHash": "a3314d05191456c5",
       "status": "active"
     },
@@ -5506,8 +5796,8 @@
       "name": "retiredCount",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 124,
-      "endLine": 124,
+      "startLine": 126,
+      "endLine": 126,
       "contentHash": "f717b0460e1cdb7d",
       "status": "active"
     },
@@ -5516,19 +5806,29 @@
       "name": "structuralEdgeCount",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 193,
-      "endLine": 193,
+      "startLine": 208,
+      "endLine": 208,
       "contentHash": "483be8fd2611bdb7",
       "status": "active"
     },
     {
-      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#symbolMap",
-      "name": "symbolMap",
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#sym",
+      "name": "sym",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 186,
-      "endLine": 191,
-      "contentHash": "e498f773f04d8aa4",
+      "startLine": 195,
+      "endLine": 195,
+      "contentHash": "be53a9f12fd60d69",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#symbolsByFile",
+      "name": "symbolsByFile",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 192,
+      "endLine": 192,
+      "contentHash": "9a273ae84acd0d4e",
       "status": "active"
     },
     {
@@ -5536,9 +5836,19 @@
       "name": "symName",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 212,
-      "endLine": 212,
+      "startLine": 230,
+      "endLine": 230,
       "contentHash": "8ca2c6ac9146dc41",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/incremental.ts#targetFile",
+      "name": "targetFile",
+      "path": "packages/trace/src/indexer/incremental.ts",
+      "symbolKind": "variable",
+      "startLine": 228,
+      "endLine": 228,
+      "contentHash": "727aaedb5ba80ee2",
       "status": "active"
     },
     {
@@ -5546,9 +5856,9 @@
       "name": "targetSym",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 213,
-      "endLine": 213,
-      "contentHash": "f19b08bb5106e176",
+      "startLine": 315,
+      "endLine": 317,
+      "contentHash": "1ec6ad0352244064",
       "status": "active"
     },
     {
@@ -5556,8 +5866,8 @@
       "name": "testNode",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 234,
-      "endLine": 234,
+      "startLine": 275,
+      "endLine": 275,
       "contentHash": "c16c1ffbd693f50f",
       "status": "active"
     },
@@ -5566,9 +5876,19 @@
       "name": "updatedCount",
       "path": "packages/trace/src/indexer/incremental.ts",
       "symbolKind": "variable",
-      "startLine": 123,
-      "endLine": 123,
+      "startLine": 125,
+      "endLine": 125,
       "contentHash": "0adc8ee74c6ab1c5",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#activeSymbols",
+      "name": "activeSymbols",
+      "path": "packages/trace/src/indexer/indexer.ts",
+      "symbolKind": "variable",
+      "startLine": 125,
+      "endLine": 127,
+      "contentHash": "d353de1434aa8c82",
       "status": "active"
     },
     {
@@ -5576,8 +5896,8 @@
       "name": "agentSkillDir",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 219,
-      "endLine": 219,
+      "startLine": 276,
+      "endLine": 276,
       "contentHash": "81b67c09fdb51d67",
       "status": "active"
     },
@@ -5586,9 +5906,29 @@
       "name": "allFiles",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 43,
-      "endLine": 50,
+      "startLine": 44,
+      "endLine": 51,
       "contentHash": "b4385b7532246df6",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#allSymbolsByName",
+      "name": "allSymbolsByName",
+      "path": "packages/trace/src/indexer/indexer.ts",
+      "symbolKind": "variable",
+      "startLine": 130,
+      "endLine": 130,
+      "contentHash": "3e48224439bb663c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#base",
+      "name": "base",
+      "path": "packages/trace/src/indexer/indexer.ts",
+      "symbolKind": "variable",
+      "startLine": 164,
+      "endLine": 164,
+      "contentHash": "16f133173a8ff5cf",
       "status": "active"
     },
     {
@@ -5596,9 +5936,19 @@
       "name": "call",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 181,
-      "endLine": 181,
+      "startLine": 222,
+      "endLine": 222,
       "contentHash": "616274dc574e52a4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#candidates",
+      "name": "candidates",
+      "path": "packages/trace/src/indexer/indexer.ts",
+      "symbolKind": "variable",
+      "startLine": 230,
+      "endLine": 230,
+      "contentHash": "bfda3a809eec541d",
       "status": "active"
     },
     {
@@ -5606,8 +5956,8 @@
       "name": "cleanName",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 182,
-      "endLine": 184,
+      "startLine": 223,
+      "endLine": 225,
       "contentHash": "c8becf2439be14b1",
       "status": "active"
     },
@@ -5616,9 +5966,9 @@
       "name": "CodebaseIndexer",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "class",
-      "startLine": 23,
-      "endLine": 294,
-      "contentHash": "e4180e55a450f07c",
+      "startLine": 24,
+      "endLine": 351,
+      "contentHash": "f8331f02552d203c",
       "status": "active"
     },
     {
@@ -5626,8 +5976,8 @@
       "name": "checkStatus",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "method",
-      "startLine": 280,
-      "endLine": 293,
+      "startLine": 337,
+      "endLine": 350,
       "contentHash": "e2ed35a83597af47",
       "status": "active"
     },
@@ -5636,8 +5986,8 @@
       "name": "constructor",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "method",
-      "startLine": 28,
-      "endLine": 31,
+      "startLine": 29,
+      "endLine": 32,
       "contentHash": "ab1de401c19382f8",
       "status": "active"
     },
@@ -5646,8 +5996,8 @@
       "name": "getStore",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "method",
-      "startLine": 33,
-      "endLine": 35,
+      "startLine": 34,
+      "endLine": 36,
       "contentHash": "8517c02a7a6530a1",
       "status": "active"
     },
@@ -5656,9 +6006,9 @@
       "name": "runFullIndex",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "method",
-      "startLine": 37,
-      "endLine": 227,
-      "contentHash": "4d9655c4370690b4",
+      "startLine": 38,
+      "endLine": 284,
+      "contentHash": "54a36af49758da9e",
       "status": "active"
     },
     {
@@ -5666,8 +6016,8 @@
       "name": "runIncrementalUpdate",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "method",
-      "startLine": 229,
-      "endLine": 278,
+      "startLine": 286,
+      "endLine": 335,
       "contentHash": "9bc1b20b1dc30c70",
       "status": "active"
     },
@@ -5676,8 +6026,8 @@
       "name": "config",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 38,
-      "endLine": 38,
+      "startLine": 39,
+      "endLine": 39,
       "contentHash": "2f4ad97702803c84",
       "status": "active"
     },
@@ -5686,8 +6036,8 @@
       "name": "content",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 58,
-      "endLine": 58,
+      "startLine": 59,
+      "endLine": 59,
       "contentHash": "1f442d35725aecab",
       "status": "active"
     },
@@ -5696,8 +6046,8 @@
       "name": "detector",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 113,
-      "endLine": 113,
+      "startLine": 114,
+      "endLine": 114,
       "contentHash": "ed58d19962082a37",
       "status": "active"
     },
@@ -5706,8 +6056,8 @@
       "name": "diff",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 251,
-      "endLine": 260,
+      "startLine": 308,
+      "endLine": 317,
       "contentHash": "bfef15a32e967efd",
       "status": "active"
     },
@@ -5716,8 +6066,8 @@
       "name": "drift",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 248,
-      "endLine": 248,
+      "startLine": 305,
+      "endLine": 305,
       "contentHash": "7ce0775e69c3a527",
       "status": "active"
     },
@@ -5726,8 +6076,8 @@
       "name": "edge",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 119,
-      "endLine": 119,
+      "startLine": 120,
+      "endLine": 120,
       "contentHash": "9b08f4c53bc6c984",
       "status": "active"
     },
@@ -5736,8 +6086,8 @@
       "name": "facts",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 131,
-      "endLine": 131,
+      "startLine": 147,
+      "endLine": 147,
       "contentHash": "83717daf253ac199",
       "status": "active"
     },
@@ -5746,8 +6096,8 @@
       "name": "factsList",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 53,
-      "endLine": 53,
+      "startLine": 54,
+      "endLine": 54,
       "contentHash": "aeba5b636ac9ab3a",
       "status": "active"
     },
@@ -5756,8 +6106,8 @@
       "name": "feat",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 116,
-      "endLine": 116,
+      "startLine": 117,
+      "endLine": 117,
       "contentHash": "d5ae229a0a194fec",
       "status": "active"
     },
@@ -5766,8 +6116,8 @@
       "name": "featureIndexMarkdown",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 216,
-      "endLine": 216,
+      "startLine": 273,
+      "endLine": 273,
       "contentHash": "fac23540cc604450",
       "status": "active"
     },
@@ -5776,8 +6126,8 @@
       "name": "featureIndexPath",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 269,
-      "endLine": 269,
+      "startLine": 326,
+      "endLine": 326,
       "contentHash": "55cf85fc65e129f7",
       "status": "active"
     },
@@ -5786,8 +6136,8 @@
       "name": "file",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 81,
-      "endLine": 81,
+      "startLine": 82,
+      "endLine": 82,
       "contentHash": "53c361a96eef6e7d",
       "status": "active"
     },
@@ -5796,8 +6146,8 @@
       "name": "fileHash",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 84,
-      "endLine": 84,
+      "startLine": 85,
+      "endLine": 85,
       "contentHash": "4601bf13efc6b6a7",
       "status": "active"
     },
@@ -5806,8 +6156,8 @@
       "name": "fileUrn",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 82,
-      "endLine": 82,
+      "startLine": 83,
+      "endLine": 83,
       "contentHash": "06c492e8c972aeee",
       "status": "active"
     },
@@ -5816,8 +6166,8 @@
       "name": "fullPath",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 83,
-      "endLine": 83,
+      "startLine": 84,
+      "endLine": 84,
       "contentHash": "7c2924893153c9eb",
       "status": "active"
     },
@@ -5826,8 +6176,8 @@
       "name": "git",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 265,
-      "endLine": 265,
+      "startLine": 322,
+      "endLine": 322,
       "contentHash": "990018dcc953d2f2",
       "status": "active"
     },
@@ -5836,8 +6186,8 @@
       "name": "graph",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 245,
-      "endLine": 245,
+      "startLine": 302,
+      "endLine": 302,
       "contentHash": "6e8f77e785e60013",
       "status": "active"
     },
@@ -5846,9 +6196,49 @@
       "name": "imp",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 132,
-      "endLine": 132,
+      "startLine": 148,
+      "endLine": 148,
       "contentHash": "58d84b71d75c62fc",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#importedFilePaths",
+      "name": "importedFilePaths",
+      "path": "packages/trace/src/indexer/indexer.ts",
+      "symbolKind": "variable",
+      "startLine": 234,
+      "endLine": 238,
+      "contentHash": "680d2ca36ed8f2f3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#isNodeBuiltin",
+      "name": "isNodeBuiltin",
+      "path": "packages/trace/src/indexer/indexer.ts",
+      "symbolKind": "variable",
+      "startLine": 159,
+      "endLine": 159,
+      "contentHash": "1b82ee2d65460e5d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#knownFiles",
+      "name": "knownFiles",
+      "path": "packages/trace/src/indexer/indexer.ts",
+      "symbolKind": "variable",
+      "startLine": 144,
+      "endLine": 144,
+      "contentHash": "49ad5a4d70af27fa",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#matchingCand",
+      "name": "matchingCand",
+      "path": "packages/trace/src/indexer/indexer.ts",
+      "symbolKind": "variable",
+      "startLine": 163,
+      "endLine": 166,
+      "contentHash": "b80be045a0d895ab",
       "status": "active"
     },
     {
@@ -5856,8 +6246,8 @@
       "name": "meta",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 291,
-      "endLine": 291,
+      "startLine": 348,
+      "endLine": 348,
       "contentHash": "dc1671df4003d937",
       "status": "active"
     },
@@ -5866,8 +6256,8 @@
       "name": "metadata",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 212,
-      "endLine": 212,
+      "startLine": 269,
+      "endLine": 269,
       "contentHash": "4b6890d4c90d70f0",
       "status": "active"
     },
@@ -5876,8 +6266,8 @@
       "name": "model",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 108,
-      "endLine": 108,
+      "startLine": 109,
+      "endLine": 109,
       "contentHash": "db8c3d911659d3d2",
       "status": "active"
     },
@@ -5886,8 +6276,8 @@
       "name": "models",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 61,
-      "endLine": 61,
+      "startLine": 62,
+      "endLine": 62,
       "contentHash": "01a50cc0fb72398c",
       "status": "active"
     },
@@ -5896,8 +6286,8 @@
       "name": "newMeta",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 266,
-      "endLine": 266,
+      "startLine": 323,
+      "endLine": 323,
       "contentHash": "5e5ec01db8e8a0d4",
       "status": "active"
     },
@@ -5906,8 +6296,8 @@
       "name": "oldMeta",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 246,
-      "endLine": 246,
+      "startLine": 303,
+      "endLine": 303,
       "contentHash": "cbacf9b23970abf1",
       "status": "active"
     },
@@ -5916,8 +6306,8 @@
       "name": "reconciler",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 250,
-      "endLine": 250,
+      "startLine": 307,
+      "endLine": 307,
       "contentHash": "5b83b3a42e712214",
       "status": "active"
     },
@@ -5926,8 +6316,8 @@
       "name": "res",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 236,
-      "endLine": 236,
+      "startLine": 293,
+      "endLine": 293,
       "contentHash": "038331acea693a3a",
       "status": "active"
     },
@@ -5936,8 +6326,8 @@
       "name": "route",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 107,
-      "endLine": 107,
+      "startLine": 108,
+      "endLine": 108,
       "contentHash": "db480675f304857a",
       "status": "active"
     },
@@ -5946,8 +6336,8 @@
       "name": "secretFilter",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 39,
-      "endLine": 39,
+      "startLine": 40,
+      "endLine": 40,
       "contentHash": "eff0f58f31e92268",
       "status": "active"
     },
@@ -5956,8 +6346,8 @@
       "name": "skillPath",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 223,
-      "endLine": 223,
+      "startLine": 280,
+      "endLine": 280,
       "contentHash": "8ba8e827a7b15d7a",
       "status": "active"
     },
@@ -5966,8 +6356,8 @@
       "name": "structuralEdgeCount",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 130,
-      "endLine": 130,
+      "startLine": 145,
+      "endLine": 145,
       "contentHash": "089f44ca25ba8e74",
       "status": "active"
     },
@@ -5976,19 +6366,19 @@
       "name": "sym",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 106,
-      "endLine": 106,
-      "contentHash": "afbe91a6cf83b6c0",
+      "startLine": 132,
+      "endLine": 132,
+      "contentHash": "4b19c904b54077c6",
       "status": "active"
     },
     {
-      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#symbolMap",
-      "name": "symbolMap",
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#symbolsByFile",
+      "name": "symbolsByFile",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 124,
-      "endLine": 128,
-      "contentHash": "92c08eb59c12d99f",
+      "startLine": 129,
+      "endLine": 129,
+      "contentHash": "7d3cb9e7a53a75b2",
       "status": "active"
     },
     {
@@ -5996,9 +6386,19 @@
       "name": "symName",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 133,
-      "endLine": 133,
+      "startLine": 151,
+      "endLine": 151,
       "contentHash": "967378de0bd2a154",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/indexer/indexer.ts#targetFile",
+      "name": "targetFile",
+      "path": "packages/trace/src/indexer/indexer.ts",
+      "symbolKind": "variable",
+      "startLine": 149,
+      "endLine": 149,
+      "contentHash": "3742f18df9ceec25",
       "status": "active"
     },
     {
@@ -6006,9 +6406,9 @@
       "name": "targetSym",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 186,
-      "endLine": 186,
-      "contentHash": "e6d236e8d9c07b16",
+      "startLine": 240,
+      "endLine": 242,
+      "contentHash": "b28576b6bd16908d",
       "status": "active"
     },
     {
@@ -6016,8 +6416,8 @@
       "name": "test",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 109,
-      "endLine": 109,
+      "startLine": 110,
+      "endLine": 110,
       "contentHash": "d2c2bd7e4ae4c383",
       "status": "active"
     },
@@ -6026,8 +6426,8 @@
       "name": "testNode",
       "path": "packages/trace/src/indexer/indexer.ts",
       "symbolKind": "variable",
-      "startLine": 157,
-      "endLine": 157,
+      "startLine": 198,
+      "endLine": 198,
       "contentHash": "fbe0e0aa5d30865d",
       "status": "active"
     },
@@ -9136,8 +9536,8 @@
       "name": "out",
       "path": "packages/trace/src/renderers/terminal.ts",
       "symbolKind": "variable",
-      "startLine": 451,
-      "endLine": 451,
+      "startLine": 455,
+      "endLine": 455,
       "contentHash": "1bac5e760cb12ec1",
       "status": "active"
     },
@@ -9217,8 +9617,8 @@
       "path": "packages/trace/src/renderers/terminal.ts",
       "symbolKind": "function",
       "startLine": 428,
-      "endLine": 448,
-      "contentHash": "4a2066b3549b952d",
+      "endLine": 452,
+      "contentHash": "6a7cf1dd561471dc",
       "status": "active"
     },
     {
@@ -9256,8 +9656,8 @@
       "name": "renderUsageSummary",
       "path": "packages/trace/src/renderers/terminal.ts",
       "symbolKind": "function",
-      "startLine": 450,
-      "endLine": 468,
+      "startLine": 454,
+      "endLine": 472,
       "contentHash": "7c9ce3d6a40224f9",
       "status": "active"
     },
@@ -9316,8 +9716,8 @@
       "name": "sevColor",
       "path": "packages/trace/src/renderers/terminal.ts",
       "symbolKind": "variable",
-      "startLine": 440,
-      "endLine": 440,
+      "startLine": 444,
+      "endLine": 444,
       "contentHash": "ef0be96e59c30647",
       "status": "active"
     },
@@ -10102,6 +10502,16 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:tests/unit/analyzer.test.ts#detector",
+      "name": "detector",
+      "path": "tests/unit/analyzer.test.ts",
+      "symbolKind": "variable",
+      "startLine": 155,
+      "endLine": 155,
+      "contentHash": "d08310ae31e5775c",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:tests/unit/analyzer.test.ts#expressCode",
       "name": "expressCode",
       "path": "tests/unit/analyzer.test.ts",
@@ -10116,9 +10526,9 @@
       "name": "facts",
       "path": "tests/unit/analyzer.test.ts",
       "symbolKind": "variable",
-      "startLine": 86,
-      "endLine": 86,
-      "contentHash": "929c4d0af9a96a95",
+      "startLine": 157,
+      "endLine": 200,
+      "contentHash": "0c1fb2a5775bd532",
       "status": "active"
     },
     {
@@ -10169,6 +10579,16 @@
       "startLine": 57,
       "endLine": 67,
       "contentHash": "49d2672ebb0d764b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/analyzer.test.ts#rendered",
+      "name": "rendered",
+      "path": "tests/unit/analyzer.test.ts",
+      "symbolKind": "variable",
+      "startLine": 209,
+      "endLine": 222,
+      "contentHash": "43deb82215c7f53d",
       "status": "active"
     },
     {
@@ -10512,6 +10932,26 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#html",
+      "name": "html",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 455,
+      "endLine": 455,
+      "contentHash": "d91ced4516de968d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#htmlRes",
+      "name": "htmlRes",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 451,
+      "endLine": 453,
+      "contentHash": "32105ab8f4bf1f15",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#i",
       "name": "i",
       "path": "tests/unit/intelligence.test.ts",
@@ -10549,6 +10989,26 @@
       "startLine": 279,
       "endLine": 279,
       "contentHash": "7679416a490264d6",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#modelsHtml",
+      "name": "modelsHtml",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 465,
+      "endLine": 465,
+      "contentHash": "a61eef3d50fd09ef",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#modelsHtmlRes",
+      "name": "modelsHtmlRes",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 461,
+      "endLine": 463,
+      "contentHash": "7a718af6562d7717",
       "status": "active"
     },
     {

@@ -21,22 +21,64 @@ interface InferredFeatureCandidate {
 }
 
 const DOMAIN_KEYWORDS: Record<string, { name: string; tags: string[] }> = {
+  // Authentication & Access Control
   auth: { name: 'Authentication', tags: ['security', 'session'] },
   login: { name: 'Authentication', tags: ['security', 'session'] },
   session: { name: 'Authentication', tags: ['security', 'session'] },
+  oauth: { name: 'Authentication', tags: ['security', 'oauth'] },
+  rbac: { name: 'Access Control', tags: ['security', 'rbac', 'permissions'] },
+  permission: { name: 'Access Control', tags: ['security', 'permissions'] },
+
+  // User & Accounts
   user: { name: 'User Management', tags: ['account', 'profile'] },
   profile: { name: 'User Management', tags: ['account', 'profile'] },
+  account: { name: 'User Management', tags: ['account'] },
+
+  // Commerce, Orders & Billing
   payment: { name: 'Payments', tags: ['billing', 'checkout'] },
   upi: { name: 'Payments', tags: ['billing', 'upi'] },
-  billing: { name: 'Payments', tags: ['billing'] },
+  billing: { name: 'Billing & Subscriptions', tags: ['billing', 'finance'] },
   invoice: { name: 'Invoicing', tags: ['billing', 'invoice'] },
-  subscription: { name: 'Subscriptions', tags: ['billing', 'recurring'] },
+  subscription: { name: 'Billing & Subscriptions', tags: ['billing', 'recurring'] },
   checkout: { name: 'Checkout', tags: ['order', 'ecommerce'] },
   order: { name: 'Orders', tags: ['ecommerce', 'order'] },
   cart: { name: 'Shopping Cart', tags: ['ecommerce'] },
+  pricing: { name: 'Billing & Subscriptions', tags: ['billing', 'pricing'] },
+
+  // Discovery & Navigation
   search: { name: 'Search', tags: ['discovery'] },
+  catalog: { name: 'Catalog', tags: ['inventory', 'discovery'] },
+
+  // Notifications & Integrations
   notification: { name: 'Notifications', tags: ['alerts', 'email'] },
-  settings: { name: 'Settings', tags: ['preferences'] }
+  email: { name: 'Notifications', tags: ['communication', 'email'] },
+  webhook: { name: 'Integrations & Webhooks', tags: ['integrations', 'webhooks'] },
+  integration: { name: 'Integrations & Webhooks', tags: ['integrations', 'api'] },
+
+  // AI & Machine Learning
+  ai: { name: 'AI & Intelligence', tags: ['ai', 'llm'] },
+  llm: { name: 'AI & Intelligence', tags: ['ai', 'llm'] },
+  chat: { name: 'AI & Intelligence', tags: ['ai', 'messaging'] },
+  agent: { name: 'AI & Intelligence', tags: ['ai', 'agents'] },
+
+  // Analytics, Telemetry & Monitoring
+  analytics: { name: 'Analytics & Reporting', tags: ['telemetry', 'analytics'] },
+  telemetry: { name: 'Analytics & Reporting', tags: ['telemetry', 'metrics'] },
+  report: { name: 'Analytics & Reporting', tags: ['reporting', 'bi'] },
+  metric: { name: 'Analytics & Reporting', tags: ['telemetry', 'monitoring'] },
+
+  // Storage & Media
+  storage: { name: 'Storage & Media', tags: ['files', 'storage'] },
+  upload: { name: 'Storage & Media', tags: ['files', 'upload'] },
+  media: { name: 'Storage & Media', tags: ['files', 'media'] },
+
+  // Tools & Utilities
+  tool: { name: 'Tools & Utilities', tags: ['tools', 'utilities'] },
+  calculator: { name: 'Tools & Utilities', tags: ['tools', 'calculator'] },
+
+  // Settings & Configuration
+  settings: { name: 'Settings & Config', tags: ['preferences', 'config'] },
+  config: { name: 'Settings & Config', tags: ['preferences', 'config'] }
 };
 
 export class FeatureDetector {
@@ -72,16 +114,34 @@ export class FeatureDetector {
       return candidates.get(slug)!;
     }
 
-    // 1. Process routes
+    // 1. Process routes with domain sanitization
     for (const facts of factsList) {
       for (const route of facts.routes) {
         // e.g. /api/payment/upi -> domain 'payment'
-        const routeParts = route.routePath.split('/').filter(Boolean);
-        const domain = routeParts[0] === 'api' ? routeParts[1] : routeParts[0];
+        const routeParts = route.routePath
+          .split('/')
+          .filter(Boolean)
+          .filter((p) => !p.startsWith('(') && !p.endsWith(')')); // Filter Next.js route groups like (marketing)
+
+        let domain = '';
+        for (const part of routeParts) {
+          if (['api', 'v1', 'v2', 'v3', 'app', 'routes'].includes(part.toLowerCase())) continue;
+          // Skip dynamic bracket parameters: [slug], [id], [...rest]
+          if (part.startsWith('[') && part.endsWith(']')) continue;
+          // Strip extension (e.g. key.txt, rss.xml, sitemap.xml)
+          const cleanPart = part.replace(/\.[a-zA-Z0-9]+$/, '');
+          if (['rss', 'sitemap', 'robots', 'favicon', 'og', 'manifest'].includes(cleanPart.toLowerCase())) {
+            continue;
+          }
+          if (cleanPart) {
+            domain = cleanPart;
+            break;
+          }
+        }
 
         if (domain) {
           const match = DOMAIN_KEYWORDS[domain.toLowerCase()];
-          const featureName = match ? match.name : domain.charAt(0).toUpperCase() + domain.slice(1);
+          const featureName = match ? match.name : domain.charAt(0).toUpperCase() + domain.slice(1).replace(/[-_]/g, ' ');
           const tags = match ? match.tags : [domain];
           const cand = getOrCreateCandidate(domain, featureName, tags);
 
@@ -126,7 +186,32 @@ export class FeatureDetector {
         const lowerPath = symbol.path.toLowerCase();
         const lowerSym = symbol.name.toLowerCase();
 
-        // Check path components (e.g. src/features/payment/ or src/components/payment/)
+        // 3a. Structural directory feature detection: src/features/<feat>/ or src/modules/<feat>/
+        const structMatch = symbol.path.match(/(?:^|\/)(?:features|modules)\/([a-zA-Z0-9_-]+)(?:\/|$)/i);
+        if (structMatch && structMatch[1]) {
+          const rawFeat = structMatch[1];
+          const featMatch = DOMAIN_KEYWORDS[rawFeat.toLowerCase()];
+          const featureName = featMatch
+            ? featMatch.name
+            : rawFeat.charAt(0).toUpperCase() + rawFeat.slice(1).replace(/[-_]/g, ' ');
+          const tags = featMatch ? featMatch.tags : [rawFeat];
+          const cand = getOrCreateCandidate(rawFeat, featureName, tags);
+          cand.nodes.push({
+            node: symbol,
+            confidence: 'DETECTED',
+            score: 0.9,
+            evidence: {
+              type: 'directory_cluster',
+              file: symbol.path,
+              line: symbol.startLine,
+              symbol: symbol.name,
+              reason: `File path '${symbol.path}' clusters in '${rawFeat}' feature directory`
+            }
+          });
+          continue;
+        }
+
+        // 3b. Match path components and symbol names with DOMAIN_KEYWORDS
         for (const [kw, meta] of Object.entries(DOMAIN_KEYWORDS)) {
           const inPath = lowerPath.includes(`/${kw}/`) || lowerPath.includes(`-${kw}`) || lowerPath.includes(`_${kw}`);
           const inSymbol = lowerSym.includes(kw);
