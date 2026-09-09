@@ -190,6 +190,68 @@ describe('Intelligence Engine: Dead Code & Orphan Detection', () => {
     expect(finding?.status).toBe('POSSIBLY DEAD');
     expect(finding?.caveat).toContain('dynamic');
   });
+
+  it('reports zero retired node references after incremental update retires a node', () => {
+    const graph = new FeatureGraph();
+
+    const activeSym: SymbolNode = {
+      urn: 'urn:trace:symbol:src/active.ts#activeFn',
+      kind: 'symbol',
+      symbolKind: 'function',
+      name: 'activeFn',
+      path: 'src/active.ts',
+      status: 'active',
+      aliases: [],
+      startLine: 1,
+      endLine: 5,
+      contentHash: 'hashActive',
+      isExported: true,
+      metadata: {},
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+    const obsoleteSym: SymbolNode = {
+      urn: 'urn:trace:symbol:src/active.ts#obsoleteFn',
+      kind: 'symbol',
+      symbolKind: 'function',
+      name: 'obsoleteFn',
+      path: 'src/active.ts',
+      status: 'active',
+      aliases: [],
+      startLine: 6,
+      endLine: 12,
+      contentHash: 'hashObsolete',
+      isExported: true,
+      metadata: {},
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+    const edge: GraphEdge = {
+      id: 'edge-active-to-obsolete',
+      sourceUrn: activeSym.urn,
+      targetUrn: obsoleteSym.urn,
+      relationship: 'calls',
+      confidence: 'DETECTED',
+      confidenceScore: 0.9,
+      provenance: { source: 'ast', timestamp: new Date().toISOString() },
+      evidence: { type: 'ast_call', file: 'src/active.ts', line: 3, reason: 'Calls obsolete' },
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    graph.addNode(activeSym);
+    graph.addNode(obsoleteSym);
+    graph.addEdge(edge);
+
+    // Simulate reconcileFile when obsoleteFn is removed
+    graph.reconcileFile('src/active.ts', [activeSym], []);
+
+    expect(graph.getNode(obsoleteSym.urn)?.status).toBe('retired');
+
+    // Dead code detection should find zero retired nodes referenced
+    const report = detectDeadCode(graph);
+    expect(report.retiredNodesReferenced.length).toBe(0);
+  });
 });
 
 describe('Intelligence Engine: Task Mapping & Plan Generator', () => {

@@ -174,13 +174,86 @@ export class IncrementalReconciler {
       retiredCount += result.retired.length;
     }
 
-    // Connect new symbols to features
+    // Connect new symbols to features and refresh structural edges
     if (factsList.length > 0) {
       const { FeatureDetector } = await import('../detector/auto-detector.js');
       const detector = new FeatureDetector(this.repoRoot);
       const { edges } = detector.detectFeatures(factsList);
       for (const edge of edges) {
         graph.addEdge(edge);
+      }
+
+      const symbolMap = new Map(
+        graph
+          .getActiveNodes()
+          .filter((n) => n.kind === 'symbol')
+          .map((n) => [n.name, n])
+      );
+
+      let structuralEdgeCount = Date.now();
+      for (const facts of factsList) {
+        const fileUrn = `urn:trace:file:${facts.filePath}`;
+        const existingOutEdges = graph.getOutgoingEdges(fileUrn);
+        for (const edge of existingOutEdges) {
+          if (edge.relationship === 'imports') {
+            graph.removeEdge(edge.id);
+          }
+        }
+        for (const testNode of facts.tests) {
+          const existingTestEdges = graph.getOutgoingEdges(testNode.urn);
+          for (const edge of existingTestEdges) {
+            if (edge.relationship === 'tests') {
+              graph.removeEdge(edge.id);
+            }
+          }
+        }
+
+        for (const imp of facts.imports) {
+          for (const symName of imp.importedSymbols) {
+            const targetSym = symbolMap.get(symName);
+            if (targetSym && targetSym.path !== facts.filePath) {
+              graph.addEdge({
+                id: `edge-struct-imp-${structuralEdgeCount++}`,
+                sourceUrn: fileUrn,
+                targetUrn: targetSym.urn,
+                relationship: 'imports',
+                confidence: 'DETECTED',
+                confidenceScore: 0.95,
+                provenance: { source: 'ast', timestamp: new Date().toISOString() },
+                evidence: {
+                  type: 'ast_import',
+                  file: facts.filePath,
+                  line: imp.line,
+                  symbol: symName,
+                  reason: `AST import of '${symName}' from '${imp.moduleSpecifier}'`
+                },
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+              });
+
+              for (const testNode of facts.tests) {
+                graph.addEdge({
+                  id: `edge-struct-test-${structuralEdgeCount++}`,
+                  sourceUrn: testNode.urn,
+                  targetUrn: targetSym.urn,
+                  relationship: 'tests',
+                  confidence: 'DETECTED',
+                  confidenceScore: 0.9,
+                  provenance: { source: 'ast', timestamp: new Date().toISOString() },
+                  evidence: {
+                    type: 'ast_call',
+                    file: facts.filePath,
+                    line: testNode.startLine,
+                    symbol: symName,
+                    reason: `Test '${testNode.name}' in file importing '${symName}'`
+                  },
+                  createdAt: new Date().toISOString(),
+                  updatedAt: new Date().toISOString()
+                });
+              }
+            }
+          }
+        }
       }
     }
 

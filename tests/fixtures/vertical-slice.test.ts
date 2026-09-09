@@ -1,16 +1,28 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2026 Anubhav Mishra and Amvelt
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, beforeAll, afterAll } from 'vitest';
 import path from 'node:path';
 import fs from 'node:fs';
 import { CodebaseIndexer } from '../../packages/trace/src/indexer/indexer.js';
 import { IndexValidator } from '../../packages/trace/src/indexer/validator.js';
 import { FeatureGraph } from '../../packages/trace/src/core/graph.js';
 import { generateLLMContext } from '../../packages/trace/src/renderers/llm-context.js';
+import { createTempFixture, type TempFixture } from '../helpers/fixture-copy.js';
 
 describe('Vertical Slice: 01-small-js', () => {
-  const fixtureDir = path.resolve(process.cwd(), 'fixtures/01-small-js');
-  const indexer = new CodebaseIndexer(fixtureDir);
+  let fixture: TempFixture;
+  let fixtureDir: string;
+  let indexer: CodebaseIndexer;
+
+  beforeAll(() => {
+    fixture = createTempFixture('fixtures/01-small-js');
+    fixtureDir = fixture.dir;
+    indexer = new CodebaseIndexer(fixtureDir);
+  });
+
+  afterAll(() => {
+    fixture?.cleanup();
+  });
 
   beforeEach(async () => {
     // Clean and initialize

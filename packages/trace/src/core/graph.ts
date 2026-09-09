@@ -61,6 +61,17 @@ export class FeatureGraph {
       node.status = 'retired';
       node.retiredAt = new Date().toISOString();
       node.updatedAt = new Date().toISOString();
+
+      // Clean up connected edges so no dangling references to retired nodes remain
+      const outEdgeIds = Array.from(this.outgoing.get(resolved) || []);
+      for (const edgeId of outEdgeIds) {
+        this.removeEdge(edgeId);
+      }
+
+      const inEdgeIds = Array.from(this.incoming.get(resolved) || []);
+      for (const edgeId of inEdgeIds) {
+        this.removeEdge(edgeId);
+      }
     }
   }
 
@@ -69,17 +80,38 @@ export class FeatureGraph {
     this.nodes.delete(resolved);
 
     // Clean up associated edges
-    const outEdgeIds = this.outgoing.get(resolved) || new Set();
+    const outEdgeIds = Array.from(this.outgoing.get(resolved) || []);
     for (const edgeId of outEdgeIds) {
-      this.edges.delete(edgeId);
+      this.removeEdge(edgeId);
     }
-    this.outgoing.delete(resolved);
 
-    const inEdgeIds = this.incoming.get(resolved) || new Set();
+    const inEdgeIds = Array.from(this.incoming.get(resolved) || []);
     for (const edgeId of inEdgeIds) {
-      this.edges.delete(edgeId);
+      this.removeEdge(edgeId);
     }
-    this.incoming.delete(resolved);
+  }
+
+  removeEdge(id: string): boolean {
+    const edge = this.edges.get(id);
+    if (!edge) return false;
+
+    const source = this.resolveUrn(edge.sourceUrn);
+    const target = this.resolveUrn(edge.targetUrn);
+
+    const outSet = this.outgoing.get(source);
+    if (outSet) {
+      outSet.delete(id);
+      if (outSet.size === 0) this.outgoing.delete(source);
+    }
+
+    const inSet = this.incoming.get(target);
+    if (inSet) {
+      inSet.delete(id);
+      if (inSet.size === 0) this.incoming.delete(target);
+    }
+
+    this.edges.delete(id);
+    return true;
   }
 
   addAlias(oldUrn: string, newUrn: string): void {

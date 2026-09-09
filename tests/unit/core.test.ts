@@ -135,6 +135,69 @@ describe('FeatureGraph and Alias Handling', () => {
     expect(explanation.relatedFeatures[0]?.feature.displayName).toBe('Payments');
     expect(explanation.relatedFeatures[0]?.evidence[0]?.reason).toBe('Payment business logic');
   });
+
+  it('cleans up connected edges when a node is retired or removed', () => {
+    const sym1: SymbolNode = {
+      urn: 'urn:trace:symbol:src/a.ts#fnA',
+      kind: 'symbol',
+      symbolKind: 'function',
+      name: 'fnA',
+      path: 'src/a.ts',
+      status: 'active',
+      aliases: [],
+      startLine: 1,
+      endLine: 10,
+      contentHash: 'hashA',
+      isExported: true,
+      metadata: {},
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+    const sym2: SymbolNode = {
+      urn: 'urn:trace:symbol:src/b.ts#fnB',
+      kind: 'symbol',
+      symbolKind: 'function',
+      name: 'fnB',
+      path: 'src/b.ts',
+      status: 'active',
+      aliases: [],
+      startLine: 1,
+      endLine: 10,
+      contentHash: 'hashB',
+      isExported: true,
+      metadata: {},
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+    const edge: GraphEdge = {
+      id: 'edge-a-b',
+      sourceUrn: sym1.urn,
+      targetUrn: sym2.urn,
+      relationship: 'calls',
+      confidence: 'DETECTED',
+      confidenceScore: 0.9,
+      provenance: { source: 'ast', timestamp: new Date().toISOString() },
+      evidence: { type: 'ast_call', file: sym1.path, line: 5, reason: 'Direct call' },
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    graph.addNode(sym1);
+    graph.addNode(sym2);
+    graph.addEdge(edge);
+
+    expect(graph.getAllEdges().length).toBe(1);
+    expect(graph.getOutgoingEdges(sym1.urn).length).toBe(1);
+    expect(graph.getIncomingEdges(sym2.urn).length).toBe(1);
+
+    // Retiring sym2 must cleanly remove the edge pointing to it
+    graph.retireNode(sym2.urn);
+
+    expect(graph.getNode(sym2.urn)?.status).toBe('retired');
+    expect(graph.getAllEdges().length).toBe(0);
+    expect(graph.getOutgoingEdges(sym1.urn).length).toBe(0);
+    expect(graph.getIncomingEdges(sym2.urn).length).toBe(0);
+  });
 });
 
 describe('TokenBudgetManager', () => {

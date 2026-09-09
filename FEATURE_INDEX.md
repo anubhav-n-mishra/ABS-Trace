@@ -26,9 +26,9 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'current_session' matches 'session' domain vocabulary*
 - `fixtures/06-vibe-coded-mess/server.js:12-18` — **do_login_thing** (function)
   - *Evidence: Symbol 'do_login_thing' matches 'login' domain vocabulary*
-- `tests/fixtures/all-fixtures.test.ts:91-91` — **loginQuick** (variable)
+- `tests/fixtures/all-fixtures.test.ts:137-137` — **loginQuick** (variable)
   - *Evidence: Symbol 'loginQuick' matches 'login' domain vocabulary*
-- `tests/fixtures/all-fixtures.test.ts:202-202` — **authFeat** (variable)
+- `tests/fixtures/all-fixtures.test.ts:298-298` — **authFeat** (variable)
   - *Evidence: Symbol 'authFeat' matches 'auth' domain vocabulary*
 - `fixtures/01-small-js/tests/auth.test.js:5-5` — **session** (variable)
   - *Evidence: Symbol 'session' matches 'session' domain vocabulary*
@@ -67,9 +67,9 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Route path '/api/checkout/process' matches domain 'checkout'*
 
 ### Services & Business Logic
-- `tests/fixtures/all-fixtures.test.ts:73-73` — **checkoutService** (variable)
+- `tests/fixtures/all-fixtures.test.ts:110-110` — **checkoutService** (variable)
   - *Evidence: Symbol 'checkoutService' matches 'checkout' domain vocabulary*
-- `tests/fixtures/all-fixtures.test.ts:76-76` — **checkoutRoute** (variable)
+- `tests/fixtures/all-fixtures.test.ts:113-113` — **checkoutRoute** (variable)
   - *Evidence: Symbol 'checkoutRoute' matches 'checkout' domain vocabulary*
 - `fixtures/05-fullstack-app/src/api/checkout.ts:5-5` — **checkoutService** (variable)
   - *Evidence: Symbol 'checkoutService' matches 'checkout' domain vocabulary*
@@ -134,9 +134,9 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Route path '/api/order/cancel' matches domain 'order'*
 
 ### Services & Business Logic
-- `tests/fixtures/all-fixtures.test.ts:54-54` — **orderService** (variable)
+- `tests/fixtures/all-fixtures.test.ts:82-82` — **orderService** (variable)
   - *Evidence: Symbol 'orderService' matches 'order' domain vocabulary*
-- `tests/fixtures/all-fixtures.test.ts:57-57` — **createOrderRoute** (variable)
+- `tests/fixtures/all-fixtures.test.ts:85-85` — **createOrderRoute** (variable)
   - *Evidence: Symbol 'createOrderRoute' matches 'order' domain vocabulary*
 - `fixtures/04-node-backend/src/routes/orderRoutes.js:5-5` — **orderService** (variable)
   - *Evidence: Symbol 'orderService' matches 'order' domain vocabulary*
@@ -156,7 +156,7 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Database model 'Order' relates to 'Orders' domain*
 
 ### Tests
-- `tests/fixtures/all-fixtures.test.ts:50` — **extracts order service and express routes**
+- `tests/fixtures/all-fixtures.test.ts:78` — **extracts order service and express routes**
   - *Evidence: Test suite/case 'extracts order service and express routes' targets 'Orders' functionality*
 
 ---
@@ -185,15 +185,15 @@ It maps high-level product features to their exact implementations, APIs, databa
 ### Services & Business Logic
 - `fixtures/06-vibe-coded-mess/server.js:8-8` — **payments_db** (variable)
   - *Evidence: Symbol 'payments_db' matches 'payment' domain vocabulary*
-- `tests/fixtures/all-fixtures.test.ts:70-70` — **paymentModel** (variable)
+- `tests/fixtures/all-fixtures.test.ts:107-107` — **paymentModel** (variable)
   - *Evidence: Symbol 'paymentModel' matches 'payment' domain vocabulary*
-- `tests/fixtures/all-fixtures.test.ts:186-186` — **paymentService** (variable)
+- `tests/fixtures/all-fixtures.test.ts:273-273` — **paymentService** (variable)
   - *Evidence: Symbol 'paymentService' matches 'payment' domain vocabulary*
-- `tests/fixtures/all-fixtures.test.ts:207-207` — **paymentFeat** (variable)
+- `tests/fixtures/all-fixtures.test.ts:303-303` — **paymentFeat** (variable)
   - *Evidence: Symbol 'paymentFeat' matches 'payment' domain vocabulary*
-- `tests/fixtures/vertical-slice.test.ts:31-31` — **paymentFeat** (variable)
+- `tests/fixtures/vertical-slice.test.ts:43-43` — **paymentFeat** (variable)
   - *Evidence: Symbol 'paymentFeat' matches 'payment' domain vocabulary*
-- `tests/fixtures/vertical-slice.test.ts:49-49` — **paymentService** (variable)
+- `tests/fixtures/vertical-slice.test.ts:61-61` — **paymentService** (variable)
   - *Evidence: Symbol 'paymentService' matches 'payment' domain vocabulary*
 - `fixtures/01-small-js/src/services/payment.js:2-22` — **PaymentService** (class)
   - *Evidence: Symbol 'PaymentService' matches 'payment' domain vocabulary*
@@ -221,9 +221,9 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Database model 'Payment' relates to 'Payments' domain*
 
 ### Tests
-- `tests/fixtures/all-fixtures.test.ts:182` — **traces multi-feature consumers for shared payment service**
+- `tests/fixtures/all-fixtures.test.ts:269` — **traces multi-feature consumers for shared payment service**
   - *Evidence: Test suite/case 'traces multi-feature consumers for shared payment service' targets 'Payments' functionality*
-- `tests/fixtures/vertical-slice.test.ts:45` — **traces impact for PaymentService to test cases**
+- `tests/fixtures/vertical-slice.test.ts:57` — **traces impact for PaymentService to test cases**
   - *Evidence: Test suite/case 'traces impact for PaymentService to test cases' targets 'Payments' functionality*
 - `fixtures/01-small-js/tests/payment.test.js:3` — **Payments**
   - *Evidence: Test suite/case 'Payments' targets 'Payments' functionality*
@@ -282,11 +282,11 @@ It maps high-level product features to their exact implementations, APIs, databa
 ### Services & Business Logic
 - `fixtures/06-vibe-coded-mess/server.js:7-7` — **users_db** (variable)
   - *Evidence: Symbol 'users_db' matches 'user' domain vocabulary*
-- `tests/fixtures/all-fixtures.test.ts:18-18` — **userInterface** (variable)
+- `tests/fixtures/all-fixtures.test.ts:28-28` — **userInterface** (variable)
   - *Evidence: Symbol 'userInterface' matches 'user' domain vocabulary*
-- `tests/fixtures/all-fixtures.test.ts:21-21` — **userService** (variable)
+- `tests/fixtures/all-fixtures.test.ts:31-31` — **userService** (variable)
   - *Evidence: Symbol 'userService' matches 'user' domain vocabulary*
-- `tests/fixtures/all-fixtures.test.ts:24-24` — **updateUserProfile** (variable)
+- `tests/fixtures/all-fixtures.test.ts:34-34` — **updateUserProfile** (variable)
   - *Evidence: Symbol 'updateUserProfile' matches 'user' domain vocabulary*
 - `fixtures/02-typescript-app/src/routes/user.ts:5-5` — **userService** (variable)
   - *Evidence: Symbol 'userService' matches 'user' domain vocabulary*
