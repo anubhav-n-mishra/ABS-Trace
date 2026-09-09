@@ -1,0 +1,270 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright 2026 Anubhav Mishra and Amvelt
+import type { StructuralFacts } from '../analyzer/base.js';
+import type {
+  FeatureNode,
+  GraphEdge,
+  TraceNode,
+  StructuredEvidence,
+  ConfidenceLevel
+} from '../core/types.js';
+import { createFeatureUrn } from '../core/urn.js';
+import { ExplicitFeatureLoader, type ExplicitFeatureDefinition } from './explicit-loader.js';
+
+interface InferredFeatureCandidate {
+  id: string;
+  name: string;
+  confidence: ConfidenceLevel;
+  score: number;
+  tags: string[];
+  nodes: Array<{ node: TraceNode; evidence: StructuredEvidence; confidence: ConfidenceLevel; score: number }>;
+}
+
+const DOMAIN_KEYWORDS: Record<string, { name: string; tags: string[] }> = {
+  auth: { name: 'Authentication', tags: ['security', 'session'] },
+  login: { name: 'Authentication', tags: ['security', 'session'] },
+  session: { name: 'Authentication', tags: ['security', 'session'] },
+  user: { name: 'User Management', tags: ['account', 'profile'] },
+  profile: { name: 'User Management', tags: ['account', 'profile'] },
+  payment: { name: 'Payments', tags: ['billing', 'checkout'] },
+  upi: { name: 'Payments', tags: ['billing', 'upi'] },
+  billing: { name: 'Payments', tags: ['billing'] },
+  invoice: { name: 'Invoicing', tags: ['billing', 'invoice'] },
+  subscription: { name: 'Subscriptions', tags: ['billing', 'recurring'] },
+  checkout: { name: 'Checkout', tags: ['order', 'ecommerce'] },
+  order: { name: 'Orders', tags: ['ecommerce', 'order'] },
+  cart: { name: 'Shopping Cart', tags: ['ecommerce'] },
+  search: { name: 'Search', tags: ['discovery'] },
+  notification: { name: 'Notifications', tags: ['alerts', 'email'] },
+  settings: { name: 'Settings', tags: ['preferences'] }
+};
+
+export class FeatureDetector {
+  private explicitLoader: ExplicitFeatureLoader;
+
+  constructor(repoRoot: string) {
+    this.explicitLoader = new ExplicitFeatureLoader(repoRoot);
+  }
+
+  detectFeatures(factsList: StructuralFacts[]): {
+    features: FeatureNode[];
+    edges: GraphEdge[];
+  } {
+    const candidates = new Map<string, InferredFeatureCandidate>();
+
+    function getOrCreateCandidate(id: string, name: string, tags: string[] = []): InferredFeatureCandidate {
+      const slug = name.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-');
+      if (!candidates.has(slug)) {
+        candidates.set(slug, {
+          id: slug,
+          name,
+          confidence: 'DETECTED',
+          score: 0.85,
+          tags: [...tags],
+          nodes: []
+        });
+      } else {
+        const existing = candidates.get(slug)!;
+        for (const tag of tags) {
+          if (!existing.tags.includes(tag)) existing.tags.push(tag);
+        }
+      }
+      return candidates.get(slug)!;
+    }
+
+    // 1. Process routes
+    for (const facts of factsList) {
+      for (const route of facts.routes) {
+        // e.g. /api/payment/upi -> domain 'payment'
+        const routeParts = route.routePath.split('/').filter(Boolean);
+        const domain = routeParts[0] === 'api' ? routeParts[1] : routeParts[0];
+
+        if (domain) {
+          const match = DOMAIN_KEYWORDS[domain.toLowerCase()];
+          const featureName = match ? match.name : domain.charAt(0).toUpperCase() + domain.slice(1);
+          const tags = match ? match.tags : [domain];
+          const cand = getOrCreateCandidate(domain, featureName, tags);
+
+          cand.nodes.push({
+            node: route,
+            confidence: 'DETECTED',
+            score: 0.85,
+            evidence: {
+              type: 'route_match',
+              file: route.path,
+              line: route.startLine,
+              reason: `Route path '${route.routePath}' matches domain '${domain}'`
+            }
+          });
+        }
+      }
+
+      // 2. Process models
+      for (const model of facts.models) {
+        const lowerName = model.name.toLowerCase();
+        for (const [kw, meta] of Object.entries(DOMAIN_KEYWORDS)) {
+          if (lowerName.includes(kw)) {
+            const cand = getOrCreateCandidate(kw, meta.name, meta.tags);
+            cand.nodes.push({
+              node: model,
+              confidence: 'DETECTED',
+              score: 0.85,
+              evidence: {
+                type: 'model_ref',
+                file: model.path,
+                line: model.startLine,
+                reason: `Database model '${model.name}' relates to '${meta.name}' domain`
+              }
+            });
+            break;
+          }
+        }
+      }
+
+      // 3. Process symbols and file paths
+      for (const symbol of facts.symbols) {
+        const lowerPath = symbol.path.toLowerCase();
+        const lowerSym = symbol.name.toLowerCase();
+
+        // Check path components (e.g. src/features/payment/ or src/components/payment/)
+        for (const [kw, meta] of Object.entries(DOMAIN_KEYWORDS)) {
+          const inPath = lowerPath.includes(`/${kw}/`) || lowerPath.includes(`-${kw}`) || lowerPath.includes(`_${kw}`);
+          const inSymbol = lowerSym.includes(kw);
+
+          if (inPath || inSymbol) {
+            const cand = getOrCreateCandidate(kw, meta.name, meta.tags);
+            const isDir = inPath;
+            cand.nodes.push({
+              node: symbol,
+              confidence: isDir ? 'DETECTED' : 'INFERRED',
+              score: isDir ? 0.85 : 0.6,
+              evidence: {
+                type: isDir ? 'directory_cluster' : 'semantic_similarity',
+                file: symbol.path,
+                line: symbol.startLine,
+                symbol: symbol.name,
+                reason: isDir
+                  ? `File path '${symbol.path}' clusters in '${kw}' directory`
+                  : `Symbol '${symbol.name}' matches '${kw}' domain vocabulary`
+              }
+            });
+            break;
+          }
+        }
+      }
+
+      // 4. Process tests
+      for (const test of facts.tests) {
+        const lowerName = test.name.toLowerCase();
+        const lowerPath = test.path.toLowerCase();
+
+        for (const [kw, meta] of Object.entries(DOMAIN_KEYWORDS)) {
+          if (lowerPath.includes(kw) || lowerName.includes(kw)) {
+            const cand = getOrCreateCandidate(kw, meta.name, meta.tags);
+            cand.nodes.push({
+              node: test,
+              confidence: 'DETECTED',
+              score: 0.8,
+              evidence: {
+                type: 'ast_call',
+                file: test.path,
+                line: test.startLine,
+                reason: `Test suite/case '${test.name}' targets '${meta.name}' functionality`
+              }
+            });
+            break;
+          }
+        }
+      }
+    }
+
+    // 5. Load explicit feature definitions
+    const { features: explicitFeatures, mappings } = this.explicitLoader.loadExplicitFeatures();
+    const finalFeatures: FeatureNode[] = [...explicitFeatures];
+    const edges: GraphEdge[] = [];
+    let edgeIndex = 1;
+
+    // Apply explicit mappings
+    for (const [featUrn, def] of mappings) {
+      const explicitFeat = finalFeatures.find((f) => f.urn === featUrn);
+      if (!explicitFeat) continue;
+
+      for (const facts of factsList) {
+        for (const sym of facts.symbols) {
+          if (
+            (def.components && def.components.includes(sym.name)) ||
+            (def.services && def.services.includes(sym.name))
+          ) {
+            edges.push({
+              id: `edge-exp-${edgeIndex++}`,
+              sourceUrn: sym.urn,
+              targetUrn: featUrn,
+              relationship: 'implements',
+              confidence: 'EXPLICIT',
+              confidenceScore: 1.0,
+              provenance: { source: 'explicit', timestamp: new Date().toISOString() },
+              evidence: {
+                type: 'explicit_declaration',
+                file: sym.path,
+                line: sym.startLine,
+                symbol: sym.name,
+                reason: `Explicitly assigned in feature definition '${def.feature}'`
+              },
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            });
+          }
+        }
+      }
+    }
+
+    // Add candidates that aren't already explicitly declared
+    for (const cand of candidates.values()) {
+      const urn = createFeatureUrn(cand.id);
+      let featureNode = finalFeatures.find((f) => f.urn === urn);
+
+      if (!featureNode) {
+        featureNode = {
+          urn,
+          kind: 'feature',
+          name: cand.id,
+          displayName: cand.name,
+          path: '',
+          status: 'active',
+          aliases: [],
+          confidence: cand.confidence,
+          confidenceScore: cand.score,
+          source: 'ast',
+          tags: cand.tags,
+          metadata: {},
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString()
+        };
+        finalFeatures.push(featureNode);
+      }
+
+      for (const item of cand.nodes) {
+        // Prevent duplicate edges
+        if (!edges.some((e) => e.sourceUrn === item.node.urn && e.targetUrn === urn)) {
+          edges.push({
+            id: `edge-auto-${edgeIndex++}`,
+            sourceUrn: item.node.urn,
+            targetUrn: urn,
+            relationship: 'implements',
+            confidence: item.confidence,
+            confidenceScore: item.score,
+            provenance: { source: 'ast', timestamp: new Date().toISOString() },
+            evidence: item.evidence,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+          });
+        }
+      }
+    }
+
+    return {
+      features: finalFeatures,
+      edges
+    };
+  }
+}

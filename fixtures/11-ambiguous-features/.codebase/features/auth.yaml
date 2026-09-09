@@ -1,0 +1,9 @@
+feature: authentication
+name: Authentication
+description: User authentication and session management
+components:
+  - UserLoginForm
+services:
+  - authenticateUser
+routes:
+  - /api/auth/session

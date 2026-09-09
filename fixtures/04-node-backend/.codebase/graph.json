@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "urn": "urn:trace:feature:orders",
+      "kind": "feature",
+      "name": "orders",
+      "displayName": "Orders",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "ecommerce",
+        "order"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "urn": "urn:trace:file:package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "fa3f2e8d9648cbc658a76b227dd9478d603e4752daca738e1e901e95b41482f5"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "urn": "urn:trace:file:src/routes/orderRoutes.js",
+      "kind": "file",
+      "name": "orderRoutes.js",
+      "path": "src/routes/orderRoutes.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "1b8c4eb5dc6d00ef80eca0d7e7cecdc32b21107ef3d69467f1462ac6902ebd43"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "urn": "urn:trace:file:src/services/orderService.js",
+      "kind": "file",
+      "name": "orderService.js",
+      "path": "src/services/orderService.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "73c999c1ca4fd5314af7c4a4d6f187e5c4b664dd1b6b6b904275b927de177bd3"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "urn": "urn:trace:route:src/routes/orderRoutes.js#POST:/api/order/cancel",
+      "kind": "route",
+      "name": "POST /api/order/cancel",
+      "path": "src/routes/orderRoutes.js",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "POST",
+      "routePath": "/api/order/cancel",
+      "startLine": 13,
+      "endLine": 17,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.217Z",
+      "updatedAt": "2026-09-09T12:47:00.217Z"
+    },
+    {
+      "urn": "urn:trace:route:src/routes/orderRoutes.js#POST:/api/order/create",
+      "kind": "route",
+      "name": "POST /api/order/create",
+      "path": "src/routes/orderRoutes.js",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "POST",
+      "routePath": "/api/order/create",
+      "startLine": 7,
+      "endLine": 11,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.217Z",
+      "updatedAt": "2026-09-09T12:47:00.217Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/orderRoutes.js#order",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "order",
+      "path": "src/routes/orderRoutes.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 9,
+      "endLine": 9,
+      "contentHash": "dc778fa90fed07ba",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.217Z",
+      "updatedAt": "2026-09-09T12:47:00.217Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/orderRoutes.js#orderService",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "orderService",
+      "path": "src/routes/orderRoutes.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "94f7c06df4760218",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.217Z",
+      "updatedAt": "2026-09-09T12:47:00.217Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/orderRoutes.js#result",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "result",
+      "path": "src/routes/orderRoutes.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 15,
+      "endLine": 15,
+      "contentHash": "85ffeacaa3199697",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.218Z",
+      "updatedAt": "2026-09-09T12:47:00.218Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/orderRoutes.js#router",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "router",
+      "path": "src/routes/orderRoutes.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "4508e8f16f46a575",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.217Z",
+      "updatedAt": "2026-09-09T12:47:00.217Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/orderService.js#OrderService",
+      "kind": "symbol",
+      "symbolKind": "class",
+      "name": "OrderService",
+      "path": "src/services/orderService.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 1,
+      "endLine": 15,
+      "contentHash": "ff6bfbb20f727838",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.219Z",
+      "updatedAt": "2026-09-09T12:47:00.219Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/orderService.js#OrderService.cancelOrder",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "cancelOrder",
+      "path": "src/services/orderService.js",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "OrderService",
+      "startLine": 12,
+      "endLine": 14,
+      "contentHash": "d200f3afa95d0c8b",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.219Z",
+      "updatedAt": "2026-09-09T12:47:00.219Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/orderService.js#OrderService.createOrder",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "createOrder",
+      "path": "src/services/orderService.js",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "OrderService",
+      "startLine": 2,
+      "endLine": 10,
+      "contentHash": "5604cc7effdfa210",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.219Z",
+      "updatedAt": "2026-09-09T12:47:00.219Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/orderService.js#total",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "total",
+      "path": "src/services/orderService.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 3,
+      "endLine": 3,
+      "contentHash": "c305b65fbb0b4b3c",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.219Z",
+      "updatedAt": "2026-09-09T12:47:00.219Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-auto-1",
+      "sourceUrn": "urn:trace:route:src/routes/orderRoutes.js#POST:/api/order/create",
+      "targetUrn": "urn:trace:feature:orders",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.220Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "src/routes/orderRoutes.js",
+        "line": 7,
+        "reason": "Route path '/api/order/create' matches domain 'order'"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "id": "edge-auto-2",
+      "sourceUrn": "urn:trace:route:src/routes/orderRoutes.js#POST:/api/order/cancel",
+      "targetUrn": "urn:trace:feature:orders",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.220Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "src/routes/orderRoutes.js",
+        "line": 13,
+        "reason": "Route path '/api/order/cancel' matches domain 'order'"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "id": "edge-auto-3",
+      "sourceUrn": "urn:trace:symbol:src/routes/orderRoutes.js#orderService",
+      "targetUrn": "urn:trace:feature:orders",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.220Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/routes/orderRoutes.js",
+        "line": 5,
+        "symbol": "orderService",
+        "reason": "Symbol 'orderService' matches 'order' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "id": "edge-auto-4",
+      "sourceUrn": "urn:trace:symbol:src/routes/orderRoutes.js#order",
+      "targetUrn": "urn:trace:feature:orders",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.220Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/routes/orderRoutes.js",
+        "line": 9,
+        "symbol": "order",
+        "reason": "Symbol 'order' matches 'order' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "id": "edge-auto-5",
+      "sourceUrn": "urn:trace:symbol:src/services/orderService.js#OrderService",
+      "targetUrn": "urn:trace:feature:orders",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.220Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/orderService.js",
+        "line": 1,
+        "symbol": "OrderService",
+        "reason": "Symbol 'OrderService' matches 'order' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "id": "edge-auto-6",
+      "sourceUrn": "urn:trace:symbol:src/services/orderService.js#OrderService.createOrder",
+      "targetUrn": "urn:trace:feature:orders",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.220Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/orderService.js",
+        "line": 2,
+        "symbol": "createOrder",
+        "reason": "Symbol 'createOrder' matches 'order' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "id": "edge-auto-7",
+      "sourceUrn": "urn:trace:symbol:src/services/orderService.js#OrderService.cancelOrder",
+      "targetUrn": "urn:trace:feature:orders",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.220Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/orderService.js",
+        "line": 12,
+        "symbol": "cancelOrder",
+        "reason": "Symbol 'cancelOrder' matches 'order' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "id": "edge-struct-call-2",
+      "sourceUrn": "urn:trace:file:src/routes/orderRoutes.js",
+      "targetUrn": "urn:trace:symbol:src/services/orderService.js#OrderService.createOrder",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.220Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/routes/orderRoutes.js",
+        "line": 9,
+        "symbol": "createOrder",
+        "reason": "AST invocation of 'orderService.createOrder'"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "id": "edge-struct-call-3",
+      "sourceUrn": "urn:trace:file:src/routes/orderRoutes.js",
+      "targetUrn": "urn:trace:symbol:src/services/orderService.js#OrderService.cancelOrder",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.220Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/routes/orderRoutes.js",
+        "line": 15,
+        "symbol": "cancelOrder",
+        "reason": "AST invocation of 'orderService.cancelOrder'"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    },
+    {
+      "id": "edge-struct-imp-1",
+      "sourceUrn": "urn:trace:file:src/routes/orderRoutes.js",
+      "targetUrn": "urn:trace:symbol:src/services/orderService.js#OrderService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.220Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/routes/orderRoutes.js",
+        "line": 2,
+        "symbol": "OrderService",
+        "reason": "AST import of 'OrderService' from '../services/orderService.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.220Z",
+      "updatedAt": "2026-09-09T12:47:00.220Z"
+    }
+  ]
+}

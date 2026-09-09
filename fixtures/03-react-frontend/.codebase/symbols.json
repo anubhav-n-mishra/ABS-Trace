@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:src/components/NotificationBanner.tsx#NotificationBanner",
+      "name": "NotificationBanner",
+      "path": "src/components/NotificationBanner.tsx",
+      "symbolKind": "component",
+      "startLine": 4,
+      "endLine": 15,
+      "contentHash": "8ecfbed1b6fc180d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/hooks/useNotification.ts#notify",
+      "name": "notify",
+      "path": "src/hooks/useNotification.ts",
+      "symbolKind": "variable",
+      "startLine": 6,
+      "endLine": 8,
+      "contentHash": "1033e71b85e1fdeb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/hooks/useNotification.ts#useNotification",
+      "name": "useNotification",
+      "path": "src/hooks/useNotification.ts",
+      "symbolKind": "hook",
+      "startLine": 3,
+      "endLine": 11,
+      "contentHash": "e0eab9746a02cf06",
+      "status": "active"
+    }
+  ]
+}

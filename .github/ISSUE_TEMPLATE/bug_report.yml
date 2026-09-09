@@ -1,0 +1,50 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in Amvelt TRACE
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! Please check existing issues first.
+        **Do NOT report security vulnerabilities here; consult SECURITY.md.**
+  - type: input
+    id: version
+    attributes:
+      label: TRACE Version
+      description: Run `trace --version` and paste the output.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Node.js version and Operating System
+      placeholder: "Node 20.11.0 on Windows 11 / Ubuntu 22.04"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What Happened?
+      description: Clear and concise description of the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step reproduction instructions.
+      placeholder: |
+        1. Run `trace init` in repository...
+        2. Execute `trace feature payments`
+        3. See error...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen instead?
+    validations:
+      required: true

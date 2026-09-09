@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "features": [
+    {
+      "urn": "urn:trace:feature:authentication",
+      "name": "authentication",
+      "displayName": "Authentication",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "security",
+        "session"
+      ]
+    },
+    {
+      "urn": "urn:trace:feature:payments",
+      "name": "payments",
+      "displayName": "Payments",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "billing",
+        "checkout",
+        "upi"
+      ]
+    }
+  ]
+}

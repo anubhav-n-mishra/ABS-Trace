@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:server.js#app",
+      "name": "app",
+      "path": "server.js",
+      "symbolKind": "variable",
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "0ba021d569ddf3ab",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#current_session",
+      "name": "current_session",
+      "path": "server.js",
+      "symbolKind": "variable",
+      "startLine": 9,
+      "endLine": 9,
+      "contentHash": "de67244190728273",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#do_login_thing",
+      "name": "do_login_thing",
+      "path": "server.js",
+      "symbolKind": "function",
+      "startLine": 12,
+      "endLine": 18,
+      "contentHash": "82eebbb3ab417c19",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#out",
+      "name": "out",
+      "path": "server.js",
+      "symbolKind": "variable",
+      "startLine": 39,
+      "endLine": 39,
+      "contentHash": "afa93e94361766f8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#p_val",
+      "name": "p_val",
+      "path": "server.js",
+      "symbolKind": "variable",
+      "startLine": 22,
+      "endLine": 22,
+      "contentHash": "3c50a3bb1dca46d2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#pay_now_fast",
+      "name": "pay_now_fast",
+      "path": "server.js",
+      "symbolKind": "function",
+      "startLine": 21,
+      "endLine": 29,
+      "contentHash": "2926b959e91dc104",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#payments_db",
+      "name": "payments_db",
+      "path": "server.js",
+      "symbolKind": "variable",
+      "startLine": 8,
+      "endLine": 8,
+      "contentHash": "f67fa1963e321442",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#rec",
+      "name": "rec",
+      "path": "server.js",
+      "symbolKind": "variable",
+      "startLine": 26,
+      "endLine": 26,
+      "contentHash": "80fc6f55de908050",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#res_data",
+      "name": "res_data",
+      "path": "server.js",
+      "symbolKind": "variable",
+      "startLine": 33,
+      "endLine": 33,
+      "contentHash": "9d9544a4f7da30c9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#users_db",
+      "name": "users_db",
+      "path": "server.js",
+      "symbolKind": "variable",
+      "startLine": 7,
+      "endLine": 7,
+      "contentHash": "56941a0eb8bc0d70",
+      "status": "active"
+    }
+  ]
+}

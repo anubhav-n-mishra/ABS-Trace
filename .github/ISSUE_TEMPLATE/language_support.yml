@@ -1,0 +1,24 @@
+name: Language Support Request
+description: Propose support for a new programming language or framework
+labels: ["parser", "language-support"]
+body:
+  - type: input
+    id: language
+    attributes:
+      label: Programming Language / Ecosystem
+      placeholder: "Python, Go, Rust, Java, etc."
+    validations:
+      required: true
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: Common Frameworks & File Patterns
+      description: What frameworks, route conventions, or ORM patterns are common in this language?
+      placeholder: "e.g. FastAPI routes, Django models, pytest files"
+    validations:
+      required: true
+  - type: textarea
+    id: tooling
+    attributes:
+      label: Suggested AST Tooling / Parsers
+      description: Are there recommended Tree-sitter or AST libraries suitable for local parsing?

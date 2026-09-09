@@ -1,0 +1,783 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "urn": "urn:trace:feature:user-management",
+      "kind": "feature",
+      "name": "user-management",
+      "displayName": "User Management",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "account",
+        "profile"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.185Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "urn": "urn:trace:file:package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "e98286d29542dbfaa793aafa7cca1abfa13574daca1b5bbdbfd3fc9147f62a06"
+      },
+      "createdAt": "2026-09-09T12:47:00.184Z",
+      "updatedAt": "2026-09-09T12:47:00.184Z"
+    },
+    {
+      "urn": "urn:trace:file:src/routes/user.ts",
+      "kind": "file",
+      "name": "user.ts",
+      "path": "src/routes/user.ts",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "e8787090ea903e97da0bed8f35eae7090cd161104246efb5a4d4bbca9ff1b778"
+      },
+      "createdAt": "2026-09-09T12:47:00.184Z",
+      "updatedAt": "2026-09-09T12:47:00.184Z"
+    },
+    {
+      "urn": "urn:trace:file:src/services/UserService.ts",
+      "kind": "file",
+      "name": "UserService.ts",
+      "path": "src/services/UserService.ts",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "3d5076dab68d5f534b5e26141695d3e147918ca3eb89e754d6281bd249d94a51"
+      },
+      "createdAt": "2026-09-09T12:47:00.184Z",
+      "updatedAt": "2026-09-09T12:47:00.184Z"
+    },
+    {
+      "urn": "urn:trace:file:src/types/user.ts",
+      "kind": "file",
+      "name": "user.ts",
+      "path": "src/types/user.ts",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "c5c754c92f24bb20c2cd83a0425c2f7f24d003a3621d5f44cbe93da77f392695"
+      },
+      "createdAt": "2026-09-09T12:47:00.185Z",
+      "updatedAt": "2026-09-09T12:47:00.185Z"
+    },
+    {
+      "urn": "urn:trace:file:tests/user.test.ts",
+      "kind": "file",
+      "name": "user.test.ts",
+      "path": "tests/user.test.ts",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "d32e48e7c7f776fb78884bd653fb0604d1032f6b1097e0b91f9f042807cd0b31"
+      },
+      "createdAt": "2026-09-09T12:47:00.184Z",
+      "updatedAt": "2026-09-09T12:47:00.184Z"
+    },
+    {
+      "urn": "urn:trace:route:src/routes/user.ts#GET:/api/user/:id",
+      "kind": "route",
+      "name": "GET /api/user/:id",
+      "path": "src/routes/user.ts",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "GET",
+      "routePath": "/api/user/:id",
+      "startLine": 7,
+      "endLine": 13,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.177Z",
+      "updatedAt": "2026-09-09T12:47:00.177Z"
+    },
+    {
+      "urn": "urn:trace:route:src/routes/user.ts#PUT:/api/user/:id/profile",
+      "kind": "route",
+      "name": "PUT /api/user/:id/profile",
+      "path": "src/routes/user.ts",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "PUT",
+      "routePath": "/api/user/:id/profile",
+      "startLine": 15,
+      "endLine": 22,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.177Z",
+      "updatedAt": "2026-09-09T12:47:00.177Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/user.ts#router",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "router",
+      "path": "src/routes/user.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "fa5ec7c26e1d7a0b",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.177Z",
+      "updatedAt": "2026-09-09T12:47:00.177Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/user.ts#updated",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "updated",
+      "path": "src/routes/user.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 17,
+      "endLine": 17,
+      "contentHash": "1eb0b7bdb5a0dd92",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.177Z",
+      "updatedAt": "2026-09-09T12:47:00.177Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/user.ts#user",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "user",
+      "path": "src/routes/user.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 8,
+      "endLine": 8,
+      "contentHash": "a8f1f40b7cff67fd",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.177Z",
+      "updatedAt": "2026-09-09T12:47:00.177Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/user.ts#userService",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "userService",
+      "path": "src/routes/user.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "5d69b368a6f290eb",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.177Z",
+      "updatedAt": "2026-09-09T12:47:00.177Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/UserService.ts#user",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "user",
+      "path": "src/services/UserService.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 11,
+      "endLine": 11,
+      "contentHash": "e48b092d5675c40e",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.182Z",
+      "updatedAt": "2026-09-09T12:47:00.182Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/UserService.ts#UserService",
+      "kind": "symbol",
+      "symbolKind": "class",
+      "name": "UserService",
+      "path": "src/services/UserService.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 3,
+      "endLine": 18,
+      "contentHash": "447ab008197cdcae",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.182Z",
+      "updatedAt": "2026-09-09T12:47:00.182Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/UserService.ts#UserService.findUserById",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "findUserById",
+      "path": "src/services/UserService.ts",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "UserService",
+      "startLine": 6,
+      "endLine": 8,
+      "contentHash": "c365c61c051948ce",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.182Z",
+      "updatedAt": "2026-09-09T12:47:00.182Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/UserService.ts#UserService.updateUserProfile",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "updateUserProfile",
+      "path": "src/services/UserService.ts",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "UserService",
+      "startLine": 10,
+      "endLine": 17,
+      "contentHash": "52a03250623322ba",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.182Z",
+      "updatedAt": "2026-09-09T12:47:00.182Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/types/user.ts#User",
+      "kind": "symbol",
+      "symbolKind": "interface",
+      "name": "User",
+      "path": "src/types/user.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 9,
+      "endLine": 15,
+      "contentHash": "eb18eef7908ed5d2",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.184Z",
+      "updatedAt": "2026-09-09T12:47:00.184Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/types/user.ts#UserProfile",
+      "kind": "symbol",
+      "symbolKind": "interface",
+      "name": "UserProfile",
+      "path": "src/types/user.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 3,
+      "endLine": 7,
+      "contentHash": "1f4dcd3a7768011c",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.184Z",
+      "updatedAt": "2026-09-09T12:47:00.184Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/types/user.ts#UserRole",
+      "kind": "symbol",
+      "symbolKind": "type",
+      "name": "UserRole",
+      "path": "src/types/user.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 1,
+      "endLine": 1,
+      "contentHash": "c98577d1b51ed446",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.184Z",
+      "updatedAt": "2026-09-09T12:47:00.184Z"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/user.test.ts#service",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "service",
+      "path": "tests/user.test.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "173b5f9c2a872bd7",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.171Z",
+      "updatedAt": "2026-09-09T12:47:00.171Z"
+    },
+    {
+      "urn": "urn:trace:test:tests/user.test.ts#updates profile correctly",
+      "kind": "test",
+      "name": "updates profile correctly",
+      "path": "tests/user.test.ts",
+      "status": "active",
+      "aliases": [],
+      "testType": "case",
+      "testName": "updates profile correctly",
+      "startLine": 4,
+      "endLine": 7,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.170Z",
+      "updatedAt": "2026-09-09T12:47:00.170Z"
+    },
+    {
+      "urn": "urn:trace:test:tests/user.test.ts#User Management",
+      "kind": "test",
+      "name": "User Management",
+      "path": "tests/user.test.ts",
+      "status": "active",
+      "aliases": [],
+      "testType": "suite",
+      "suiteName": "User Management",
+      "testName": "User Management",
+      "startLine": 3,
+      "endLine": 8,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.170Z",
+      "updatedAt": "2026-09-09T12:47:00.170Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-auto-1",
+      "sourceUrn": "urn:trace:test:tests/user.test.ts#User Management",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.8,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/user.test.ts",
+        "line": 3,
+        "reason": "Test suite/case 'User Management' targets 'User Management' functionality"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-10",
+      "sourceUrn": "urn:trace:symbol:src/services/UserService.ts#user",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/UserService.ts",
+        "line": 11,
+        "symbol": "user",
+        "reason": "Symbol 'user' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-11",
+      "sourceUrn": "urn:trace:symbol:src/types/user.ts#UserRole",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/types/user.ts",
+        "line": 1,
+        "symbol": "UserRole",
+        "reason": "Symbol 'UserRole' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-12",
+      "sourceUrn": "urn:trace:symbol:src/types/user.ts#UserProfile",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/types/user.ts",
+        "line": 3,
+        "symbol": "UserProfile",
+        "reason": "Symbol 'UserProfile' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-13",
+      "sourceUrn": "urn:trace:symbol:src/types/user.ts#User",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/types/user.ts",
+        "line": 9,
+        "symbol": "User",
+        "reason": "Symbol 'User' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-2",
+      "sourceUrn": "urn:trace:test:tests/user.test.ts#updates profile correctly",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.8,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/user.test.ts",
+        "line": 4,
+        "reason": "Test suite/case 'updates profile correctly' targets 'User Management' functionality"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-3",
+      "sourceUrn": "urn:trace:route:src/routes/user.ts#GET:/api/user/:id",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "src/routes/user.ts",
+        "line": 7,
+        "reason": "Route path '/api/user/:id' matches domain 'user'"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-4",
+      "sourceUrn": "urn:trace:route:src/routes/user.ts#PUT:/api/user/:id/profile",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "src/routes/user.ts",
+        "line": 15,
+        "reason": "Route path '/api/user/:id/profile' matches domain 'user'"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-5",
+      "sourceUrn": "urn:trace:symbol:src/routes/user.ts#userService",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/routes/user.ts",
+        "line": 5,
+        "symbol": "userService",
+        "reason": "Symbol 'userService' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-6",
+      "sourceUrn": "urn:trace:symbol:src/routes/user.ts#user",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/routes/user.ts",
+        "line": 8,
+        "symbol": "user",
+        "reason": "Symbol 'user' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-7",
+      "sourceUrn": "urn:trace:symbol:src/services/UserService.ts#UserService",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/UserService.ts",
+        "line": 3,
+        "symbol": "UserService",
+        "reason": "Symbol 'UserService' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-8",
+      "sourceUrn": "urn:trace:symbol:src/services/UserService.ts#UserService.findUserById",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/UserService.ts",
+        "line": 6,
+        "symbol": "findUserById",
+        "reason": "Symbol 'findUserById' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-auto-9",
+      "sourceUrn": "urn:trace:symbol:src/services/UserService.ts#UserService.updateUserProfile",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/UserService.ts",
+        "line": 10,
+        "symbol": "updateUserProfile",
+        "reason": "Symbol 'updateUserProfile' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-struct-call-5",
+      "sourceUrn": "urn:trace:file:src/routes/user.ts",
+      "targetUrn": "urn:trace:symbol:src/services/UserService.ts#UserService.findUserById",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/routes/user.ts",
+        "line": 8,
+        "symbol": "findUserById",
+        "reason": "AST invocation of 'userService.findUserById'"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-struct-call-6",
+      "sourceUrn": "urn:trace:file:src/routes/user.ts",
+      "targetUrn": "urn:trace:symbol:src/services/UserService.ts#UserService.updateUserProfile",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/routes/user.ts",
+        "line": 17,
+        "symbol": "updateUserProfile",
+        "reason": "AST invocation of 'userService.updateUserProfile'"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-struct-imp-1",
+      "sourceUrn": "urn:trace:file:tests/user.test.ts",
+      "targetUrn": "urn:trace:symbol:src/services/UserService.ts#UserService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "tests/user.test.ts",
+        "line": 1,
+        "symbol": "UserService",
+        "reason": "AST import of 'UserService' from '../src/services/UserService.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-struct-imp-4",
+      "sourceUrn": "urn:trace:file:src/routes/user.ts",
+      "targetUrn": "urn:trace:symbol:src/services/UserService.ts#UserService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/routes/user.ts",
+        "line": 2,
+        "symbol": "UserService",
+        "reason": "AST import of 'UserService' from '../services/UserService.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-struct-imp-7",
+      "sourceUrn": "urn:trace:file:src/services/UserService.ts",
+      "targetUrn": "urn:trace:symbol:src/types/user.ts#User",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/services/UserService.ts",
+        "line": 1,
+        "symbol": "User",
+        "reason": "AST import of 'User' from '../types/user.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-struct-imp-8",
+      "sourceUrn": "urn:trace:file:src/services/UserService.ts",
+      "targetUrn": "urn:trace:symbol:src/types/user.ts#UserProfile",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/services/UserService.ts",
+        "line": 1,
+        "symbol": "UserProfile",
+        "reason": "AST import of 'UserProfile' from '../types/user.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-struct-test-2",
+      "sourceUrn": "urn:trace:test:tests/user.test.ts#User Management",
+      "targetUrn": "urn:trace:symbol:src/services/UserService.ts#UserService",
+      "relationship": "tests",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/user.test.ts",
+        "line": 3,
+        "symbol": "UserService",
+        "reason": "Test 'User Management' in file importing 'UserService'"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    },
+    {
+      "id": "edge-struct-test-3",
+      "sourceUrn": "urn:trace:test:tests/user.test.ts#updates profile correctly",
+      "targetUrn": "urn:trace:symbol:src/services/UserService.ts#UserService",
+      "relationship": "tests",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.186Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/user.test.ts",
+        "line": 4,
+        "symbol": "UserService",
+        "reason": "Test 'updates profile correctly' in file importing 'UserService'"
+      },
+      "createdAt": "2026-09-09T12:47:00.186Z",
+      "updatedAt": "2026-09-09T12:47:00.186Z"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:src/routes/user.ts#router",
+      "name": "router",
+      "path": "src/routes/user.ts",
+      "symbolKind": "variable",
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "fa5ec7c26e1d7a0b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/user.ts#updated",
+      "name": "updated",
+      "path": "src/routes/user.ts",
+      "symbolKind": "variable",
+      "startLine": 17,
+      "endLine": 17,
+      "contentHash": "1eb0b7bdb5a0dd92",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/user.ts#user",
+      "name": "user",
+      "path": "src/routes/user.ts",
+      "symbolKind": "variable",
+      "startLine": 8,
+      "endLine": 8,
+      "contentHash": "a8f1f40b7cff67fd",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/user.ts#userService",
+      "name": "userService",
+      "path": "src/routes/user.ts",
+      "symbolKind": "variable",
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "5d69b368a6f290eb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/UserService.ts#user",
+      "name": "user",
+      "path": "src/services/UserService.ts",
+      "symbolKind": "variable",
+      "startLine": 11,
+      "endLine": 11,
+      "contentHash": "e48b092d5675c40e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/UserService.ts#UserService",
+      "name": "UserService",
+      "path": "src/services/UserService.ts",
+      "symbolKind": "class",
+      "startLine": 3,
+      "endLine": 18,
+      "contentHash": "447ab008197cdcae",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/UserService.ts#UserService.findUserById",
+      "name": "findUserById",
+      "path": "src/services/UserService.ts",
+      "symbolKind": "method",
+      "startLine": 6,
+      "endLine": 8,
+      "contentHash": "c365c61c051948ce",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/UserService.ts#UserService.updateUserProfile",
+      "name": "updateUserProfile",
+      "path": "src/services/UserService.ts",
+      "symbolKind": "method",
+      "startLine": 10,
+      "endLine": 17,
+      "contentHash": "52a03250623322ba",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/types/user.ts#User",
+      "name": "User",
+      "path": "src/types/user.ts",
+      "symbolKind": "interface",
+      "startLine": 9,
+      "endLine": 15,
+      "contentHash": "eb18eef7908ed5d2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/types/user.ts#UserProfile",
+      "name": "UserProfile",
+      "path": "src/types/user.ts",
+      "symbolKind": "interface",
+      "startLine": 3,
+      "endLine": 7,
+      "contentHash": "1f4dcd3a7768011c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/types/user.ts#UserRole",
+      "name": "UserRole",
+      "path": "src/types/user.ts",
+      "symbolKind": "type",
+      "startLine": 1,
+      "endLine": 1,
+      "contentHash": "c98577d1b51ed446",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/user.test.ts#service",
+      "name": "service",
+      "path": "tests/user.test.ts",
+      "symbolKind": "variable",
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "173b5f9c2a872bd7",
+      "status": "active"
+    }
+  ]
+}

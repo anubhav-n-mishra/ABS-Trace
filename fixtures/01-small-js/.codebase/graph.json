@@ -1,0 +1,1342 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "urn": "urn:trace:feature:authentication",
+      "kind": "feature",
+      "name": "authentication",
+      "displayName": "Authentication",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "security",
+        "session"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:feature:payments",
+      "kind": "feature",
+      "name": "payments",
+      "displayName": "Payments",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "billing",
+        "checkout",
+        "upi"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:file:package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "6437587c028847ecb9c558c76cdddfefa22ee568a5e928d3ef5066fb92db2bc7"
+      },
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:file:src/app.js",
+      "kind": "file",
+      "name": "app.js",
+      "path": "src/app.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "42e017b11494f1c391b0e91444c5de2f21cfc910c2dee0bd95b397a9e43c4f3d"
+      },
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:file:src/components/PaymentForm.jsx",
+      "kind": "file",
+      "name": "PaymentForm.jsx",
+      "path": "src/components/PaymentForm.jsx",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "2735d0819ef0d80ea89e317c140e92213edb3e68fca044513eb00820c374cf12"
+      },
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:file:src/routes/auth.js",
+      "kind": "file",
+      "name": "auth.js",
+      "path": "src/routes/auth.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "9dfabf264e222b6232323a83c94b5568170b1e018b75c345df24bad7282ab192"
+      },
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:file:src/routes/payment.js",
+      "kind": "file",
+      "name": "payment.js",
+      "path": "src/routes/payment.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "9bf1585a662d6a6fc4da88c8338336493f9e2e06f667a7834de154a27db363ef"
+      },
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:file:src/services/auth.js",
+      "kind": "file",
+      "name": "auth.js",
+      "path": "src/services/auth.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "ac11e0d10e735ce06393c475a8e7be4683505a80ca7c1db84b5269d7ed065ddb"
+      },
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:file:src/services/payment.js",
+      "kind": "file",
+      "name": "payment.js",
+      "path": "src/services/payment.js",
+      "status": "retired",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "98db856db5a94ef0c53219a00d59c5c30eb2c2e51c85864c9769d279493f8417"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.314Z",
+      "retiredAt": "2026-09-09T12:47:00.314Z"
+    },
+    {
+      "urn": "urn:trace:file:tests/auth.test.js",
+      "kind": "file",
+      "name": "auth.test.js",
+      "path": "tests/auth.test.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "304a68b821aa414dab17a47f8e854217dcc8139a9abd515bdbaa8214ced05d08"
+      },
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:file:tests/payment.test.js",
+      "kind": "file",
+      "name": "payment.test.js",
+      "path": "tests/payment.test.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "03c010fa3127ed16851df3f508896bf4bdd2cc48991cf1339e14ce5d8073b367"
+      },
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:route:src/routes/auth.js#POST:/api/auth/login",
+      "kind": "route",
+      "name": "POST /api/auth/login",
+      "path": "src/routes/auth.js",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "POST",
+      "routePath": "/api/auth/login",
+      "startLine": 6,
+      "endLine": 14,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:route:src/routes/payment.js#GET:/api/payment/status",
+      "kind": "route",
+      "name": "GET /api/payment/status",
+      "path": "src/routes/payment.js",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "GET",
+      "routePath": "/api/payment/status",
+      "startLine": 16,
+      "endLine": 20,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:route:src/routes/payment.js#POST:/api/payment/upi",
+      "kind": "route",
+      "name": "POST /api/payment/upi",
+      "path": "src/routes/payment.js",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "POST",
+      "routePath": "/api/payment/upi",
+      "startLine": 6,
+      "endLine": 14,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/app.js#app",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "app",
+      "path": "src/app.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "0ba021d569ddf3ab",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.284Z",
+      "updatedAt": "2026-09-09T12:47:00.284Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/components/PaymentForm.jsx#handleSubmit",
+      "kind": "symbol",
+      "symbolKind": "function",
+      "name": "handleSubmit",
+      "path": "src/components/PaymentForm.jsx",
+      "status": "active",
+      "aliases": [],
+      "startLine": 8,
+      "endLine": 12,
+      "contentHash": "215c7967be10897d",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.287Z",
+      "updatedAt": "2026-09-09T12:47:00.287Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/components/PaymentForm.jsx#PaymentForm",
+      "kind": "symbol",
+      "symbolKind": "component",
+      "name": "PaymentForm",
+      "path": "src/components/PaymentForm.jsx",
+      "status": "active",
+      "aliases": [],
+      "startLine": 4,
+      "endLine": 26,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "c59a6f0eb093e76d",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.287Z",
+      "updatedAt": "2026-09-09T12:47:00.287Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/components/PaymentForm.jsx#res",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "res",
+      "path": "src/components/PaymentForm.jsx",
+      "status": "active",
+      "aliases": [],
+      "startLine": 10,
+      "endLine": 10,
+      "contentHash": "919299a5fa8a20a3",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.287Z",
+      "updatedAt": "2026-09-09T12:47:00.287Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/auth.js#router",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "router",
+      "path": "src/routes/auth.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "4508e8f16f46a575",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/auth.js#session",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "session",
+      "path": "src/routes/auth.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 9,
+      "endLine": 9,
+      "contentHash": "4b2ca7f6b0ad002c",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/payment.js#result",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "result",
+      "path": "src/routes/payment.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 9,
+      "endLine": 9,
+      "contentHash": "978f0e7def891b9a",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/payment.js#router",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "router",
+      "path": "src/routes/payment.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "4508e8f16f46a575",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/payment.js#verified",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "verified",
+      "path": "src/routes/payment.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 18,
+      "endLine": 18,
+      "contentHash": "bcdf859f1522aeb0",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/auth.js#generateToken",
+      "kind": "symbol",
+      "symbolKind": "function",
+      "name": "generateToken",
+      "path": "src/services/auth.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 9,
+      "endLine": 11,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "cadc358e8c117e0d",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.289Z",
+      "updatedAt": "2026-09-09T12:47:00.289Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/auth.js#loginUser",
+      "kind": "symbol",
+      "symbolKind": "function",
+      "name": "loginUser",
+      "path": "src/services/auth.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 2,
+      "endLine": 7,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "6ceccb97a06c8618",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.289Z",
+      "updatedAt": "2026-09-09T12:47:00.289Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#calculateConvenienceFee",
+      "kind": "symbol",
+      "symbolKind": "function",
+      "name": "calculateConvenienceFee",
+      "path": "src/services/payment.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 26,
+      "endLine": 28,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "cffda6e4a824f1da",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.314Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#defaultPaymentService",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "defaultPaymentService",
+      "path": "src/services/payment.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 24,
+      "endLine": 24,
+      "contentHash": "5847d9d375a1b6fd",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.314Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#PaymentService",
+      "kind": "symbol",
+      "symbolKind": "class",
+      "name": "PaymentService",
+      "path": "src/services/payment.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 2,
+      "endLine": 22,
+      "contentHash": "642cbb51b849670c",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.314Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#PaymentService.processUPIPayment",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "processUPIPayment",
+      "path": "src/services/payment.js",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "PaymentService",
+      "startLine": 3,
+      "endLine": 12,
+      "contentHash": "0d41605413829d15",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.314Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#PaymentService.refundUPIPayment",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "refundUPIPayment",
+      "path": "src/services/payment.js",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "PaymentService",
+      "startLine": 18,
+      "endLine": 21,
+      "contentHash": "1d7524dbce899895",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.314Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#PaymentService.verifyUPIResponse",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "verifyUPIResponse",
+      "path": "src/services/payment.js",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "PaymentService",
+      "startLine": 14,
+      "endLine": 16,
+      "contentHash": "ad05d3d8efe892fb",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.314Z"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/auth.test.js#session",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "session",
+      "path": "tests/auth.test.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "79c74ad087904d85",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.285Z",
+      "updatedAt": "2026-09-09T12:47:00.285Z"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/payment.test.js#res",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "res",
+      "path": "tests/payment.test.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 6,
+      "endLine": 6,
+      "contentHash": "e9349ca8d239102f",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.285Z",
+      "updatedAt": "2026-09-09T12:47:00.285Z"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/payment.test.js#service",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "service",
+      "path": "tests/payment.test.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 11,
+      "endLine": 11,
+      "contentHash": "31af018f2d246eae",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.285Z",
+      "updatedAt": "2026-09-09T12:47:00.285Z"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/payment.test.js#verified",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "verified",
+      "path": "tests/payment.test.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 12,
+      "endLine": 12,
+      "contentHash": "8c31d89909c7966d",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.285Z",
+      "updatedAt": "2026-09-09T12:47:00.285Z"
+    },
+    {
+      "urn": "urn:trace:test:tests/auth.test.js#authenticates valid credentials",
+      "kind": "test",
+      "name": "authenticates valid credentials",
+      "path": "tests/auth.test.js",
+      "status": "active",
+      "aliases": [],
+      "testType": "case",
+      "testName": "authenticates valid credentials",
+      "startLine": 4,
+      "endLine": 7,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.285Z",
+      "updatedAt": "2026-09-09T12:47:00.285Z"
+    },
+    {
+      "urn": "urn:trace:test:tests/auth.test.js#Authentication",
+      "kind": "test",
+      "name": "Authentication",
+      "path": "tests/auth.test.js",
+      "status": "active",
+      "aliases": [],
+      "testType": "suite",
+      "suiteName": "Authentication",
+      "testName": "Authentication",
+      "startLine": 3,
+      "endLine": 8,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.285Z",
+      "updatedAt": "2026-09-09T12:47:00.285Z"
+    },
+    {
+      "urn": "urn:trace:test:tests/payment.test.js#Payments",
+      "kind": "test",
+      "name": "Payments",
+      "path": "tests/payment.test.js",
+      "status": "active",
+      "aliases": [],
+      "testType": "suite",
+      "suiteName": "Payments",
+      "testName": "Payments",
+      "startLine": 3,
+      "endLine": 15,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.285Z",
+      "updatedAt": "2026-09-09T12:47:00.285Z"
+    },
+    {
+      "urn": "urn:trace:test:tests/payment.test.js#processes valid UPI payments",
+      "kind": "test",
+      "name": "processes valid UPI payments",
+      "path": "tests/payment.test.js",
+      "status": "active",
+      "aliases": [],
+      "testType": "case",
+      "testName": "processes valid UPI payments",
+      "startLine": 4,
+      "endLine": 8,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.285Z",
+      "updatedAt": "2026-09-09T12:47:00.285Z"
+    },
+    {
+      "urn": "urn:trace:test:tests/payment.test.js#verifies UPI transaction response",
+      "kind": "test",
+      "name": "verifies UPI transaction response",
+      "path": "tests/payment.test.js",
+      "status": "active",
+      "aliases": [],
+      "testType": "case",
+      "testName": "verifies UPI transaction response",
+      "startLine": 10,
+      "endLine": 14,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.285Z",
+      "updatedAt": "2026-09-09T12:47:00.285Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-auto-1",
+      "sourceUrn": "urn:trace:symbol:src/services/payment.js#PaymentService",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.315Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/payment.js",
+        "line": 2,
+        "symbol": "PaymentService",
+        "reason": "Symbol 'PaymentService' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.315Z",
+      "updatedAt": "2026-09-09T12:47:00.315Z"
+    },
+    {
+      "id": "edge-auto-10",
+      "sourceUrn": "urn:trace:symbol:src/components/PaymentForm.jsx#PaymentForm",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/components/PaymentForm.jsx",
+        "line": 4,
+        "symbol": "PaymentForm",
+        "reason": "Symbol 'PaymentForm' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-11",
+      "sourceUrn": "urn:trace:route:src/routes/payment.js#POST:/api/payment/upi",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "src/routes/payment.js",
+        "line": 6,
+        "reason": "Route path '/api/payment/upi' matches domain 'payment'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-12",
+      "sourceUrn": "urn:trace:route:src/routes/payment.js#GET:/api/payment/status",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "src/routes/payment.js",
+        "line": 16,
+        "reason": "Route path '/api/payment/status' matches domain 'payment'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-13",
+      "sourceUrn": "urn:trace:symbol:src/services/payment.js#PaymentService",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/payment.js",
+        "line": 2,
+        "symbol": "PaymentService",
+        "reason": "Symbol 'PaymentService' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-14",
+      "sourceUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.processUPIPayment",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/payment.js",
+        "line": 3,
+        "symbol": "processUPIPayment",
+        "reason": "Symbol 'processUPIPayment' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-15",
+      "sourceUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.verifyUPIResponse",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/payment.js",
+        "line": 14,
+        "symbol": "verifyUPIResponse",
+        "reason": "Symbol 'verifyUPIResponse' matches 'upi' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-16",
+      "sourceUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.refundUPIPayment",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/payment.js",
+        "line": 18,
+        "symbol": "refundUPIPayment",
+        "reason": "Symbol 'refundUPIPayment' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-17",
+      "sourceUrn": "urn:trace:symbol:src/services/payment.js#defaultPaymentService",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/payment.js",
+        "line": 24,
+        "symbol": "defaultPaymentService",
+        "reason": "Symbol 'defaultPaymentService' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-2",
+      "sourceUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.processUPIPayment",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.315Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/payment.js",
+        "line": 3,
+        "symbol": "processUPIPayment",
+        "reason": "Symbol 'processUPIPayment' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.315Z",
+      "updatedAt": "2026-09-09T12:47:00.315Z"
+    },
+    {
+      "id": "edge-auto-3",
+      "sourceUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.verifyUPIResponse",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.315Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/payment.js",
+        "line": 14,
+        "symbol": "verifyUPIResponse",
+        "reason": "Symbol 'verifyUPIResponse' matches 'upi' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.315Z",
+      "updatedAt": "2026-09-09T12:47:00.315Z"
+    },
+    {
+      "id": "edge-auto-4",
+      "sourceUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.refundUPIPayment",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.315Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/payment.js",
+        "line": 18,
+        "symbol": "refundUPIPayment",
+        "reason": "Symbol 'refundUPIPayment' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.315Z",
+      "updatedAt": "2026-09-09T12:47:00.315Z"
+    },
+    {
+      "id": "edge-auto-5",
+      "sourceUrn": "urn:trace:symbol:src/services/payment.js#defaultPaymentService",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.315Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/payment.js",
+        "line": 24,
+        "symbol": "defaultPaymentService",
+        "reason": "Symbol 'defaultPaymentService' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.315Z",
+      "updatedAt": "2026-09-09T12:47:00.315Z"
+    },
+    {
+      "id": "edge-auto-6",
+      "sourceUrn": "urn:trace:symbol:src/services/auth.js#loginUser",
+      "targetUrn": "urn:trace:feature:authentication",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/auth.js",
+        "line": 2,
+        "symbol": "loginUser",
+        "reason": "Symbol 'loginUser' matches 'login' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-7",
+      "sourceUrn": "urn:trace:test:tests/payment.test.js#Payments",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.8,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/payment.test.js",
+        "line": 3,
+        "reason": "Test suite/case 'Payments' targets 'Payments' functionality"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-8",
+      "sourceUrn": "urn:trace:test:tests/payment.test.js#processes valid UPI payments",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.8,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/payment.test.js",
+        "line": 4,
+        "reason": "Test suite/case 'processes valid UPI payments' targets 'Payments' functionality"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-9",
+      "sourceUrn": "urn:trace:test:tests/payment.test.js#verifies UPI transaction response",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.8,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/payment.test.js",
+        "line": 10,
+        "reason": "Test suite/case 'verifies UPI transaction response' targets 'Payments' functionality"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-call-10",
+      "sourceUrn": "urn:trace:file:tests/payment.test.js",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.verifyUPIResponse",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/payment.test.js",
+        "line": 12,
+        "symbol": "verifyUPIResponse",
+        "reason": "AST invocation of 'service.verifyUPIResponse'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-call-12",
+      "sourceUrn": "urn:trace:file:src/components/PaymentForm.jsx",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.processUPIPayment",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/components/PaymentForm.jsx",
+        "line": 10,
+        "symbol": "processUPIPayment",
+        "reason": "AST invocation of 'defaultPaymentService.processUPIPayment'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-call-14",
+      "sourceUrn": "urn:trace:file:src/routes/auth.js",
+      "targetUrn": "urn:trace:symbol:src/services/auth.js#loginUser",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/routes/auth.js",
+        "line": 9,
+        "symbol": "loginUser",
+        "reason": "AST invocation of 'loginUser'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-call-16",
+      "sourceUrn": "urn:trace:file:src/routes/payment.js",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.processUPIPayment",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/routes/payment.js",
+        "line": 9,
+        "symbol": "processUPIPayment",
+        "reason": "AST invocation of 'defaultPaymentService.processUPIPayment'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-call-17",
+      "sourceUrn": "urn:trace:file:src/routes/payment.js",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.verifyUPIResponse",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/routes/payment.js",
+        "line": 18,
+        "symbol": "verifyUPIResponse",
+        "reason": "AST invocation of 'defaultPaymentService.verifyUPIResponse'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-call-4",
+      "sourceUrn": "urn:trace:file:tests/auth.test.js",
+      "targetUrn": "urn:trace:symbol:src/services/auth.js#loginUser",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/auth.test.js",
+        "line": 5,
+        "symbol": "loginUser",
+        "reason": "AST invocation of 'loginUser'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-call-9",
+      "sourceUrn": "urn:trace:file:tests/payment.test.js",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#PaymentService.processUPIPayment",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/payment.test.js",
+        "line": 6,
+        "symbol": "processUPIPayment",
+        "reason": "AST invocation of 'service.processUPIPayment'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-imp-1",
+      "sourceUrn": "urn:trace:file:tests/auth.test.js",
+      "targetUrn": "urn:trace:symbol:src/services/auth.js#loginUser",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "tests/auth.test.js",
+        "line": 1,
+        "symbol": "loginUser",
+        "reason": "AST import of 'loginUser' from '../src/services/auth.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-imp-11",
+      "sourceUrn": "urn:trace:file:src/components/PaymentForm.jsx",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#defaultPaymentService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/components/PaymentForm.jsx",
+        "line": 2,
+        "symbol": "defaultPaymentService",
+        "reason": "AST import of 'defaultPaymentService' from '../services/payment.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-imp-13",
+      "sourceUrn": "urn:trace:file:src/routes/auth.js",
+      "targetUrn": "urn:trace:symbol:src/services/auth.js#loginUser",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/routes/auth.js",
+        "line": 2,
+        "symbol": "loginUser",
+        "reason": "AST import of 'loginUser' from '../services/auth.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-imp-15",
+      "sourceUrn": "urn:trace:file:src/routes/payment.js",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#defaultPaymentService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/routes/payment.js",
+        "line": 2,
+        "symbol": "defaultPaymentService",
+        "reason": "AST import of 'defaultPaymentService' from '../services/payment.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-imp-5",
+      "sourceUrn": "urn:trace:file:tests/payment.test.js",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#PaymentService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "tests/payment.test.js",
+        "line": 1,
+        "symbol": "PaymentService",
+        "reason": "AST import of 'PaymentService' from '../src/services/payment.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-test-2",
+      "sourceUrn": "urn:trace:test:tests/auth.test.js#Authentication",
+      "targetUrn": "urn:trace:symbol:src/services/auth.js#loginUser",
+      "relationship": "tests",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/auth.test.js",
+        "line": 3,
+        "symbol": "loginUser",
+        "reason": "Test 'Authentication' in file importing 'loginUser'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-test-3",
+      "sourceUrn": "urn:trace:test:tests/auth.test.js#authenticates valid credentials",
+      "targetUrn": "urn:trace:symbol:src/services/auth.js#loginUser",
+      "relationship": "tests",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/auth.test.js",
+        "line": 4,
+        "symbol": "loginUser",
+        "reason": "Test 'authenticates valid credentials' in file importing 'loginUser'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-test-6",
+      "sourceUrn": "urn:trace:test:tests/payment.test.js#Payments",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#PaymentService",
+      "relationship": "tests",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/payment.test.js",
+        "line": 3,
+        "symbol": "PaymentService",
+        "reason": "Test 'Payments' in file importing 'PaymentService'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-test-7",
+      "sourceUrn": "urn:trace:test:tests/payment.test.js#processes valid UPI payments",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#PaymentService",
+      "relationship": "tests",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/payment.test.js",
+        "line": 4,
+        "symbol": "PaymentService",
+        "reason": "Test 'processes valid UPI payments' in file importing 'PaymentService'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-test-8",
+      "sourceUrn": "urn:trace:test:tests/payment.test.js#verifies UPI transaction response",
+      "targetUrn": "urn:trace:symbol:src/services/payment.js#PaymentService",
+      "relationship": "tests",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/payment.test.js",
+        "line": 10,
+        "symbol": "PaymentService",
+        "reason": "Test 'verifies UPI transaction response' in file importing 'PaymentService'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    }
+  ]
+}

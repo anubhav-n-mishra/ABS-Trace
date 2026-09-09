@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "generator": "Amvelt TRACE v0.1.0",
+  "generatedAt": "2026-09-09T13:03:03.465Z",
+  "gitCommit": "uncommitted",
+  "stats": {
+    "nodeCount": 922,
+    "edgeCount": 807,
+    "featureCount": 9,
+    "symbolCount": 728,
+    "fileCount": 117
+  }
+}

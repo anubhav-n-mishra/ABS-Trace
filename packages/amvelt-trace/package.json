@@ -1,0 +1,40 @@
+{
+  "name": "@amvelt/trace",
+  "version": "0.1.0",
+  "description": "Amvelt TRACE - Branded distribution for Amvelt TRACE",
+  "author": "Anubhav Mishra",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "trace": "./bin/trace.js",
+    "abs-trace": "./bin/trace.js",
+    "codebase-map": "./bin/trace.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node ./build.js"
+  },
+  "dependencies": {
+    "@anubhavm/trace": "^0.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anubhav-n-mishra/ABS-Trace.git"
+  }
+}

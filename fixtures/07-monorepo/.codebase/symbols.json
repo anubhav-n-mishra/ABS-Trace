@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:packages/api-gateway/src/index.ts#app",
+      "name": "app",
+      "path": "packages/api-gateway/src/index.ts",
+      "symbolKind": "variable",
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "0ba021d569ddf3ab",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/api-gateway/src/index.ts#user",
+      "name": "user",
+      "path": "packages/api-gateway/src/index.ts",
+      "symbolKind": "variable",
+      "startLine": 7,
+      "endLine": 7,
+      "contentHash": "1cb9eb17c6a71392",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/shared-types/src/index.ts#SharedAuthUser",
+      "name": "SharedAuthUser",
+      "path": "packages/shared-types/src/index.ts",
+      "symbolKind": "interface",
+      "startLine": 1,
+      "endLine": 4,
+      "contentHash": "b0677a1975380364",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/shared-types/src/index.ts#SharedPaymentToken",
+      "name": "SharedPaymentToken",
+      "path": "packages/shared-types/src/index.ts",
+      "symbolKind": "interface",
+      "startLine": 6,
+      "endLine": 9,
+      "contentHash": "e0bbfcbd14205e5a",
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:src/features/auth/login.js#authenticateUser",
+      "name": "authenticateUser",
+      "path": "src/features/auth/login.js",
+      "symbolKind": "function",
+      "startLine": 1,
+      "endLine": 4,
+      "contentHash": "3b762a138e68d8eb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/payment.js#router",
+      "name": "router",
+      "path": "src/routes/payment.js",
+      "symbolKind": "variable",
+      "startLine": 3,
+      "endLine": 3,
+      "contentHash": "4508e8f16f46a575",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/utils/tokenHelper.js#parseTokenHeader",
+      "name": "parseTokenHeader",
+      "path": "src/utils/tokenHelper.js",
+      "symbolKind": "function",
+      "startLine": 2,
+      "endLine": 6,
+      "contentHash": "28753ae12af10e7d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/utils/tokenHelper.js#parts",
+      "name": "parts",
+      "path": "src/utils/tokenHelper.js",
+      "symbolKind": "variable",
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "f9f330b689060d04",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/utils/tokenHelper.js#validateGenericToken",
+      "name": "validateGenericToken",
+      "path": "src/utils/tokenHelper.js",
+      "symbolKind": "function",
+      "startLine": 8,
+      "endLine": 10,
+      "contentHash": "9065521d80d3a6f8",
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "features": [
+    {
+      "urn": "urn:trace:feature:user-management",
+      "name": "user-management",
+      "displayName": "User Management",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "account",
+        "profile"
+      ]
+    }
+  ]
+}

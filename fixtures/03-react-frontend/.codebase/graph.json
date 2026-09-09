@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "urn": "urn:trace:feature:notifications",
+      "kind": "feature",
+      "name": "notifications",
+      "displayName": "Notifications",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "alerts",
+        "email"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.209Z",
+      "updatedAt": "2026-09-09T12:47:00.209Z"
+    },
+    {
+      "urn": "urn:trace:file:package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "61272992d9a178534aecb5a65bbc7b6fd3186496d541cf2fc6353ba2acdeed70"
+      },
+      "createdAt": "2026-09-09T12:47:00.209Z",
+      "updatedAt": "2026-09-09T12:47:00.209Z"
+    },
+    {
+      "urn": "urn:trace:file:src/components/NotificationBanner.tsx",
+      "kind": "file",
+      "name": "NotificationBanner.tsx",
+      "path": "src/components/NotificationBanner.tsx",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "9240ac6b1689d69a01eabf9b2a78923f1bc679a33fb1c8a71758225a3c69d0dc"
+      },
+      "createdAt": "2026-09-09T12:47:00.209Z",
+      "updatedAt": "2026-09-09T12:47:00.209Z"
+    },
+    {
+      "urn": "urn:trace:file:src/hooks/useNotification.ts",
+      "kind": "file",
+      "name": "useNotification.ts",
+      "path": "src/hooks/useNotification.ts",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "e2f1eea4e42ce27eafc8a4c9f100b642faabb1fdebeb32b9487c7e785fe5721a"
+      },
+      "createdAt": "2026-09-09T12:47:00.209Z",
+      "updatedAt": "2026-09-09T12:47:00.209Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/components/NotificationBanner.tsx#NotificationBanner",
+      "kind": "symbol",
+      "symbolKind": "component",
+      "name": "NotificationBanner",
+      "path": "src/components/NotificationBanner.tsx",
+      "status": "active",
+      "aliases": [],
+      "startLine": 4,
+      "endLine": 15,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "8ecfbed1b6fc180d",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.206Z",
+      "updatedAt": "2026-09-09T12:47:00.206Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/hooks/useNotification.ts#notify",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "notify",
+      "path": "src/hooks/useNotification.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 6,
+      "endLine": 8,
+      "contentHash": "1033e71b85e1fdeb",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.209Z",
+      "updatedAt": "2026-09-09T12:47:00.209Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/hooks/useNotification.ts#useNotification",
+      "kind": "symbol",
+      "symbolKind": "hook",
+      "name": "useNotification",
+      "path": "src/hooks/useNotification.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 3,
+      "endLine": 11,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "e0eab9746a02cf06",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.209Z",
+      "updatedAt": "2026-09-09T12:47:00.209Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-auto-1",
+      "sourceUrn": "urn:trace:symbol:src/components/NotificationBanner.tsx#NotificationBanner",
+      "targetUrn": "urn:trace:feature:notifications",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.209Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/components/NotificationBanner.tsx",
+        "line": 4,
+        "symbol": "NotificationBanner",
+        "reason": "Symbol 'NotificationBanner' matches 'notification' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.209Z",
+      "updatedAt": "2026-09-09T12:47:00.209Z"
+    },
+    {
+      "id": "edge-auto-2",
+      "sourceUrn": "urn:trace:symbol:src/hooks/useNotification.ts#useNotification",
+      "targetUrn": "urn:trace:feature:notifications",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.209Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/hooks/useNotification.ts",
+        "line": 3,
+        "symbol": "useNotification",
+        "reason": "Symbol 'useNotification' matches 'notification' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.209Z",
+      "updatedAt": "2026-09-09T12:47:00.209Z"
+    },
+    {
+      "id": "edge-struct-call-2",
+      "sourceUrn": "urn:trace:file:src/components/NotificationBanner.tsx",
+      "targetUrn": "urn:trace:symbol:src/hooks/useNotification.ts#useNotification",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.209Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/components/NotificationBanner.tsx",
+        "line": 5,
+        "symbol": "useNotification",
+        "reason": "AST invocation of 'useNotification'"
+      },
+      "createdAt": "2026-09-09T12:47:00.209Z",
+      "updatedAt": "2026-09-09T12:47:00.209Z"
+    },
+    {
+      "id": "edge-struct-imp-1",
+      "sourceUrn": "urn:trace:file:src/components/NotificationBanner.tsx",
+      "targetUrn": "urn:trace:symbol:src/hooks/useNotification.ts#useNotification",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.209Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/components/NotificationBanner.tsx",
+        "line": 2,
+        "symbol": "useNotification",
+        "reason": "AST import of 'useNotification' from '../hooks/useNotification.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.209Z",
+      "updatedAt": "2026-09-09T12:47:00.209Z"
+    }
+  ]
+}

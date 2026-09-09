@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "urn": "urn:trace:feature:authentication",
+      "kind": "feature",
+      "name": "authentication",
+      "displayName": "Authentication",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "security",
+        "session"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:feature:payments",
+      "kind": "feature",
+      "name": "payments",
+      "displayName": "Payments",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "billing",
+        "checkout"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:feature:user-management",
+      "kind": "feature",
+      "name": "user-management",
+      "displayName": "User Management",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "account",
+        "profile"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:file:package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "c1b0a8b2003cb7ea489a7e7f8d2b5cfe6912f812948aed0e2e77548713e5ccee"
+      },
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:file:server.js",
+      "kind": "file",
+      "name": "server.js",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "c7559be9a9ff808397210527cab07a8aeba56566567afcb47386d436d397d1b6"
+      },
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:route:server.js#GET:/api/payment/list_all",
+      "kind": "route",
+      "name": "GET /api/payment/list_all",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "GET",
+      "routePath": "/api/payment/list_all",
+      "startLine": 46,
+      "endLine": 48,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:route:server.js#POST:/api/auth/login_quick",
+      "kind": "route",
+      "name": "POST /api/auth/login_quick",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "POST",
+      "routePath": "/api/auth/login_quick",
+      "startLine": 32,
+      "endLine": 35,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:route:server.js#POST:/api/payment/pay_instant",
+      "kind": "route",
+      "name": "POST /api/payment/pay_instant",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "POST",
+      "routePath": "/api/payment/pay_instant",
+      "startLine": 37,
+      "endLine": 44,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#app",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "app",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "0ba021d569ddf3ab",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.241Z",
+      "updatedAt": "2026-09-09T12:47:00.241Z"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#current_session",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "current_session",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 9,
+      "endLine": 9,
+      "contentHash": "de67244190728273",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#do_login_thing",
+      "kind": "symbol",
+      "symbolKind": "function",
+      "name": "do_login_thing",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 12,
+      "endLine": 18,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "82eebbb3ab417c19",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#out",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "out",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 39,
+      "endLine": 39,
+      "contentHash": "afa93e94361766f8",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#p_val",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "p_val",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 22,
+      "endLine": 22,
+      "contentHash": "3c50a3bb1dca46d2",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#pay_now_fast",
+      "kind": "symbol",
+      "symbolKind": "function",
+      "name": "pay_now_fast",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 21,
+      "endLine": 29,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "2926b959e91dc104",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#payments_db",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "payments_db",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 8,
+      "endLine": 8,
+      "contentHash": "f67fa1963e321442",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#rec",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "rec",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 26,
+      "endLine": 26,
+      "contentHash": "80fc6f55de908050",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#res_data",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "res_data",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 33,
+      "endLine": 33,
+      "contentHash": "9d9544a4f7da30c9",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "urn": "urn:trace:symbol:server.js#users_db",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "users_db",
+      "path": "server.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 7,
+      "endLine": 7,
+      "contentHash": "56941a0eb8bc0d70",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-auto-1",
+      "sourceUrn": "urn:trace:route:server.js#POST:/api/auth/login_quick",
+      "targetUrn": "urn:trace:feature:authentication",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.242Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "server.js",
+        "line": 32,
+        "reason": "Route path '/api/auth/login_quick' matches domain 'auth'"
+      },
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "id": "edge-auto-2",
+      "sourceUrn": "urn:trace:symbol:server.js#current_session",
+      "targetUrn": "urn:trace:feature:authentication",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.242Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "server.js",
+        "line": 9,
+        "symbol": "current_session",
+        "reason": "Symbol 'current_session' matches 'session' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "id": "edge-auto-3",
+      "sourceUrn": "urn:trace:symbol:server.js#do_login_thing",
+      "targetUrn": "urn:trace:feature:authentication",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.242Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "server.js",
+        "line": 12,
+        "symbol": "do_login_thing",
+        "reason": "Symbol 'do_login_thing' matches 'login' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "id": "edge-auto-4",
+      "sourceUrn": "urn:trace:route:server.js#POST:/api/payment/pay_instant",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.242Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "server.js",
+        "line": 37,
+        "reason": "Route path '/api/payment/pay_instant' matches domain 'payment'"
+      },
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "id": "edge-auto-5",
+      "sourceUrn": "urn:trace:route:server.js#GET:/api/payment/list_all",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.242Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "server.js",
+        "line": 46,
+        "reason": "Route path '/api/payment/list_all' matches domain 'payment'"
+      },
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "id": "edge-auto-6",
+      "sourceUrn": "urn:trace:symbol:server.js#payments_db",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.242Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "server.js",
+        "line": 8,
+        "symbol": "payments_db",
+        "reason": "Symbol 'payments_db' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    },
+    {
+      "id": "edge-auto-7",
+      "sourceUrn": "urn:trace:symbol:server.js#users_db",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.242Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "server.js",
+        "line": 7,
+        "symbol": "users_db",
+        "reason": "Symbol 'users_db' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.242Z",
+      "updatedAt": "2026-09-09T12:47:00.242Z"
+    }
+  ]
+}

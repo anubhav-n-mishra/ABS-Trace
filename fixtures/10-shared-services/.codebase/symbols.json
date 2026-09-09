@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:src/features/checkout/checkoutService.js#charge",
+      "name": "charge",
+      "path": "src/features/checkout/checkoutService.js",
+      "symbolKind": "variable",
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "1966e78b6264c9e6",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/checkout/checkoutService.js#CheckoutManager",
+      "name": "CheckoutManager",
+      "path": "src/features/checkout/checkoutService.js",
+      "symbolKind": "class",
+      "startLine": 3,
+      "endLine": 8,
+      "contentHash": "3248e9e61a676984",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/checkout/checkoutService.js#CheckoutManager.completeCheckout",
+      "name": "completeCheckout",
+      "path": "src/features/checkout/checkoutService.js",
+      "symbolKind": "method",
+      "startLine": 4,
+      "endLine": 7,
+      "contentHash": "0e3f4d25bebc8a7b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/invoice/invoiceService.js#charge",
+      "name": "charge",
+      "path": "src/features/invoice/invoiceService.js",
+      "symbolKind": "variable",
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "6a751be7f6a8ed07",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/invoice/invoiceService.js#InvoiceManager",
+      "name": "InvoiceManager",
+      "path": "src/features/invoice/invoiceService.js",
+      "symbolKind": "class",
+      "startLine": 3,
+      "endLine": 8,
+      "contentHash": "7e16bb18f40b0852",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/invoice/invoiceService.js#InvoiceManager.payInvoice",
+      "name": "payInvoice",
+      "path": "src/features/invoice/invoiceService.js",
+      "symbolKind": "method",
+      "startLine": 4,
+      "endLine": 7,
+      "contentHash": "494be6f65f8334ee",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/subscription/subscriptionService.js#charge",
+      "name": "charge",
+      "path": "src/features/subscription/subscriptionService.js",
+      "symbolKind": "variable",
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "40bbc19e192d04d7",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/subscription/subscriptionService.js#SubscriptionManager",
+      "name": "SubscriptionManager",
+      "path": "src/features/subscription/subscriptionService.js",
+      "symbolKind": "class",
+      "startLine": 3,
+      "endLine": 8,
+      "contentHash": "5df4f559f9980292",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/subscription/subscriptionService.js#SubscriptionManager.renewSubscription",
+      "name": "renewSubscription",
+      "path": "src/features/subscription/subscriptionService.js",
+      "symbolKind": "method",
+      "startLine": 4,
+      "endLine": 7,
+      "contentHash": "c9be4fdd08f9eab9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/paymentService.js#paymentService",
+      "name": "paymentService",
+      "path": "src/services/paymentService.js",
+      "symbolKind": "variable",
+      "startLine": 11,
+      "endLine": 11,
+      "contentHash": "017fb61ffd5ce448",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/paymentService.js#SharedPaymentService",
+      "name": "SharedPaymentService",
+      "path": "src/services/paymentService.js",
+      "symbolKind": "class",
+      "startLine": 1,
+      "endLine": 9,
+      "contentHash": "a48ebddd3781b7bb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/paymentService.js#SharedPaymentService.processCharge",
+      "name": "processCharge",
+      "path": "src/services/paymentService.js",
+      "symbolKind": "method",
+      "startLine": 2,
+      "endLine": 4,
+      "contentHash": "168ef387961da25c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/paymentService.js#SharedPaymentService.processRefund",
+      "name": "processRefund",
+      "path": "src/services/paymentService.js",
+      "symbolKind": "method",
+      "startLine": 6,
+      "endLine": 8,
+      "contentHash": "faebf19c4cbc4069",
+      "status": "active"
+    }
+  ]
+}

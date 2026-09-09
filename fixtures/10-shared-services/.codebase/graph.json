@@ -1,0 +1,718 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "urn": "urn:trace:feature:checkout",
+      "kind": "feature",
+      "name": "checkout",
+      "displayName": "Checkout",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "order",
+        "ecommerce"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:feature:invoicing",
+      "kind": "feature",
+      "name": "invoicing",
+      "displayName": "Invoicing",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "billing",
+        "invoice"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:feature:payments",
+      "kind": "feature",
+      "name": "payments",
+      "displayName": "Payments",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "billing",
+        "checkout"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:feature:subscriptions",
+      "kind": "feature",
+      "name": "subscriptions",
+      "displayName": "Subscriptions",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "billing",
+        "recurring"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:file:package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "5f684408780f614dcedb811107767cb2167b4567b3bd0c8212ff274594b6cc0a"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:file:src/features/checkout/checkoutService.js",
+      "kind": "file",
+      "name": "checkoutService.js",
+      "path": "src/features/checkout/checkoutService.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "ddf12a7a48537793a647b9981b8f106305855175e4b5907e1755ee9d90d07677"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:file:src/features/invoice/invoiceService.js",
+      "kind": "file",
+      "name": "invoiceService.js",
+      "path": "src/features/invoice/invoiceService.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "bd53ba1e15f6258a32937fa98cb923f4f6101b7f6fa985fa5207a0c29fa37df6"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:file:src/features/subscription/subscriptionService.js",
+      "kind": "file",
+      "name": "subscriptionService.js",
+      "path": "src/features/subscription/subscriptionService.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "7b3c02de234fe678cfcd85b97cfed060a09c2783385e0a025240c0f07316e4f2"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:file:src/services/paymentService.js",
+      "kind": "file",
+      "name": "paymentService.js",
+      "path": "src/services/paymentService.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "b9365357cf7798ebf52ff09a4f4afe36fec4e3fde89136897b618978488c8d5a"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/checkout/checkoutService.js#charge",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "charge",
+      "path": "src/features/checkout/checkoutService.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "1966e78b6264c9e6",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.289Z",
+      "updatedAt": "2026-09-09T12:47:00.289Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/checkout/checkoutService.js#CheckoutManager",
+      "kind": "symbol",
+      "symbolKind": "class",
+      "name": "CheckoutManager",
+      "path": "src/features/checkout/checkoutService.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 3,
+      "endLine": 8,
+      "contentHash": "3248e9e61a676984",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.289Z",
+      "updatedAt": "2026-09-09T12:47:00.289Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/checkout/checkoutService.js#CheckoutManager.completeCheckout",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "completeCheckout",
+      "path": "src/features/checkout/checkoutService.js",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "CheckoutManager",
+      "startLine": 4,
+      "endLine": 7,
+      "contentHash": "0e3f4d25bebc8a7b",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.289Z",
+      "updatedAt": "2026-09-09T12:47:00.289Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/invoice/invoiceService.js#charge",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "charge",
+      "path": "src/features/invoice/invoiceService.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "6a751be7f6a8ed07",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/invoice/invoiceService.js#InvoiceManager",
+      "kind": "symbol",
+      "symbolKind": "class",
+      "name": "InvoiceManager",
+      "path": "src/features/invoice/invoiceService.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 3,
+      "endLine": 8,
+      "contentHash": "7e16bb18f40b0852",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/invoice/invoiceService.js#InvoiceManager.payInvoice",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "payInvoice",
+      "path": "src/features/invoice/invoiceService.js",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "InvoiceManager",
+      "startLine": 4,
+      "endLine": 7,
+      "contentHash": "494be6f65f8334ee",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/subscription/subscriptionService.js#charge",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "charge",
+      "path": "src/features/subscription/subscriptionService.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "40bbc19e192d04d7",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/subscription/subscriptionService.js#SubscriptionManager",
+      "kind": "symbol",
+      "symbolKind": "class",
+      "name": "SubscriptionManager",
+      "path": "src/features/subscription/subscriptionService.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 3,
+      "endLine": 8,
+      "contentHash": "5df4f559f9980292",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/subscription/subscriptionService.js#SubscriptionManager.renewSubscription",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "renewSubscription",
+      "path": "src/features/subscription/subscriptionService.js",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "SubscriptionManager",
+      "startLine": 4,
+      "endLine": 7,
+      "contentHash": "c9be4fdd08f9eab9",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.290Z",
+      "updatedAt": "2026-09-09T12:47:00.290Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/paymentService.js#paymentService",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "paymentService",
+      "path": "src/services/paymentService.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 11,
+      "endLine": 11,
+      "contentHash": "017fb61ffd5ce448",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/paymentService.js#SharedPaymentService",
+      "kind": "symbol",
+      "symbolKind": "class",
+      "name": "SharedPaymentService",
+      "path": "src/services/paymentService.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 1,
+      "endLine": 9,
+      "contentHash": "a48ebddd3781b7bb",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/paymentService.js#SharedPaymentService.processCharge",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "processCharge",
+      "path": "src/services/paymentService.js",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "SharedPaymentService",
+      "startLine": 2,
+      "endLine": 4,
+      "contentHash": "168ef387961da25c",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/paymentService.js#SharedPaymentService.processRefund",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "processRefund",
+      "path": "src/services/paymentService.js",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "SharedPaymentService",
+      "startLine": 6,
+      "endLine": 8,
+      "contentHash": "faebf19c4cbc4069",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.288Z",
+      "updatedAt": "2026-09-09T12:47:00.288Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-auto-1",
+      "sourceUrn": "urn:trace:symbol:src/services/paymentService.js#SharedPaymentService",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/paymentService.js",
+        "line": 1,
+        "symbol": "SharedPaymentService",
+        "reason": "Symbol 'SharedPaymentService' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-10",
+      "sourceUrn": "urn:trace:symbol:src/features/subscription/subscriptionService.js#SubscriptionManager.renewSubscription",
+      "targetUrn": "urn:trace:feature:subscriptions",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "directory_cluster",
+        "file": "src/features/subscription/subscriptionService.js",
+        "line": 4,
+        "symbol": "renewSubscription",
+        "reason": "File path 'src/features/subscription/subscriptionService.js' clusters in 'subscription' directory"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-11",
+      "sourceUrn": "urn:trace:symbol:src/features/subscription/subscriptionService.js#charge",
+      "targetUrn": "urn:trace:feature:subscriptions",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "directory_cluster",
+        "file": "src/features/subscription/subscriptionService.js",
+        "line": 5,
+        "symbol": "charge",
+        "reason": "File path 'src/features/subscription/subscriptionService.js' clusters in 'subscription' directory"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-2",
+      "sourceUrn": "urn:trace:symbol:src/services/paymentService.js#paymentService",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/paymentService.js",
+        "line": 11,
+        "symbol": "paymentService",
+        "reason": "Symbol 'paymentService' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-3",
+      "sourceUrn": "urn:trace:symbol:src/features/checkout/checkoutService.js#CheckoutManager",
+      "targetUrn": "urn:trace:feature:checkout",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "directory_cluster",
+        "file": "src/features/checkout/checkoutService.js",
+        "line": 3,
+        "symbol": "CheckoutManager",
+        "reason": "File path 'src/features/checkout/checkoutService.js' clusters in 'checkout' directory"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-4",
+      "sourceUrn": "urn:trace:symbol:src/features/checkout/checkoutService.js#CheckoutManager.completeCheckout",
+      "targetUrn": "urn:trace:feature:checkout",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "directory_cluster",
+        "file": "src/features/checkout/checkoutService.js",
+        "line": 4,
+        "symbol": "completeCheckout",
+        "reason": "File path 'src/features/checkout/checkoutService.js' clusters in 'checkout' directory"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-5",
+      "sourceUrn": "urn:trace:symbol:src/features/checkout/checkoutService.js#charge",
+      "targetUrn": "urn:trace:feature:checkout",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "directory_cluster",
+        "file": "src/features/checkout/checkoutService.js",
+        "line": 5,
+        "symbol": "charge",
+        "reason": "File path 'src/features/checkout/checkoutService.js' clusters in 'checkout' directory"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-6",
+      "sourceUrn": "urn:trace:symbol:src/features/invoice/invoiceService.js#InvoiceManager",
+      "targetUrn": "urn:trace:feature:invoicing",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "directory_cluster",
+        "file": "src/features/invoice/invoiceService.js",
+        "line": 3,
+        "symbol": "InvoiceManager",
+        "reason": "File path 'src/features/invoice/invoiceService.js' clusters in 'invoice' directory"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-7",
+      "sourceUrn": "urn:trace:symbol:src/features/invoice/invoiceService.js#InvoiceManager.payInvoice",
+      "targetUrn": "urn:trace:feature:invoicing",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "directory_cluster",
+        "file": "src/features/invoice/invoiceService.js",
+        "line": 4,
+        "symbol": "payInvoice",
+        "reason": "File path 'src/features/invoice/invoiceService.js' clusters in 'invoice' directory"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-8",
+      "sourceUrn": "urn:trace:symbol:src/features/invoice/invoiceService.js#charge",
+      "targetUrn": "urn:trace:feature:invoicing",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "directory_cluster",
+        "file": "src/features/invoice/invoiceService.js",
+        "line": 5,
+        "symbol": "charge",
+        "reason": "File path 'src/features/invoice/invoiceService.js' clusters in 'invoice' directory"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-auto-9",
+      "sourceUrn": "urn:trace:symbol:src/features/subscription/subscriptionService.js#SubscriptionManager",
+      "targetUrn": "urn:trace:feature:subscriptions",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "directory_cluster",
+        "file": "src/features/subscription/subscriptionService.js",
+        "line": 3,
+        "symbol": "SubscriptionManager",
+        "reason": "File path 'src/features/subscription/subscriptionService.js' clusters in 'subscription' directory"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-call-2",
+      "sourceUrn": "urn:trace:file:src/features/checkout/checkoutService.js",
+      "targetUrn": "urn:trace:symbol:src/services/paymentService.js#SharedPaymentService.processCharge",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/features/checkout/checkoutService.js",
+        "line": 5,
+        "symbol": "processCharge",
+        "reason": "AST invocation of 'paymentService.processCharge'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-call-4",
+      "sourceUrn": "urn:trace:file:src/features/invoice/invoiceService.js",
+      "targetUrn": "urn:trace:symbol:src/services/paymentService.js#SharedPaymentService.processCharge",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/features/invoice/invoiceService.js",
+        "line": 5,
+        "symbol": "processCharge",
+        "reason": "AST invocation of 'paymentService.processCharge'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-call-6",
+      "sourceUrn": "urn:trace:file:src/features/subscription/subscriptionService.js",
+      "targetUrn": "urn:trace:symbol:src/services/paymentService.js#SharedPaymentService.processCharge",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/features/subscription/subscriptionService.js",
+        "line": 5,
+        "symbol": "processCharge",
+        "reason": "AST invocation of 'paymentService.processCharge'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-imp-1",
+      "sourceUrn": "urn:trace:file:src/features/checkout/checkoutService.js",
+      "targetUrn": "urn:trace:symbol:src/services/paymentService.js#paymentService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/features/checkout/checkoutService.js",
+        "line": 1,
+        "symbol": "paymentService",
+        "reason": "AST import of 'paymentService' from '../../services/paymentService.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-imp-3",
+      "sourceUrn": "urn:trace:file:src/features/invoice/invoiceService.js",
+      "targetUrn": "urn:trace:symbol:src/services/paymentService.js#paymentService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/features/invoice/invoiceService.js",
+        "line": 1,
+        "symbol": "paymentService",
+        "reason": "AST import of 'paymentService' from '../../services/paymentService.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    },
+    {
+      "id": "edge-struct-imp-5",
+      "sourceUrn": "urn:trace:file:src/features/subscription/subscriptionService.js",
+      "targetUrn": "urn:trace:symbol:src/services/paymentService.js#paymentService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.291Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/features/subscription/subscriptionService.js",
+        "line": 1,
+        "symbol": "paymentService",
+        "reason": "AST import of 'paymentService' from '../../services/paymentService.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.291Z",
+      "updatedAt": "2026-09-09T12:47:00.291Z"
+    }
+  ]
+}

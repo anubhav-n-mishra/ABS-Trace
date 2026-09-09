@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:src/routes/orderRoutes.js#order",
+      "name": "order",
+      "path": "src/routes/orderRoutes.js",
+      "symbolKind": "variable",
+      "startLine": 9,
+      "endLine": 9,
+      "contentHash": "dc778fa90fed07ba",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/orderRoutes.js#orderService",
+      "name": "orderService",
+      "path": "src/routes/orderRoutes.js",
+      "symbolKind": "variable",
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "94f7c06df4760218",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/orderRoutes.js#result",
+      "name": "result",
+      "path": "src/routes/orderRoutes.js",
+      "symbolKind": "variable",
+      "startLine": 15,
+      "endLine": 15,
+      "contentHash": "85ffeacaa3199697",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/orderRoutes.js#router",
+      "name": "router",
+      "path": "src/routes/orderRoutes.js",
+      "symbolKind": "variable",
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "4508e8f16f46a575",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/orderService.js#OrderService",
+      "name": "OrderService",
+      "path": "src/services/orderService.js",
+      "symbolKind": "class",
+      "startLine": 1,
+      "endLine": 15,
+      "contentHash": "ff6bfbb20f727838",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/orderService.js#OrderService.cancelOrder",
+      "name": "cancelOrder",
+      "path": "src/services/orderService.js",
+      "symbolKind": "method",
+      "startLine": 12,
+      "endLine": 14,
+      "contentHash": "d200f3afa95d0c8b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/orderService.js#OrderService.createOrder",
+      "name": "createOrder",
+      "path": "src/services/orderService.js",
+      "symbolKind": "method",
+      "startLine": 2,
+      "endLine": 10,
+      "contentHash": "5604cc7effdfa210",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/orderService.js#total",
+      "name": "total",
+      "path": "src/services/orderService.js",
+      "symbolKind": "variable",
+      "startLine": 3,
+      "endLine": 3,
+      "contentHash": "c305b65fbb0b4b3c",
+      "status": "active"
+    }
+  ]
+}

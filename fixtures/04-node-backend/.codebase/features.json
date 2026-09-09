@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "features": [
+    {
+      "urn": "urn:trace:feature:orders",
+      "name": "orders",
+      "displayName": "Orders",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "ecommerce",
+        "order"
+      ]
+    }
+  ]
+}

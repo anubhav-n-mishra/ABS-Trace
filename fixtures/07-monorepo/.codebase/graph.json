@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "urn": "urn:trace:feature:authentication",
+      "kind": "feature",
+      "name": "authentication",
+      "displayName": "Authentication",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "security",
+        "session"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.250Z",
+      "updatedAt": "2026-09-09T12:47:00.250Z"
+    },
+    {
+      "urn": "urn:trace:feature:payments",
+      "kind": "feature",
+      "name": "payments",
+      "displayName": "Payments",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "billing",
+        "checkout"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.250Z",
+      "updatedAt": "2026-09-09T12:47:00.250Z"
+    },
+    {
+      "urn": "urn:trace:feature:user-management",
+      "kind": "feature",
+      "name": "user-management",
+      "displayName": "User Management",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "account",
+        "profile"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.250Z",
+      "updatedAt": "2026-09-09T12:47:00.250Z"
+    },
+    {
+      "urn": "urn:trace:file:package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "3d9c17353ec2d8927e0ab9f43f3bc94285660c051ef58a961f466c4abb270462"
+      },
+      "createdAt": "2026-09-09T12:47:00.249Z",
+      "updatedAt": "2026-09-09T12:47:00.249Z"
+    },
+    {
+      "urn": "urn:trace:file:packages/api-gateway/src/index.ts",
+      "kind": "file",
+      "name": "index.ts",
+      "path": "packages/api-gateway/src/index.ts",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "1c916f6451923a1b8e43c6b1f49bdefcd27ac96dac55593ed0f26a4c08d94980"
+      },
+      "createdAt": "2026-09-09T12:47:00.250Z",
+      "updatedAt": "2026-09-09T12:47:00.250Z"
+    },
+    {
+      "urn": "urn:trace:file:packages/shared-types/package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "packages/shared-types/package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "2b051b479c91af4d1a7b09c3ba98a718e5607408bb4d0833d72282db26e1de44"
+      },
+      "createdAt": "2026-09-09T12:47:00.249Z",
+      "updatedAt": "2026-09-09T12:47:00.249Z"
+    },
+    {
+      "urn": "urn:trace:file:packages/shared-types/src/index.ts",
+      "kind": "file",
+      "name": "index.ts",
+      "path": "packages/shared-types/src/index.ts",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "2a61218eeee7e95f3b648493c9d7f518580adb098fca21ec216a4ac1904da241"
+      },
+      "createdAt": "2026-09-09T12:47:00.250Z",
+      "updatedAt": "2026-09-09T12:47:00.250Z"
+    },
+    {
+      "urn": "urn:trace:route:packages/api-gateway/src/index.ts#GET:/api/auth/profile",
+      "kind": "route",
+      "name": "GET /api/auth/profile",
+      "path": "packages/api-gateway/src/index.ts",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "GET",
+      "routePath": "/api/auth/profile",
+      "startLine": 6,
+      "endLine": 9,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.249Z",
+      "updatedAt": "2026-09-09T12:47:00.249Z"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/api-gateway/src/index.ts#app",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "app",
+      "path": "packages/api-gateway/src/index.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "0ba021d569ddf3ab",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.249Z",
+      "updatedAt": "2026-09-09T12:47:00.249Z"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/api-gateway/src/index.ts#user",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "user",
+      "path": "packages/api-gateway/src/index.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 7,
+      "endLine": 7,
+      "contentHash": "1cb9eb17c6a71392",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.249Z",
+      "updatedAt": "2026-09-09T12:47:00.249Z"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/shared-types/src/index.ts#SharedAuthUser",
+      "kind": "symbol",
+      "symbolKind": "interface",
+      "name": "SharedAuthUser",
+      "path": "packages/shared-types/src/index.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 1,
+      "endLine": 4,
+      "contentHash": "b0677a1975380364",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.249Z",
+      "updatedAt": "2026-09-09T12:47:00.249Z"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/shared-types/src/index.ts#SharedPaymentToken",
+      "kind": "symbol",
+      "symbolKind": "interface",
+      "name": "SharedPaymentToken",
+      "path": "packages/shared-types/src/index.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 6,
+      "endLine": 9,
+      "contentHash": "e0bbfcbd14205e5a",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.249Z",
+      "updatedAt": "2026-09-09T12:47:00.249Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-auto-1",
+      "sourceUrn": "urn:trace:route:packages/api-gateway/src/index.ts#GET:/api/auth/profile",
+      "targetUrn": "urn:trace:feature:authentication",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.250Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "packages/api-gateway/src/index.ts",
+        "line": 6,
+        "reason": "Route path '/api/auth/profile' matches domain 'auth'"
+      },
+      "createdAt": "2026-09-09T12:47:00.250Z",
+      "updatedAt": "2026-09-09T12:47:00.250Z"
+    },
+    {
+      "id": "edge-auto-2",
+      "sourceUrn": "urn:trace:symbol:packages/shared-types/src/index.ts#SharedAuthUser",
+      "targetUrn": "urn:trace:feature:authentication",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.250Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "packages/shared-types/src/index.ts",
+        "line": 1,
+        "symbol": "SharedAuthUser",
+        "reason": "Symbol 'SharedAuthUser' matches 'auth' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.250Z",
+      "updatedAt": "2026-09-09T12:47:00.250Z"
+    },
+    {
+      "id": "edge-auto-3",
+      "sourceUrn": "urn:trace:symbol:packages/api-gateway/src/index.ts#user",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.250Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "packages/api-gateway/src/index.ts",
+        "line": 7,
+        "symbol": "user",
+        "reason": "Symbol 'user' matches 'user' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.250Z",
+      "updatedAt": "2026-09-09T12:47:00.250Z"
+    },
+    {
+      "id": "edge-auto-4",
+      "sourceUrn": "urn:trace:symbol:packages/shared-types/src/index.ts#SharedPaymentToken",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.250Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "packages/shared-types/src/index.ts",
+        "line": 6,
+        "symbol": "SharedPaymentToken",
+        "reason": "Symbol 'SharedPaymentToken' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.250Z",
+      "updatedAt": "2026-09-09T12:47:00.250Z"
+    },
+    {
+      "id": "edge-struct-imp-1",
+      "sourceUrn": "urn:trace:file:packages/api-gateway/src/index.ts",
+      "targetUrn": "urn:trace:symbol:packages/shared-types/src/index.ts#SharedAuthUser",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.250Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "packages/api-gateway/src/index.ts",
+        "line": 2,
+        "symbol": "SharedAuthUser",
+        "reason": "AST import of 'SharedAuthUser' from '@monorepo/shared-types'"
+      },
+      "createdAt": "2026-09-09T12:47:00.250Z",
+      "updatedAt": "2026-09-09T12:47:00.250Z"
+    }
+  ]
+}

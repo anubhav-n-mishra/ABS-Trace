@@ -1,0 +1,31 @@
+{
+  "name": "amvelt-trace-monorepo",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Amvelt TRACE - The living codebase map for humans and AI agents",
+  "author": "Anubhav Mishra",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "node ./scripts/lint.js",
+    "test": "vitest run tests/unit",
+    "test:fixtures": "vitest run tests/fixtures",
+    "test:all": "vitest run",
+    "dogfood": "node ./scripts/dogfood.js",
+    "check:hygiene": "node ./scripts/check-package-hygiene.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2",
+    "tsup": "^8.3.5",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

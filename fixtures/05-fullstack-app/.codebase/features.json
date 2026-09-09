@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "features": [
+    {
+      "urn": "urn:trace:feature:checkout",
+      "name": "checkout",
+      "displayName": "Checkout",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "order",
+        "ecommerce"
+      ]
+    },
+    {
+      "urn": "urn:trace:feature:orders",
+      "name": "orders",
+      "displayName": "Orders",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "ecommerce",
+        "order"
+      ]
+    },
+    {
+      "urn": "urn:trace:feature:payments",
+      "name": "payments",
+      "displayName": "Payments",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "billing",
+        "checkout"
+      ]
+    },
+    {
+      "urn": "urn:trace:feature:user-management",
+      "name": "user-management",
+      "displayName": "User Management",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "account",
+        "profile"
+      ]
+    }
+  ]
+}

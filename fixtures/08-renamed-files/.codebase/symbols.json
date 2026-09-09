@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:src/legacy/oldPaymentProcessor.js#LegacyPaymentProcessor",
+      "name": "LegacyPaymentProcessor",
+      "path": "src/legacy/oldPaymentProcessor.js",
+      "symbolKind": "class",
+      "startLine": 1,
+      "endLine": 6,
+      "contentHash": "8ce47abab8194d16",
+      "status": "retired"
+    },
+    {
+      "urn": "urn:trace:symbol:src/legacy/oldPaymentProcessor.js#LegacyPaymentProcessor.processOldTransaction",
+      "name": "processOldTransaction",
+      "path": "src/legacy/oldPaymentProcessor.js",
+      "symbolKind": "method",
+      "startLine": 2,
+      "endLine": 5,
+      "contentHash": "70016b2da9a69cb6",
+      "status": "retired"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/ModernPaymentProcessor.js#LegacyPaymentProcessor",
+      "name": "LegacyPaymentProcessor",
+      "path": "src/services/ModernPaymentProcessor.js",
+      "symbolKind": "class",
+      "startLine": 1,
+      "endLine": 6,
+      "contentHash": "8ce47abab8194d16",
+      "status": "retired"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/ModernPaymentProcessor.js#LegacyPaymentProcessor.processOldTransaction",
+      "name": "processOldTransaction",
+      "path": "src/services/ModernPaymentProcessor.js",
+      "symbolKind": "method",
+      "startLine": 2,
+      "endLine": 5,
+      "contentHash": "70016b2da9a69cb6",
+      "status": "retired"
+    }
+  ]
+}

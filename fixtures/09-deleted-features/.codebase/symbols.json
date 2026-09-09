@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:src/features/deprecated/cryptoPayment.js#processCryptoPayment",
+      "name": "processCryptoPayment",
+      "path": "src/features/deprecated/cryptoPayment.js",
+      "symbolKind": "function",
+      "startLine": 1,
+      "endLine": 3,
+      "contentHash": "8dde1bac845ae726",
+      "status": "retired"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "fixture-vibe-coded-mess",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

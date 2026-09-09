@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "urn": "urn:trace:feature:authentication",
+      "kind": "feature",
+      "name": "authentication",
+      "displayName": "Authentication",
+      "description": "User authentication and session management",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "EXPLICIT",
+      "confidenceScore": 1,
+      "source": "explicit",
+      "tags": [],
+      "metadata": {
+        "explicitFile": "auth.yaml"
+      },
+      "createdAt": "2026-09-09T12:47:00.303Z",
+      "updatedAt": "2026-09-09T12:47:00.303Z"
+    },
+    {
+      "urn": "urn:trace:feature:payments",
+      "kind": "feature",
+      "name": "payments",
+      "displayName": "Payments",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "billing",
+        "checkout"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.303Z",
+      "updatedAt": "2026-09-09T12:47:00.303Z"
+    },
+    {
+      "urn": "urn:trace:file:package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "82aec38005741743dd6830332148e88c7e55552abdb7d22c460cd7968807f123"
+      },
+      "createdAt": "2026-09-09T12:47:00.297Z",
+      "updatedAt": "2026-09-09T12:47:00.297Z"
+    },
+    {
+      "urn": "urn:trace:file:src/features/auth/login.js",
+      "kind": "file",
+      "name": "login.js",
+      "path": "src/features/auth/login.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "34944691485be3a58ef199a6ed9e12a496d1993d2da0bce1c12f5fd24f3df7c3"
+      },
+      "createdAt": "2026-09-09T12:47:00.297Z",
+      "updatedAt": "2026-09-09T12:47:00.297Z"
+    },
+    {
+      "urn": "urn:trace:file:src/routes/payment.js",
+      "kind": "file",
+      "name": "payment.js",
+      "path": "src/routes/payment.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "564060a055439b33be7183c748a88d195b3b38bbbbccb475a3942770db915c6c"
+      },
+      "createdAt": "2026-09-09T12:47:00.297Z",
+      "updatedAt": "2026-09-09T12:47:00.297Z"
+    },
+    {
+      "urn": "urn:trace:file:src/utils/tokenHelper.js",
+      "kind": "file",
+      "name": "tokenHelper.js",
+      "path": "src/utils/tokenHelper.js",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "a3d088ed06729f01625324a1870aab21ed4ab008e42256877f21c87c857346e7"
+      },
+      "createdAt": "2026-09-09T12:47:00.297Z",
+      "updatedAt": "2026-09-09T12:47:00.297Z"
+    },
+    {
+      "urn": "urn:trace:route:src/routes/payment.js#POST:/api/payment/charge",
+      "kind": "route",
+      "name": "POST /api/payment/charge",
+      "path": "src/routes/payment.js",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "POST",
+      "routePath": "/api/payment/charge",
+      "startLine": 5,
+      "endLine": 7,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.296Z",
+      "updatedAt": "2026-09-09T12:47:00.296Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/auth/login.js#authenticateUser",
+      "kind": "symbol",
+      "symbolKind": "function",
+      "name": "authenticateUser",
+      "path": "src/features/auth/login.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 1,
+      "endLine": 4,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "3b762a138e68d8eb",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.297Z",
+      "updatedAt": "2026-09-09T12:47:00.297Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/payment.js#router",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "router",
+      "path": "src/routes/payment.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 3,
+      "endLine": 3,
+      "contentHash": "4508e8f16f46a575",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.296Z",
+      "updatedAt": "2026-09-09T12:47:00.296Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/utils/tokenHelper.js#parseTokenHeader",
+      "kind": "symbol",
+      "symbolKind": "function",
+      "name": "parseTokenHeader",
+      "path": "src/utils/tokenHelper.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 2,
+      "endLine": 6,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "28753ae12af10e7d",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.296Z",
+      "updatedAt": "2026-09-09T12:47:00.296Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/utils/tokenHelper.js#parts",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "parts",
+      "path": "src/utils/tokenHelper.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "f9f330b689060d04",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.296Z",
+      "updatedAt": "2026-09-09T12:47:00.297Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/utils/tokenHelper.js#validateGenericToken",
+      "kind": "symbol",
+      "symbolKind": "function",
+      "name": "validateGenericToken",
+      "path": "src/utils/tokenHelper.js",
+      "status": "active",
+      "aliases": [],
+      "startLine": 8,
+      "endLine": 10,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "9065521d80d3a6f8",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.297Z",
+      "updatedAt": "2026-09-09T12:47:00.297Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-auto-2",
+      "sourceUrn": "urn:trace:route:src/routes/payment.js#POST:/api/payment/charge",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.303Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "src/routes/payment.js",
+        "line": 5,
+        "reason": "Route path '/api/payment/charge' matches domain 'payment'"
+      },
+      "createdAt": "2026-09-09T12:47:00.303Z",
+      "updatedAt": "2026-09-09T12:47:00.303Z"
+    },
+    {
+      "id": "edge-exp-1",
+      "sourceUrn": "urn:trace:symbol:src/features/auth/login.js#authenticateUser",
+      "targetUrn": "urn:trace:feature:authentication",
+      "relationship": "implements",
+      "confidence": "EXPLICIT",
+      "confidenceScore": 1,
+      "provenance": {
+        "source": "explicit",
+        "timestamp": "2026-09-09T12:47:00.303Z"
+      },
+      "evidence": {
+        "type": "explicit_declaration",
+        "file": "src/features/auth/login.js",
+        "line": 1,
+        "symbol": "authenticateUser",
+        "reason": "Explicitly assigned in feature definition 'authentication'"
+      },
+      "createdAt": "2026-09-09T12:47:00.303Z",
+      "updatedAt": "2026-09-09T12:47:00.303Z"
+    }
+  ]
+}

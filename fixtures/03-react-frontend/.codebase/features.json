@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "features": [
+    {
+      "urn": "urn:trace:feature:notifications",
+      "name": "notifications",
+      "displayName": "Notifications",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "alerts",
+        "email"
+      ]
+    }
+  ]
+}

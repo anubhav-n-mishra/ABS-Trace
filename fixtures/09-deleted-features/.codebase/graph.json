@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "urn": "urn:trace:feature:payments",
+      "kind": "feature",
+      "name": "payments",
+      "displayName": "Payments",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "billing",
+        "checkout"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.275Z",
+      "updatedAt": "2026-09-09T12:47:00.275Z"
+    },
+    {
+      "urn": "urn:trace:file:package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "95e2071db4366e2f8cfa65333a0369c6ff4bb8dbae0f8681b4ce7853c937998e"
+      },
+      "createdAt": "2026-09-09T12:47:00.275Z",
+      "updatedAt": "2026-09-09T12:47:00.275Z"
+    },
+    {
+      "urn": "urn:trace:file:src/features/deprecated/cryptoPayment.js",
+      "kind": "file",
+      "name": "cryptoPayment.js",
+      "path": "src/features/deprecated/cryptoPayment.js",
+      "status": "retired",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "ecd6d2e373afef9e629133e50a403a65e4c359a968cea4ac1d4160d5bf37bd64"
+      },
+      "createdAt": "2026-09-09T12:47:00.275Z",
+      "updatedAt": "2026-09-09T12:47:00.279Z",
+      "retiredAt": "2026-09-09T12:47:00.279Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/features/deprecated/cryptoPayment.js#processCryptoPayment",
+      "kind": "symbol",
+      "symbolKind": "function",
+      "name": "processCryptoPayment",
+      "path": "src/features/deprecated/cryptoPayment.js",
+      "status": "retired",
+      "aliases": [],
+      "startLine": 1,
+      "endLine": 3,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "8dde1bac845ae726",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.275Z",
+      "updatedAt": "2026-09-09T12:47:00.279Z",
+      "retiredAt": "2026-09-09T12:47:00.279Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-auto-1",
+      "sourceUrn": "urn:trace:symbol:src/features/deprecated/cryptoPayment.js#processCryptoPayment",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.275Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/features/deprecated/cryptoPayment.js",
+        "line": 1,
+        "symbol": "processCryptoPayment",
+        "reason": "Symbol 'processCryptoPayment' matches 'payment' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.275Z",
+      "updatedAt": "2026-09-09T12:47:00.275Z"
+    }
+  ]
+}

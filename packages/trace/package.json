@@ -1,0 +1,64 @@
+{
+  "name": "@anubhavm/trace",
+  "version": "0.1.0",
+  "description": "Amvelt TRACE - The living codebase map for humans and AI agents",
+  "author": "Anubhav Mishra",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "trace": "./bin/trace.js",
+    "abs-trace": "./bin/abs-trace.js",
+    "codebase-map": "./bin/codebase-map.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsup --watch"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.26.9",
+    "@babel/traverse": "^7.26.9",
+    "@babel/types": "^7.26.9",
+    "commander": "^13.1.0",
+    "fast-glob": "^3.3.3",
+    "ignore": "^7.0.3",
+    "picocolors": "^1.1.1",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/babel__traverse": "^7.20.6",
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anubhav-n-mishra/ABS-Trace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anubhav-n-mishra/ABS-Trace/issues"
+  },
+  "homepage": "https://github.com/anubhav-n-mishra/ABS-Trace#readme"
+}

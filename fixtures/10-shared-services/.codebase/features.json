@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "features": [
+    {
+      "urn": "urn:trace:feature:checkout",
+      "name": "checkout",
+      "displayName": "Checkout",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "order",
+        "ecommerce"
+      ]
+    },
+    {
+      "urn": "urn:trace:feature:invoicing",
+      "name": "invoicing",
+      "displayName": "Invoicing",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "billing",
+        "invoice"
+      ]
+    },
+    {
+      "urn": "urn:trace:feature:payments",
+      "name": "payments",
+      "displayName": "Payments",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "billing",
+        "checkout"
+      ]
+    },
+    {
+      "urn": "urn:trace:feature:subscriptions",
+      "name": "subscriptions",
+      "displayName": "Subscriptions",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "tags": [
+        "billing",
+        "recurring"
+      ]
+    }
+  ]
+}

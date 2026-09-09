@@ -1,0 +1,849 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "urn": "urn:trace:feature:checkout",
+      "kind": "feature",
+      "name": "checkout",
+      "displayName": "Checkout",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "order",
+        "ecommerce"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "urn": "urn:trace:feature:orders",
+      "kind": "feature",
+      "name": "orders",
+      "displayName": "Orders",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "ecommerce",
+        "order"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "urn": "urn:trace:feature:payments",
+      "kind": "feature",
+      "name": "payments",
+      "displayName": "Payments",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "billing",
+        "checkout"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "urn": "urn:trace:feature:user-management",
+      "kind": "feature",
+      "name": "user-management",
+      "displayName": "User Management",
+      "path": "",
+      "status": "active",
+      "aliases": [],
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "source": "ast",
+      "tags": [
+        "account",
+        "profile"
+      ],
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "urn": "urn:trace:file:package.json",
+      "kind": "file",
+      "name": "package.json",
+      "path": "package.json",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "b745ac8b588b1c018a43b792938c79668383304e426245d38f32749d3c0e4bf4"
+      },
+      "createdAt": "2026-09-09T12:47:00.232Z",
+      "updatedAt": "2026-09-09T12:47:00.232Z"
+    },
+    {
+      "urn": "urn:trace:file:prisma/schema.prisma",
+      "kind": "file",
+      "name": "schema.prisma",
+      "path": "prisma/schema.prisma",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "a9ab955e3ebf5754f8ac9fa104195620d53c5cd47e8d120f63f47c53c27baf8c"
+      },
+      "createdAt": "2026-09-09T12:47:00.232Z",
+      "updatedAt": "2026-09-09T12:47:00.232Z"
+    },
+    {
+      "urn": "urn:trace:file:src/api/checkout.ts",
+      "kind": "file",
+      "name": "checkout.ts",
+      "path": "src/api/checkout.ts",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "f02d79972d05141fac26e172aa7ef9207d174bd6912e0377a64bb2d9865a2207"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "urn": "urn:trace:file:src/components/CheckoutButton.tsx",
+      "kind": "file",
+      "name": "CheckoutButton.tsx",
+      "path": "src/components/CheckoutButton.tsx",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "b04a50dad275928e1005d800b6620b99db7b0b02576484b7b5339889ce4025f5"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "urn": "urn:trace:file:src/services/checkoutService.ts",
+      "kind": "file",
+      "name": "checkoutService.ts",
+      "path": "src/services/checkoutService.ts",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "98c6f8dcf1d2d6e49ab1ca2c3d19bd88d9d34e7a36cf4abfefaa5968949a1b07"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "urn": "urn:trace:file:tests/checkout.test.ts",
+      "kind": "file",
+      "name": "checkout.test.ts",
+      "path": "tests/checkout.test.ts",
+      "status": "active",
+      "aliases": [],
+      "metadata": {
+        "fileHash": "e8eaaac671a5811aba66dc839d95d90dc47cbb31da4a4a8c42f0d8073c3a7cc7"
+      },
+      "createdAt": "2026-09-09T12:47:00.232Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "urn": "urn:trace:model:prisma/schema.prisma#Order",
+      "kind": "model",
+      "name": "Order",
+      "path": "prisma/schema.prisma",
+      "status": "active",
+      "aliases": [],
+      "fields": [
+        {
+          "name": "id",
+          "type": "String",
+          "isId": true,
+          "isRelation": false
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "user",
+          "type": "User",
+          "isId": false,
+          "isRelation": true
+        },
+        {
+          "name": "amount",
+          "type": "Float",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "payments",
+          "type": "Payment[]",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime",
+          "isId": false,
+          "isRelation": false
+        }
+      ],
+      "startLine": 14,
+      "endLine": 22,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.227Z",
+      "updatedAt": "2026-09-09T12:47:00.227Z"
+    },
+    {
+      "urn": "urn:trace:model:prisma/schema.prisma#Payment",
+      "kind": "model",
+      "name": "Payment",
+      "path": "prisma/schema.prisma",
+      "status": "active",
+      "aliases": [],
+      "fields": [
+        {
+          "name": "id",
+          "type": "String",
+          "isId": true,
+          "isRelation": false
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "order",
+          "type": "Order",
+          "isId": false,
+          "isRelation": true
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "user",
+          "type": "User",
+          "isId": false,
+          "isRelation": true
+        },
+        {
+          "name": "amount",
+          "type": "Float",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime",
+          "isId": false,
+          "isRelation": false
+        }
+      ],
+      "startLine": 24,
+      "endLine": 33,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.227Z",
+      "updatedAt": "2026-09-09T12:47:00.227Z"
+    },
+    {
+      "urn": "urn:trace:model:prisma/schema.prisma#User",
+      "kind": "model",
+      "name": "User",
+      "path": "prisma/schema.prisma",
+      "status": "active",
+      "aliases": [],
+      "fields": [
+        {
+          "name": "id",
+          "type": "String",
+          "isId": true,
+          "isRelation": false
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "orders",
+          "type": "Order[]",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "payments",
+          "type": "Payment[]",
+          "isId": false,
+          "isRelation": false
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime",
+          "isId": false,
+          "isRelation": false
+        }
+      ],
+      "startLine": 6,
+      "endLine": 12,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.227Z",
+      "updatedAt": "2026-09-09T12:47:00.227Z"
+    },
+    {
+      "urn": "urn:trace:route:src/api/checkout.ts#POST:/api/checkout/process",
+      "kind": "route",
+      "name": "POST /api/checkout/process",
+      "path": "src/api/checkout.ts",
+      "status": "active",
+      "aliases": [],
+      "httpMethod": "POST",
+      "routePath": "/api/checkout/process",
+      "startLine": 7,
+      "endLine": 11,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.230Z",
+      "updatedAt": "2026-09-09T12:47:00.230Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/api/checkout.ts#checkoutService",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "checkoutService",
+      "path": "src/api/checkout.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "f1cd43fcfd23e6cc",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.230Z",
+      "updatedAt": "2026-09-09T12:47:00.230Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/api/checkout.ts#result",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "result",
+      "path": "src/api/checkout.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 9,
+      "endLine": 9,
+      "contentHash": "8b468445fe5df487",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.230Z",
+      "updatedAt": "2026-09-09T12:47:00.230Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/api/checkout.ts#router",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "router",
+      "path": "src/api/checkout.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "fa5ec7c26e1d7a0b",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.230Z",
+      "updatedAt": "2026-09-09T12:47:00.230Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/components/CheckoutButton.tsx#CheckoutButton",
+      "kind": "symbol",
+      "symbolKind": "component",
+      "name": "CheckoutButton",
+      "path": "src/components/CheckoutButton.tsx",
+      "status": "active",
+      "aliases": [],
+      "startLine": 3,
+      "endLine": 9,
+      "startCol": 7,
+      "endCol": 1,
+      "contentHash": "8c8e9b201a5f7b1e",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.231Z",
+      "updatedAt": "2026-09-09T12:47:00.231Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService",
+      "kind": "symbol",
+      "symbolKind": "class",
+      "name": "CheckoutService",
+      "path": "src/services/checkoutService.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 1,
+      "endLine": 11,
+      "contentHash": "4055e14f59119f82",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.232Z",
+      "updatedAt": "2026-09-09T12:47:00.232Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService.processCheckout",
+      "kind": "symbol",
+      "symbolKind": "method",
+      "name": "processCheckout",
+      "path": "src/services/checkoutService.ts",
+      "status": "active",
+      "aliases": [],
+      "enclosingScope": "CheckoutService",
+      "startLine": 2,
+      "endLine": 10,
+      "contentHash": "0367ef2f9d781271",
+      "isExported": true,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.232Z",
+      "updatedAt": "2026-09-09T12:47:00.232Z"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/checkoutService.ts#total",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "total",
+      "path": "src/services/checkoutService.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 3,
+      "endLine": 3,
+      "contentHash": "0111997fc8d8ad62",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.232Z",
+      "updatedAt": "2026-09-09T12:47:00.232Z"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/checkout.test.ts#res",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "res",
+      "path": "tests/checkout.test.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 6,
+      "endLine": 6,
+      "contentHash": "8180c37abcf5d2f5",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.228Z",
+      "updatedAt": "2026-09-09T12:47:00.228Z"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/checkout.test.ts#service",
+      "kind": "symbol",
+      "symbolKind": "variable",
+      "name": "service",
+      "path": "tests/checkout.test.ts",
+      "status": "active",
+      "aliases": [],
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "d74cb7c871344a8d",
+      "isExported": false,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.228Z",
+      "updatedAt": "2026-09-09T12:47:00.228Z"
+    },
+    {
+      "urn": "urn:trace:test:tests/checkout.test.ts#calculates checkout totals correctly",
+      "kind": "test",
+      "name": "calculates checkout totals correctly",
+      "path": "tests/checkout.test.ts",
+      "status": "active",
+      "aliases": [],
+      "testType": "case",
+      "testName": "calculates checkout totals correctly",
+      "startLine": 4,
+      "endLine": 8,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.228Z",
+      "updatedAt": "2026-09-09T12:47:00.228Z"
+    },
+    {
+      "urn": "urn:trace:test:tests/checkout.test.ts#Checkout Flow",
+      "kind": "test",
+      "name": "Checkout Flow",
+      "path": "tests/checkout.test.ts",
+      "status": "active",
+      "aliases": [],
+      "testType": "suite",
+      "suiteName": "Checkout Flow",
+      "testName": "Checkout Flow",
+      "startLine": 3,
+      "endLine": 9,
+      "metadata": {},
+      "createdAt": "2026-09-09T12:47:00.228Z",
+      "updatedAt": "2026-09-09T12:47:00.228Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-auto-1",
+      "sourceUrn": "urn:trace:model:prisma/schema.prisma#User",
+      "targetUrn": "urn:trace:feature:user-management",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "model_ref",
+        "file": "prisma/schema.prisma",
+        "line": 6,
+        "reason": "Database model 'User' relates to 'User Management' domain"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-auto-10",
+      "sourceUrn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService.processCheckout",
+      "targetUrn": "urn:trace:feature:checkout",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/checkoutService.ts",
+        "line": 2,
+        "symbol": "processCheckout",
+        "reason": "Symbol 'processCheckout' matches 'checkout' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-auto-2",
+      "sourceUrn": "urn:trace:model:prisma/schema.prisma#Order",
+      "targetUrn": "urn:trace:feature:orders",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "model_ref",
+        "file": "prisma/schema.prisma",
+        "line": 14,
+        "reason": "Database model 'Order' relates to 'Orders' domain"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-auto-3",
+      "sourceUrn": "urn:trace:model:prisma/schema.prisma#Payment",
+      "targetUrn": "urn:trace:feature:payments",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "model_ref",
+        "file": "prisma/schema.prisma",
+        "line": 24,
+        "reason": "Database model 'Payment' relates to 'Payments' domain"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-auto-4",
+      "sourceUrn": "urn:trace:test:tests/checkout.test.ts#Checkout Flow",
+      "targetUrn": "urn:trace:feature:checkout",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.8,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/checkout.test.ts",
+        "line": 3,
+        "reason": "Test suite/case 'Checkout Flow' targets 'Checkout' functionality"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-auto-5",
+      "sourceUrn": "urn:trace:test:tests/checkout.test.ts#calculates checkout totals correctly",
+      "targetUrn": "urn:trace:feature:checkout",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.8,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/checkout.test.ts",
+        "line": 4,
+        "reason": "Test suite/case 'calculates checkout totals correctly' targets 'Checkout' functionality"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-auto-6",
+      "sourceUrn": "urn:trace:route:src/api/checkout.ts#POST:/api/checkout/process",
+      "targetUrn": "urn:trace:feature:checkout",
+      "relationship": "implements",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.85,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "route_match",
+        "file": "src/api/checkout.ts",
+        "line": 7,
+        "reason": "Route path '/api/checkout/process' matches domain 'checkout'"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-auto-7",
+      "sourceUrn": "urn:trace:symbol:src/api/checkout.ts#checkoutService",
+      "targetUrn": "urn:trace:feature:checkout",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/api/checkout.ts",
+        "line": 5,
+        "symbol": "checkoutService",
+        "reason": "Symbol 'checkoutService' matches 'checkout' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-auto-8",
+      "sourceUrn": "urn:trace:symbol:src/components/CheckoutButton.tsx#CheckoutButton",
+      "targetUrn": "urn:trace:feature:checkout",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/components/CheckoutButton.tsx",
+        "line": 3,
+        "symbol": "CheckoutButton",
+        "reason": "Symbol 'CheckoutButton' matches 'checkout' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-auto-9",
+      "sourceUrn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService",
+      "targetUrn": "urn:trace:feature:checkout",
+      "relationship": "implements",
+      "confidence": "INFERRED",
+      "confidenceScore": 0.6,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "semantic_similarity",
+        "file": "src/services/checkoutService.ts",
+        "line": 1,
+        "symbol": "CheckoutService",
+        "reason": "Symbol 'CheckoutService' matches 'checkout' domain vocabulary"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-struct-call-4",
+      "sourceUrn": "urn:trace:file:tests/checkout.test.ts",
+      "targetUrn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService.processCheckout",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/checkout.test.ts",
+        "line": 6,
+        "symbol": "processCheckout",
+        "reason": "AST invocation of 'service.processCheckout'"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-struct-call-6",
+      "sourceUrn": "urn:trace:file:src/api/checkout.ts",
+      "targetUrn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService.processCheckout",
+      "relationship": "calls",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "src/api/checkout.ts",
+        "line": 9,
+        "symbol": "processCheckout",
+        "reason": "AST invocation of 'checkoutService.processCheckout'"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-struct-imp-1",
+      "sourceUrn": "urn:trace:file:tests/checkout.test.ts",
+      "targetUrn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "tests/checkout.test.ts",
+        "line": 1,
+        "symbol": "CheckoutService",
+        "reason": "AST import of 'CheckoutService' from '../src/services/checkoutService.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-struct-imp-5",
+      "sourceUrn": "urn:trace:file:src/api/checkout.ts",
+      "targetUrn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService",
+      "relationship": "imports",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.95,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "ast_import",
+        "file": "src/api/checkout.ts",
+        "line": 2,
+        "symbol": "CheckoutService",
+        "reason": "AST import of 'CheckoutService' from '../services/checkoutService.js'"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-struct-test-2",
+      "sourceUrn": "urn:trace:test:tests/checkout.test.ts#Checkout Flow",
+      "targetUrn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService",
+      "relationship": "tests",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/checkout.test.ts",
+        "line": 3,
+        "symbol": "CheckoutService",
+        "reason": "Test 'Checkout Flow' in file importing 'CheckoutService'"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    },
+    {
+      "id": "edge-struct-test-3",
+      "sourceUrn": "urn:trace:test:tests/checkout.test.ts#calculates checkout totals correctly",
+      "targetUrn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService",
+      "relationship": "tests",
+      "confidence": "DETECTED",
+      "confidenceScore": 0.9,
+      "provenance": {
+        "source": "ast",
+        "timestamp": "2026-09-09T12:47:00.233Z"
+      },
+      "evidence": {
+        "type": "ast_call",
+        "file": "tests/checkout.test.ts",
+        "line": 4,
+        "symbol": "CheckoutService",
+        "reason": "Test 'calculates checkout totals correctly' in file importing 'CheckoutService'"
+      },
+      "createdAt": "2026-09-09T12:47:00.233Z",
+      "updatedAt": "2026-09-09T12:47:00.233Z"
+    }
+  ]
+}

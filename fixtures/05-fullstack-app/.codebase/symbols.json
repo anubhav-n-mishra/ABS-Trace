@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:src/api/checkout.ts#checkoutService",
+      "name": "checkoutService",
+      "path": "src/api/checkout.ts",
+      "symbolKind": "variable",
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "f1cd43fcfd23e6cc",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/api/checkout.ts#result",
+      "name": "result",
+      "path": "src/api/checkout.ts",
+      "symbolKind": "variable",
+      "startLine": 9,
+      "endLine": 9,
+      "contentHash": "8b468445fe5df487",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/api/checkout.ts#router",
+      "name": "router",
+      "path": "src/api/checkout.ts",
+      "symbolKind": "variable",
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "fa5ec7c26e1d7a0b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/components/CheckoutButton.tsx#CheckoutButton",
+      "name": "CheckoutButton",
+      "path": "src/components/CheckoutButton.tsx",
+      "symbolKind": "component",
+      "startLine": 3,
+      "endLine": 9,
+      "contentHash": "8c8e9b201a5f7b1e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService",
+      "name": "CheckoutService",
+      "path": "src/services/checkoutService.ts",
+      "symbolKind": "class",
+      "startLine": 1,
+      "endLine": 11,
+      "contentHash": "4055e14f59119f82",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/checkoutService.ts#CheckoutService.processCheckout",
+      "name": "processCheckout",
+      "path": "src/services/checkoutService.ts",
+      "symbolKind": "method",
+      "startLine": 2,
+      "endLine": 10,
+      "contentHash": "0367ef2f9d781271",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/checkoutService.ts#total",
+      "name": "total",
+      "path": "src/services/checkoutService.ts",
+      "symbolKind": "variable",
+      "startLine": 3,
+      "endLine": 3,
+      "contentHash": "0111997fc8d8ad62",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/checkout.test.ts#res",
+      "name": "res",
+      "path": "tests/checkout.test.ts",
+      "symbolKind": "variable",
+      "startLine": 6,
+      "endLine": 6,
+      "contentHash": "8180c37abcf5d2f5",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/checkout.test.ts#service",
+      "name": "service",
+      "path": "tests/checkout.test.ts",
+      "symbolKind": "variable",
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "d74cb7c871344a8d",
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "symbols": [
+    {
+      "urn": "urn:trace:symbol:src/app.js#app",
+      "name": "app",
+      "path": "src/app.js",
+      "symbolKind": "variable",
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "0ba021d569ddf3ab",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/components/PaymentForm.jsx#handleSubmit",
+      "name": "handleSubmit",
+      "path": "src/components/PaymentForm.jsx",
+      "symbolKind": "function",
+      "startLine": 8,
+      "endLine": 12,
+      "contentHash": "215c7967be10897d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/components/PaymentForm.jsx#PaymentForm",
+      "name": "PaymentForm",
+      "path": "src/components/PaymentForm.jsx",
+      "symbolKind": "component",
+      "startLine": 4,
+      "endLine": 26,
+      "contentHash": "c59a6f0eb093e76d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/components/PaymentForm.jsx#res",
+      "name": "res",
+      "path": "src/components/PaymentForm.jsx",
+      "symbolKind": "variable",
+      "startLine": 10,
+      "endLine": 10,
+      "contentHash": "919299a5fa8a20a3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/auth.js#router",
+      "name": "router",
+      "path": "src/routes/auth.js",
+      "symbolKind": "variable",
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "4508e8f16f46a575",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/auth.js#session",
+      "name": "session",
+      "path": "src/routes/auth.js",
+      "symbolKind": "variable",
+      "startLine": 9,
+      "endLine": 9,
+      "contentHash": "4b2ca7f6b0ad002c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/payment.js#result",
+      "name": "result",
+      "path": "src/routes/payment.js",
+      "symbolKind": "variable",
+      "startLine": 9,
+      "endLine": 9,
+      "contentHash": "978f0e7def891b9a",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/payment.js#router",
+      "name": "router",
+      "path": "src/routes/payment.js",
+      "symbolKind": "variable",
+      "startLine": 4,
+      "endLine": 4,
+      "contentHash": "4508e8f16f46a575",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/routes/payment.js#verified",
+      "name": "verified",
+      "path": "src/routes/payment.js",
+      "symbolKind": "variable",
+      "startLine": 18,
+      "endLine": 18,
+      "contentHash": "bcdf859f1522aeb0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/auth.js#generateToken",
+      "name": "generateToken",
+      "path": "src/services/auth.js",
+      "symbolKind": "function",
+      "startLine": 9,
+      "endLine": 11,
+      "contentHash": "cadc358e8c117e0d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/auth.js#loginUser",
+      "name": "loginUser",
+      "path": "src/services/auth.js",
+      "symbolKind": "function",
+      "startLine": 2,
+      "endLine": 7,
+      "contentHash": "6ceccb97a06c8618",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#calculateConvenienceFee",
+      "name": "calculateConvenienceFee",
+      "path": "src/services/payment.js",
+      "symbolKind": "function",
+      "startLine": 26,
+      "endLine": 28,
+      "contentHash": "cffda6e4a824f1da",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#defaultPaymentService",
+      "name": "defaultPaymentService",
+      "path": "src/services/payment.js",
+      "symbolKind": "variable",
+      "startLine": 24,
+      "endLine": 24,
+      "contentHash": "5847d9d375a1b6fd",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#PaymentService",
+      "name": "PaymentService",
+      "path": "src/services/payment.js",
+      "symbolKind": "class",
+      "startLine": 2,
+      "endLine": 22,
+      "contentHash": "642cbb51b849670c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#PaymentService.processUPIPayment",
+      "name": "processUPIPayment",
+      "path": "src/services/payment.js",
+      "symbolKind": "method",
+      "startLine": 3,
+      "endLine": 12,
+      "contentHash": "0d41605413829d15",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#PaymentService.refundUPIPayment",
+      "name": "refundUPIPayment",
+      "path": "src/services/payment.js",
+      "symbolKind": "method",
+      "startLine": 18,
+      "endLine": 21,
+      "contentHash": "1d7524dbce899895",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:src/services/payment.js#PaymentService.verifyUPIResponse",
+      "name": "verifyUPIResponse",
+      "path": "src/services/payment.js",
+      "symbolKind": "method",
+      "startLine": 14,
+      "endLine": 16,
+      "contentHash": "ad05d3d8efe892fb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/auth.test.js#session",
+      "name": "session",
+      "path": "tests/auth.test.js",
+      "symbolKind": "variable",
+      "startLine": 5,
+      "endLine": 5,
+      "contentHash": "79c74ad087904d85",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/payment.test.js#res",
+      "name": "res",
+      "path": "tests/payment.test.js",
+      "symbolKind": "variable",
+      "startLine": 6,
+      "endLine": 6,
+      "contentHash": "e9349ca8d239102f",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/payment.test.js#service",
+      "name": "service",
+      "path": "tests/payment.test.js",
+      "symbolKind": "variable",
+      "startLine": 11,
+      "endLine": 11,
+      "contentHash": "31af018f2d246eae",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/payment.test.js#verified",
+      "name": "verified",
+      "path": "tests/payment.test.js",
+      "symbolKind": "variable",
+      "startLine": 12,
+      "endLine": 12,
+      "contentHash": "8c31d89909c7966d",
+      "status": "active"
+    }
+  ]
+}
