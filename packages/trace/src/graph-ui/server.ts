@@ -12,6 +12,7 @@ export interface GraphServerOptions {
   focusFeature?: string;
   focusSymbol?: string;
   focusImpact?: string;
+  showModels?: boolean;
 }
 
 export interface GraphServerInstance {
@@ -46,13 +47,19 @@ export async function startGraphServer(
     }
 
     if (reqUrl.pathname === '/' || reqUrl.pathname === '/index.html') {
+      const showModelsParam = reqUrl.searchParams.get('models');
+      const showModels = showModelsParam !== null
+        ? (showModelsParam === 'true' || showModelsParam === '1')
+        : options.showModels;
+
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       res.end(
         generateGraphHtml({
           repoRoot,
           focusFeature: options.focusFeature,
           focusSymbol: options.focusSymbol,
-          focusImpact: options.focusImpact
+          focusImpact: options.focusImpact,
+          showModels
         })
       );
       return;

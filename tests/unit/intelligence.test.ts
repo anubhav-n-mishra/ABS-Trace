@@ -446,6 +446,25 @@ describe('Interactive Graph Server', () => {
       expect(json).toHaveProperty('nodes');
       expect(json).toHaveProperty('edges');
       expect(json).toHaveProperty('features');
+
+      // Default HTML should have model filter inactive by default
+      const htmlRes = await fetch('http://127.0.0.1:8765/', {
+        headers: { connection: 'close' }
+      });
+      expect(htmlRes.status).toBe(200);
+      const html = await htmlRes.text();
+      expect(html).toContain('data-kind="model"');
+      expect(html).not.toMatch(/class="chip active"\s+data-kind="model"/);
+      expect(html).toContain('showModels: false');
+
+      // Request with ?models=true should activate models
+      const modelsHtmlRes = await fetch('http://127.0.0.1:8765/?models=true', {
+        headers: { connection: 'close' }
+      });
+      expect(modelsHtmlRes.status).toBe(200);
+      const modelsHtml = await modelsHtmlRes.text();
+      expect(modelsHtml).toContain('class="chip active" data-kind="model"');
+      expect(modelsHtml).toContain('showModels: true');
     } finally {
       await serverInstance.stop();
     }

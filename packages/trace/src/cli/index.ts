@@ -590,6 +590,7 @@ export function createProgram(): Command {
     .option('--feature <name>', 'Focus graph view on specific feature')
     .option('--symbol <name>', 'Focus graph view on specific symbol')
     .option('--impact <name>', 'Focus graph view on blast radius of symbol')
+    .option('--models', 'Show data model nodes by default (default: false)', false)
     .option('--json', 'Export graph visualization payload as JSON instead of starting server')
     .action(async (options, cmd) => {
       const repoRoot = path.resolve(cmd.optsWithGlobals().root);
@@ -619,7 +620,8 @@ export function createProgram(): Command {
           openBrowser: options.open !== false,
           focusFeature: options.feature,
           focusSymbol: options.symbol,
-          focusImpact: options.impact
+          focusImpact: options.impact,
+          showModels: Boolean(options.models)
         });
       } catch (err: any) {
         handleError(err, cmd.optsWithGlobals().verbose);

@@ -6,6 +6,7 @@ export function generateGraphHtml(initialData: {
   focusFeature?: string;
   focusSymbol?: string;
   focusImpact?: string;
+  showModels?: boolean;
 }): string {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -502,7 +503,7 @@ export function generateGraphHtml(initialData: {
         <div class="chip active" data-kind="feature">Feature</div>
         <div class="chip active" data-kind="route">API</div>
         <div class="chip active" data-kind="symbol">Symbol</div>
-        <div class="chip active" data-kind="model">Model</div>
+        <div class="chip${initialData.showModels ? ' active' : ''}" data-kind="model">Model</div>
         <div class="chip active" data-kind="test">Test</div>
         <div class="chip" data-kind="file">File</div>
       </div>
@@ -595,7 +596,8 @@ export function generateGraphHtml(initialData: {
         repoRoot: ${JSON.stringify(initialData.repoRoot)},
         focusFeature: ${JSON.stringify(initialData.focusFeature || '')},
         focusSymbol: ${JSON.stringify(initialData.focusSymbol || '')},
-        focusImpact: ${JSON.stringify(initialData.focusImpact || '')}
+        focusImpact: ${JSON.stringify(initialData.focusImpact || '')},
+        showModels: ${Boolean(initialData.showModels)}
       };
 
       let allNodes = [];
@@ -606,8 +608,28 @@ export function generateGraphHtml(initialData: {
       let neighborMap = new Map(); // urn -> Set of connected urns
       let edgeMap = new Map();     // urn -> Array of edges
 
-      // Default active kinds: file is toggled off by default for clean initial readability
-      let activeKinds = new Set(['feature', 'route', 'symbol', 'model', 'test']);
+      // Check query param for models override if present
+      const urlParams = new URLSearchParams(window.location.search);
+      const modelsQuery = urlParams.get('models');
+      const initialShowModels = modelsQuery !== null
+        ? (modelsQuery === 'true' || modelsQuery === '1')
+        : config.showModels;
+
+      // Default active kinds: file and model are turned off by default to prevent visual clutter
+      let activeKinds = new Set(['feature', 'route', 'symbol', 'test']);
+      if (initialShowModels) {
+        activeKinds.add('model');
+      }
+
+      // Sync chip class if overridden via URL parameter
+      const initialModelChip = document.querySelector('#kindChips .chip[data-kind="model"]');
+      if (initialModelChip) {
+        if (activeKinds.has('model')) {
+          initialModelChip.classList.add('active');
+        } else {
+          initialModelChip.classList.remove('active');
+        }
+      }
       let activeMode = 'all';
       let selectedFeature = config.focusFeature;
       let selectedNode = null;
