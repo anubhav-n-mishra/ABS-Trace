@@ -44,7 +44,7 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: File path 'fixtures/11-ambiguous-features/src/features/auth/login.js' clusters in 'auth' directory*
 
 ### Tests
-- `tests/unit/intelligence.test.ts:329` — **records session usage locally and aggregates by command and date**
+- `tests/unit/intelligence.test.ts:391` — **records session usage locally and aggregates by command and date**
   - *Evidence: Test suite/case 'records session usage locally and aggregates by command and date' targets 'Authentication' functionality*
 - `fixtures/01-small-js/tests/auth.test.js:3` — **Authentication**
   - *Evidence: Test suite/case 'Authentication' targets 'Authentication' functionality*

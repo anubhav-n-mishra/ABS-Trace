@@ -198,6 +198,101 @@ describe('FeatureGraph and Alias Handling', () => {
     expect(graph.getOutgoingEdges(sym1.urn).length).toBe(0);
     expect(graph.getIncomingEdges(sym2.urn).length).toBe(0);
   });
+
+  it('does not retire the file node during reconcileFile', () => {
+    const fileNode: TraceNode = {
+      urn: 'urn:trace:file:src/index.ts',
+      kind: 'file',
+      name: 'index.ts',
+      path: 'src/index.ts',
+      status: 'active',
+      aliases: [],
+      metadata: {},
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+    const sym: SymbolNode = {
+      urn: 'urn:trace:symbol:src/index.ts#main',
+      kind: 'symbol',
+      symbolKind: 'function',
+      name: 'main',
+      path: 'src/index.ts',
+      status: 'active',
+      aliases: [],
+      startLine: 1,
+      endLine: 5,
+      contentHash: 'hashMain',
+      isExported: true,
+      metadata: {},
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    graph.addNode(fileNode);
+    graph.addNode(sym);
+
+    // Call reconcileFile when editing the file with updated symbols
+    graph.reconcileFile('src/index.ts', [sym], []);
+
+    // FileNode must remain active, never retired
+    const retrievedFileNode = graph.getNode(fileNode.urn);
+    expect(retrievedFileNode?.status).toBe('active');
+    expect(graph.getActiveNodes().some((n) => n.urn === fileNode.urn)).toBe(true);
+  });
+
+  it('prevents adding edges connected to retired nodes', () => {
+    const activeNode: SymbolNode = {
+      urn: 'urn:trace:symbol:src/a.ts#active',
+      kind: 'symbol',
+      symbolKind: 'function',
+      name: 'active',
+      path: 'src/a.ts',
+      status: 'active',
+      aliases: [],
+      startLine: 1,
+      endLine: 5,
+      contentHash: 'hashActive',
+      isExported: true,
+      metadata: {},
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+    const retiredNode: SymbolNode = {
+      urn: 'urn:trace:symbol:src/b.ts#retired',
+      kind: 'symbol',
+      symbolKind: 'function',
+      name: 'retired',
+      path: 'src/b.ts',
+      status: 'retired',
+      aliases: [],
+      startLine: 1,
+      endLine: 5,
+      contentHash: 'hashRetired',
+      isExported: true,
+      metadata: {},
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    graph.addNode(activeNode);
+    graph.addNode(retiredNode);
+
+    graph.addEdge({
+      id: 'edge-to-retired',
+      sourceUrn: activeNode.urn,
+      targetUrn: retiredNode.urn,
+      relationship: 'calls',
+      confidence: 'DETECTED',
+      confidenceScore: 0.9,
+      provenance: { source: 'ast', timestamp: new Date().toISOString() },
+      evidence: { type: 'ast_call', file: 'src/a.ts', line: 2, reason: 'Call to retired' },
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    });
+
+    expect(graph.getAllEdges().length).toBe(0);
+    expect(graph.getOutgoingEdges(activeNode.urn).length).toBe(0);
+  });
 });
 
 describe('TokenBudgetManager', () => {

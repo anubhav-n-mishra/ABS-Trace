@@ -2146,8 +2146,8 @@
       "name": "added",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 450,
-      "endLine": 450,
+      "startLine": 456,
+      "endLine": 456,
       "contentHash": "47e5e31a913e1bfe",
       "status": "active"
     },
@@ -2156,8 +2156,8 @@
       "name": "affectedApis",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 302,
-      "endLine": 302,
+      "startLine": 308,
+      "endLine": 308,
       "contentHash": "b50be05e90aa321c",
       "status": "active"
     },
@@ -2166,8 +2166,8 @@
       "name": "affectedFeatures",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 301,
-      "endLine": 301,
+      "startLine": 307,
+      "endLine": 307,
       "contentHash": "c1cd595f6fb355ad",
       "status": "active"
     },
@@ -2176,8 +2176,8 @@
       "name": "affectedTests",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 303,
-      "endLine": 303,
+      "startLine": 309,
+      "endLine": 309,
       "contentHash": "bd84a3765e7f3aba",
       "status": "active"
     },
@@ -2196,8 +2196,8 @@
       "name": "allEdges",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 376,
-      "endLine": 376,
+      "startLine": 382,
+      "endLine": 382,
       "contentHash": "b8f07d531145b987",
       "status": "active"
     },
@@ -2206,8 +2206,8 @@
       "name": "caller",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 314,
-      "endLine": 314,
+      "startLine": 320,
+      "endLine": 320,
       "contentHash": "de931a825d56970c",
       "status": "active"
     },
@@ -2216,8 +2216,8 @@
       "name": "callerFeatures",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 260,
-      "endLine": 263,
+      "startLine": 266,
+      "endLine": 269,
       "contentHash": "580b8d11698c8bd2",
       "status": "active"
     },
@@ -2226,8 +2226,8 @@
       "name": "callerNode",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 257,
-      "endLine": 257,
+      "startLine": 263,
+      "endLine": 263,
       "contentHash": "98e4c5ab26ff0002",
       "status": "active"
     },
@@ -2236,8 +2236,8 @@
       "name": "consumerEdge",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 255,
-      "endLine": 255,
+      "startLine": 261,
+      "endLine": 261,
       "contentHash": "521e7952cade08fc",
       "status": "active"
     },
@@ -2246,8 +2246,8 @@
       "name": "consumersOfItem",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 254,
-      "endLine": 254,
+      "startLine": 260,
+      "endLine": 260,
       "contentHash": "539e4d1dd66ec9b9",
       "status": "active"
     },
@@ -2256,8 +2256,8 @@
       "name": "directConsumers",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 299,
-      "endLine": 299,
+      "startLine": 305,
+      "endLine": 305,
       "contentHash": "d0691ada1bf69446",
       "status": "active"
     },
@@ -2266,8 +2266,8 @@
       "name": "edge",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 480,
-      "endLine": 480,
+      "startLine": 486,
+      "endLine": 486,
       "contentHash": "f578c1f4243477e6",
       "status": "active"
     },
@@ -2286,8 +2286,8 @@
       "name": "edgeIds",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 170,
-      "endLine": 170,
+      "startLine": 176,
+      "endLine": 176,
       "contentHash": "a44d515cbdd7ad47",
       "status": "active"
     },
@@ -2296,8 +2296,8 @@
       "name": "entry",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 391,
-      "endLine": 391,
+      "startLine": 397,
+      "endLine": 397,
       "contentHash": "35925abee76b1e96",
       "status": "active"
     },
@@ -2306,8 +2306,8 @@
       "name": "existing",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 458,
-      "endLine": 458,
+      "startLine": 464,
+      "endLine": 464,
       "contentHash": "73f5dd2ce4587fd5",
       "status": "active"
     },
@@ -2316,9 +2316,9 @@
       "name": "existingFileNodes",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 443,
-      "endLine": 445,
-      "contentHash": "0152add59b8667bb",
+      "startLine": 449,
+      "endLine": 451,
+      "contentHash": "4d59a67215134ebe",
       "status": "active"
     },
     {
@@ -2326,8 +2326,8 @@
       "name": "existingNodeMap",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 448,
-      "endLine": 448,
+      "startLine": 454,
+      "endLine": 454,
       "contentHash": "d71f349ac2394557",
       "status": "active"
     },
@@ -2336,8 +2336,8 @@
       "name": "f",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 265,
-      "endLine": 265,
+      "startLine": 271,
+      "endLine": 271,
       "contentHash": "ac5f0b9679757e2e",
       "status": "active"
     },
@@ -2346,8 +2346,8 @@
       "name": "feat",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 410,
-      "endLine": 410,
+      "startLine": 416,
+      "endLine": 416,
       "contentHash": "44aa69da7df83a0b",
       "status": "active"
     },
@@ -2356,8 +2356,8 @@
       "name": "feature",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 197,
-      "endLine": 197,
+      "startLine": 203,
+      "endLine": 203,
       "contentHash": "5d6c77a579cb8e5f",
       "status": "active"
     },
@@ -2367,8 +2367,8 @@
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "class",
       "startLine": 17,
-      "endLine": 486,
-      "contentHash": "0f5383aeb8a16063",
+      "endLine": 492,
+      "contentHash": "e29705931138f183",
       "status": "active"
     },
     {
@@ -2386,9 +2386,9 @@
       "name": "addEdge",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 129,
-      "endLine": 149,
-      "contentHash": "c5f26ab6498963ff",
+      "startLine": 127,
+      "endLine": 155,
+      "contentHash": "ce5896c65c39f30f",
       "status": "active"
     },
     {
@@ -2406,8 +2406,8 @@
       "name": "explain",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 348,
-      "endLine": 434,
+      "startLine": 354,
+      "endLine": 440,
       "contentHash": "6a0fef9fa6f19cc0",
       "status": "active"
     },
@@ -2426,8 +2426,8 @@
       "name": "getAllEdges",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 155,
-      "endLine": 157,
+      "startLine": 161,
+      "endLine": 163,
       "contentHash": "3ddf3c6fb7baa93c",
       "status": "active"
     },
@@ -2446,8 +2446,8 @@
       "name": "getEdge",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 151,
-      "endLine": 153,
+      "startLine": 157,
+      "endLine": 159,
       "contentHash": "5ff81aab4df3caea",
       "status": "active"
     },
@@ -2456,8 +2456,8 @@
       "name": "getFeatureByName",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 185,
-      "endLine": 193,
+      "startLine": 191,
+      "endLine": 199,
       "contentHash": "c062477a03a36a3d",
       "status": "active"
     },
@@ -2466,8 +2466,8 @@
       "name": "getFeatures",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 179,
-      "endLine": 183,
+      "startLine": 185,
+      "endLine": 189,
       "contentHash": "08ffe803dd5e41d7",
       "status": "active"
     },
@@ -2476,8 +2476,8 @@
       "name": "getFeatureView",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 195,
-      "endLine": 281,
+      "startLine": 201,
+      "endLine": 287,
       "contentHash": "7804da1860f7f00e",
       "status": "active"
     },
@@ -2486,8 +2486,8 @@
       "name": "getImpact",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 285,
-      "endLine": 344,
+      "startLine": 291,
+      "endLine": 350,
       "contentHash": "81e5e26607b5c96e",
       "status": "active"
     },
@@ -2496,8 +2496,8 @@
       "name": "getIncomingEdges",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 168,
-      "endLine": 175,
+      "startLine": 174,
+      "endLine": 181,
       "contentHash": "dea7f6ea140c17c5",
       "status": "active"
     },
@@ -2516,8 +2516,8 @@
       "name": "getOutgoingEdges",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 159,
-      "endLine": 166,
+      "startLine": 165,
+      "endLine": 172,
       "contentHash": "8b42e89c7ce1c3d4",
       "status": "active"
     },
@@ -2536,9 +2536,9 @@
       "name": "reconcileFile",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "method",
-      "startLine": 438,
-      "endLine": 485,
-      "contentHash": "6e1d9d485166e1eb",
+      "startLine": 444,
+      "endLine": 491,
+      "contentHash": "21c030822afa3021",
       "status": "active"
     },
     {
@@ -2586,8 +2586,8 @@
       "name": "featureMap",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 364,
-      "endLine": 373,
+      "startLine": 370,
+      "endLine": 379,
       "contentHash": "efbd41bb8d959396",
       "status": "active"
     },
@@ -2596,8 +2596,8 @@
       "name": "fileEdges",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 405,
-      "endLine": 405,
+      "startLine": 411,
+      "endLine": 411,
       "contentHash": "4c652fd75b47916f",
       "status": "active"
     },
@@ -2606,8 +2606,8 @@
       "name": "fileUrn",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 404,
-      "endLine": 404,
+      "startLine": 410,
+      "endLine": 410,
       "contentHash": "25ca428ae7f9f2c7",
       "status": "active"
     },
@@ -2616,8 +2616,8 @@
       "name": "incoming",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 215,
-      "endLine": 215,
+      "startLine": 221,
+      "endLine": 221,
       "contentHash": "94a48a7eb1039f04",
       "status": "active"
     },
@@ -2626,8 +2626,8 @@
       "name": "indirectConsumers",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 300,
-      "endLine": 300,
+      "startLine": 306,
+      "endLine": 306,
       "contentHash": "b08fa8326c25befe",
       "status": "active"
     },
@@ -2646,8 +2646,8 @@
       "name": "inEdges",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 311,
-      "endLine": 311,
+      "startLine": 317,
+      "endLine": 317,
       "contentHash": "7cdd3b7347c31d8e",
       "status": "active"
     },
@@ -2666,8 +2666,8 @@
       "name": "item",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 253,
-      "endLine": 253,
+      "startLine": 259,
+      "endLine": 259,
       "contentHash": "6095a6961aa96a0c",
       "status": "active"
     },
@@ -2676,8 +2676,8 @@
       "name": "lower",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 186,
-      "endLine": 186,
+      "startLine": 192,
+      "endLine": 192,
       "contentHash": "041a7aefdbff239d",
       "status": "active"
     },
@@ -2686,8 +2686,8 @@
       "name": "newNodeMap",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 447,
-      "endLine": 447,
+      "startLine": 453,
+      "endLine": 453,
       "contentHash": "1011a7a95deddcde",
       "status": "active"
     },
@@ -2706,8 +2706,8 @@
       "name": "normalizedEdge",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 132,
-      "endLine": 136,
+      "startLine": 138,
+      "endLine": 142,
       "contentHash": "225b2501dc781a4c",
       "status": "active"
     },
@@ -2716,8 +2716,8 @@
       "name": "otherNode",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 408,
-      "endLine": 408,
+      "startLine": 414,
+      "endLine": 414,
       "contentHash": "8093e58d21f65ce0",
       "status": "active"
     },
@@ -2726,8 +2726,8 @@
       "name": "otherUrn",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 407,
-      "endLine": 407,
+      "startLine": 413,
+      "endLine": 413,
       "contentHash": "f38ab80aff61b36b",
       "status": "active"
     },
@@ -2746,8 +2746,8 @@
       "name": "outgoing",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 237,
-      "endLine": 237,
+      "startLine": 243,
+      "endLine": 243,
       "contentHash": "b6f42b2230735b44",
       "status": "active"
     },
@@ -2766,8 +2766,8 @@
       "name": "queue",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 307,
-      "endLine": 307,
+      "startLine": 313,
+      "endLine": 313,
       "contentHash": "c496065fd35f09be",
       "status": "active"
     },
@@ -2776,8 +2776,8 @@
       "name": "resolved",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 358,
-      "endLine": 358,
+      "startLine": 364,
+      "endLine": 364,
       "contentHash": "17b25ba71557eb86",
       "status": "active"
     },
@@ -2796,9 +2796,19 @@
       "name": "retired",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 452,
-      "endLine": 452,
+      "startLine": 458,
+      "endLine": 458,
       "contentHash": "6808c4a6e8767c22",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/core/graph.ts#sNode",
+      "name": "sNode",
+      "path": "packages/trace/src/core/graph.ts",
+      "symbolKind": "variable",
+      "startLine": 132,
+      "endLine": 132,
+      "contentHash": "a86a8f6bde682a7f",
       "status": "active"
     },
     {
@@ -2806,8 +2816,8 @@
       "name": "source",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 217,
-      "endLine": 217,
+      "startLine": 223,
+      "endLine": 223,
       "contentHash": "e3c8cf3c413b196a",
       "status": "active"
     },
@@ -2816,8 +2826,8 @@
       "name": "sym",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 221,
-      "endLine": 221,
+      "startLine": 227,
+      "endLine": 227,
       "contentHash": "76808fe1c916c31b",
       "status": "active"
     },
@@ -2826,9 +2836,19 @@
       "name": "target",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 359,
-      "endLine": 359,
+      "startLine": 365,
+      "endLine": 365,
       "contentHash": "574729a5bfdf4294",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/core/graph.ts#tNode",
+      "name": "tNode",
+      "path": "packages/trace/src/core/graph.ts",
+      "symbolKind": "variable",
+      "startLine": 133,
+      "endLine": 133,
+      "contentHash": "2a85a9f4e9b76307",
       "status": "active"
     },
     {
@@ -2836,8 +2856,8 @@
       "name": "updated",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 451,
-      "endLine": 451,
+      "startLine": 457,
+      "endLine": 457,
       "contentHash": "3941f34eaf3a0228",
       "status": "active"
     },
@@ -2846,8 +2866,8 @@
       "name": "view",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 202,
-      "endLine": 211,
+      "startLine": 208,
+      "endLine": 217,
       "contentHash": "e40205114925d177",
       "status": "active"
     },
@@ -2856,8 +2876,8 @@
       "name": "visited",
       "path": "packages/trace/src/core/graph.ts",
       "symbolKind": "variable",
-      "startLine": 306,
-      "endLine": 306,
+      "startLine": 312,
+      "endLine": 312,
       "contentHash": "86624cece9db2285",
       "status": "active"
     },
@@ -3628,7 +3648,7 @@
       "symbolKind": "variable",
       "startLine": 27,
       "endLine": 27,
-      "contentHash": "8cd6c00a0b37bed7",
+      "contentHash": "e6ceec5110076ec9",
       "status": "active"
     },
     {
@@ -3638,7 +3658,7 @@
       "symbolKind": "function",
       "startLine": 46,
       "endLine": 53,
-      "contentHash": "94d3f3a8a0cad961",
+      "contentHash": "8a05663f51880ef6",
       "status": "active"
     },
     {
@@ -3648,7 +3668,7 @@
       "symbolKind": "function",
       "startLine": 55,
       "endLine": 58,
-      "contentHash": "e23a9050673da666",
+      "contentHash": "b1e13707bb527ff7",
       "status": "active"
     },
     {
@@ -3658,7 +3678,7 @@
       "symbolKind": "function",
       "startLine": 31,
       "endLine": 34,
-      "contentHash": "00e759b69c2109e3",
+      "contentHash": "3a6c3df6f075339a",
       "status": "active"
     },
     {
@@ -3668,7 +3688,7 @@
       "symbolKind": "function",
       "startLine": 21,
       "endLine": 29,
-      "contentHash": "cf2cfc6cae2e8ba3",
+      "contentHash": "ee43f7a4f49ad550",
       "status": "active"
     },
     {
@@ -3678,7 +3698,7 @@
       "symbolKind": "function",
       "startLine": 11,
       "endLine": 19,
-      "contentHash": "046fd79867348de5",
+      "contentHash": "150340f961a4b02e",
       "status": "active"
     },
     {
@@ -3688,7 +3708,7 @@
       "symbolKind": "function",
       "startLine": 36,
       "endLine": 44,
-      "contentHash": "e17103c8e7a29413",
+      "contentHash": "b680691728b82c09",
       "status": "active"
     },
     {
@@ -3698,7 +3718,7 @@
       "symbolKind": "variable",
       "startLine": 68,
       "endLine": 68,
-      "contentHash": "27e54d9df48f18c3",
+      "contentHash": "0fc4b88c0a661c7b",
       "status": "active"
     },
     {
@@ -3708,7 +3728,7 @@
       "symbolKind": "function",
       "startLine": 6,
       "endLine": 9,
-      "contentHash": "53f75db80c16fc41",
+      "contentHash": "e41575fc94119669",
       "status": "active"
     },
     {
@@ -3718,7 +3738,7 @@
       "symbolKind": "variable",
       "startLine": 56,
       "endLine": 56,
-      "contentHash": "c5f96c2966c05a77",
+      "contentHash": "441b3f39be2bb0c5",
       "status": "active"
     },
     {
@@ -3728,7 +3748,7 @@
       "symbolKind": "interface",
       "startLine": 60,
       "endLine": 65,
-      "contentHash": "65211e1651a7cc4c",
+      "contentHash": "369bae388f3c4cbe",
       "status": "active"
     },
     {
@@ -3738,7 +3758,7 @@
       "symbolKind": "function",
       "startLine": 67,
       "endLine": 79,
-      "contentHash": "ea2e95982acf6d85",
+      "contentHash": "a65774ad8a00f8c4",
       "status": "active"
     },
     {
@@ -3748,7 +3768,7 @@
       "symbolKind": "variable",
       "startLine": 17,
       "endLine": 17,
-      "contentHash": "f080d949e4b02bce",
+      "contentHash": "daa138ee932c7099",
       "status": "active"
     },
     {
@@ -3758,7 +3778,7 @@
       "symbolKind": "variable",
       "startLine": 42,
       "endLine": 42,
-      "contentHash": "f2f8f9823504a29b",
+      "contentHash": "40c7fbd4ba29531d",
       "status": "active"
     },
     {
@@ -3768,7 +3788,7 @@
       "symbolKind": "variable",
       "startLine": 47,
       "endLine": 51,
-      "contentHash": "80be2073cfdbf9ea",
+      "contentHash": "dd10f6b044b72842",
       "status": "active"
     },
     {
@@ -4647,8 +4667,8 @@
       "path": "packages/trace/src/graph-ui/html-template.ts",
       "symbolKind": "function",
       "startLine": 4,
-      "endLine": 960,
-      "contentHash": "49357bf0efed4b60",
+      "endLine": 1409,
+      "contentHash": "3369f5c19ed5c5b8",
       "status": "active"
     },
     {
@@ -10172,6 +10192,16 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:tests/unit/core.test.ts#activeNode",
+      "name": "activeNode",
+      "path": "tests/unit/core.test.ts",
+      "symbolKind": "variable",
+      "startLine": 244,
+      "endLine": 259,
+      "contentHash": "f16764e2116023ab",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:tests/unit/core.test.ts#edge",
       "name": "edge",
       "path": "tests/unit/core.test.ts",
@@ -10186,8 +10216,8 @@
       "name": "estimated",
       "path": "tests/unit/core.test.ts",
       "symbolKind": "variable",
-      "startLine": 210,
-      "endLine": 210,
+      "startLine": 305,
+      "endLine": 305,
       "contentHash": "2c3bb83eb2de91d0",
       "status": "active"
     },
@@ -10212,6 +10242,16 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:tests/unit/core.test.ts#fileNode",
+      "name": "fileNode",
+      "path": "tests/unit/core.test.ts",
+      "symbolKind": "variable",
+      "startLine": 203,
+      "endLine": 213,
+      "contentHash": "61009d17988b914b",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:tests/unit/core.test.ts#graph",
       "name": "graph",
       "path": "tests/unit/core.test.ts",
@@ -10226,8 +10266,8 @@
       "name": "longText",
       "path": "tests/unit/core.test.ts",
       "symbolKind": "variable",
-      "startLine": 206,
-      "endLine": 206,
+      "startLine": 301,
+      "endLine": 301,
       "contentHash": "c0b27bc50eac9b1a",
       "status": "active"
     },
@@ -10236,8 +10276,8 @@
       "name": "manager",
       "path": "tests/unit/core.test.ts",
       "symbolKind": "variable",
-      "startLine": 205,
-      "endLine": 205,
+      "startLine": 300,
+      "endLine": 300,
       "contentHash": "1eeaa26642e838e8",
       "status": "active"
     },
@@ -10246,8 +10286,8 @@
       "name": "maxTokens",
       "path": "tests/unit/core.test.ts",
       "symbolKind": "variable",
-      "startLine": 207,
-      "endLine": 207,
+      "startLine": 302,
+      "endLine": 302,
       "contentHash": "9f7380e450b3ec93",
       "status": "active"
     },
@@ -10282,13 +10322,33 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:tests/unit/core.test.ts#retiredNode",
+      "name": "retiredNode",
+      "path": "tests/unit/core.test.ts",
+      "symbolKind": "variable",
+      "startLine": 260,
+      "endLine": 275,
+      "contentHash": "76316e43544e5e7b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/core.test.ts#retrievedFileNode",
+      "name": "retrievedFileNode",
+      "path": "tests/unit/core.test.ts",
+      "symbolKind": "variable",
+      "startLine": 238,
+      "endLine": 238,
+      "contentHash": "b66493bf628e0275",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:tests/unit/core.test.ts#sym",
       "name": "sym",
       "path": "tests/unit/core.test.ts",
       "symbolKind": "variable",
-      "startLine": 94,
-      "endLine": 109,
-      "contentHash": "03d1474fc8fdb65f",
+      "startLine": 214,
+      "endLine": 229,
+      "contentHash": "6afc44874110b6b1",
       "status": "active"
     },
     {
@@ -10326,8 +10386,8 @@
       "name": "truncated",
       "path": "tests/unit/core.test.ts",
       "symbolKind": "variable",
-      "startLine": 209,
-      "endLine": 209,
+      "startLine": 304,
+      "endLine": 304,
       "contentHash": "2357499eb82b3a1f",
       "status": "active"
     },
@@ -10362,6 +10422,16 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#activeSym",
+      "name": "activeSym",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 197,
+      "endLine": 212,
+      "contentHash": "32200c28b1900302",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#caller",
       "name": "caller",
       "path": "tests/unit/intelligence.test.ts",
@@ -10376,8 +10446,8 @@
       "name": "dbNode",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 276,
-      "endLine": 291,
+      "startLine": 338,
+      "endLine": 353,
       "contentHash": "42f4554c8e59b570",
       "status": "active"
     },
@@ -10392,12 +10462,22 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#edge",
+      "name": "edge",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 229,
+      "endLine": 240,
+      "contentHash": "0e788cc8206687f6",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#feat",
       "name": "feat",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 230,
-      "endLine": 245,
+      "startLine": 292,
+      "endLine": 307,
       "contentHash": "56a6cefdc93937dc",
       "status": "active"
     },
@@ -10416,8 +10496,8 @@
       "name": "graph",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 368,
-      "endLine": 368,
+      "startLine": 430,
+      "endLine": 430,
       "contentHash": "6e8f77e785e60013",
       "status": "active"
     },
@@ -10446,8 +10526,8 @@
       "name": "json",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 383,
-      "endLine": 383,
+      "startLine": 445,
+      "endLine": 445,
       "contentHash": "d619a3ba38745ccf",
       "status": "active"
     },
@@ -10456,8 +10536,8 @@
       "name": "ledger",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 330,
-      "endLine": 330,
+      "startLine": 392,
+      "endLine": 392,
       "contentHash": "c25ad7ada92e934b",
       "status": "active"
     },
@@ -10466,8 +10546,8 @@
       "name": "map",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 217,
-      "endLine": 217,
+      "startLine": 279,
+      "endLine": 279,
       "contentHash": "7679416a490264d6",
       "status": "active"
     },
@@ -10492,12 +10572,22 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#obsoleteSym",
+      "name": "obsoleteSym",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 213,
+      "endLine": 228,
+      "contentHash": "f31b9d0c7c62a0ad",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#plan",
       "name": "plan",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 220,
-      "endLine": 220,
+      "startLine": 282,
+      "endLine": 282,
       "contentHash": "5c413f7538b183a6",
       "status": "active"
     },
@@ -10506,8 +10596,8 @@
       "name": "postReset",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 361,
-      "endLine": 361,
+      "startLine": 423,
+      "endLine": 423,
       "contentHash": "72e1b315a321c88c",
       "status": "active"
     },
@@ -10516,8 +10606,8 @@
       "name": "report",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 310,
-      "endLine": 310,
+      "startLine": 372,
+      "endLine": 372,
       "contentHash": "10d85780a7618b71",
       "status": "active"
     },
@@ -10526,8 +10616,8 @@
       "name": "reports",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 248,
-      "endLine": 248,
+      "startLine": 310,
+      "endLine": 310,
       "contentHash": "bfdacc8fdc867a9b",
       "status": "active"
     },
@@ -10536,8 +10626,8 @@
       "name": "res",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 378,
-      "endLine": 380,
+      "startLine": 440,
+      "endLine": 442,
       "contentHash": "39e93b695e3a68c7",
       "status": "active"
     },
@@ -10546,8 +10636,8 @@
       "name": "serverInstance",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 369,
-      "endLine": 372,
+      "startLine": 431,
+      "endLine": 434,
       "contentHash": "bd53a4b2506e3cb8",
       "status": "active"
     },
@@ -10556,8 +10646,8 @@
       "name": "summary",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 352,
-      "endLine": 352,
+      "startLine": 414,
+      "endLine": 414,
       "contentHash": "ec193fd0b19b6e46",
       "status": "active"
     },
@@ -10576,8 +10666,8 @@
       "name": "tempDir",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 318,
-      "endLine": 318,
+      "startLine": 380,
+      "endLine": 380,
       "contentHash": "743958e88bd083d2",
       "status": "active"
     },
@@ -10586,8 +10676,8 @@
       "name": "uiNode",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 259,
-      "endLine": 274,
+      "startLine": 321,
+      "endLine": 336,
       "contentHash": "2f79d7972bcb5200",
       "status": "active"
     }

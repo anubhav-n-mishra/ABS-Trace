@@ -124,11 +124,17 @@ export class FeatureGraph {
     }
   }
 
-  // --- Edge Operations ---
-
   addEdge(edge: GraphEdge): void {
     const source = this.resolveUrn(edge.sourceUrn);
     const target = this.resolveUrn(edge.targetUrn);
+
+    // Guardrail: do not connect edges to or from retired nodes
+    const sNode = this.nodes.get(source);
+    const tNode = this.nodes.get(target);
+    if (sNode?.status === 'retired' || tNode?.status === 'retired') {
+      return;
+    }
+
     const normalizedEdge: GraphEdge = {
       ...edge,
       sourceUrn: source,
@@ -441,7 +447,7 @@ export class FeatureGraph {
     newEdges: GraphEdge[]
   ): { added: TraceNode[]; updated: TraceNode[]; retired: TraceNode[] } {
     const existingFileNodes = Array.from(this.nodes.values()).filter(
-      (n) => n.path === filePath && n.kind !== 'feature'
+      (n) => n.path === filePath && n.kind !== 'feature' && n.kind !== 'file'
     );
 
     const newNodeMap = new Map(newNodes.map((n) => [n.urn, n]));
