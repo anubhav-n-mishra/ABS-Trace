@@ -18,11 +18,11 @@ export function generateGraphHtml(initialData: {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-base: #07090e;
-      --bg-panel: rgba(13, 17, 26, 0.88);
-      --bg-card: #131a29;
-      --bg-card-hover: #1c263b;
-      --border: #202b40;
+      --bg-base: #06090f;
+      --bg-panel: rgba(11, 15, 25, 0.88);
+      --bg-card: #111827;
+      --bg-card-hover: #1e293b;
+      --border: #1e293b;
       --border-active: #38bdf8;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
@@ -54,7 +54,7 @@ export function generateGraphHtml(initialData: {
     header {
       height: 56px;
       min-height: 56px;
-      background: rgba(9, 12, 19, 0.95);
+      background: rgba(8, 11, 18, 0.94);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(16px);
       display: flex;
@@ -86,7 +86,7 @@ export function generateGraphHtml(initialData: {
 
     .search-box {
       position: relative;
-      width: 340px;
+      width: 360px;
     }
 
     .search-box input {
@@ -94,7 +94,7 @@ export function generateGraphHtml(initialData: {
       background: var(--bg-card);
       border: 1px solid var(--border);
       color: var(--text-main);
-      padding: 8px 14px 8px 34px;
+      padding: 8px 14px 8px 36px;
       border-radius: 8px;
       font-size: 13px;
       font-family: var(--font-sans);
@@ -107,12 +107,14 @@ export function generateGraphHtml(initialData: {
     }
     .search-icon {
       position: absolute;
-      left: 11px;
+      left: 12px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 13px;
       color: var(--text-dim);
       pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .stats-bar {
@@ -124,7 +126,7 @@ export function generateGraphHtml(initialData: {
     .stat-pill {
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--border);
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 20px;
       font-size: 12px;
       color: var(--text-muted);
@@ -139,7 +141,7 @@ export function generateGraphHtml(initialData: {
       flex: 1;
       position: relative;
       overflow: hidden;
-      background: radial-gradient(circle at 50% 50%, #0d131f 0%, #07090e 100%);
+      background: radial-gradient(circle at 50% 50%, #0d1424 0%, #05070c 100%);
     }
 
     canvas {
@@ -185,13 +187,16 @@ export function generateGraphHtml(initialData: {
       background: var(--bg-card);
       border: 1px solid var(--border);
       color: var(--text-muted);
-      padding: 4px 10px;
+      padding: 5px 10px;
       border-radius: 6px;
       font-size: 11px;
       font-weight: 500;
       cursor: pointer;
       user-select: none;
       transition: background 0.15s, border-color 0.15s, color 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
     .chip:hover {
       background: var(--bg-card-hover);
@@ -209,7 +214,7 @@ export function generateGraphHtml(initialData: {
       background: var(--bg-card);
       border: 1px solid var(--border);
       color: var(--text-main);
-      padding: 7px 10px;
+      padding: 8px 10px;
       border-radius: 6px;
       font-size: 12px;
       font-family: var(--font-sans);
@@ -226,7 +231,7 @@ export function generateGraphHtml(initialData: {
       background: #1e293b;
       color: var(--text-main);
       border: 1px solid var(--border);
-      padding: 8px 12px;
+      padding: 9px 12px;
       border-radius: 6px;
       font-size: 12px;
       font-weight: 600;
@@ -235,14 +240,14 @@ export function generateGraphHtml(initialData: {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 8px;
     }
     .action-btn:hover {
       background: #27354f;
       border-color: var(--accent-blue);
     }
 
-    /* Zoom / Canvas Controls */
+    /* Zoom Controls */
     .zoom-controls {
       position: absolute;
       bottom: 20px;
@@ -263,8 +268,6 @@ export function generateGraphHtml(initialData: {
       color: var(--text-main);
       width: 36px;
       height: 36px;
-      font-size: 17px;
-      font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -274,7 +277,7 @@ export function generateGraphHtml(initialData: {
     .zoom-btn:hover { background: var(--bg-card-hover); }
     .zoom-btn + .zoom-btn { border-top: 1px solid var(--border); }
 
-    /* Details Slide-out Drawer */
+    /* Details Drawer */
     #details-drawer {
       position: absolute;
       top: 0;
@@ -306,11 +309,13 @@ export function generateGraphHtml(initialData: {
       background: transparent;
       border: none;
       color: var(--text-dim);
-      font-size: 22px;
       cursor: pointer;
-      line-height: 1;
-      padding: 2px 6px;
-      border-radius: 4px;
+      padding: 4px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s, color 0.15s;
     }
     .drawer-close:hover { color: var(--text-main); background: rgba(255,255,255,0.06); }
 
@@ -322,7 +327,7 @@ export function generateGraphHtml(initialData: {
 
     .detail-kind-badge {
       display: inline-block;
-      padding: 2px 8px;
+      padding: 3px 8px;
       border-radius: 4px;
       font-size: 11px;
       font-weight: 700;
@@ -393,11 +398,11 @@ export function generateGraphHtml(initialData: {
     .editor-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       background: #1e293b;
       border: 1px solid var(--border);
       color: var(--text-main);
-      padding: 6px 12px;
+      padding: 7px 14px;
       border-radius: 6px;
       font-size: 12px;
       font-weight: 500;
@@ -425,7 +430,6 @@ export function generateGraphHtml(initialData: {
       word-break: break-word;
     }
 
-    /* Helper hints */
     .helper-hint {
       position: absolute;
       bottom: 20px;
@@ -450,7 +454,12 @@ export function generateGraphHtml(initialData: {
     </div>
 
     <div class="search-box">
-      <span class="search-icon">🔍</span>
+      <span class="search-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </span>
       <input type="text" id="searchInput" placeholder="Search features, symbols, APIs (Press Enter to focus)...">
     </div>
 
@@ -465,10 +474,22 @@ export function generateGraphHtml(initialData: {
     <div class="controls-dock">
       <div class="dock-section-title">View Mode</div>
       <div class="filter-chips" id="modeChips">
-        <div class="chip active" data-mode="all" title="Show all indexed elements">All</div>
-        <div class="chip" data-mode="features" title="Show only features and key interfaces">Architecture</div>
-        <div class="chip" data-mode="focus" title="Focus on selected node and direct connections">Focus</div>
-        <div class="chip" data-mode="impact" title="Show blast radius of selected node">Impact</div>
+        <div class="chip active" data-mode="all" title="Show all indexed elements organized by feature/module clusters">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          All
+        </div>
+        <div class="chip" data-mode="features" title="Show only features and key interfaces">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          Architecture
+        </div>
+        <div class="chip" data-mode="focus" title="Focus on selected node and direct connections">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+          Focus
+        </div>
+        <div class="chip" data-mode="impact" title="Show blast radius of selected node">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          Impact
+        </div>
       </div>
 
       <div class="dock-section-title">Focus Feature</div>
@@ -486,13 +507,31 @@ export function generateGraphHtml(initialData: {
         <div class="chip" data-kind="file">File</div>
       </div>
 
-      <button class="action-btn" id="btnFitView">⛶ Fit Whole Graph</button>
+      <button class="action-btn" id="btnFitView">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+        Fit Whole Graph
+      </button>
     </div>
 
     <div class="zoom-controls">
-      <button class="zoom-btn" id="btnZoomIn" title="Zoom in">+</button>
-      <button class="zoom-btn" id="btnZoomOut" title="Zoom out">−</button>
-      <button class="zoom-btn" id="btnZoomFit" title="Fit to view">⛶</button>
+      <button class="zoom-btn" id="btnZoomIn" title="Zoom in">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+      <button class="zoom-btn" id="btnZoomOut" title="Zoom out">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+      <button class="zoom-btn" id="btnZoomFit" title="Fit to view">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+      </button>
     </div>
 
     <div class="helper-hint">
@@ -509,7 +548,12 @@ export function generateGraphHtml(initialData: {
           <span class="detail-kind-badge" id="drawerBadge">Symbol</span>
           <h2 class="detail-title" id="drawerTitle">Name</h2>
         </div>
-        <button class="drawer-close" id="drawerClose" title="Close drawer">&times;</button>
+        <button class="drawer-close" id="drawerClose" title="Close drawer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
       </div>
 
       <div class="drawer-content">
@@ -519,7 +563,11 @@ export function generateGraphHtml(initialData: {
           <div class="detail-section-heading">Location</div>
           <div id="drawerLocation" style="font-size: 13px; color: var(--text-muted); font-family: var(--font-mono);">src/file.ts</div>
           <a class="editor-btn" id="drawerEditorLink" target="_blank">
-            <span>💻</span> Open in Editor
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            Open in Editor
           </a>
         </div>
 
@@ -553,6 +601,7 @@ export function generateGraphHtml(initialData: {
       let allNodes = [];
       let allEdges = [];
       let features = [];
+      let clusters = []; // Cluster metadata
       let nodeMap = new Map();
       let neighborMap = new Map(); // urn -> Set of connected urns
       let edgeMap = new Map();     // urn -> Array of edges
@@ -578,12 +627,9 @@ export function generateGraphHtml(initialData: {
       let dragStartX = 0;
       let dragStartY = 0;
       let draggedNode = null;
-      let mouseScreenX = 0;
-      let mouseScreenY = 0;
 
       // Simulation temperature / cooling parameter
       let alpha = 1.0;
-      let simTimer = null;
       let isSimRunning = false;
       let needsRender = true;
 
@@ -655,73 +701,144 @@ export function generateGraphHtml(initialData: {
             sel.appendChild(opt);
           });
 
-          setupInitialLayout();
+          setupClusteredGalaxyLayout();
         } catch (e) {
           console.error('Failed to load graph data:', e);
         }
       }
 
-      // Feature-Centric Cluster Layout
-      function setupInitialLayout() {
-        const featureNodes = allNodes.filter(n => n.kind === 'feature');
-        const featureCount = Math.max(1, featureNodes.length);
-        const featureMapLocal = new Map();
+      // Determines a human-readable cluster / module category for any node
+      function getNodeClusterKey(node) {
+        if (node.kind === 'feature') {
+          return 'feat:' + node.urn;
+        }
 
-        // 1. Arrange Features in a spacious circle
-        const ringRadius = Math.max(350, featureCount * 90);
-        featureNodes.forEach((f, idx) => {
-          const angle = (idx / featureCount) * 2 * Math.PI - Math.PI / 2;
-          f.x = Math.cos(angle) * ringRadius;
-          f.y = Math.sin(angle) * ringRadius;
-          f.vx = 0;
-          f.vy = 0;
-          f.radius = 28;
-          f.clusterX = f.x;
-          f.clusterY = f.y;
-          featureMapLocal.set(f.urn, f);
+        // 1. Direct or 1-hop connected feature
+        const neighbors = neighborMap.get(node.urn) || new Set();
+        for (const nUrn of neighbors) {
+          const nNode = nodeMap.get(nUrn);
+          if (nNode && nNode.kind === 'feature') {
+            return 'feat:' + nNode.urn;
+          }
+        }
+
+        // 2. Directory / Module Categorization
+        const p = node.path || '';
+        if (p.includes('packages/trace/src/core')) return 'mod:Core';
+        if (p.includes('packages/trace/src/indexer')) return 'mod:Indexer';
+        if (p.includes('packages/trace/src/analyzer')) return 'mod:Analyzer';
+        if (p.includes('packages/trace/src/intelligence')) return 'mod:Intelligence';
+        if (p.includes('packages/trace/src/graph-ui')) return 'mod:Graph UI';
+        if (p.includes('packages/trace/src/cli') || p.includes('packages/trace/bin')) return 'mod:CLI';
+        if (p.includes('packages/amvelt-trace')) return 'mod:Amvelt Distribution';
+        if (p.startsWith('fixtures/01-')) return 'mod:Fixture 01 (JS)';
+        if (p.startsWith('fixtures/02-')) return 'mod:Fixture 02 (TS)';
+        if (p.startsWith('fixtures/03-')) return 'mod:Fixture 03 (React)';
+        if (p.startsWith('fixtures/04-')) return 'mod:Fixture 04 (Backend)';
+        if (p.startsWith('fixtures/05-')) return 'mod:Fixture 05 (Fullstack)';
+        if (p.startsWith('fixtures/06-')) return 'mod:Fixture 06 (Vibe)';
+        if (p.startsWith('fixtures/07-')) return 'mod:Fixture 07 (Monorepo)';
+        if (p.startsWith('fixtures/08-')) return 'mod:Fixture 08 (Renamed)';
+        if (p.startsWith('fixtures/09-')) return 'mod:Fixture 09 (Deleted)';
+        if (p.startsWith('fixtures/10-')) return 'mod:Fixture 10 (Shared)';
+        if (p.startsWith('fixtures/11-')) return 'mod:Fixture 11 (Ambiguous)';
+        if (p.startsWith('fixtures/')) return 'mod:Fixtures';
+        if (p.startsWith('tests/')) return 'mod:Tests';
+        if (p.startsWith('scripts/')) return 'mod:Scripts';
+
+        return 'mod:Utilities';
+      }
+
+      // Feature & Module Galaxy Layout (Eliminates the giant central blob)
+      function setupClusteredGalaxyLayout() {
+        // Group all nodes by their cluster key
+        const clusterBuckets = new Map(); // key -> Array of nodes
+
+        allNodes.forEach(n => {
+          const key = getNodeClusterKey(n);
+          if (!clusterBuckets.has(key)) clusterBuckets.set(key, []);
+          clusterBuckets.get(key).push(n);
         });
 
-        // 2. Associate non-feature nodes with their nearest feature cluster
-        const orphanNodes = [];
-        allNodes.forEach((n, idx) => {
-          if (n.kind === 'feature') return;
+        clusters = [];
+        const sortedKeys = Array.from(clusterBuckets.keys()).sort((a, b) => {
+          // Feature clusters first, then module clusters
+          const isFeatA = a.startsWith('feat:');
+          const isFeatB = b.startsWith('feat:');
+          if (isFeatA && !isFeatB) return -1;
+          if (!isFeatA && isFeatB) return 1;
+          return a.localeCompare(b);
+        });
 
-          n.vx = 0;
-          n.vy = 0;
-          n.radius = n.kind === 'route' ? 18 : (n.kind === 'model' ? 18 : (n.kind === 'test' ? 14 : (n.kind === 'file' ? 12 : 14)));
+        const totalClusters = sortedKeys.length;
+        // Two rings: outer ring for features, inner ring for modules
+        const featKeys = sortedKeys.filter(k => k.startsWith('feat:'));
+        const modKeys = sortedKeys.filter(k => !k.startsWith('feat:'));
 
-          // Find connected feature
-          let parentFeat = null;
-          const neighbors = neighborMap.get(n.urn) || new Set();
-          for (const neighborUrn of neighbors) {
-            if (featureMapLocal.has(neighborUrn)) {
-              parentFeat = featureMapLocal.get(neighborUrn);
-              break;
+        const featRingRadius = Math.max(700, featKeys.length * 110);
+        const modRingRadius = Math.max(450, modKeys.length * 55);
+
+        // Position Feature clusters on the outer ring
+        featKeys.forEach((key, idx) => {
+          const angle = (idx / Math.max(1, featKeys.length)) * 2 * Math.PI - Math.PI / 2;
+          const cx = Math.cos(angle) * featRingRadius;
+          const cy = Math.sin(angle) * featRingRadius;
+          const featUrn = key.replace('feat:', '');
+          const featNode = nodeMap.get(featUrn);
+          const label = featNode ? (featNode.displayName || featNode.name) : 'Feature';
+
+          clusters.push({
+            key,
+            label,
+            isFeature: true,
+            x: cx,
+            y: cy,
+            count: clusterBuckets.get(key).length
+          });
+        });
+
+        // Position Module clusters on an inner constellation
+        modKeys.forEach((key, idx) => {
+          const angle = (idx / Math.max(1, modKeys.length)) * 2 * Math.PI - Math.PI / 4;
+          const cx = Math.cos(angle) * modRingRadius;
+          const cy = Math.sin(angle) * modRingRadius;
+          const label = key.replace('mod:', '');
+
+          clusters.push({
+            key,
+            label,
+            isFeature: false,
+            x: cx,
+            y: cy,
+            count: clusterBuckets.get(key).length
+          });
+        });
+
+        const clusterMap = new Map(clusters.map(c => [c.key, c]));
+
+        // Distribute nodes around their cluster center in golden spiral orbits
+        clusters.forEach(c => {
+          const nodes = clusterBuckets.get(c.key) || [];
+          nodes.forEach((n, idx) => {
+            n.vx = 0;
+            n.vy = 0;
+
+            if (n.kind === 'feature') {
+              n.x = c.x;
+              n.y = c.y;
+              n.radius = 26;
+            } else {
+              n.radius = n.kind === 'route' ? 17 : (n.kind === 'model' ? 17 : (n.kind === 'test' ? 13 : (n.kind === 'file' ? 11 : 13)));
+              // Golden spiral distribution around cluster center
+              const phi = idx * 2.39996; // Golden angle
+              const r = (c.isFeature ? 45 : 30) + Math.sqrt(idx) * 18;
+              n.x = c.x + Math.cos(phi) * r;
+              n.y = c.y + Math.sin(phi) * r;
             }
-          }
 
-          if (parentFeat) {
-            // Place orbiting parent feature with deterministic pseudo-random offset
-            const angle = (idx * 1.37) % (2 * Math.PI);
-            const dist = 70 + (idx % 12) * 16;
-            n.x = parentFeat.x + Math.cos(angle) * dist;
-            n.y = parentFeat.y + Math.sin(angle) * dist;
-            n.clusterX = parentFeat.x;
-            n.clusterY = parentFeat.y;
-          } else {
-            orphanNodes.push(n);
-          }
-        });
-
-        // 3. Arrange unmapped nodes in a center outer constellation
-        const orphanCount = Math.max(1, orphanNodes.length);
-        orphanNodes.forEach((n, idx) => {
-          const angle = (idx / orphanCount) * 2 * Math.PI;
-          const dist = ringRadius * 0.4 + (idx % 5) * 35;
-          n.x = Math.cos(angle) * dist;
-          n.y = Math.sin(angle) * dist;
-          n.clusterX = 0;
-          n.clusterY = 0;
+            n.clusterX = c.x;
+            n.clusterY = c.y;
+          });
         });
 
         // If focus requested from CLI config
@@ -730,7 +847,7 @@ export function generateGraphHtml(initialData: {
           if (target) selectNode(target);
         }
 
-        // Start fast simulation with high cooling
+        // Start smooth simulation
         alpha = 1.0;
         startSimulation();
         fitView();
@@ -787,19 +904,18 @@ export function generateGraphHtml(initialData: {
         const visibleNodes = getVisibleNodes();
         const visibleSet = new Set(visibleNodes.map(n => n.urn));
 
-        // 1. Cluster Attraction & Center Gravity
+        // 1. Cluster Attraction (each node gravitates to its own cluster anchor)
         for (let i = 0; i < visibleNodes.length; i++) {
           const n = visibleNodes[i];
           if (n === draggedNode) continue;
 
-          // Pull towards cluster center
           const targetX = n.clusterX || 0;
           const targetY = n.clusterY || 0;
-          n.vx += (targetX - n.x) * 0.02 * alpha;
-          n.vy += (targetY - n.y) * 0.02 * alpha;
+          n.vx += (targetX - n.x) * 0.025 * alpha;
+          n.vy += (targetY - n.y) * 0.025 * alpha;
         }
 
-        // 2. Spring forces along edges (only O(E), very fast!)
+        // 2. Spring forces along edges (O(E))
         for (let i = 0; i < allEdges.length; i++) {
           const e = allEdges[i];
           if (!visibleSet.has(e.sourceUrn) || !visibleSet.has(e.targetUrn)) continue;
@@ -811,8 +927,8 @@ export function generateGraphHtml(initialData: {
           const dx = b.x - a.x;
           const dy = b.y - a.y;
           const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-          const targetDist = (a.kind === 'feature' || b.kind === 'feature') ? 140 : 80;
-          const force = (dist - targetDist) * 0.03 * alpha;
+          const targetDist = (a.kind === 'feature' || b.kind === 'feature') ? 90 : 55;
+          const force = (dist - targetDist) * 0.02 * alpha;
           const fx = (dx / dist) * force;
           const fy = (dy / dist) * force;
 
@@ -826,8 +942,8 @@ export function generateGraphHtml(initialData: {
           }
         }
 
-        // 3. Local repulsion using grid/spatial buckets (capped at O(N))
-        const gridSize = 120;
+        // 3. Local repulsion using spatial grid (prevents overlaps)
+        const gridSize = 100;
         const grid = new Map();
         for (let i = 0; i < visibleNodes.length; i++) {
           const n = visibleNodes[i];
@@ -843,7 +959,6 @@ export function generateGraphHtml(initialData: {
           const gx = parseInt(gxStr, 10);
           const gy = parseInt(gyStr, 10);
 
-          // Compare with nodes in current cell and adjacent 4 cells
           const neighborsToCheck = cellNodes.concat(
             grid.get((gx + 1) + ',' + gy) || [],
             grid.get(gx + ',' + (gy + 1)) || [],
@@ -859,11 +974,11 @@ export function generateGraphHtml(initialData: {
               const dx = b.x - a.x;
               const dy = b.y - a.y;
               const distSq = dx * dx + dy * dy;
-              const minDist = a.radius + b.radius + 20;
+              const minDist = a.radius + b.radius + 12;
 
               if (distSq < minDist * minDist && distSq > 0.01) {
                 const dist = Math.sqrt(distSq);
-                const force = ((minDist - dist) / dist) * 0.6 * alpha;
+                const force = ((minDist - dist) / dist) * 0.5 * alpha;
                 const fx = dx * force;
                 const fy = dy * force;
 
@@ -881,7 +996,7 @@ export function generateGraphHtml(initialData: {
         }
 
         // 4. Position update & damping
-        const damping = 0.72;
+        const damping = 0.70;
         for (let i = 0; i < visibleNodes.length; i++) {
           const n = visibleNodes[i];
           if (n !== draggedNode) {
@@ -892,8 +1007,8 @@ export function generateGraphHtml(initialData: {
           }
         }
 
-        // Cool down
-        alpha *= 0.94;
+        // Smooth energy cooling
+        alpha *= 0.93;
         requestRender();
       }
 
@@ -931,12 +1046,24 @@ export function generateGraphHtml(initialData: {
         ctx.translate(panX, panY);
         ctx.scale(scale, scale);
 
-        // Highlight sets if a node is selected
         const selectedNeighbors = selectedNode ? (neighborMap.get(selectedNode.urn) || new Set()) : null;
 
-        // --- 1. Draw Edges ---
-        // Normal edges pass
-        ctx.lineWidth = 1.2 / scale;
+        // --- 1. Draw Cluster Hub Titles ---
+        // Subtle, elegant cluster labels behind nodes
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        for (let i = 0; i < clusters.length; i++) {
+          const c = clusters[i];
+          if (c.isFeature) continue; // Features already have their own large glowing feature nodes
+
+          ctx.font = '600 12px var(--font-sans)';
+          ctx.fillStyle = 'rgba(100, 116, 139, 0.35)';
+          ctx.fillText(c.label.toUpperCase(), c.x, c.y - 12);
+        }
+
+        // --- 2. Draw Edges ---
+        // Normal background edges pass
+        ctx.lineWidth = 1.0 / scale;
         for (let i = 0; i < allEdges.length; i++) {
           const e = allEdges[i];
           if (!visibleSet.has(e.sourceUrn) || !visibleSet.has(e.targetUrn)) continue;
@@ -949,11 +1076,10 @@ export function generateGraphHtml(initialData: {
             (e.sourceUrn === selectedNode.urn && selectedNeighbors.has(e.targetUrn)) ||
             (e.targetUrn === selectedNode.urn && selectedNeighbors.has(e.sourceUrn))
           );
-
-          if (isHighlight) continue; // Drawn in foreground pass
+          if (isHighlight) continue;
 
           const isDimmed = selectedNode !== null;
-          ctx.strokeStyle = isDimmed ? 'rgba(32, 43, 64, 0.4)' : 'rgba(56, 189, 248, 0.18)';
+          ctx.strokeStyle = isDimmed ? 'rgba(30, 41, 59, 0.25)' : 'rgba(56, 189, 248, 0.12)';
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
@@ -971,7 +1097,6 @@ export function generateGraphHtml(initialData: {
               (e.sourceUrn === selectedNode.urn && selectedNeighbors.has(e.targetUrn)) ||
               (e.targetUrn === selectedNode.urn && selectedNeighbors.has(e.sourceUrn))
             );
-
             if (!isHighlight) continue;
 
             const a = nodeMap.get(e.sourceUrn);
@@ -986,7 +1111,7 @@ export function generateGraphHtml(initialData: {
           }
         }
 
-        // --- 2. Draw Nodes ---
+        // --- 3. Draw Nodes ---
         for (let i = 0; i < visibleNodes.length; i++) {
           const n = visibleNodes[i];
           const isSelected = selectedNode && selectedNode.urn === n.urn;
@@ -1001,48 +1126,77 @@ export function generateGraphHtml(initialData: {
           ctx.arc(n.x, n.y, n.radius, 0, 2 * Math.PI);
 
           if (isDimmed) {
-            ctx.fillStyle = 'rgba(25, 33, 49, 0.6)';
+            ctx.fillStyle = 'rgba(20, 27, 40, 0.5)';
             ctx.fill();
-            ctx.strokeStyle = 'rgba(40, 53, 76, 0.5)';
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'rgba(35, 47, 70, 0.4)';
+            ctx.lineWidth = 1 / scale;
             ctx.stroke();
           } else {
             ctx.fillStyle = isSelected ? '#ffffff' : (isHovered ? '#ffffff' : baseColor);
             ctx.fill();
 
-            // Distinct node borders
             if (isSelected) {
-              ctx.lineWidth = 4 / scale;
+              ctx.lineWidth = 3.5 / scale;
               ctx.strokeStyle = '#38bdf8';
               ctx.stroke();
 
-              // Outer glow ring
+              // Outer glow halo
               ctx.beginPath();
               ctx.arc(n.x, n.y, n.radius + 6 / scale, 0, 2 * Math.PI);
               ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
               ctx.lineWidth = 2 / scale;
               ctx.stroke();
-            } else if (isConnected) {
+            } else if (n.kind === 'feature') {
+              // Feature nodes have a distinct outer purple ring
               ctx.lineWidth = 2.5 / scale;
+              ctx.strokeStyle = 'rgba(192, 132, 252, 0.8)';
+              ctx.stroke();
+            } else if (isConnected) {
+              ctx.lineWidth = 2.2 / scale;
               ctx.strokeStyle = '#38bdf8';
               ctx.stroke();
             } else {
-              ctx.lineWidth = 2 / scale;
-              ctx.strokeStyle = 'rgba(10, 14, 23, 0.8)';
+              ctx.lineWidth = 1.5 / scale;
+              ctx.strokeStyle = 'rgba(8, 12, 20, 0.7)';
               ctx.stroke();
             }
           }
 
-          // Node Label (Level of Detail: show if zoomed in or if important)
-          const shouldShowLabel = scale > 0.4 || n.kind === 'feature' || isSelected || isConnected || isHovered;
+          // --- 4. Crisp Level of Detail Label Rendering ---
+          // NEVER show all labels simultaneously to prevent overlapping text walls!
+          const isFeature = n.kind === 'feature';
+          const shouldShowLabel = isFeature || isSelected || isHovered || (isConnected && scale > 0.6) || (scale > 1.35 && !isDimmed);
+
           if (shouldShowLabel && !isDimmed) {
-            ctx.fillStyle = isSelected ? '#38bdf8' : (isHovered ? '#ffffff' : '#f1f5f9');
-            ctx.font = isSelected ? ('bold ' + Math.max(12, 13 / scale) + 'px var(--font-sans)') : (Math.max(10, 11 / scale) + 'px var(--font-sans)');
-            ctx.textAlign = 'center';
-            const displayName = n.kind === 'feature' ? (n.displayName || n.name) : n.name;
-            const maxLen = 22;
+            const displayName = isFeature ? (n.displayName || n.name) : n.name;
+            const maxLen = isFeature ? 28 : 20;
             const label = displayName.length > maxLen ? displayName.slice(0, maxLen - 1) + '…' : displayName;
-            ctx.fillText(label, n.x, n.y + n.radius + 14 / scale);
+
+            const fontSize = isFeature ? Math.max(12, 13 / scale) : Math.max(10, 11 / scale);
+            ctx.font = (isFeature || isSelected ? '600 ' : '500 ') + fontSize + 'px var(--font-sans)';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+
+            const textWidth = ctx.measureText(label).width;
+            const badgeHeight = fontSize + 6;
+            const badgeY = n.y + n.radius + 6 / scale;
+
+            // Capsule background to prevent text clash with underlying circles
+            ctx.fillStyle = isFeature ? 'rgba(30, 20, 48, 0.88)' : 'rgba(8, 12, 20, 0.85)';
+            ctx.beginPath();
+            if (ctx.roundRect) {
+              ctx.roundRect(n.x - textWidth / 2 - 6, badgeY - 2, textWidth + 12, badgeHeight, 4);
+            } else {
+              ctx.rect(n.x - textWidth / 2 - 6, badgeY - 2, textWidth + 12, badgeHeight);
+            }
+            ctx.fill();
+            ctx.strokeStyle = isFeature ? 'rgba(192, 132, 252, 0.5)' : (isSelected ? 'rgba(56, 189, 248, 0.6)' : 'rgba(30, 41, 59, 0.6)');
+            ctx.lineWidth = 1 / scale;
+            ctx.stroke();
+
+            // Label text
+            ctx.fillStyle = isFeature ? '#e9d5ff' : (isSelected ? '#38bdf8' : (isHovered ? '#ffffff' : '#f1f5f9'));
+            ctx.fillText(label, n.x, badgeY + 1);
           }
         }
 
@@ -1074,11 +1228,11 @@ export function generateGraphHtml(initialData: {
           if (n.y > maxY) maxY = n.y;
         });
 
-        const padding = 80;
-        const boxWidth = Math.max(200, (maxX - minX) + padding * 2);
-        const boxHeight = Math.max(200, (maxY - minY) + padding * 2);
+        const padding = 100;
+        const boxWidth = Math.max(300, (maxX - minX) + padding * 2);
+        const boxHeight = Math.max(300, (maxY - minY) + padding * 2);
 
-        const targetScale = Math.min(1.4, Math.max(0.08, Math.min(width / boxWidth, height / boxHeight)));
+        const targetScale = Math.min(1.2, Math.max(0.06, Math.min(width / boxWidth, height / boxHeight)));
         const centerX = (minX + maxX) / 2;
         const centerY = (minY + maxY) / 2;
 
@@ -1091,7 +1245,7 @@ export function generateGraphHtml(initialData: {
       // Fly Camera to Specific Node
       function focusOnNode(node) {
         if (!node) return;
-        scale = Math.max(1.0, Math.min(2.5, scale));
+        scale = Math.max(1.1, Math.min(2.5, scale));
         panX = (width / 2) - (node.x * scale);
         panY = (height / 2) - (node.y * scale);
         requestRender();
@@ -1119,11 +1273,10 @@ export function generateGraphHtml(initialData: {
         const my = (e.clientY - rect.top - panY) / scale;
 
         const visibleNodes = getVisibleNodes();
-        // Adaptive hit testing with minimum radius so nodes are easily clickable at any zoom level
         const clicked = visibleNodes.find(n => {
           const dx = n.x - mx;
           const dy = n.y - my;
-          const hitRadius = Math.max(n.radius, 15 / scale);
+          const hitRadius = Math.max(n.radius, 16 / scale);
           return (dx * dx + dy * dy) <= (hitRadius * hitRadius);
         });
 
@@ -1139,9 +1292,6 @@ export function generateGraphHtml(initialData: {
       });
 
       window.addEventListener('mousemove', e => {
-        mouseScreenX = e.clientX;
-        mouseScreenY = e.clientY;
-
         const rect = canvas.getBoundingClientRect();
         const mx = (e.clientX - rect.left - panX) / scale;
         const my = (e.clientY - rect.top - panY) / scale;
@@ -1151,7 +1301,7 @@ export function generateGraphHtml(initialData: {
           draggedNode.y = my;
           draggedNode.vx = 0;
           draggedNode.vy = 0;
-          startSimulation(0.2); // Reheat slightly to adjust neighboring springs
+          startSimulation(0.2);
           requestRender();
         } else if (isDragging) {
           panX = e.clientX - dragStartX;
@@ -1163,7 +1313,7 @@ export function generateGraphHtml(initialData: {
           const hovered = visibleNodes.find(n => {
             const dx = n.x - mx;
             const dy = n.y - my;
-            const hitRadius = Math.max(n.radius, 14 / scale);
+            const hitRadius = Math.max(n.radius, 15 / scale);
             return (dx * dx + dy * dy) <= (hitRadius * hitRadius);
           });
 
