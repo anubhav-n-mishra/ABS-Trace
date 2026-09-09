@@ -19,7 +19,7 @@ The Amvelt TRACE team takes the security of our developer tools and the reposito
 
 If you believe you have discovered a vulnerability, please report it through one of the following channels:
 1. **GitHub Private Vulnerability Reporting**: Use the "Report a vulnerability" button under the **Security** tab of the [ABS-Trace repository](https://github.com/anubhav-n-mishra/ABS-Trace/security/advisories/new).
-2. **Email**: If GitHub reporting is unavailable, send an email to **anubhav.mishra.dev@gmail.com** with the subject `[SECURITY] Amvelt TRACE Vulnerability Report`.
+2. **Email**: If GitHub reporting is unavailable, send an email to **anubhav09.work@gmail.com** with the subject `[SECURITY] Amvelt TRACE Vulnerability Report`.
 
 ### What to Include in Your Report
 To help us triage and resolve the issue quickly, please provide:

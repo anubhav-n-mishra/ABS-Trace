@@ -117,6 +117,75 @@ export function generateGraphHtml(initialData: {
       align-items: center;
       justify-content: center;
     }
+    .search-dropdown {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.75);
+      max-height: 280px;
+      overflow-y: auto;
+      display: none;
+      z-index: 50;
+    }
+    .search-item {
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      transition: background 0.15s;
+    }
+    .search-item:hover {
+      background: #1e293b;
+    }
+    .search-item-name {
+      font-weight: 500;
+      color: #f8fafc;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .search-item-kind {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .drawer-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .drawer-action-btn {
+      flex: 1;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #f1f5f9;
+      padding: 7px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+    .drawer-action-btn:hover {
+      background: #334155;
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
 
     .stats-bar {
       display: flex;
@@ -461,7 +530,8 @@ export function generateGraphHtml(initialData: {
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
       </span>
-      <input type="text" id="searchInput" placeholder="Search features, symbols, APIs (Press Enter to focus)...">
+      <input type="text" id="searchInput" placeholder="Search features, symbols, APIs (Press Enter to focus)..." autocomplete="off">
+      <div class="search-dropdown" id="searchDropdown"></div>
     </div>
 
     <div class="stats-bar">
@@ -475,11 +545,11 @@ export function generateGraphHtml(initialData: {
     <div class="controls-dock">
       <div class="dock-section-title">View Mode</div>
       <div class="filter-chips" id="modeChips">
-        <div class="chip active" data-mode="all" title="Show all indexed elements organized by feature/module clusters">
+        <div class="chip active" data-mode="all" title="Show all indexed elements organized by feature clusters">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
           All
         </div>
-        <div class="chip" data-mode="features" title="Show only features and key interfaces">
+        <div class="chip" data-mode="architecture" title="High-level architecture: features and key interfaces">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
           Architecture
         </div>
@@ -504,7 +574,7 @@ export function generateGraphHtml(initialData: {
         <div class="chip active" data-kind="route">API</div>
         <div class="chip active" data-kind="symbol">Symbol</div>
         <div class="chip${initialData.showModels ? ' active' : ''}" data-kind="model">Model</div>
-        <div class="chip active" data-kind="test">Test</div>
+        <div class="chip" data-kind="test">Test</div>
         <div class="chip" data-kind="file">File</div>
       </div>
 
@@ -548,6 +618,16 @@ export function generateGraphHtml(initialData: {
         <div>
           <span class="detail-kind-badge" id="drawerBadge">Symbol</span>
           <h2 class="detail-title" id="drawerTitle">Name</h2>
+          <div class="drawer-actions">
+            <button class="drawer-action-btn" id="btnDrawerFocus">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+              Focus Subsystem
+            </button>
+            <button class="drawer-action-btn" id="btnDrawerImpact">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              Blast Radius
+            </button>
+          </div>
         </div>
         <button class="drawer-close" id="drawerClose" title="Close drawer">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -555,7 +635,7 @@ export function generateGraphHtml(initialData: {
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
-      </div>
+      </div></div>
 
       <div class="drawer-content">
         <div class="detail-urn" id="drawerUrn">urn:trace:...</div>
@@ -608,17 +688,22 @@ export function generateGraphHtml(initialData: {
       let neighborMap = new Map(); // urn -> Set of connected urns
       let edgeMap = new Map();     // urn -> Array of edges
 
-      // Check query param for models override if present
+      // Check query param for models & tests override if present
       const urlParams = new URLSearchParams(window.location.search);
       const modelsQuery = urlParams.get('models');
       const initialShowModels = modelsQuery !== null
         ? (modelsQuery === 'true' || modelsQuery === '1')
         : config.showModels;
 
-      // Default active kinds: file and model are turned off by default to prevent visual clutter
-      let activeKinds = new Set(['feature', 'route', 'symbol', 'test']);
+      // Default active kinds: file, model, and test are turned off by default to prevent visual clutter
+      let activeKinds = new Set(['feature', 'route', 'symbol']);
       if (initialShowModels) {
         activeKinds.add('model');
+      }
+      if (urlParams.get('tests') === 'true' || urlParams.get('tests') === '1') {
+        activeKinds.add('test');
+        const testChip = document.querySelector('#kindChips .chip[data-kind="test"]');
+        if (testChip) testChip.classList.add('active');
       }
 
       // Sync chip class if overridden via URL parameter
@@ -744,63 +829,50 @@ export function generateGraphHtml(initialData: {
           }
         }
 
-        // 2. Directory / Module Categorization
+        // 2. 2-hop connection to a feature (traceable subsystem linkage)
+        for (const nUrn of neighbors) {
+          const secondHop = neighborMap.get(nUrn) || new Set();
+          for (const sUrn of secondHop) {
+            const sNode = nodeMap.get(sUrn);
+            if (sNode && sNode.kind === 'feature') {
+              return 'feat:' + sNode.urn;
+            }
+          }
+        }
+
+        // 3. Fallback: Group by core repository subsystem
         const p = node.path || '';
-        if (p.includes('packages/trace/src/core')) return 'mod:Core';
+        if (p.includes('packages/trace/src/core')) return 'mod:Core Engine';
         if (p.includes('packages/trace/src/indexer')) return 'mod:Indexer';
         if (p.includes('packages/trace/src/analyzer')) return 'mod:Analyzer';
         if (p.includes('packages/trace/src/intelligence')) return 'mod:Intelligence';
         if (p.includes('packages/trace/src/graph-ui')) return 'mod:Graph UI';
         if (p.includes('packages/trace/src/cli') || p.includes('packages/trace/bin')) return 'mod:CLI';
         if (p.includes('packages/amvelt-trace')) return 'mod:Amvelt Distribution';
-        if (p.startsWith('fixtures/01-')) return 'mod:Fixture 01 (JS)';
-        if (p.startsWith('fixtures/02-')) return 'mod:Fixture 02 (TS)';
-        if (p.startsWith('fixtures/03-')) return 'mod:Fixture 03 (React)';
-        if (p.startsWith('fixtures/04-')) return 'mod:Fixture 04 (Backend)';
-        if (p.startsWith('fixtures/05-')) return 'mod:Fixture 05 (Fullstack)';
-        if (p.startsWith('fixtures/06-')) return 'mod:Fixture 06 (Vibe)';
-        if (p.startsWith('fixtures/07-')) return 'mod:Fixture 07 (Monorepo)';
-        if (p.startsWith('fixtures/08-')) return 'mod:Fixture 08 (Renamed)';
-        if (p.startsWith('fixtures/09-')) return 'mod:Fixture 09 (Deleted)';
-        if (p.startsWith('fixtures/10-')) return 'mod:Fixture 10 (Shared)';
-        if (p.startsWith('fixtures/11-')) return 'mod:Fixture 11 (Ambiguous)';
         if (p.startsWith('fixtures/')) return 'mod:Fixtures';
         if (p.startsWith('tests/')) return 'mod:Tests';
-        if (p.startsWith('scripts/')) return 'mod:Scripts';
 
-        return 'mod:Utilities';
+        return 'mod:Shared Utilities';
       }
 
-      // Feature & Module Galaxy Layout (Eliminates the giant central blob)
+      // Feature & Module Galaxy Layout (Balanced Constellation)
       function setupClusteredGalaxyLayout() {
-        // Group all nodes by their cluster key
-        const clusterBuckets = new Map(); // key -> Array of nodes
+        const clusterBuckets = new Map();
 
         allNodes.forEach(n => {
           const key = getNodeClusterKey(n);
+          n.clusterKey = key;
           if (!clusterBuckets.has(key)) clusterBuckets.set(key, []);
           clusterBuckets.get(key).push(n);
         });
 
         clusters = [];
-        const sortedKeys = Array.from(clusterBuckets.keys()).sort((a, b) => {
-          // Feature clusters first, then module clusters
-          const isFeatA = a.startsWith('feat:');
-          const isFeatB = b.startsWith('feat:');
-          if (isFeatA && !isFeatB) return -1;
-          if (!isFeatA && isFeatB) return 1;
-          return a.localeCompare(b);
-        });
+        const featKeys = Array.from(clusterBuckets.keys()).filter(k => k.startsWith('feat:'));
+        const modKeys = Array.from(clusterBuckets.keys()).filter(k => !k.startsWith('feat:'));
 
-        const totalClusters = sortedKeys.length;
-        // Two rings: outer ring for features, inner ring for modules
-        const featKeys = sortedKeys.filter(k => k.startsWith('feat:'));
-        const modKeys = sortedKeys.filter(k => !k.startsWith('feat:'));
+        // Feature hubs form the primary architectural orbit (comfortably visible)
+        const featRingRadius = Math.max(480, featKeys.length * 60);
 
-        const featRingRadius = Math.max(700, featKeys.length * 110);
-        const modRingRadius = Math.max(450, modKeys.length * 55);
-
-        // Position Feature clusters on the outer ring
         featKeys.forEach((key, idx) => {
           const angle = (idx / Math.max(1, featKeys.length)) * 2 * Math.PI - Math.PI / 2;
           const cx = Math.cos(angle) * featRingRadius;
@@ -819,9 +891,10 @@ export function generateGraphHtml(initialData: {
           });
         });
 
-        // Position Module clusters on an inner constellation
+        // Shared/Internal module clusters sit in a compact central constellation
+        const modRingRadius = Math.max(220, modKeys.length * 30);
         modKeys.forEach((key, idx) => {
-          const angle = (idx / Math.max(1, modKeys.length)) * 2 * Math.PI - Math.PI / 4;
+          const angle = (idx / Math.max(1, modKeys.length)) * 2 * Math.PI;
           const cx = Math.cos(angle) * modRingRadius;
           const cy = Math.sin(angle) * modRingRadius;
           const label = key.replace('mod:', '');
@@ -836,9 +909,7 @@ export function generateGraphHtml(initialData: {
           });
         });
 
-        const clusterMap = new Map(clusters.map(c => [c.key, c]));
-
-        // Distribute nodes around their cluster center in golden spiral orbits
+        // Distribute nodes around their cluster anchor with generous spacing
         clusters.forEach(c => {
           const nodes = clusterBuckets.get(c.key) || [];
           nodes.forEach((n, idx) => {
@@ -848,12 +919,12 @@ export function generateGraphHtml(initialData: {
             if (n.kind === 'feature') {
               n.x = c.x;
               n.y = c.y;
-              n.radius = 26;
+              n.radius = 28;
             } else {
-              n.radius = n.kind === 'route' ? 17 : (n.kind === 'model' ? 17 : (n.kind === 'test' ? 13 : (n.kind === 'file' ? 11 : 13)));
-              // Golden spiral distribution around cluster center
-              const phi = idx * 2.39996; // Golden angle
-              const r = (c.isFeature ? 45 : 30) + Math.sqrt(idx) * 18;
+              n.radius = n.kind === 'route' ? 18 : (n.kind === 'model' ? 14 : (n.kind === 'test' ? 12 : (n.kind === 'file' ? 11 : 12)));
+              // Wide Fermat / golden spiral distribution around cluster center
+              const phi = idx * 2.39996;
+              const r = 55 + Math.sqrt(idx + 1) * 26;
               n.x = c.x + Math.cos(phi) * r;
               n.y = c.y + Math.sin(phi) * r;
             }
@@ -880,13 +951,13 @@ export function generateGraphHtml(initialData: {
         return allNodes.filter(n => {
           if (!activeKinds.has(n.kind)) return false;
 
-          if (activeMode === 'features') {
+          if (activeMode === 'architecture' || activeMode === 'features') {
             if (n.kind !== 'feature' && n.kind !== 'route') return false;
           }
 
           if (searchQuery) {
             const q = searchQuery.toLowerCase();
-            const matchesName = n.name.toLowerCase().includes(q);
+            const matchesName = (n.displayName || n.name).toLowerCase().includes(q);
             const matchesPath = (n.path || '').toLowerCase().includes(q);
             if (!matchesName && !matchesPath) return false;
           }
@@ -926,15 +997,15 @@ export function generateGraphHtml(initialData: {
         const visibleNodes = getVisibleNodes();
         const visibleSet = new Set(visibleNodes.map(n => n.urn));
 
-        // 1. Cluster Attraction (each node gravitates to its own cluster anchor)
+        // 1. Cluster Attraction (gentle anchor pull)
         for (let i = 0; i < visibleNodes.length; i++) {
           const n = visibleNodes[i];
           if (n === draggedNode) continue;
 
           const targetX = n.clusterX || 0;
           const targetY = n.clusterY || 0;
-          n.vx += (targetX - n.x) * 0.025 * alpha;
-          n.vy += (targetY - n.y) * 0.025 * alpha;
+          n.vx += (targetX - n.x) * 0.012 * alpha;
+          n.vy += (targetY - n.y) * 0.012 * alpha;
         }
 
         // 2. Spring forces along edges (O(E))
@@ -949,8 +1020,8 @@ export function generateGraphHtml(initialData: {
           const dx = b.x - a.x;
           const dy = b.y - a.y;
           const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-          const targetDist = (a.kind === 'feature' || b.kind === 'feature') ? 90 : 55;
-          const force = (dist - targetDist) * 0.02 * alpha;
+          const targetDist = (a.kind === 'feature' || b.kind === 'feature') ? 110 : 65;
+          const force = (dist - targetDist) * 0.015 * alpha;
           const fx = (dx / dist) * force;
           const fy = (dy / dist) * force;
 
@@ -964,8 +1035,8 @@ export function generateGraphHtml(initialData: {
           }
         }
 
-        // 3. Local repulsion using spatial grid (prevents overlaps)
-        const gridSize = 100;
+        // 3. Local repulsion using spatial grid with generous margin (prevents overlaps)
+        const gridSize = 120;
         const grid = new Map();
         for (let i = 0; i < visibleNodes.length; i++) {
           const n = visibleNodes[i];
@@ -996,11 +1067,11 @@ export function generateGraphHtml(initialData: {
               const dx = b.x - a.x;
               const dy = b.y - a.y;
               const distSq = dx * dx + dy * dy;
-              const minDist = a.radius + b.radius + 12;
+              const minDist = a.radius + b.radius + 30;
 
               if (distSq < minDist * minDist && distSq > 0.01) {
                 const dist = Math.sqrt(distSq);
-                const force = ((minDist - dist) / dist) * 0.5 * alpha;
+                const force = ((minDist - dist) / dist) * 0.45 * alpha;
                 const fx = dx * force;
                 const fy = dy * force;
 
@@ -1018,7 +1089,7 @@ export function generateGraphHtml(initialData: {
         }
 
         // 4. Position update & damping
-        const damping = 0.70;
+        const damping = 0.72;
         for (let i = 0; i < visibleNodes.length; i++) {
           const n = visibleNodes[i];
           if (n !== draggedNode) {
@@ -1030,7 +1101,7 @@ export function generateGraphHtml(initialData: {
         }
 
         // Smooth energy cooling
-        alpha *= 0.93;
+        alpha *= 0.94;
         requestRender();
       }
 
@@ -1070,17 +1141,52 @@ export function generateGraphHtml(initialData: {
 
         const selectedNeighbors = selectedNode ? (neighborMap.get(selectedNode.urn) || new Set()) : null;
 
-        // --- 1. Draw Cluster Hub Titles ---
-        // Subtle, elegant cluster labels behind nodes
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        for (let i = 0; i < clusters.length; i++) {
-          const c = clusters[i];
-          if (c.isFeature) continue; // Features already have their own large glowing feature nodes
+        // --- 1. Draw Feature Cluster Aura Hulls ---
+        if (activeMode !== 'focus' && activeMode !== 'impact') {
+          for (let i = 0; i < clusters.length; i++) {
+            const c = clusters[i];
+            if (!c.isFeature) continue;
 
-          ctx.font = '600 12px var(--font-sans)';
-          ctx.fillStyle = 'rgba(100, 116, 139, 0.35)';
-          ctx.fillText(c.label.toUpperCase(), c.x, c.y - 12);
+            const members = visibleNodes.filter(n => n.clusterKey === c.key);
+            if (members.length === 0) continue;
+
+            let maxDist = 70;
+            for (let m = 0; m < members.length; m++) {
+              const dx = members[m].x - c.x;
+              const dy = members[m].y - c.y;
+              const d = Math.sqrt(dx * dx + dy * dy);
+              if (d > maxDist) maxDist = d;
+            }
+
+            const auraRadius = maxDist + 22;
+
+            // Translucent glowing island background
+            const grad = ctx.createRadialGradient(c.x, c.y, 10, c.x, c.y, auraRadius);
+            grad.addColorStop(0, 'rgba(192, 132, 252, 0.05)');
+            grad.addColorStop(0.7, 'rgba(192, 132, 252, 0.02)');
+            grad.addColorStop(1, 'rgba(192, 132, 252, 0.0)');
+
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.arc(c.x, c.y, auraRadius, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Island perimeter boundary
+            ctx.strokeStyle = 'rgba(192, 132, 252, 0.14)';
+            ctx.lineWidth = 1 / scale;
+            ctx.setLineDash([5 / scale, 5 / scale]);
+            ctx.beginPath();
+            ctx.arc(c.x, c.y, auraRadius, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Island title pill
+            ctx.font = '600 ' + Math.max(10, 11 / scale) + 'px var(--font-sans)';
+            ctx.fillStyle = 'rgba(192, 132, 252, 0.65)';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'bottom';
+            ctx.fillText(c.label.toUpperCase(), c.x, c.y - auraRadius - 4 / scale);
+          }
         }
 
         // --- 2. Draw Edges ---
@@ -1170,8 +1276,8 @@ export function generateGraphHtml(initialData: {
               ctx.stroke();
             } else if (n.kind === 'feature') {
               // Feature nodes have a distinct outer purple ring
-              ctx.lineWidth = 2.5 / scale;
-              ctx.strokeStyle = 'rgba(192, 132, 252, 0.8)';
+              ctx.lineWidth = 3.0 / scale;
+              ctx.strokeStyle = 'rgba(192, 132, 252, 0.9)';
               ctx.stroke();
             } else if (isConnected) {
               ctx.lineWidth = 2.2 / scale;
@@ -1183,43 +1289,99 @@ export function generateGraphHtml(initialData: {
               ctx.stroke();
             }
           }
+        }
 
-          // --- 4. Crisp Level of Detail Label Rendering ---
-          // NEVER show all labels simultaneously to prevent overlapping text walls!
-          const isFeature = n.kind === 'feature';
-          const shouldShowLabel = isFeature || isSelected || isHovered || (isConnected && scale > 0.6) || (scale > 1.35 && !isDimmed);
+        // --- 4. Zero-Overlap Greedy Label Placement Pass ---
+        // Mathematically prevents any two labels from colliding or overlapping
+        const placedLabels = [];
 
-          if (shouldShowLabel && !isDimmed) {
-            const displayName = isFeature ? (n.displayName || n.name) : n.name;
-            const maxLen = isFeature ? 28 : 20;
-            const label = displayName.length > maxLen ? displayName.slice(0, maxLen - 1) + '…' : displayName;
-
-            const fontSize = isFeature ? Math.max(12, 13 / scale) : Math.max(10, 11 / scale);
-            ctx.font = (isFeature || isSelected ? '600 ' : '500 ') + fontSize + 'px var(--font-sans)';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'top';
-
-            const textWidth = ctx.measureText(label).width;
-            const badgeHeight = fontSize + 6;
-            const badgeY = n.y + n.radius + 6 / scale;
-
-            // Capsule background to prevent text clash with underlying circles
-            ctx.fillStyle = isFeature ? 'rgba(30, 20, 48, 0.88)' : 'rgba(8, 12, 20, 0.85)';
-            ctx.beginPath();
-            if (ctx.roundRect) {
-              ctx.roundRect(n.x - textWidth / 2 - 6, badgeY - 2, textWidth + 12, badgeHeight, 4);
-            } else {
-              ctx.rect(n.x - textWidth / 2 - 6, badgeY - 2, textWidth + 12, badgeHeight);
+        function labelCollides(x1, y1, x2, y2) {
+          for (let k = 0; k < placedLabels.length; k++) {
+            const p = placedLabels[k];
+            if (x1 < p.x2 && x2 > p.x1 && y1 < p.y2 && y2 > p.y1) {
+              return true;
             }
-            ctx.fill();
-            ctx.strokeStyle = isFeature ? 'rgba(192, 132, 252, 0.5)' : (isSelected ? 'rgba(56, 189, 248, 0.6)' : 'rgba(30, 41, 59, 0.6)');
-            ctx.lineWidth = 1 / scale;
-            ctx.stroke();
-
-            // Label text
-            ctx.fillStyle = isFeature ? '#e9d5ff' : (isSelected ? '#38bdf8' : (isHovered ? '#ffffff' : '#f1f5f9'));
-            ctx.fillText(label, n.x, badgeY + 1);
           }
+          return false;
+        }
+
+        const labelQueue = [];
+
+        for (let i = 0; i < visibleNodes.length; i++) {
+          const n = visibleNodes[i];
+          const isSelected = selectedNode && selectedNode.urn === n.urn;
+          const isHovered = hoveredNode && hoveredNode.urn === n.urn;
+          const isConnected = selectedNeighbors && selectedNeighbors.has(n.urn);
+          const isDimmed = selectedNode && !isSelected && !isConnected;
+
+          if (isDimmed) continue;
+
+          let priority = 4;
+          if (isSelected || isHovered) priority = 1;
+          else if (n.kind === 'feature') priority = 2;
+          else if (n.kind === 'route' || isConnected) priority = 3;
+          else if (scale > 0.8) priority = 4;
+          else continue;
+
+          labelQueue.push({ node: n, priority });
+        }
+
+        // Sort by priority ascending (highest priority 1 placed first)
+        labelQueue.sort((a, b) => a.priority - b.priority);
+
+        for (let i = 0; i < labelQueue.length; i++) {
+          const item = labelQueue[i];
+          const n = item.node;
+          const isFeature = n.kind === 'feature';
+          const isSelected = selectedNode && selectedNode.urn === n.urn;
+          const isHovered = hoveredNode && hoveredNode.urn === n.urn;
+
+          const displayName = isFeature ? (n.displayName || n.name) : n.name;
+          const maxLen = (isFeature || isSelected || isHovered) ? 32 : 20;
+          const label = displayName.length > maxLen ? displayName.slice(0, maxLen - 1) + '…' : displayName;
+
+          const fontSize = isFeature ? Math.max(12, 13 / scale) : Math.max(10, 11 / scale);
+          ctx.font = (isFeature || isSelected ? '600 ' : '500 ') + fontSize + 'px var(--font-sans)';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'top';
+
+          const textWidth = ctx.measureText(label).width;
+          const badgeWidth = textWidth + 12 / scale;
+          const badgeHeight = (fontSize + 6) / scale;
+          const badgeX = n.x - badgeWidth / 2;
+          const badgeY = n.y + n.radius + 6 / scale;
+
+          // Margin padding for collision box
+          const box = {
+            x1: badgeX - 3 / scale,
+            y1: badgeY - 2 / scale,
+            x2: badgeX + badgeWidth + 3 / scale,
+            y2: badgeY + badgeHeight + 2 / scale
+          };
+
+          if (item.priority > 1 && labelCollides(box.x1, box.y1, box.x2, box.y2)) {
+            continue; // Skip rendering this label to avoid collision!
+          }
+
+          placedLabels.push(box);
+
+          // Capsule background
+          ctx.fillStyle = isFeature ? 'rgba(30, 20, 48, 0.92)' : (isSelected ? 'rgba(8, 30, 52, 0.92)' : 'rgba(8, 12, 20, 0.88)');
+          ctx.beginPath();
+          if (ctx.roundRect) {
+            ctx.roundRect(badgeX, badgeY, badgeWidth, badgeHeight, 4 / scale);
+          } else {
+            ctx.rect(badgeX, badgeY, badgeWidth, badgeHeight);
+          }
+          ctx.fill();
+
+          ctx.strokeStyle = isFeature ? 'rgba(192, 132, 252, 0.6)' : (isSelected ? 'rgba(56, 189, 248, 0.7)' : 'rgba(30, 41, 59, 0.65)');
+          ctx.lineWidth = 1 / scale;
+          ctx.stroke();
+
+          // Text label
+          ctx.fillStyle = isFeature ? '#f3e8ff' : (isSelected ? '#38bdf8' : (isHovered ? '#ffffff' : '#f1f5f9'));
+          ctx.fillText(label, n.x, badgeY + 3 / scale);
         }
 
         ctx.restore();
@@ -1501,11 +1663,67 @@ export function generateGraphHtml(initialData: {
         requestRender();
       });
 
-      // Controls
+      // Drawer quick action buttons
+      const btnFocus = document.getElementById('btnDrawerFocus');
+      if (btnFocus) {
+        btnFocus.addEventListener('click', () => {
+          if (!selectedNode) return;
+          document.querySelectorAll('#modeChips .chip').forEach(c => c.classList.remove('active'));
+          document.querySelector('#modeChips .chip[data-mode="focus"]')?.classList.add('active');
+          activeMode = 'focus';
+          startSimulation(0.6);
+          focusOnNode(selectedNode);
+        });
+      }
+
+      const btnImpact = document.getElementById('btnDrawerImpact');
+      if (btnImpact) {
+        btnImpact.addEventListener('click', () => {
+          if (!selectedNode) return;
+          document.querySelectorAll('#modeChips .chip').forEach(c => c.classList.remove('active'));
+          document.querySelector('#modeChips .chip[data-mode="impact"]')?.classList.add('active');
+          activeMode = 'impact';
+          startSimulation(0.6);
+          focusOnNode(selectedNode);
+        });
+      }
+
+      // Search Autocomplete & Filtering
       const searchInput = document.getElementById('searchInput');
+      const searchDropdown = document.getElementById('searchDropdown');
+
       searchInput.addEventListener('input', e => {
-        searchQuery = e.target.value;
+        searchQuery = e.target.value.trim();
         requestRender();
+
+        if (searchQuery.length >= 2) {
+          const q = searchQuery.toLowerCase();
+          const matches = allNodes
+            .filter(n => (n.displayName || n.name).toLowerCase().includes(q) || (n.path || '').toLowerCase().includes(q))
+            .slice(0, 8);
+
+          if (matches.length > 0) {
+            searchDropdown.innerHTML = '';
+            matches.forEach(m => {
+              const item = document.createElement('div');
+              item.className = 'search-item';
+              item.innerHTML = '<span class="search-item-name">' + (m.displayName || m.name) + '</span>' +
+                '<span class="search-item-kind kind-' + m.kind + '">' + m.kind + '</span>';
+              item.onclick = () => {
+                selectNode(m);
+                focusOnNode(m);
+                searchDropdown.style.display = 'none';
+                searchInput.value = m.displayName || m.name;
+              };
+              searchDropdown.appendChild(item);
+            });
+            searchDropdown.style.display = 'block';
+          } else {
+            searchDropdown.style.display = 'none';
+          }
+        } else {
+          searchDropdown.style.display = 'none';
+        }
       });
 
       searchInput.addEventListener('keydown', e => {
@@ -1515,6 +1733,15 @@ export function generateGraphHtml(initialData: {
             selectNode(visible[0]);
             focusOnNode(visible[0]);
           }
+          if (searchDropdown) searchDropdown.style.display = 'none';
+        } else if (e.key === 'Escape') {
+          if (searchDropdown) searchDropdown.style.display = 'none';
+        }
+      });
+
+      document.addEventListener('click', e => {
+        if (!searchInput.contains(e.target) && searchDropdown && !searchDropdown.contains(e.target)) {
+          searchDropdown.style.display = 'none';
         }
       });
 

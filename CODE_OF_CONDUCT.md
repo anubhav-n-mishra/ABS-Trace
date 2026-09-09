@@ -59,7 +59,7 @@ representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders at **anubhav.mishra.dev@gmail.com** (or via
+reported to the community leaders at **anubhav09.work@gmail.com** (or via
 private GitHub reporting). All complaints will be reviewed and investigated
 promptly and fairly.
 
