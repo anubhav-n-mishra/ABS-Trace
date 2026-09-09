@@ -3678,7 +3678,7 @@
       "symbolKind": "function",
       "startLine": 6,
       "endLine": 9,
-      "contentHash": "cabe5e9124a22a9a",
+      "contentHash": "53f75db80c16fc41",
       "status": "active"
     },
     {
@@ -4626,8 +4626,8 @@
       "name": "cmd",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 147,
-      "endLine": 147,
+      "startLine": 156,
+      "endLine": 156,
       "contentHash": "ae566f6278778c1a",
       "status": "active"
     },
@@ -4696,8 +4696,8 @@
       "name": "openBrowser",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "function",
-      "startLine": 145,
-      "endLine": 159,
+      "startLine": 154,
+      "endLine": 168,
       "contentHash": "8e1a3d60de2c95c4",
       "status": "active"
     },
@@ -4716,8 +4716,8 @@
       "name": "platform",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 146,
-      "endLine": 146,
+      "startLine": 155,
+      "endLine": 155,
       "contentHash": "279efa84dd5f8790",
       "status": "active"
     },
@@ -4742,13 +4742,33 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#socket",
+      "name": "socket",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 144,
+      "endLine": 144,
+      "contentHash": "1ac027cb5393fcd8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#sockets",
+      "name": "sockets",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 113,
+      "endLine": 113,
+      "contentHash": "9b4a6c539eb35641",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#startGraphServer",
       "name": "startGraphServer",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "function",
       "startLine": 28,
-      "endLine": 143,
-      "contentHash": "4880567e6f327c93",
+      "endLine": 152,
+      "contentHash": "38d8eb02f880ee45",
       "status": "active"
     },
     {
@@ -4766,8 +4786,8 @@
       "name": "url",
       "path": "packages/trace/src/graph-ui/server.ts",
       "symbolKind": "variable",
-      "startLine": 124,
-      "endLine": 124,
+      "startLine": 130,
+      "endLine": 130,
       "contentHash": "406cc49868f00f86",
       "status": "active"
     },
@@ -10236,8 +10256,8 @@
       "name": "json",
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
-      "startLine": 381,
-      "endLine": 381,
+      "startLine": 383,
+      "endLine": 383,
       "contentHash": "d619a3ba38745ccf",
       "status": "active"
     },
@@ -10327,8 +10347,8 @@
       "path": "tests/unit/intelligence.test.ts",
       "symbolKind": "variable",
       "startLine": 378,
-      "endLine": 378,
-      "contentHash": "d660b2be53aebfa9",
+      "endLine": 380,
+      "contentHash": "39e93b695e3a68c7",
       "status": "active"
     },
     {

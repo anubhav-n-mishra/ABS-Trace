@@ -375,7 +375,9 @@ describe('Interactive Graph Server', () => {
       expect(serverInstance.port).toBe(8765);
       expect(serverInstance.url).toBe('http://127.0.0.1:8765');
 
-      const res = await fetch('http://127.0.0.1:8765/api/graph');
+      const res = await fetch('http://127.0.0.1:8765/api/graph', {
+        headers: { connection: 'close' }
+      });
       expect(res.status).toBe(200);
 
       const json = await res.json();
@@ -385,5 +387,5 @@ describe('Interactive Graph Server', () => {
     } finally {
       await serverInstance.stop();
     }
-  });
+  }, 15000);
 });

@@ -5,7 +5,7 @@ import type { NodeKind } from './types.js';
 
 export function normalizeRepoPath(filePath: string): string {
   // Convert Windows backslashes to forward slashes and trim leading slashes
-  return filePath.split(path.sep).join('/').replace(/^\/+/, '');
+  return filePath.replace(/\\/g, '/').replace(/^\/+/, '');
 }
 
 export function createSymbolUrn(

@@ -110,6 +110,12 @@ export async function startGraphServer(
     res.end('Not Found');
   });
 
+  const sockets = new Set<import('node:net').Socket>();
+  server.on('connection', (socket) => {
+    sockets.add(socket);
+    socket.once('close', () => sockets.delete(socket));
+  });
+
   return new Promise((resolve, reject) => {
     server.on('error', (err: any) => {
       if (err.code === 'EADDRINUSE') {
@@ -135,6 +141,9 @@ export async function startGraphServer(
         port: targetPort,
         stop: () =>
           new Promise((res) => {
+            for (const socket of sockets) {
+              socket.destroy();
+            }
             server.close(() => res());
           })
       });
