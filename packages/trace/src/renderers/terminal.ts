@@ -122,7 +122,7 @@ export function renderDriftStatus(report: DriftReport): string {
 
   if (!report.isStale) {
     out += `${pc.green(pc.bold('INDEX: CURRENT'))}\n`;
-    out += `${pc.dim('The feature index matches the working tree and Git commit.')}\n`;
+    out += `${pc.dim('The feature index matches the working tree.')}\n`;
     return out;
   }
 

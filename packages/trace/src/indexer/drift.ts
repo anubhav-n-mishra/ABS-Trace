@@ -58,7 +58,7 @@ export function calculateDrift(repoRoot: string, metadata: IndexMetadata): Drift
         // Ignored
       }
 
-      if ((storedHash && currentHash && storedHash !== currentHash) || gitStatus.modified.includes(file)) {
+      if (storedHash && currentHash && storedHash !== currentHash) {
         modified.push(file);
       }
     }
@@ -72,7 +72,7 @@ export function calculateDrift(repoRoot: string, metadata: IndexMetadata): Drift
   }
 
   const totalTracked = Math.max(1, currentFiles.length);
-  const changedCount = modified.length + added.length + deleted.length + gitStatus.renamed.length;
+  const changedCount = modified.length + added.length + deleted.length;
   const driftScore = Math.min(1.0, changedCount / totalTracked);
 
   const commitMismatch =
@@ -81,7 +81,7 @@ export function calculateDrift(repoRoot: string, metadata: IndexMetadata): Drift
     gitStatus.currentCommit !== 'uncommitted' &&
     metadata.gitCommit !== gitStatus.currentCommit;
 
-  const isStale = changedCount > 0 || commitMismatch;
+  const isStale = changedCount > 0;
 
   const recommendations: string[] = [];
   if (isStale) {
@@ -95,9 +95,9 @@ export function calculateDrift(repoRoot: string, metadata: IndexMetadata): Drift
     driftScore,
     isStale,
     workingTree: {
-      modified: Array.from(new Set([...modified, ...gitStatus.modified])),
-      added: Array.from(new Set([...added, ...gitStatus.added])),
-      deleted: Array.from(new Set([...deleted, ...gitStatus.deleted])),
+      modified,
+      added,
+      deleted,
       renamed: gitStatus.renamed
     },
     git: {
