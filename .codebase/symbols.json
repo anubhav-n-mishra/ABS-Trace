@@ -907,8 +907,8 @@
       "path": "packages/trace/src/agent/skill-generator.ts",
       "symbolKind": "function",
       "startLine": 4,
-      "endLine": 68,
-      "contentHash": "5205827525895e4a",
+      "endLine": 91,
+      "contentHash": "2dab60e85b825556",
       "status": "active"
     },
     {
@@ -1696,8 +1696,8 @@
       "name": "confColor",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 136,
-      "endLine": 141,
+      "startLine": 155,
+      "endLine": 160,
       "contentHash": "17fe070b2f39c30f",
       "status": "active"
     },
@@ -1706,8 +1706,8 @@
       "name": "contextText",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 399,
-      "endLine": 399,
+      "startLine": 418,
+      "endLine": 418,
       "contentHash": "0a3a180c256767d8",
       "status": "active"
     },
@@ -1716,9 +1716,9 @@
       "name": "createProgram",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "function",
-      "startLine": 21,
-      "endLine": 550,
-      "contentHash": "a663efe5a8759ba0",
+      "startLine": 40,
+      "endLine": 916,
+      "contentHash": "4a14ec10126fc8a1",
       "status": "active"
     },
     {
@@ -1726,9 +1726,19 @@
       "name": "data",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 539,
-      "endLine": 542,
+      "startLine": 574,
+      "endLine": 577,
       "contentHash": "b79bd53ea2e78577",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/cli/index.ts#debounceMs",
+      "name": "debounceMs",
+      "path": "packages/trace/src/cli/index.ts",
+      "symbolKind": "variable",
+      "startLine": 870,
+      "endLine": 870,
+      "contentHash": "e1bdecd0c5fd06a4",
       "status": "active"
     },
     {
@@ -1736,8 +1746,8 @@
       "name": "diagnostics",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 449,
-      "endLine": 457,
+      "startLine": 484,
+      "endLine": 492,
       "contentHash": "397c810584ba41d3",
       "status": "active"
     },
@@ -1746,8 +1756,8 @@
       "name": "ev",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 236,
-      "endLine": 236,
+      "startLine": 255,
+      "endLine": 255,
       "contentHash": "2f501d3678ade4d2",
       "status": "active"
     },
@@ -1756,8 +1766,8 @@
       "name": "exp",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 220,
-      "endLine": 220,
+      "startLine": 239,
+      "endLine": 239,
       "contentHash": "fa7d199d2ee38b72",
       "status": "active"
     },
@@ -1766,8 +1776,8 @@
       "name": "feat",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 487,
-      "endLine": 487,
+      "startLine": 522,
+      "endLine": 522,
       "contentHash": "90f867237cccca13",
       "status": "active"
     },
@@ -1776,8 +1786,8 @@
       "name": "features",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 130,
-      "endLine": 130,
+      "startLine": 149,
+      "endLine": 149,
       "contentHash": "4d68c0cd9d1adc66",
       "status": "active"
     },
@@ -1786,8 +1796,8 @@
       "name": "files",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 494,
-      "endLine": 502,
+      "startLine": 529,
+      "endLine": 537,
       "contentHash": "52e4efdf9b010466",
       "status": "active"
     },
@@ -1796,8 +1806,8 @@
       "name": "git",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 446,
-      "endLine": 446,
+      "startLine": 481,
+      "endLine": 481,
       "contentHash": "8aa351e4c00d6d33",
       "status": "active"
     },
@@ -1806,8 +1816,8 @@
       "name": "graph",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 530,
-      "endLine": 530,
+      "startLine": 842,
+      "endLine": 842,
       "contentHash": "082a218c74043e03",
       "status": "active"
     },
@@ -1816,8 +1826,8 @@
       "name": "handleError",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "function",
-      "startLine": 552,
-      "endLine": 558,
+      "startLine": 918,
+      "endLine": 924,
       "contentHash": "93f1e565a40dcb08",
       "status": "active"
     },
@@ -1826,8 +1836,8 @@
       "name": "history",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 504,
-      "endLine": 504,
+      "startLine": 539,
+      "endLine": 539,
       "contentHash": "ec11ef291b71244d",
       "status": "active"
     },
@@ -1836,8 +1846,8 @@
       "name": "impact",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 343,
-      "endLine": 343,
+      "startLine": 362,
+      "endLine": 362,
       "contentHash": "4b0a91f536fc49a1",
       "status": "active"
     },
@@ -1846,9 +1856,29 @@
       "name": "indexer",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 528,
-      "endLine": 528,
+      "startLine": 869,
+      "endLine": 869,
       "contentHash": "0aaf8d2e8b06b210",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/cli/index.ts#ledger",
+      "name": "ledger",
+      "path": "packages/trace/src/cli/index.ts",
+      "symbolKind": "variable",
+      "startLine": 895,
+      "endLine": 895,
+      "contentHash": "7536305ebd970cf8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/cli/index.ts#limit",
+      "name": "limit",
+      "path": "packages/trace/src/cli/index.ts",
+      "symbolKind": "variable",
+      "startLine": 723,
+      "endLine": 723,
+      "contentHash": "df5c2264fa086041",
       "status": "active"
     },
     {
@@ -1856,8 +1886,8 @@
       "name": "matcher",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 331,
-      "endLine": 331,
+      "startLine": 350,
+      "endLine": 350,
       "contentHash": "c5d2a06cafb5ca0a",
       "status": "active"
     },
@@ -1866,9 +1896,19 @@
       "name": "maxTokens",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 398,
-      "endLine": 398,
+      "startLine": 417,
+      "endLine": 417,
       "contentHash": "bd0f9854d8653d6c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/cli/index.ts#payload",
+      "name": "payload",
+      "path": "packages/trace/src/cli/index.ts",
+      "symbolKind": "variable",
+      "startLine": 607,
+      "endLine": 611,
+      "contentHash": "a82c61d42339d489",
       "status": "active"
     },
     {
@@ -1876,8 +1916,8 @@
       "name": "program",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 561,
-      "endLine": 561,
+      "startLine": 927,
+      "endLine": 927,
       "contentHash": "f3a45d608d04ed80",
       "status": "active"
     },
@@ -1886,8 +1926,8 @@
       "name": "rel",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 232,
-      "endLine": 232,
+      "startLine": 251,
+      "endLine": 251,
       "contentHash": "cb714aa46068dcb2",
       "status": "active"
     },
@@ -1896,8 +1936,8 @@
       "name": "repoRoot",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 527,
-      "endLine": 527,
+      "startLine": 894,
+      "endLine": 894,
       "contentHash": "0fb742ab7be882bb",
       "status": "active"
     },
@@ -1906,9 +1946,29 @@
       "name": "report",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 426,
-      "endLine": 426,
-      "contentHash": "72382c22dc1d7ab6",
+      "startLine": 850,
+      "endLine": 850,
+      "contentHash": "52fc5d2f293e76d7",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/cli/index.ts#reports",
+      "name": "reports",
+      "path": "packages/trace/src/cli/index.ts",
+      "symbolKind": "variable",
+      "startLine": 824,
+      "endLine": 824,
+      "contentHash": "f96c30c790df641b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/cli/index.ts#result",
+      "name": "result",
+      "path": "packages/trace/src/cli/index.ts",
+      "symbolKind": "variable",
+      "startLine": 799,
+      "endLine": 799,
+      "contentHash": "9f49b03b869b5cca",
       "status": "active"
     },
     {
@@ -1916,8 +1976,8 @@
       "name": "results",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 303,
-      "endLine": 303,
+      "startLine": 322,
+      "endLine": 322,
       "contentHash": "0302035f37987c68",
       "status": "active"
     },
@@ -1926,8 +1986,8 @@
       "name": "runCLI",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "function",
-      "startLine": 560,
-      "endLine": 563,
+      "startLine": 926,
+      "endLine": 929,
       "contentHash": "1010a86d99fef74d",
       "status": "active"
     },
@@ -1936,8 +1996,8 @@
       "name": "searchRes",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 332,
-      "endLine": 332,
+      "startLine": 351,
+      "endLine": 351,
       "contentHash": "9cad62f0bf351c0e",
       "status": "active"
     },
@@ -1946,8 +2006,8 @@
       "name": "status",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 105,
-      "endLine": 105,
+      "startLine": 124,
+      "endLine": 124,
       "contentHash": "582fd36be5401adc",
       "status": "active"
     },
@@ -1956,9 +2016,19 @@
       "name": "store",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 447,
-      "endLine": 447,
+      "startLine": 482,
+      "endLine": 482,
       "contentHash": "65cf7f2405ee759b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/cli/index.ts#summary",
+      "name": "summary",
+      "path": "packages/trace/src/cli/index.ts",
+      "symbolKind": "variable",
+      "startLine": 903,
+      "endLine": 906,
+      "contentHash": "00978989ba748fbb",
       "status": "active"
     },
     {
@@ -1966,8 +2036,8 @@
       "name": "targetNode",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 329,
-      "endLine": 329,
+      "startLine": 348,
+      "endLine": 348,
       "contentHash": "d2a8876c32e0d69f",
       "status": "active"
     },
@@ -1976,8 +2046,8 @@
       "name": "validator",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 425,
-      "endLine": 425,
+      "startLine": 460,
+      "endLine": 460,
       "contentHash": "796c49d8857bda57",
       "status": "active"
     },
@@ -1986,9 +2056,19 @@
       "name": "view",
       "path": "packages/trace/src/cli/index.ts",
       "symbolKind": "variable",
-      "startLine": 493,
-      "endLine": 493,
+      "startLine": 528,
+      "endLine": 528,
       "contentHash": "945a48cc014d2758",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/cli/index.ts#watcher",
+      "name": "watcher",
+      "path": "packages/trace/src/cli/index.ts",
+      "symbolKind": "variable",
+      "startLine": 872,
+      "endLine": 872,
+      "contentHash": "a4a90542e808c45d",
       "status": "active"
     },
     {
@@ -4532,6 +4612,176 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/html-template.ts#generateGraphHtml",
+      "name": "generateGraphHtml",
+      "path": "packages/trace/src/graph-ui/html-template.ts",
+      "symbolKind": "function",
+      "startLine": 4,
+      "endLine": 960,
+      "contentHash": "49357bf0efed4b60",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#cmd",
+      "name": "cmd",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 147,
+      "endLine": 147,
+      "contentHash": "ae566f6278778c1a",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#details",
+      "name": "details",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 90,
+      "endLine": 102,
+      "contentHash": "0479a16ae3da0f60",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#exp",
+      "name": "exp",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 87,
+      "endLine": 87,
+      "contentHash": "f095cdf7065744db",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#GraphServerInstance",
+      "name": "GraphServerInstance",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "interface",
+      "startLine": 17,
+      "endLine": 22,
+      "contentHash": "39c9a5ffc62a27ae",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#GraphServerOptions",
+      "name": "GraphServerOptions",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "interface",
+      "startLine": 9,
+      "endLine": 15,
+      "contentHash": "934b10a84fc1a675",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#impact",
+      "name": "impact",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 88,
+      "endLine": 88,
+      "contentHash": "113351b806c1c074",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#node",
+      "name": "node",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 80,
+      "endLine": 80,
+      "contentHash": "640c303ba53c6d42",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#openBrowser",
+      "name": "openBrowser",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "function",
+      "startLine": 145,
+      "endLine": 159,
+      "contentHash": "8e1a3d60de2c95c4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#payload",
+      "name": "payload",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 63,
+      "endLine": 67,
+      "contentHash": "cf757d4dbf14b5f7",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#platform",
+      "name": "platform",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 146,
+      "endLine": 146,
+      "contentHash": "279efa84dd5f8790",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#reqUrl",
+      "name": "reqUrl",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 36,
+      "endLine": 36,
+      "contentHash": "ed7eb8f37b459318",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#server",
+      "name": "server",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 35,
+      "endLine": 111,
+      "contentHash": "57264d2d4e58b4bd",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#startGraphServer",
+      "name": "startGraphServer",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "function",
+      "startLine": 28,
+      "endLine": 143,
+      "contentHash": "4880567e6f327c93",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#targetPort",
+      "name": "targetPort",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 33,
+      "endLine": 33,
+      "contentHash": "d65b644c614f7f6b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#url",
+      "name": "url",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 124,
+      "endLine": 124,
+      "contentHash": "406cc49868f00f86",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/graph-ui/server.ts#urn",
+      "name": "urn",
+      "path": "packages/trace/src/graph-ui/server.ts",
+      "symbolKind": "variable",
+      "startLine": 73,
+      "endLine": 73,
+      "contentHash": "4f29e2cc44618735",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:packages/trace/src/indexer/drift.ts#added",
       "name": "added",
       "path": "packages/trace/src/indexer/drift.ts",
@@ -4548,7 +4798,7 @@
       "symbolKind": "function",
       "startLine": 13,
       "endLine": 110,
-      "contentHash": "cf0f323df03e4ee6",
+      "contentHash": "22244a32cc91cce1",
       "status": "active"
     },
     {
@@ -4558,7 +4808,7 @@
       "symbolKind": "variable",
       "startLine": 75,
       "endLine": 75,
-      "contentHash": "5608a5d7254faf8f",
+      "contentHash": "a03914a10c5f302e",
       "status": "active"
     },
     {
@@ -4688,7 +4938,7 @@
       "symbolKind": "variable",
       "startLine": 84,
       "endLine": 84,
-      "contentHash": "6224b274751f6a4c",
+      "contentHash": "16d4472d6db6e683",
       "status": "active"
     },
     {
@@ -5872,6 +6122,2496 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#affectedFeatureMap",
+      "name": "affectedFeatureMap",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 94,
+      "endLine": 94,
+      "contentHash": "6129183263c2a8ee",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#affectedFeatures",
+      "name": "affectedFeatures",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 151,
+      "endLine": 151,
+      "contentHash": "5592843b1eb37640",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#affectedTestMap",
+      "name": "affectedTestMap",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 95,
+      "endLine": 95,
+      "contentHash": "11e398f34f6002c6",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#affectedTests",
+      "name": "affectedTests",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 152,
+      "endLine": 152,
+      "contentHash": "b0eef655bea2fdec",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#allActive",
+      "name": "allActive",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 76,
+      "endLine": 76,
+      "contentHash": "ad72d07af900e930",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#api",
+      "name": "api",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 114,
+      "endLine": 114,
+      "contentHash": "57bf696b13b04788",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#apisChanged",
+      "name": "apisChanged",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 80,
+      "endLine": 80,
+      "contentHash": "c9b6d19a153fe54c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#ArchitecturalDiffReport",
+      "name": "ArchitecturalDiffReport",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "interface",
+      "startLine": 9,
+      "endLine": 30,
+      "contentHash": "88450e676d2d5140",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#changedFiles",
+      "name": "changedFiles",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 40,
+      "endLine": 40,
+      "contentHash": "40575f4a73851bc8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#computeArchitecturalDiff",
+      "name": "computeArchitecturalDiff",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "function",
+      "startLine": 35,
+      "endLine": 187,
+      "contentHash": "5ff32605adc719cc",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#directConsumersCount",
+      "name": "directConsumersCount",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 96,
+      "endLine": 96,
+      "contentHash": "eda4e4050ad82198",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#entries",
+      "name": "entries",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 58,
+      "endLine": 58,
+      "contentHash": "f44146de13648d03",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#entry",
+      "name": "entry",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 60,
+      "endLine": 60,
+      "contentHash": "d6ef966b8e4df0e1",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#exp",
+      "name": "exp",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 108,
+      "endLine": 108,
+      "contentHash": "d2b2dba9a1a69266",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#f",
+      "name": "f",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 122,
+      "endLine": 122,
+      "contentHash": "58f4bfe76441da92",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#filePath",
+      "name": "filePath",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 61,
+      "endLine": 61,
+      "contentHash": "f457b75af4e5c6ff",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#fileSet",
+      "name": "fileSet",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 77,
+      "endLine": 77,
+      "contentHash": "611ae9ee64d684c0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#gitArgs",
+      "name": "gitArgs",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 43,
+      "endLine": 43,
+      "contentHash": "92d4ef97295d92d5",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#i",
+      "name": "i",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 59,
+      "endLine": 59,
+      "contentHash": "05d4755ac7ce41b9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#impact",
+      "name": "impact",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 121,
+      "endLine": 121,
+      "contentHash": "cd6de593e67c4c9e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#model",
+      "name": "model",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 120,
+      "endLine": 120,
+      "contentHash": "e58562aa620d2c12",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#modelsChanged",
+      "name": "modelsChanged",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 81,
+      "endLine": 81,
+      "contentHash": "fba6d7261b91b104",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#modifiedTestFiles",
+      "name": "modifiedTestFiles",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 128,
+      "endLine": 130,
+      "contentHash": "7c38ac95a1eee089",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#next",
+      "name": "next",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 63,
+      "endLine": 63,
+      "contentHash": "0bf8196dd554e718",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#node",
+      "name": "node",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 84,
+      "endLine": 84,
+      "contentHash": "26172ae59241605e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#potentialConcerns",
+      "name": "potentialConcerns",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 127,
+      "endLine": 127,
+      "contentHash": "d9de926090c10b98",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#raw",
+      "name": "raw",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 44,
+      "endLine": 48,
+      "contentHash": "b81c30cd4fb6a167",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#rel",
+      "name": "rel",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 109,
+      "endLine": 109,
+      "contentHash": "2e19e26bf562504a",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#riskRating",
+      "name": "riskRating",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 154,
+      "endLine": 154,
+      "contentHash": "6199f1ed4b96fccf",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#riskRationale",
+      "name": "riskRationale",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 155,
+      "endLine": 155,
+      "contentHash": "2fd9837c3b95335e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#sym",
+      "name": "sym",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 98,
+      "endLine": 98,
+      "contentHash": "db2fc8cb5508e511",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#symbolsChanged",
+      "name": "symbolsChanged",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 79,
+      "endLine": 79,
+      "contentHash": "70829bab38cc128f",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#t",
+      "name": "t",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 123,
+      "endLine": 123,
+      "contentHash": "1eda2e4569fff7bb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/architectural-diff.ts#testNodesChanged",
+      "name": "testNodesChanged",
+      "path": "packages/trace/src/intelligence/architectural-diff.ts",
+      "symbolKind": "variable",
+      "startLine": 82,
+      "endLine": 82,
+      "contentHash": "46f7b9be8fb30a72",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#consumerCount",
+      "name": "consumerCount",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 108,
+      "endLine": 108,
+      "contentHash": "004924284536abca",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#dimensions",
+      "name": "dimensions",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 39,
+      "endLine": 39,
+      "contentHash": "673aa9a3a9f71dd4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#DimensionStatus",
+      "name": "DimensionStatus",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "type",
+      "startLine": 8,
+      "endLine": 8,
+      "contentHash": "a786f5e73cc234a3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#docsDir",
+      "name": "docsDir",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 87,
+      "endLine": 87,
+      "contentHash": "f970a0cdd3636aca",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#evaluateFeatureCoverage",
+      "name": "evaluateFeatureCoverage",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "function",
+      "startLine": 28,
+      "endLine": 133,
+      "contentHash": "7a54a1895c84029e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#feat",
+      "name": "feat",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 37,
+      "endLine": 37,
+      "contentHash": "627de075d007fa95",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#FeatureCoverageReport",
+      "name": "FeatureCoverageReport",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "interface",
+      "startLine": 17,
+      "endLine": 22,
+      "contentHash": "2c5f84082e67820f",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#features",
+      "name": "features",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 33,
+      "endLine": 33,
+      "contentHash": "6a1873dad08983b9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#file",
+      "name": "file",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 90,
+      "endLine": 90,
+      "contentHash": "59d8000ad34adef7",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#files",
+      "name": "files",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 89,
+      "endLine": 89,
+      "contentHash": "cfc75d76d9396328",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#hasDocs",
+      "name": "hasDocs",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 85,
+      "endLine": 85,
+      "contentHash": "6cdf0204c4715f7f",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#implCount",
+      "name": "implCount",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 42,
+      "endLine": 42,
+      "contentHash": "af71c968cfdbd297",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#points",
+      "name": "points",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 117,
+      "endLine": 121,
+      "contentHash": "615713040dce5c20",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#reports",
+      "name": "reports",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 35,
+      "endLine": 35,
+      "contentHash": "6ddcdf72b0d2a7b2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#score",
+      "name": "score",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 122,
+      "endLine": 122,
+      "contentHash": "7a1f3322b7352b19",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#testCount",
+      "name": "testCount",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 67,
+      "endLine": 67,
+      "contentHash": "0d5292a0a083d32b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#testStatus",
+      "name": "testStatus",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 68,
+      "endLine": 68,
+      "contentHash": "db9f53b2eb2b9616",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#testSymbol",
+      "name": "testSymbol",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 69,
+      "endLine": 69,
+      "contentHash": "a149c40fd793f981",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#TraceabilityDimension",
+      "name": "TraceabilityDimension",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "interface",
+      "startLine": 10,
+      "endLine": 15,
+      "contentHash": "27f9d6ef0ffabad0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/coverage.ts#view",
+      "name": "view",
+      "path": "packages/trace/src/intelligence/coverage.ts",
+      "symbolKind": "variable",
+      "startLine": 38,
+      "endLine": 38,
+      "contentHash": "59a01dc9abebd7d3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#activeNodes",
+      "name": "activeNodes",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 29,
+      "endLine": 29,
+      "contentHash": "446e8c62895f413d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#CycleNodeInfo",
+      "name": "CycleNodeInfo",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "interface",
+      "startLine": 6,
+      "endLine": 11,
+      "contentHash": "2af0a216985acca4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#cycleNodes",
+      "name": "cycleNodes",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 114,
+      "endLine": 114,
+      "contentHash": "6f17bd1c7fcb8d19",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#cyclePath",
+      "name": "cyclePath",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 112,
+      "endLine": 112,
+      "contentHash": "3ec2e7e70c025750",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#CycleReport",
+      "name": "CycleReport",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "interface",
+      "startLine": 19,
+      "endLine": 23,
+      "contentHash": "a5ece863f607530b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#cycles",
+      "name": "cycles",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 32,
+      "endLine": 32,
+      "contentHash": "ea827f5d9876bdee",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#cycleStartIndex",
+      "name": "cycleStartIndex",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 110,
+      "endLine": 110,
+      "contentHash": "b78d8c955059a5f0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#detailedNodes",
+      "name": "detailedNodes",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 122,
+      "endLine": 129,
+      "contentHash": "3b7079c627157279",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#detectCycles",
+      "name": "detectCycles",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "function",
+      "startLine": 28,
+      "endLine": 86,
+      "contentHash": "20356fcdc5314878",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#DetectedCycle",
+      "name": "DetectedCycle",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "interface",
+      "startLine": 13,
+      "endLine": 17,
+      "contentHash": "55a453f734884bad",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#dfs",
+      "name": "dfs",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "function",
+      "startLine": 99,
+      "endLine": 146,
+      "contentHash": "e16dc55a6c62df46",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#display",
+      "name": "display",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 127,
+      "endLine": 127,
+      "contentHash": "83d08350bb5e51e8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#edge",
+      "name": "edge",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 66,
+      "endLine": 66,
+      "contentHash": "2216ab9d399708ee",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#edges",
+      "name": "edges",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 30,
+      "endLine": 30,
+      "contentHash": "00e80f4915331ad8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#fileAdjacency",
+      "name": "fileAdjacency",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 56,
+      "endLine": 56,
+      "contentHash": "2f0c6e13b3a01001",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#fileUrn",
+      "name": "fileUrn",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 59,
+      "endLine": 59,
+      "contentHash": "b1752d7cae89f9c6",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#findCyclesInGraph",
+      "name": "findCyclesInGraph",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "function",
+      "startLine": 88,
+      "endLine": 153,
+      "contentHash": "3e46bbd2f57ff94a",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#minIndex",
+      "name": "minIndex",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 115,
+      "endLine": 115,
+      "contentHash": "fb90c82b53dfa12c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#n",
+      "name": "n",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 123,
+      "endLine": 123,
+      "contentHash": "918879e050242235",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#neighbors",
+      "name": "neighbors",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 104,
+      "endLine": 104,
+      "contentHash": "2418d7a1cddf7e7f",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#next",
+      "name": "next",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 105,
+      "endLine": 105,
+      "contentHash": "4d1acf28864ce19d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#node",
+      "name": "node",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 148,
+      "endLine": 148,
+      "contentHash": "f630dc3616d89a50",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#normalized",
+      "name": "normalized",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 116,
+      "endLine": 116,
+      "contentHash": "eceb6e5d223a61fa",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#path",
+      "name": "path",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 97,
+      "endLine": 97,
+      "contentHash": "d41b972afe31328c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#recursionStack",
+      "name": "recursionStack",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 96,
+      "endLine": 96,
+      "contentHash": "1989c636e4a6291c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#sFile",
+      "name": "sFile",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 71,
+      "endLine": 71,
+      "contentHash": "374fc09f9a0093c7",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#signature",
+      "name": "signature",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 117,
+      "endLine": 117,
+      "contentHash": "18543453da5a0635",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#sNode",
+      "name": "sNode",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 68,
+      "endLine": 68,
+      "contentHash": "ec350e480f587239",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#source",
+      "name": "source",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 45,
+      "endLine": 45,
+      "contentHash": "c2618a43ba63d1a0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#symbolAdjacency",
+      "name": "symbolAdjacency",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 36,
+      "endLine": 36,
+      "contentHash": "27b55c97f80df642",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#target",
+      "name": "target",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 46,
+      "endLine": 46,
+      "contentHash": "9e22121653b063de",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#tFile",
+      "name": "tFile",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 72,
+      "endLine": 72,
+      "contentHash": "4b7d48fb47248d8f",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#tNode",
+      "name": "tNode",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 69,
+      "endLine": 69,
+      "contentHash": "f53a84ed4b10accc",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#visited",
+      "name": "visited",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 95,
+      "endLine": 95,
+      "contentHash": "1b3c197399b384b3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/cycles.ts#visitedCycleSignatures",
+      "name": "visitedCycleSignatures",
+      "path": "packages/trace/src/intelligence/cycles.ts",
+      "symbolKind": "variable",
+      "startLine": 33,
+      "endLine": 33,
+      "contentHash": "c65d956191d9a6bd",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#activeNodes",
+      "name": "activeNodes",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 33,
+      "endLine": 33,
+      "contentHash": "446e8c62895f413d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#allFiles",
+      "name": "allFiles",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 88,
+      "endLine": 88,
+      "contentHash": "56eb71c93048995e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#allNodes",
+      "name": "allNodes",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 32,
+      "endLine": 32,
+      "contentHash": "bfc9d3de5390b586",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#brokenRelationships",
+      "name": "brokenRelationships",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 39,
+      "endLine": 39,
+      "contentHash": "7c61644504205e19",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#consumers",
+      "name": "consumers",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 107,
+      "endLine": 107,
+      "contentHash": "06c1802a7f78c175",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#DeadCodeReport",
+      "name": "DeadCodeReport",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "interface",
+      "startLine": 17,
+      "endLine": 23,
+      "contentHash": "61eb9fc68c909271",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#DeadNodeFinding",
+      "name": "DeadNodeFinding",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "interface",
+      "startLine": 6,
+      "endLine": 15,
+      "contentHash": "5f7617092c338c7c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#detectDeadCode",
+      "name": "detectDeadCode",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "function",
+      "startLine": 31,
+      "endLine": 196,
+      "contentHash": "7a766ea9669bb88c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#edge",
+      "name": "edge",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 154,
+      "endLine": 154,
+      "contentHash": "2216ab9d399708ee",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#edges",
+      "name": "edges",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 34,
+      "endLine": 34,
+      "contentHash": "00e80f4915331ad8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#file",
+      "name": "file",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 89,
+      "endLine": 89,
+      "contentHash": "b7f183a51850a0c5",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#fileConsumerCounts",
+      "name": "fileConsumerCounts",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 79,
+      "endLine": 79,
+      "contentHash": "5544c41d07bb6bbd",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#incoming",
+      "name": "incoming",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 50,
+      "endLine": 50,
+      "contentHash": "4c24bbaf7dc1a90e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#incomingCounts",
+      "name": "incomingCounts",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 41,
+      "endLine": 41,
+      "contentHash": "15f93f333cd19de3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#inEdges",
+      "name": "inEdges",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 52,
+      "endLine": 52,
+      "contentHash": "d5e7db71c5439ec4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#isCodeFile",
+      "name": "isCodeFile",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 90,
+      "endLine": 90,
+      "contentHash": "e11aad97f6fd070b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#isEntrypoint",
+      "name": "isEntrypoint",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 94,
+      "endLine": 105,
+      "contentHash": "06bd70f46adc84aa",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#isReferenced",
+      "name": "isReferenced",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 53,
+      "endLine": 53,
+      "contentHash": "47c5b0ff768840a5",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#isTestOrConfig",
+      "name": "isTestOrConfig",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 56,
+      "endLine": 61,
+      "contentHash": "8560baa2297993e8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#node",
+      "name": "node",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 48,
+      "endLine": 48,
+      "contentHash": "22d4011c224a691f",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#possiblyDeadFiles",
+      "name": "possiblyDeadFiles",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 37,
+      "endLine": 37,
+      "contentHash": "a1c91488e107a719",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#possiblyDeadSymbols",
+      "name": "possiblyDeadSymbols",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 36,
+      "endLine": 36,
+      "contentHash": "043723eefa777d05",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#retiredNodesReferenced",
+      "name": "retiredNodesReferenced",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 38,
+      "endLine": 38,
+      "contentHash": "b59ed01e9530e7e1",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#sExists",
+      "name": "sExists",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 155,
+      "endLine": 155,
+      "contentHash": "0a1bdb4ca8300fe2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#sNode",
+      "name": "sNode",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 124,
+      "endLine": 124,
+      "contentHash": "7ded3d21e96783f1",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#target",
+      "name": "target",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 43,
+      "endLine": 43,
+      "contentHash": "9ea5e13f1d544d8f",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#tExists",
+      "name": "tExists",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 156,
+      "endLine": 156,
+      "contentHash": "fa6e4dfcaab502a3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#tNode",
+      "name": "tNode",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 125,
+      "endLine": 125,
+      "contentHash": "c8f51d7fd76c8916",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/dead-code.ts#total",
+      "name": "total",
+      "path": "packages/trace/src/intelligence/dead-code.ts",
+      "symbolKind": "variable",
+      "startLine": 183,
+      "endLine": 187,
+      "contentHash": "5e197b82b4c5d423",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#activeNodes",
+      "name": "activeNodes",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 39,
+      "endLine": 39,
+      "contentHash": "446e8c62895f413d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#analyzeHotspots",
+      "name": "analyzeHotspots",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "function",
+      "startLine": 38,
+      "endLine": 107,
+      "contentHash": "f979b6efa67099cd",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#apiCount",
+      "name": "apiCount",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 63,
+      "endLine": 63,
+      "contentHash": "54c7d9f1e59f2291",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#consumerCount",
+      "name": "consumerCount",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 61,
+      "endLine": 61,
+      "contentHash": "8759c80cbd3426c3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#CouplingRating",
+      "name": "CouplingRating",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "type",
+      "startLine": 6,
+      "endLine": 6,
+      "contentHash": "b2753e5688d1fcee",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#edge",
+      "name": "edge",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 51,
+      "endLine": 51,
+      "contentHash": "d31d03eb82763d77",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#featureUrns",
+      "name": "featureUrns",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 50,
+      "endLine": 50,
+      "contentHash": "211bcd63922b1cd1",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#formulaDoc",
+      "name": "formulaDoc",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 42,
+      "endLine": 42,
+      "contentHash": "3735e41404fb8ef2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#highRisk",
+      "name": "highRisk",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 96,
+      "endLine": 96,
+      "contentHash": "a44ea75f75c545d3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#HotspotMetrics",
+      "name": "HotspotMetrics",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "interface",
+      "startLine": 8,
+      "endLine": 19,
+      "contentHash": "a17c59b452f32506",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#HotspotsReport",
+      "name": "HotspotsReport",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "interface",
+      "startLine": 21,
+      "endLine": 27,
+      "contentHash": "2e255af5a99a28a1",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#impact",
+      "name": "impact",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 60,
+      "endLine": 60,
+      "contentHash": "5817a3c3be5e8394",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#inEdges",
+      "name": "inEdges",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 46,
+      "endLine": 46,
+      "contentHash": "34581f52f27332f5",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#lowRisk",
+      "name": "lowRisk",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 98,
+      "endLine": 98,
+      "contentHash": "f59b46487ca22350",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#medRisk",
+      "name": "medRisk",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 97,
+      "endLine": 97,
+      "contentHash": "5e60b62eb1798d45",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#metricsList",
+      "name": "metricsList",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 43,
+      "endLine": 43,
+      "contentHash": "b7fccf2fc2d57368",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#node",
+      "name": "node",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 45,
+      "endLine": 45,
+      "contentHash": "8945a10126bed618",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#other",
+      "name": "other",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 53,
+      "endLine": 53,
+      "contentHash": "b1605880b8c23f1b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#otherUrn",
+      "name": "otherUrn",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 52,
+      "endLine": 52,
+      "contentHash": "75954284f0baa7e0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#outEdges",
+      "name": "outEdges",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 47,
+      "endLine": 47,
+      "contentHash": "aff50cc7c85a73bc",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#rating",
+      "name": "rating",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 72,
+      "endLine": 72,
+      "contentHash": "0e63bca37f82b4ff",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#score",
+      "name": "score",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 65,
+      "endLine": 70,
+      "contentHash": "fb5d934677196b67",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#targetNodes",
+      "name": "targetNodes",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 40,
+      "endLine": 40,
+      "contentHash": "1e156ec2c2e2dce9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/hotspots.ts#testCount",
+      "name": "testCount",
+      "path": "packages/trace/src/intelligence/hotspots.ts",
+      "symbolKind": "variable",
+      "startLine": 62,
+      "endLine": 62,
+      "contentHash": "5973b940557b3d8d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#ArchitectureRule",
+      "name": "ArchitectureRule",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "interface",
+      "startLine": 9,
+      "endLine": 17,
+      "contentHash": "524ef6baccd4507b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#candidatePaths",
+      "name": "candidatePaths",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 139,
+      "endLine": 143,
+      "contentHash": "d11e575e18e42957",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#checkArchitectureRules",
+      "name": "checkArchitectureRules",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "function",
+      "startLine": 55,
+      "endLine": 136,
+      "contentHash": "09ddea307a4366bc",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#edge",
+      "name": "edge",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 66,
+      "endLine": 66,
+      "contentHash": "733b419e62a0ebc2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#failedCount",
+      "name": "failedCount",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 126,
+      "endLine": 126,
+      "contentHash": "8fc565fdaca4a963",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#filePath",
+      "name": "filePath",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 145,
+      "endLine": 145,
+      "contentHash": "c330ad36f284fff9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#h",
+      "name": "h",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 111,
+      "endLine": 111,
+      "contentHash": "3381c5d1e6aae463",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#hotspots",
+      "name": "hotspots",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 110,
+      "endLine": 110,
+      "contentHash": "2286ecf6e2fdd2de",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#impact",
+      "name": "impact",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 92,
+      "endLine": 92,
+      "contentHash": "1aa82156d199cd29",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#loadRules",
+      "name": "loadRules",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "function",
+      "startLine": 138,
+      "endLine": 170,
+      "contentHash": "a8eca3724c8a4309",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#matchGlob",
+      "name": "matchGlob",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "function",
+      "startLine": 37,
+      "endLine": 50,
+      "contentHash": "7350cb98877b1801",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#node",
+      "name": "node",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 90,
+      "endLine": 90,
+      "contentHash": "8774c699de3bfdc3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#normPattern",
+      "name": "normPattern",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 38,
+      "endLine": 38,
+      "contentHash": "924d9758726fbc02",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#normTarget",
+      "name": "normTarget",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 39,
+      "endLine": 39,
+      "contentHash": "981a8f703b585069",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#parsed",
+      "name": "parsed",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 153,
+      "endLine": 153,
+      "contentHash": "e5d47dbd8dda3a53",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#passedRules",
+      "name": "passedRules",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 127,
+      "endLine": 127,
+      "contentHash": "3e865893cef636f4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#raw",
+      "name": "raw",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 148,
+      "endLine": 148,
+      "contentHash": "eee770beb62be0fb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#regex",
+      "name": "regex",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 48,
+      "endLine": 48,
+      "contentHash": "32f8ff994902d506",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#regStr",
+      "name": "regStr",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 42,
+      "endLine": 46,
+      "contentHash": "d9dc8bfbf2b6c551",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#rule",
+      "name": "rule",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 63,
+      "endLine": 63,
+      "contentHash": "f9d17809afb342f0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#RuleCheckReport",
+      "name": "RuleCheckReport",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "interface",
+      "startLine": 29,
+      "endLine": 35,
+      "contentHash": "17fb8fc61da87975",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#rules",
+      "name": "rules",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 60,
+      "endLine": 60,
+      "contentHash": "3b6c2316e3afaf25",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#RuleViolation",
+      "name": "RuleViolation",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "interface",
+      "startLine": 19,
+      "endLine": 27,
+      "contentHash": "22f84dae7ffd6743",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#sNode",
+      "name": "sNode",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 68,
+      "endLine": 68,
+      "contentHash": "748e835565ddbbea",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#tNode",
+      "name": "tNode",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 69,
+      "endLine": 69,
+      "contentHash": "14e649cbd58bfbc1",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/rules.ts#violations",
+      "name": "violations",
+      "path": "packages/trace/src/intelligence/rules.ts",
+      "symbolKind": "variable",
+      "startLine": 61,
+      "endLine": 61,
+      "contentHash": "54aabc3076efd852",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#a",
+      "name": "a",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 91,
+      "endLine": 91,
+      "contentHash": "7446709f8783f290",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#affectedApis",
+      "name": "affectedApis",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 209,
+      "endLine": 209,
+      "contentHash": "30732f4b13e708b8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#affectedFeatures",
+      "name": "affectedFeatures",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 200,
+      "endLine": 200,
+      "contentHash": "7b27049d7315d940",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#affectedModels",
+      "name": "affectedModels",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 210,
+      "endLine": 210,
+      "contentHash": "ed0f221baff45514",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#affectedSymbols",
+      "name": "affectedSymbols",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 208,
+      "endLine": 208,
+      "contentHash": "15eb6b45bb3f0d6e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#affectedTests",
+      "name": "affectedTests",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 211,
+      "endLine": 211,
+      "contentHash": "72c3666f1606fe4d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#allActive",
+      "name": "allActive",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 147,
+      "endLine": 147,
+      "contentHash": "ad72d07af900e930",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#existingPatterns",
+      "name": "existingPatterns",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 146,
+      "endLine": 146,
+      "contentHash": "7140a2e698595ee4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#exp",
+      "name": "exp",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 65,
+      "endLine": 65,
+      "contentHash": "2a893764ec0b23f0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#features",
+      "name": "features",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 52,
+      "endLine": 52,
+      "contentHash": "45ff46da300761d5",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#fileSuggestions",
+      "name": "fileSuggestions",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 74,
+      "endLine": 74,
+      "contentHash": "7343732361fedbdb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#generateTaskPlan",
+      "name": "generateTaskPlan",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "function",
+      "startLine": 197,
+      "endLine": 306,
+      "contentHash": "6006c697283870ac",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#m",
+      "name": "m",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 113,
+      "endLine": 113,
+      "contentHash": "9bb857a32567abf3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#mapTaskArchitecture",
+      "name": "mapTaskArchitecture",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "function",
+      "startLine": 47,
+      "endLine": 191,
+      "contentHash": "df8a90a0297a469b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#matcher",
+      "name": "matcher",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 48,
+      "endLine": 48,
+      "contentHash": "50e13ea723d1a6d9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#node",
+      "name": "node",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 214,
+      "endLine": 214,
+      "contentHash": "c85a1867a6d45fca",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#phaseNum",
+      "name": "phaseNum",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 237,
+      "endLine": 237,
+      "contentHash": "08a7db1caf247f65",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#PlanPhase",
+      "name": "PlanPhase",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "interface",
+      "startLine": 23,
+      "endLine": 29,
+      "contentHash": "91440cd97c127586",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#potentialRisks",
+      "name": "potentialRisks",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 224,
+      "endLine": 224,
+      "contentHash": "d6ee55a96b7db2e0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#primaryFeature",
+      "name": "primaryFeature",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 55,
+      "endLine": 57,
+      "contentHash": "6f78a19f1f0ddbdb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#queryLower",
+      "name": "queryLower",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 53,
+      "endLine": 53,
+      "contentHash": "ca7629b94367927b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#r",
+      "name": "r",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 127,
+      "endLine": 127,
+      "contentHash": "d97d452d166c770d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#relevantTests",
+      "name": "relevantTests",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 168,
+      "endLine": 168,
+      "contentHash": "756f08fe9a083ba1",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#role",
+      "name": "role",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 130,
+      "endLine": 130,
+      "contentHash": "61c2b7e882ec9fb4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#s",
+      "name": "s",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 102,
+      "endLine": 102,
+      "contentHash": "b65a65b868bd731a",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#searchResults",
+      "name": "searchResults",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 49,
+      "endLine": 49,
+      "contentHash": "565cd368241d51c2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#seenPaths",
+      "name": "seenPaths",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 75,
+      "endLine": 75,
+      "contentHash": "c273696036ecf5b5",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#serviceSymbols",
+      "name": "serviceSymbols",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 249,
+      "endLine": 249,
+      "contentHash": "2e14d56cdafdd270",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#suggestedOrder",
+      "name": "suggestedOrder",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 236,
+      "endLine": 236,
+      "contentHash": "23c7104ac110f527",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#suggestedSurface",
+      "name": "suggestedSurface",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 176,
+      "endLine": 176,
+      "contentHash": "492041226bdfe2b2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#t",
+      "name": "t",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 171,
+      "endLine": 171,
+      "contentHash": "6531ab985968fd8a",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#targetFileSet",
+      "name": "targetFileSet",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 213,
+      "endLine": 213,
+      "contentHash": "6fee0fd0701d0edf",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#TaskFileSuggestion",
+      "name": "TaskFileSuggestion",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "interface",
+      "startLine": 7,
+      "endLine": 12,
+      "contentHash": "db0982f5142b0169",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#taskMap",
+      "name": "taskMap",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 198,
+      "endLine": 198,
+      "contentHash": "650a166a6908d9a4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#TaskMapResult",
+      "name": "TaskMapResult",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "interface",
+      "startLine": 14,
+      "endLine": 21,
+      "contentHash": "d8ed6cdc758b46d0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#TaskPlanResult",
+      "name": "TaskPlanResult",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "interface",
+      "startLine": 31,
+      "endLine": 41,
+      "contentHash": "a982ec75b8b14efb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#u",
+      "name": "u",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 80,
+      "endLine": 80,
+      "contentHash": "0ffab7bb0e6fbd85",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#uiSymbols",
+      "name": "uiSymbols",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 270,
+      "endLine": 270,
+      "contentHash": "984d731f55179acb",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/task-planner.ts#view",
+      "name": "view",
+      "path": "packages/trace/src/intelligence/task-planner.ts",
+      "symbolKind": "variable",
+      "startLine": 170,
+      "endLine": 170,
+      "contentHash": "81f9ca82ffb4a5a6",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#byCommand",
+      "name": "byCommand",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 75,
+      "endLine": 75,
+      "contentHash": "76046ff3630be27b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#byDay",
+      "name": "byDay",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 74,
+      "endLine": 74,
+      "contentHash": "07d71d580d39fb08",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#codebaseDir",
+      "name": "codebaseDir",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 115,
+      "endLine": 115,
+      "contentHash": "91113ef3f71b36d4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#day",
+      "name": "day",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 79,
+      "endLine": 79,
+      "contentHash": "a21a5908d0d5ea8f",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#LocalUsageLedger",
+      "name": "LocalUsageLedger",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "class",
+      "startLine": 40,
+      "endLine": 121,
+      "contentHash": "57670ae4d4f2e76d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#LocalUsageLedger.constructor",
+      "name": "constructor",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "method",
+      "startLine": 43,
+      "endLine": 45,
+      "contentHash": "b93e2c1978ed977a",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#LocalUsageLedger.getSummary",
+      "name": "getSummary",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "method",
+      "startLine": 61,
+      "endLine": 93,
+      "contentHash": "f0c93f5764dc8215",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#LocalUsageLedger.loadRecords",
+      "name": "loadRecords",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "method",
+      "startLine": 101,
+      "endLine": 112,
+      "contentHash": "c0e472f72e323bd3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#LocalUsageLedger.record",
+      "name": "record",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "method",
+      "startLine": 47,
+      "endLine": 59,
+      "contentHash": "93cb7c5cdf45fa09",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#LocalUsageLedger.reset",
+      "name": "reset",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "method",
+      "startLine": 95,
+      "endLine": 99,
+      "contentHash": "50c710119302d336",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#LocalUsageLedger.saveRecords",
+      "name": "saveRecords",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "method",
+      "startLine": 114,
+      "endLine": 120,
+      "contentHash": "31a8bad7a5ced4e9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#parsed",
+      "name": "parsed",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 107,
+      "endLine": 107,
+      "contentHash": "e6ddef3d9fd7be85",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#r",
+      "name": "r",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 78,
+      "endLine": 78,
+      "contentHash": "5ffde4b92f809c92",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#raw",
+      "name": "raw",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 106,
+      "endLine": 106,
+      "contentHash": "a7e03494a97e3dd3",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#record",
+      "name": "record",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 50,
+      "endLine": 54,
+      "contentHash": "7649a4e0e84e7cf9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#records",
+      "name": "records",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 62,
+      "endLine": 62,
+      "contentHash": "161a2f177845e9d1",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#todayStr",
+      "name": "todayStr",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 69,
+      "endLine": 69,
+      "contentHash": "1f281cb8426341b4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#TokenType",
+      "name": "TokenType",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "type",
+      "startLine": 6,
+      "endLine": 6,
+      "contentHash": "54b771dee1c1564a",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#TokenUsageProvider",
+      "name": "TokenUsageProvider",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "interface",
+      "startLine": 31,
+      "endLine": 34,
+      "contentHash": "626e9c926b4434d8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#TokenUsageRecord",
+      "name": "TokenUsageRecord",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "interface",
+      "startLine": 8,
+      "endLine": 20,
+      "contentHash": "8cd3c57034a83a1b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#TokenUsageSummary",
+      "name": "TokenUsageSummary",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "interface",
+      "startLine": 22,
+      "endLine": 29,
+      "contentHash": "d7d0464b7bf25ca9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#totalTokens",
+      "name": "totalTokens",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 76,
+      "endLine": 76,
+      "contentHash": "21f4dbc7b1b8f4f7",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/telemetry.ts#uniqueSessions",
+      "name": "uniqueSessions",
+      "path": "packages/trace/src/intelligence/telemetry.ts",
+      "symbolKind": "variable",
+      "startLine": 73,
+      "endLine": 73,
+      "contentHash": "24ec53c23f17f183",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#affectedFeatures",
+      "name": "affectedFeatures",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 115,
+      "endLine": 115,
+      "contentHash": "3d84531f6ac13c1c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#changes",
+      "name": "changes",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 102,
+      "endLine": 102,
+      "contentHash": "5db5f040b126535e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#CodebaseWatcher",
+      "name": "CodebaseWatcher",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "class",
+      "startLine": 17,
+      "endLine": 145,
+      "contentHash": "7ed4e744e695af8c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#CodebaseWatcher.constructor",
+      "name": "constructor",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "method",
+      "startLine": 23,
+      "endLine": 27,
+      "contentHash": "7ac9f19a3755ce0e",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#CodebaseWatcher.reconcile",
+      "name": "reconcile",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "method",
+      "startLine": 96,
+      "endLine": 144,
+      "contentHash": "16b2539c48b82987",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#CodebaseWatcher.scheduleReconciliation",
+      "name": "scheduleReconciliation",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "method",
+      "startLine": 85,
+      "endLine": 94,
+      "contentHash": "69f25daf6f873af8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#CodebaseWatcher.start",
+      "name": "start",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "method",
+      "startLine": 29,
+      "endLine": 72,
+      "contentHash": "5708f1f054e3cb42",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#CodebaseWatcher.stop",
+      "name": "stop",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "method",
+      "startLine": 74,
+      "endLine": 83,
+      "contentHash": "d39b77fa8e9b1bb2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#config",
+      "name": "config",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 30,
+      "endLine": 30,
+      "contentHash": "2f4ad97702803c84",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#debounceTime",
+      "name": "debounceTime",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 90,
+      "endLine": 90,
+      "contentHash": "17fb55b1d09e1e10",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#exp",
+      "name": "exp",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 119,
+      "endLine": 119,
+      "contentHash": "20e27928ca23b1a1",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#featureList",
+      "name": "featureList",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 127,
+      "endLine": 127,
+      "contentHash": "f9cb60ae2f358888",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#file",
+      "name": "file",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 116,
+      "endLine": 116,
+      "contentHash": "9992733edc8de8e0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#ignoredPatterns",
+      "name": "ignoredPatterns",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 31,
+      "endLine": 41,
+      "contentHash": "19b20baa6359cbf4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#node",
+      "name": "node",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 117,
+      "endLine": 117,
+      "contentHash": "3e3672cd92bcd2c8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#normFile",
+      "name": "normFile",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 53,
+      "endLine": 53,
+      "contentHash": "25e66a553cdd6e57",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#r",
+      "name": "r",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 120,
+      "endLine": 120,
+      "contentHash": "44472f82f554bdc2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#timestamp",
+      "name": "timestamp",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "variable",
+      "startLine": 108,
+      "endLine": 108,
+      "contentHash": "3b75416bddac2880",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/intelligence/watcher.ts#WatcherOptions",
+      "name": "WatcherOptions",
+      "path": "packages/trace/src/intelligence/watcher.ts",
+      "symbolKind": "interface",
+      "startLine": 9,
+      "endLine": 12,
+      "contentHash": "7851dedf5757f242",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:packages/trace/src/renderers/llm-context.ts#allFeatures",
       "name": "allFeatures",
       "path": "packages/trace/src/renderers/llm-context.ts",
@@ -6142,13 +8882,23 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#catColor",
+      "name": "catColor",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "variable",
+      "startLine": 385,
+      "endLine": 392,
+      "contentHash": "8eeea1e03e648227",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#color",
       "name": "color",
       "path": "packages/trace/src/renderers/terminal.ts",
       "symbolKind": "variable",
-      "startLine": 176,
-      "endLine": 176,
-      "contentHash": "9928dbb0b0c71cf6",
+      "startLine": 228,
+      "endLine": 228,
+      "contentHash": "16c8fe4a44938e10",
       "status": "active"
     },
     {
@@ -6236,9 +8986,49 @@
       "name": "out",
       "path": "packages/trace/src/renderers/terminal.ts",
       "symbolKind": "variable",
-      "startLine": 191,
-      "endLine": 191,
-      "contentHash": "4cb0b2334e5ff0ee",
+      "startLine": 451,
+      "endLine": 451,
+      "contentHash": "1bac5e760cb12ec1",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderArchitecturalDiffReport",
+      "name": "renderArchitecturalDiffReport",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "function",
+      "startLine": 286,
+      "endLine": 340,
+      "contentHash": "68e496d3923a8ebe",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderCoverageReports",
+      "name": "renderCoverageReports",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "function",
+      "startLine": 413,
+      "endLine": 426,
+      "contentHash": "f5f7448947d2be0d",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderCyclesReport",
+      "name": "renderCyclesReport",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "function",
+      "startLine": 202,
+      "endLine": 220,
+      "contentHash": "8c3e05e97a9b8536",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderDeadCodeReport",
+      "name": "renderDeadCodeReport",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "function",
+      "startLine": 236,
+      "endLine": 284,
+      "contentHash": "8603893e09a5c53f",
       "status": "active"
     },
     {
@@ -6248,7 +9038,7 @@
       "symbolKind": "function",
       "startLine": 120,
       "endLine": 159,
-      "contentHash": "a62714be68e9e345",
+      "contentHash": "a76d64144d4ad316",
       "status": "active"
     },
     {
@@ -6262,6 +9052,26 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderHotspotsReport",
+      "name": "renderHotspotsReport",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "function",
+      "startLine": 222,
+      "endLine": 234,
+      "contentHash": "de4bd9951ecc9001",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderRuleCheckReport",
+      "name": "renderRuleCheckReport",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "function",
+      "startLine": 428,
+      "endLine": 448,
+      "contentHash": "4a2066b3549b952d",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderSearchResults",
       "name": "renderSearchResults",
       "path": "packages/trace/src/renderers/terminal.ts",
@@ -6272,6 +9082,36 @@
       "status": "active"
     },
     {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderTaskMapReport",
+      "name": "renderTaskMapReport",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "function",
+      "startLine": 342,
+      "endLine": 376,
+      "contentHash": "21fdeece5957b734",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderTaskPlanReport",
+      "name": "renderTaskPlanReport",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "function",
+      "startLine": 378,
+      "endLine": 411,
+      "contentHash": "b33e4460375332d5",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderUsageSummary",
+      "name": "renderUsageSummary",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "function",
+      "startLine": 450,
+      "endLine": 468,
+      "contentHash": "7c9ce3d6a40224f9",
+      "status": "active"
+    },
+    {
       "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#renderValidationReport",
       "name": "renderValidationReport",
       "path": "packages/trace/src/renderers/terminal.ts",
@@ -6279,6 +9119,16 @@
       "startLine": 161,
       "endLine": 184,
       "contentHash": "068cc6fbf0e09ac0",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#riskColor",
+      "name": "riskColor",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "variable",
+      "startLine": 289,
+      "endLine": 289,
+      "contentHash": "f625907914b8fd9f",
       "status": "active"
     },
     {
@@ -6309,6 +9159,26 @@
       "startLine": 30,
       "endLine": 30,
       "contentHash": "6f05bd7e91d71159",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#sevColor",
+      "name": "sevColor",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "variable",
+      "startLine": 440,
+      "endLine": 440,
+      "contentHash": "ef0be96e59c30647",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:packages/trace/src/renderers/terminal.ts#symColor",
+      "name": "symColor",
+      "path": "packages/trace/src/renderers/terminal.ts",
+      "symbolKind": "variable",
+      "startLine": 419,
+      "endLine": 419,
+      "contentHash": "8199ae7e98f310b8",
       "status": "active"
     },
     {
@@ -7279,6 +10149,236 @@
       "startLine": 23,
       "endLine": 23,
       "contentHash": "4066f97360bc8d75",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#caller",
+      "name": "caller",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 121,
+      "endLine": 136,
+      "contentHash": "3b8f0133f0ffeecd",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#dbNode",
+      "name": "dbNode",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 276,
+      "endLine": 291,
+      "contentHash": "42f4554c8e59b570",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#deadSymbol",
+      "name": "deadSymbol",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 167,
+      "endLine": 182,
+      "contentHash": "85625cbf97e7ff74",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#feat",
+      "name": "feat",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 230,
+      "endLine": 245,
+      "contentHash": "56a6cefdc93937dc",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#finding",
+      "name": "finding",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 188,
+      "endLine": 188,
+      "contentHash": "085e953ece8e65c4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#graph",
+      "name": "graph",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 368,
+      "endLine": 368,
+      "contentHash": "6e8f77e785e60013",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#hot",
+      "name": "hot",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 155,
+      "endLine": 155,
+      "contentHash": "c382f11523fae0a7",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#i",
+      "name": "i",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 120,
+      "endLine": 120,
+      "contentHash": "ad856d5836668561",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#json",
+      "name": "json",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 381,
+      "endLine": 381,
+      "contentHash": "d619a3ba38745ccf",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#ledger",
+      "name": "ledger",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 330,
+      "endLine": 330,
+      "contentHash": "c25ad7ada92e934b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#map",
+      "name": "map",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 217,
+      "endLine": 217,
+      "contentHash": "7679416a490264d6",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#nodeA",
+      "name": "nodeA",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 21,
+      "endLine": 36,
+      "contentHash": "67c8e6667b56c1c4",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#nodeB",
+      "name": "nodeB",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 38,
+      "endLine": 53,
+      "contentHash": "ded5fbbecd129177",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#plan",
+      "name": "plan",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 220,
+      "endLine": 220,
+      "contentHash": "5c413f7538b183a6",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#postReset",
+      "name": "postReset",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 361,
+      "endLine": 361,
+      "contentHash": "72e1b315a321c88c",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#report",
+      "name": "report",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 310,
+      "endLine": 310,
+      "contentHash": "10d85780a7618b71",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#reports",
+      "name": "reports",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 248,
+      "endLine": 248,
+      "contentHash": "bfdacc8fdc867a9b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#res",
+      "name": "res",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 378,
+      "endLine": 378,
+      "contentHash": "d660b2be53aebfa9",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#serverInstance",
+      "name": "serverInstance",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 369,
+      "endLine": 372,
+      "contentHash": "bd53a4b2506e3cb8",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#summary",
+      "name": "summary",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 352,
+      "endLine": 352,
+      "contentHash": "ec193fd0b19b6e46",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#targetNode",
+      "name": "targetNode",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 101,
+      "endLine": 116,
+      "contentHash": "3fd43831517cbb9b",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#tempDir",
+      "name": "tempDir",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 318,
+      "endLine": 318,
+      "contentHash": "743958e88bd083d2",
+      "status": "active"
+    },
+    {
+      "urn": "urn:trace:symbol:tests/unit/intelligence.test.ts#uiNode",
+      "name": "uiNode",
+      "path": "tests/unit/intelligence.test.ts",
+      "symbolKind": "variable",
+      "startLine": 259,
+      "endLine": 274,
+      "contentHash": "2f79d7972bcb5200",
       "status": "active"
     }
   ]

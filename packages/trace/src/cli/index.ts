@@ -13,10 +13,29 @@ import {
   renderFeatureView,
   renderDriftStatus,
   renderValidationReport,
-  renderSearchResults
+  renderSearchResults,
+  renderCyclesReport,
+  renderHotspotsReport,
+  renderDeadCodeReport,
+  renderArchitecturalDiffReport,
+  renderTaskMapReport,
+  renderTaskPlanReport,
+  renderCoverageReports,
+  renderRuleCheckReport,
+  renderUsageSummary
 } from '../renderers/terminal.js';
 import { generateLLMContext } from '../renderers/llm-context.js';
 import { generateFeatureIndexMarkdown } from '../renderers/markdown.js';
+import { startGraphServer } from '../graph-ui/server.js';
+import { detectCycles } from '../intelligence/cycles.js';
+import { analyzeHotspots } from '../intelligence/hotspots.js';
+import { detectDeadCode } from '../intelligence/dead-code.js';
+import { computeArchitecturalDiff } from '../intelligence/architectural-diff.js';
+import { mapTaskArchitecture, generateTaskPlan } from '../intelligence/task-planner.js';
+import { evaluateFeatureCoverage } from '../intelligence/coverage.js';
+import { checkArchitectureRules } from '../intelligence/rules.js';
+import { LocalUsageLedger } from '../intelligence/telemetry.js';
+import { CodebaseWatcher } from '../intelligence/watcher.js';
 
 export function createProgram(): Command {
   const program = new Command();
@@ -398,6 +417,22 @@ export function createProgram(): Command {
       const maxTokens = parseInt(options.tokens, 10) || 4000;
       const contextText = generateLLMContext(graph, query, { maxTokens });
 
+      try {
+        const ledger = new LocalUsageLedger(repoRoot);
+        ledger.record({
+          sessionId: process.env.TRACE_SESSION_ID || 'default',
+          command: 'context',
+          tokensRequested: maxTokens,
+          tokensGenerated: Math.ceil(contextText.length / 3.8),
+          tokenType: 'ESTIMATED',
+          filesIncluded: (contextText.match(/## File:/g) || []).length,
+          symbolsIncluded: (contextText.match(/### /g) || []).length,
+          query
+        });
+      } catch {
+        // Non-fatal telemetry recording
+      }
+
       if (options.json) {
         console.log(JSON.stringify({ query, maxTokens, context: contextText }, null, 2));
       } else {
@@ -543,6 +578,337 @@ export function createProgram(): Command {
         console.log(JSON.stringify(data, null, 2));
       } else {
         console.log(generateFeatureIndexMarkdown(graph));
+      }
+    });
+
+  // 16. graph
+  program
+    .command('graph')
+    .description('Launch local interactive codebase visualizer')
+    .option('-p, --port <number>', 'Port for local visualizer server', '4321')
+    .option('--no-open', 'Do not automatically open browser')
+    .option('--feature <name>', 'Focus graph view on specific feature')
+    .option('--symbol <name>', 'Focus graph view on specific symbol')
+    .option('--impact <name>', 'Focus graph view on blast radius of symbol')
+    .option('--json', 'Export graph visualization payload as JSON instead of starting server')
+    .action(async (options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+
+      const graph = new FeatureGraph();
+      try {
+        indexer.getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      if (options.json) {
+        const payload = {
+          nodes: graph.getActiveNodes(),
+          edges: graph.getAllEdges(),
+          features: graph.getFeatures()
+        };
+        console.log(JSON.stringify(payload, null, 2));
+        return;
+      }
+
+      try {
+        await startGraphServer(repoRoot, graph, {
+          port: parseInt(options.port, 10) || 4321,
+          openBrowser: options.open !== false,
+          focusFeature: options.feature,
+          focusSymbol: options.symbol,
+          focusImpact: options.impact
+        });
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+      }
+    });
+
+  // 17. diff [ref]
+  program
+    .command('diff [ref]')
+    .description('Architectural interpretation of Git diff or working tree changes')
+    .option('--json', 'Output diff analysis as JSON')
+    .action(async (ref, options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+
+      const graph = new FeatureGraph();
+      try {
+        indexer.getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const report = computeArchitecturalDiff(repoRoot, graph, ref);
+      if (options.json) {
+        console.log(JSON.stringify(report, null, 2));
+      } else {
+        console.log(renderArchitecturalDiffReport(report));
+      }
+    });
+
+  // 18. review [ref]
+  program
+    .command('review [ref]')
+    .description('Review proposed changes against features, APIs, models, and tests')
+    .option('--json', 'Output review report as JSON')
+    .action(async (ref, options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+
+      const graph = new FeatureGraph();
+      try {
+        indexer.getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const report = computeArchitecturalDiff(repoRoot, graph, ref);
+      if (options.json) {
+        console.log(JSON.stringify(report, null, 2));
+      } else {
+        console.log(renderArchitecturalDiffReport(report));
+      }
+    });
+
+  // 19. dead / orphan
+  program
+    .command('dead')
+    .alias('orphan')
+    .description('Detect unreferenced symbols, unconsumed files, and orphan graph nodes')
+    .option('--json', 'Output findings as JSON')
+    .action(async (options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+
+      const graph = new FeatureGraph();
+      try {
+        indexer.getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const report = detectDeadCode(graph);
+      if (options.json) {
+        console.log(JSON.stringify(report, null, 2));
+      } else {
+        console.log(renderDeadCodeReport(report));
+      }
+    });
+
+  // 20. hotspots
+  program
+    .command('hotspots')
+    .description('Identify highly coupled architectural nodes with documented formulas')
+    .option('-n, --top <number>', 'Number of hotspots to display', '10')
+    .option('--json', 'Output hotspots as JSON')
+    .action(async (options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+
+      const graph = new FeatureGraph();
+      try {
+        indexer.getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const limit = parseInt(options.top, 10) || 10;
+      const report = analyzeHotspots(graph, limit);
+      if (options.json) {
+        console.log(JSON.stringify(report, null, 2));
+      } else {
+        console.log(renderHotspotsReport(report));
+      }
+    });
+
+  // 21. cycles
+  program
+    .command('cycles')
+    .description('Detect circular dependencies at symbol and file levels')
+    .option('--json', 'Output cycle chains as JSON')
+    .action(async (options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+
+      const graph = new FeatureGraph();
+      try {
+        indexer.getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const report = detectCycles(graph);
+      if (options.json) {
+        console.log(JSON.stringify(report, null, 2));
+      } else {
+        console.log(renderCyclesReport(report));
+      }
+    });
+
+  // 22. task <query>
+  program
+    .command('task <query>')
+    .description('Map likely architecture, files, and reference patterns for a task')
+    .option('--json', 'Output task map as JSON')
+    .action(async (query, options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+
+      const graph = new FeatureGraph();
+      try {
+        indexer.getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const result = mapTaskArchitecture(graph, query);
+      if (options.json) {
+        console.log(JSON.stringify(result, null, 2));
+      } else {
+        console.log(renderTaskMapReport(result));
+      }
+    });
+
+  // 23. plan <query>
+  program
+    .command('plan <query>')
+    .description('Generate an evidence-backed implementation plan')
+    .option('--json', 'Output plan as JSON')
+    .action(async (query, options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+
+      const graph = new FeatureGraph();
+      try {
+        indexer.getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const result = generateTaskPlan(graph, query);
+      if (options.json) {
+        console.log(JSON.stringify(result, null, 2));
+      } else {
+        console.log(renderTaskPlanReport(result));
+      }
+    });
+
+  // 24. coverage [feature]
+  program
+    .command('coverage [feature]')
+    .description('Evaluate feature architectural traceability across 6 core dimensions')
+    .option('--json', 'Output coverage as JSON')
+    .action(async (feature, options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+
+      const graph = new FeatureGraph();
+      try {
+        indexer.getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const reports = evaluateFeatureCoverage(repoRoot, graph, feature);
+      if (options.json) {
+        console.log(JSON.stringify(reports, null, 2));
+      } else {
+        console.log(renderCoverageReports(reports));
+      }
+    });
+
+  // 25. check
+  program
+    .command('check')
+    .description('Validate architecture rules against codebase map')
+    .option('-c, --config <path>', 'Custom rules file path')
+    .option('--json', 'Output violations as JSON')
+    .action(async (options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+
+      const graph = new FeatureGraph();
+      try {
+        indexer.getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const report = checkArchitectureRules(repoRoot, graph, options.config);
+      if (options.json) {
+        console.log(JSON.stringify(report, null, 2));
+      } else {
+        console.log(renderRuleCheckReport(report));
+      }
+
+      if (!report.isCompliant) {
+        process.exit(1);
+      }
+    });
+
+  // 26. watch
+  program
+    .command('watch')
+    .description('Watch repository filesystem and incrementally re-index on changes')
+    .option('-d, --debounce <ms>', 'Debounce interval in milliseconds', '500')
+    .action(async (options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const indexer = new CodebaseIndexer(repoRoot);
+      const debounceMs = parseInt(options.debounce, 10) || 500;
+
+      const watcher = new CodebaseWatcher(repoRoot, indexer, { debounceMs });
+      watcher.start();
+
+      process.on('SIGINT', () => {
+        watcher.stop();
+        process.exit(0);
+      });
+      process.on('SIGTERM', () => {
+        watcher.stop();
+        process.exit(0);
+      });
+    });
+
+  // 27. usage
+  program
+    .command('usage')
+    .description('View local token telemetry and agent session usage')
+    .option('--session [id]', 'Filter by session ID')
+    .option('--today', 'Show usage for today')
+    .option('--reset', 'Reset local usage ledger')
+    .option('--json', 'Output usage as JSON')
+    .action(async (options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const ledger = new LocalUsageLedger(repoRoot);
+
+      if (options.reset) {
+        ledger.reset();
+        console.log(pc.green('Local usage ledger has been reset.'));
+        return;
+      }
+
+      const summary = ledger.getSummary({
+        sessionId: typeof options.session === 'string' ? options.session : undefined,
+        today: options.today
+      });
+
+      if (options.json) {
+        console.log(JSON.stringify(summary, null, 2));
+      } else {
+        console.log(renderUsageSummary(summary));
       }
     });
 

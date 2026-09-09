@@ -76,6 +76,8 @@ PROJECTIONS (Non-canonical views)
 
 ---
 
+---
+
 ## 5. Quick Start
 
 Run TRACE on-demand without global installation:
@@ -84,19 +86,34 @@ Run TRACE on-demand without global installation:
 # 1. Initialize TRACE in your repository
 npx @amvelt/trace init
 
-# 2. View all mapped features
+# 2. Open the interactive visual codebase graph
+npx @amvelt/trace graph
+
+# 3. View all mapped features
 npx @amvelt/trace features
 
-# 3. Explore a specific feature
+# 4. Explore a specific feature
 npx @amvelt/trace feature payments
 
-# 4. Understand why a relationship exists
+# 5. Understand why a relationship exists
 npx @amvelt/trace explain PaymentService
 
-# 5. Check impact before making changes
+# 6. Check blast radius & impact before making changes
 npx @amvelt/trace impact PaymentService
 
-# 6. Check index health
+# 7. Check architectural coupling hotspots and cycles
+npx @amvelt/trace hotspots
+npx @amvelt/trace cycles
+
+# 8. Review changes before committing
+npx @amvelt/trace diff
+npx @amvelt/trace review
+
+# 9. Map tasks and generate implementation plans
+npx @amvelt/trace task "Add Google OAuth login"
+npx @amvelt/trace plan "refactor payment service"
+
+# 10. Check index health and status
 npx @amvelt/trace status
 npx @amvelt/trace validate
 ```
@@ -104,12 +121,93 @@ npx @amvelt/trace validate
 Or install globally:
 ```bash
 npm install -g @amvelt/trace
-trace init
+trace graph
 ```
 
 ---
 
-## 6. Example Output
+## 6. Complete CLI Command Reference
+
+| Command | Category | Description |
+| :--- | :--- | :--- |
+| `trace init` | Core | Initialize `.codebase/` index and map features |
+| `trace update` | Core | Incrementally update index with recent modifications & renames |
+| `trace rebuild` | Core | Cleanly delete existing index and rebuild from scratch |
+| `trace status` | Health | Check if index is current or has drifted from filesystem/git |
+| `trace validate` | Health | Verify index health (stale line ranges, broken links, orphan nodes) |
+| `trace graph` | Visual | Launch local-first interactive visual codebase graph |
+| `trace features` | Navigation | List all mapped features with confidence ratings |
+| `trace feature <name>` | Navigation | Display complete implementation surface area for a feature |
+| `trace where <concept>` | Navigation | Find where a feature, route, or concept is implemented |
+| `trace explain <target>` | Evidence | Explain WHY a relationship exists with evidence chains |
+| `trace search <query>` | Search | Semantic and keyword search across features, symbols, and routes |
+| `trace impact <target>` | Impact | Compute direct & indirect consumers and affected tests |
+| `trace hotspots` | Intelligence | Identify highly coupled architectural nodes with documented formulas |
+| `trace cycles` | Intelligence | Detect circular dependencies at symbol and file levels |
+| `trace dead` / `orphan` | Intelligence | Detect unreferenced symbols, unconsumed files, and orphan nodes |
+| `trace diff [ref]` | Review | Architectural interpretation of Git diff or working tree changes |
+| `trace review [ref]` | Review | Review proposed changes against features, APIs, models, and tests |
+| `trace task <query>` | AI Planning | Map likely architecture, files, and reference patterns for a task |
+| `trace plan <query>` | AI Planning | Generate evidence-backed implementation plan (phases & risks) |
+| `trace context <query>` | AI Context | Generate compact, token-budgeted markdown context (hard ceiling) |
+| `trace coverage [name]` | Governance | Evaluate feature architectural traceability across 6 dimensions |
+| `trace check` | Governance | Validate architecture rules (import boundaries, required tests) |
+| `trace watch` | Live | Watch repository filesystem and incrementally re-index on changes |
+| `trace usage` | Telemetry | View local token telemetry ledger and session usage (zero phone-home) |
+| `trace doctor` | Diagnostic | Diagnostic check of repository setup, parsers, and git integration |
+| `trace history <feat>` | History | Show recent Git commits affecting this feature |
+| `trace export` | Export | Export full graph projection as JSON or Markdown |
+
+---
+
+## 7. Interactive Visual Codebase Graph (`trace graph`)
+
+TRACE features an embedded, 100% offline interactive visualization server:
+- **Zero Cloud / Zero CDN**: Runs on a local Node HTTP server (`127.0.0.1:4321`) with no third-party network requests.
+- **Clickable Nodes**: Feature, API Route, Database Model, Core Service, UI Component, Test, and File.
+- **Details Drawer**: Reveals exact file locations, line numbers, connected features, structured evidence, blast radius, consumers, and `vscode://` editor links.
+- **Dynamic Physics & Modes**: Force simulation with pan, zoom, real-time search, category filters, Focus Mode, and Impact Mode.
+
+Run:
+```bash
+trace graph
+trace graph --feature payments
+trace graph --symbol PaymentService
+trace graph --impact PaymentService
+```
+
+---
+
+## 8. Architectural Intelligence & Review
+
+### Architectural Diff (`trace diff`)
+Rather than viewing line-by-line git diffs, TRACE interprets changes architecturally:
+```text
+TRACE ARCHITECTURAL DIFF
+
+Target Ref:     working-tree
+Potential Risk: [MEDIUM] - Moderate blast radius affecting 1 feature(s) and 0 API(s).
+
+Changed Files & Symbols:
+  Files modified:   2
+  Symbols modified: 4
+    - processPayment (src/services/payment.ts:45)
+
+Affected Features:
+  - Payments
+
+Tests Impacted:
+  - processes valid UPI payments (tests/payment.test.ts)
+```
+
+### Hotspots & Cycle Detection
+- `trace hotspots`: Identifies architectural bottlenecks using a deterministic formula:
+  $$\text{Score} = (2 \times \text{in}) + (1 \times \text{out}) + (3 \times \text{features}) + (2 \times \text{consumers}) + (2 \times \text{apis})$$
+- `trace cycles`: Uncovers circular dependencies across symbols and modules to prevent tangled spaghetti architectures.
+
+---
+
+## 9. Example Feature Output
 
 ### `trace feature payments`
 ```text
@@ -138,24 +236,6 @@ Implementation
 Consumers
 ├── Checkout
 └── Subscriptions
-```
-
-### `trace status`
-```text
-TRACE STATUS
-
-INDEX: STALE
-
-Working tree:
-  Modified: 1 file(s)
-    - src/services/payment.js
-
-Git:
-  Indexed commit: abc1234
-  HEAD commit:    def5678
-
-Recommended Action:
-  Run 'trace update' to reconcile recent changes with the feature map.
 ```
 
 ---

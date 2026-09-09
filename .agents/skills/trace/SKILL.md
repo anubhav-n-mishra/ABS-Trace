@@ -50,13 +50,36 @@ When assigned any coding, debugging, refactoring, or feature task:
 
 ---
 
-## Core CLI Navigation Commands
+## Core CLI Navigation & Intelligence Commands
 
-- `trace features`: List all detected and explicit features in the repository.
-- `trace feature <name>`: Show the complete implementation surface for a feature.
+### For Architecture Understanding
+- `trace features`: List all mapped features with confidence ratings.
+- `trace feature <name>`: Show complete implementation surface area for a feature.
+- `trace where <concept>`: Find where a feature, route, or concept is implemented.
 - `trace explain <symbol>`: Show why TRACE believes a symbol belongs to a feature, including evidence.
-- `trace impact <symbol-or-file>`: Identify direct and indirect consumers and affected tests.
-- `trace context "<feature>" --tokens 2000`: Retrieve high-density, token-budgeted prompt context.
-- `trace status`: Check if the working tree has drifted from the index.
+- `trace search "<query>"`: Semantic search across features, symbols, and routes.
+- `trace graph`: Launch interactive visual codebase map.
+
+### For Task Planning & Impact Analysis
+- `trace task "<task>"`: Map likely architecture, files, and reference patterns for a task.
+- `trace plan "<task>"`: Generate an evidence-backed implementation plan distinguishing deterministic facts from suggestions.
+- `trace impact <target>`: Identify direct and indirect consumers and affected tests.
+- `trace hotspots`: Identify highly coupled architectural nodes.
+- `trace cycles`: Detect dependency cycles across files and symbols.
+
+### For Code Review & Diff Intelligence
+- `trace diff [ref]`: Architectural interpretation of Git diff or working tree changes.
+- `trace review [ref]`: Review proposed changes against features, APIs, models, and tests.
+- `trace dead`: Detect unreferenced symbols, unconsumed files, and orphan graph nodes.
+
+### For AI Context & Telemetry
+- `trace context "<task>" --tokens 2000`: Retrieve compact, token-budgeted prompt context with hard ceiling guarantee.
+- `trace usage`: View local token usage ledger and session telemetry.
+
+### For Governance & Maintenance
+- `trace check`: Validate architecture rules (import boundaries, required tests).
+- `trace coverage [feature]`: Evaluate feature architectural traceability across 6 dimensions.
+- `trace status`: Check if index has drifted from the working tree.
 - `trace update`: Incrementally re-index changed, added, or renamed files.
-- `trace validate`: Ensure the index is completely healthy with no stale or orphaned links.
+- `trace validate`: Ensure index health with zero stale or broken references.
+- `trace watch`: Real-time filesystem watcher for continuous synchronization.

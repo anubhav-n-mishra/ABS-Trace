@@ -36,12 +36,16 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'session' matches 'session' domain vocabulary*
 - `fixtures/01-small-js/src/services/auth.js:2-7` — **loginUser** (function)
   - *Evidence: Symbol 'loginUser' matches 'login' domain vocabulary*
+- `packages/trace/src/intelligence/telemetry.ts:73-73` — **uniqueSessions** (variable)
+  - *Evidence: Symbol 'uniqueSessions' matches 'session' domain vocabulary*
 - `fixtures/07-monorepo/packages/shared-types/src/index.ts:1-4` — **SharedAuthUser** (interface)
   - *Evidence: Symbol 'SharedAuthUser' matches 'auth' domain vocabulary*
 - `fixtures/11-ambiguous-features/src/features/auth/login.js:1-4` — **authenticateUser** (function)
   - *Evidence: File path 'fixtures/11-ambiguous-features/src/features/auth/login.js' clusters in 'auth' directory*
 
 ### Tests
+- `tests/unit/intelligence.test.ts:329` — **records session usage locally and aggregates by command and date**
+  - *Evidence: Test suite/case 'records session usage locally and aggregates by command and date' targets 'Authentication' functionality*
 - `fixtures/01-small-js/tests/auth.test.js:3` — **Authentication**
   - *Evidence: Test suite/case 'Authentication' targets 'Authentication' functionality*
 - `fixtures/01-small-js/tests/auth.test.js:4` — **authenticates valid credentials**
@@ -144,6 +148,8 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'createOrder' matches 'order' domain vocabulary*
 - `fixtures/04-node-backend/src/services/orderService.js:12-14` — **cancelOrder** (method)
   - *Evidence: Symbol 'cancelOrder' matches 'order' domain vocabulary*
+- `packages/trace/src/intelligence/task-planner.ts:236-236` — **suggestedOrder** (variable)
+  - *Evidence: Symbol 'suggestedOrder' matches 'order' domain vocabulary*
 
 ### Database Models
 - `Order` model in `fixtures/05-fullstack-app/prisma/schema.prisma:14`
@@ -234,12 +240,14 @@ It maps high-level product features to their exact implementations, APIs, databa
 - **Tags**: `discovery`
 
 ### Services & Business Logic
-- `packages/trace/src/cli/index.ts:332-332` — **searchRes** (variable)
+- `packages/trace/src/cli/index.ts:351-351` — **searchRes** (variable)
   - *Evidence: Symbol 'searchRes' matches 'search' domain vocabulary*
 - `packages/trace/src/detector/semantic-matcher.ts:6-10` — **SearchResult** (interface)
   - *Evidence: Symbol 'SearchResult' matches 'search' domain vocabulary*
 - `packages/trace/src/detector/semantic-matcher.ts:19-89` — **search** (method)
   - *Evidence: Symbol 'search' matches 'search' domain vocabulary*
+- `packages/trace/src/intelligence/task-planner.ts:49-49` — **searchResults** (variable)
+  - *Evidence: Symbol 'searchResults' matches 'search' domain vocabulary*
 - `packages/trace/src/renderers/terminal.ts:186-200` — **renderSearchResults** (function)
   - *Evidence: Symbol 'renderSearchResults' matches 'search' domain vocabulary*
 
