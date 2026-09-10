@@ -9,6 +9,10 @@ import { CodebaseStore } from '../core/store.js';
 import { loadConfig } from '../core/config.js';
 import { SecretFilter } from '../analyzer/secrets.js';
 import { JavaScriptTypeScriptAnalyzer } from '../analyzer/js-ts-analyzer.js';
+import { PythonAnalyzer } from '../analyzer/python-analyzer.js';
+import { GoAnalyzer } from '../analyzer/go-analyzer.js';
+import { RustAnalyzer } from '../analyzer/rust-analyzer.js';
+import { JavaAnalyzer } from '../analyzer/java-analyzer.js';
 import { parsePrismaSchema } from '../analyzer/database.js';
 import { FeatureDetector } from '../detector/auto-detector.js';
 import { IncrementalReconciler, type FileChangeDiff } from './incremental.js';
@@ -19,12 +23,18 @@ import type { StructuralFacts } from '../analyzer/base.js';
 import type { IndexMetadata, DriftReport, SymbolNode } from '../core/types.js';
 import { generateFeatureIndexMarkdown } from '../renderers/markdown.js';
 import { generateAgentSkillMarkdown } from '../agent/skill-generator.js';
-import { isStandardBuiltin, resolveImportTargetFile } from './builtins.js';
+import { isStandardBuiltin, resolveImportTargetFile, resolveImportTargetFiles } from './builtins.js';
 
 export class CodebaseIndexer {
   private repoRoot: string;
   private store: CodebaseStore;
-  private jsTsAnalyzer = new JavaScriptTypeScriptAnalyzer();
+  private analyzers = [
+    new JavaScriptTypeScriptAnalyzer(),
+    new PythonAnalyzer(),
+    new GoAnalyzer(),
+    new RustAnalyzer(),
+    new JavaAnalyzer()
+  ];
 
   constructor(repoRoot: string) {
     this.repoRoot = path.resolve(repoRoot);
@@ -69,9 +79,11 @@ export class CodebaseIndexer {
             imports: [],
             calls: []
           });
-        } else if (this.jsTsAnalyzer.canAnalyze(file)) {
-          const facts = await this.jsTsAnalyzer.extractStructuralFacts(content, file);
-          factsList.push(facts);
+        } else {
+          const analyzer = this.analyzers.find((a) => a.canAnalyze(file));
+          if (analyzer) {
+            factsList.push(await analyzer.extractStructuralFacts(content, file));
+          }
         }
       } catch (err: any) {
         console.warn(`[WARN] Failed to analyze file ${file}:`, err.message);
@@ -232,19 +244,28 @@ export class CodebaseIndexer {
 
         // Prefer candidate from a file directly imported by this file
         const importedFilePaths = new Set(
-          facts.imports
-            .map((i) => resolveImportTargetFile(facts.filePath, i.moduleSpecifier, knownFiles))
-            .filter(Boolean) as string[]
+          facts.imports.flatMap((i) =>
+            resolveImportTargetFiles(facts.filePath, i.moduleSpecifier, knownFiles)
+          )
         );
 
+        // A local definition shadows an import, so resolve same-file first.
         const targetSym =
+          candidates.find((c) => c.path === facts.filePath) ||
           candidates.find((c) => importedFilePaths.has(c.path)) ||
           (candidates.length === 1 ? candidates[0] : undefined);
 
-        if (targetSym && targetSym.path !== facts.filePath) {
+        if (targetSym) {
+          // Attribute the call to the calling function when it is a symbol we
+          // actually indexed; otherwise fall back to the containing file.
+          const callerUrn =
+            call.callerUrn && call.callerUrn !== targetSym.urn && graph.hasNode(call.callerUrn)
+              ? call.callerUrn
+              : `urn:trace:file:${facts.filePath}`;
+
           graph.addEdge({
             id: `edge-struct-call-${structuralEdgeCount++}`,
-            sourceUrn: `urn:trace:file:${facts.filePath}`,
+            sourceUrn: callerUrn,
             targetUrn: targetSym.urn,
             relationship: 'calls',
             confidence: 'DETECTED',

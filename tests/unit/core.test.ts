@@ -295,6 +295,112 @@ describe('FeatureGraph and Alias Handling', () => {
   });
 });
 
+describe('Impact Analysis', () => {
+  it('reports the feature and tests a symbol belongs to', () => {
+    const graph = new FeatureGraph();
+    const now = new Date().toISOString();
+
+    const symbol: SymbolNode = {
+      urn: createSymbolUrn('src/services/auth.ts', 'verifyCredentials'),
+      kind: 'symbol',
+      symbolKind: 'function',
+      name: 'verifyCredentials',
+      path: 'src/services/auth.ts',
+      status: 'active',
+      aliases: [],
+      startLine: 10,
+      endLine: 20,
+      contentHash: 'h1',
+      isExported: true,
+      metadata: {},
+      createdAt: now,
+      updatedAt: now
+    };
+
+    const feature: FeatureNode = {
+      urn: createFeatureUrn('authentication'),
+      kind: 'feature',
+      name: 'authentication',
+      displayName: 'Authentication',
+      path: '',
+      status: 'active',
+      aliases: [],
+      confidence: 'DETECTED',
+      confidenceScore: 0.85,
+      source: 'ast',
+      tags: [],
+      metadata: {},
+      createdAt: now,
+      updatedAt: now
+    };
+
+    const testCase = {
+      urn: createTestUrn('tests/auth.test.ts', 'rejects a bad password'),
+      kind: 'test' as const,
+      name: 'rejects a bad password',
+      path: 'tests/auth.test.ts',
+      status: 'active' as const,
+      aliases: [],
+      startLine: 5,
+      endLine: 8,
+      testType: 'unit' as const,
+      metadata: {},
+      createdAt: now,
+      updatedAt: now
+    };
+
+    const testFile = {
+      urn: 'urn:trace:file:tests/auth.test.ts',
+      kind: 'file' as const,
+      name: 'auth.test.ts',
+      path: 'tests/auth.test.ts',
+      status: 'active' as const,
+      aliases: [],
+      metadata: {},
+      createdAt: now,
+      updatedAt: now
+    };
+
+    graph.addNode(symbol);
+    graph.addNode(feature);
+    graph.addNode(testFile as never);
+    graph.addNode(testCase as never);
+
+    // Feature membership is an OUTGOING edge from the symbol to the feature.
+    graph.addEdge({
+      id: 'edge-implements',
+      sourceUrn: symbol.urn,
+      targetUrn: feature.urn,
+      relationship: 'implements',
+      confidence: 'DETECTED',
+      confidenceScore: 0.85,
+      provenance: { source: 'ast', timestamp: now },
+      evidence: { type: 'semantic_similarity', file: symbol.path, line: 10, reason: 'vocabulary' },
+      createdAt: now,
+      updatedAt: now
+    } as GraphEdge);
+
+    // The test file consumes the symbol.
+    graph.addEdge({
+      id: 'edge-test-call',
+      sourceUrn: 'urn:trace:file:tests/auth.test.ts',
+      targetUrn: symbol.urn,
+      relationship: 'calls',
+      confidence: 'DETECTED',
+      confidenceScore: 0.9,
+      provenance: { source: 'ast', timestamp: now },
+      evidence: { type: 'ast_call', file: 'tests/auth.test.ts', line: 5, reason: 'call' },
+      createdAt: now,
+      updatedAt: now
+    } as GraphEdge);
+
+    const impact = graph.getImpact(symbol.urn);
+
+    expect(impact.affectedFeatures.map((f) => f.displayName)).toContain('Authentication');
+    expect(impact.affectedTests.map((t) => t.name)).toContain('rejects a bad password');
+  });
+});
+
 describe('TokenBudgetManager', () => {
   it('strictly enforces requested budget limit', () => {
     const manager = new TokenBudgetManager();

@@ -314,5 +314,70 @@ export function resolveImportTargetFile(
   // 3. Exact match against known files
   if (knownFiles.has(specifier)) return specifier;
 
+  // 4. Dotted module paths (Python, Java): app.services.auth_service ->
+  //    app/services/auth_service.py. Without this, calls in these languages
+  //    fall back to matching by bare name, which mislinks same-named functions
+  //    living in different packages.
+  if (/^[A-Za-z_][\w.]*$/.test(specifier) && specifier.includes('.')) {
+    const asPath = specifier.replace(/\./g, '/');
+    for (const ext of ['.py', '.java', '/__init__.py']) {
+      const full = asPath + ext;
+      if (knownFiles.has(full)) return full;
+    }
+    // Java imports name the type, not the file: com.shop.auth.AuthService
+    const javaByType = asPath + '.java';
+    if (knownFiles.has(javaByType)) return javaByType;
+  }
+
+  // 5. Go package import paths (example.com/mod/internal/auth) name a
+  //    directory, not a file. Resolve to any .go file inside that directory.
+  if (specifier.includes('/') && !specifier.startsWith('.')) {
+    const segments = specifier.split('/');
+    for (let start = 0; start < segments.length; start++) {
+      const suffix = segments.slice(start).join('/');
+      if (!suffix) continue;
+      for (const file of knownFiles) {
+        if (!file.endsWith('.go')) continue;
+        const dir = path.posix.dirname(file);
+        if (dir === suffix || dir.endsWith('/' + suffix)) return file;
+      }
+    }
+  }
+
   return null;
+}
+
+/**
+ * Go and Python import whole modules rather than individual symbols, so a call
+ * resolves against every file in the imported package. Returns all candidate
+ * files an import specifier could contribute symbols from.
+ */
+export function resolveImportTargetFiles(
+  currentFilePath: string,
+  specifier: string,
+  knownFiles: Set<string>
+): string[] {
+  const single = resolveImportTargetFile(currentFilePath, specifier, knownFiles);
+  const results = new Set<string>();
+  if (single) results.add(single);
+
+  if (specifier.includes('/') && !specifier.startsWith('.')) {
+    const segments = specifier.split('/');
+    for (let start = 0; start < segments.length; start++) {
+      const suffix = segments.slice(start).join('/');
+      if (!suffix) continue;
+      let matched = false;
+      for (const file of knownFiles) {
+        if (!file.endsWith('.go')) continue;
+        const dir = path.posix.dirname(file);
+        if (dir === suffix || dir.endsWith('/' + suffix)) {
+          results.add(file);
+          matched = true;
+        }
+      }
+      if (matched) break;
+    }
+  }
+
+  return Array.from(results);
 }

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2026 Anubhav Mishra and Amvelt
 import type { FeatureGraph } from '../core/graph.js';
-import type { TraceNode } from '../core/types.js';
+import type { SymbolNode, TraceNode } from '../core/types.js';
 
 export interface DeadNodeFinding {
   status: 'POSSIBLY DEAD';
@@ -47,6 +47,22 @@ export function detectDeadCode(graph: FeatureGraph): DeadCodeReport {
   // 1. Unreferenced symbols
   for (const node of activeNodes) {
     if (node.kind === 'symbol') {
+      const symbol = node as SymbolNode;
+
+      // Locals and variables are excluded deliberately. The graph records
+      // cross-file relationships, not intra-file dataflow, so a module-scope
+      // binding that is only used within its own file (an import alias, a
+      // router handed to app.use) looks unreferenced here even though it is
+      // live. Unused locals are a linter's job; this report is for declarations
+      // that nothing in the repository consumes.
+      const isLocal = Boolean(symbol.enclosingScope);
+      const isDeclaration =
+        symbol.symbolKind === 'function' ||
+        symbol.symbolKind === 'class' ||
+        symbol.symbolKind === 'component' ||
+        symbol.symbolKind === 'hook';
+      if (isLocal || !isDeclaration) continue;
+
       const incoming = incomingCounts.get(node.urn) || 0;
       // Also check incoming through feature edges
       const inEdges = graph.getIncomingEdges(node.urn);

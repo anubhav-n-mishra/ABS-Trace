@@ -91,6 +91,70 @@ export class JavaScriptTypeScriptAnalyzer implements LanguageAnalyzer {
       return crypto.createHash('sha256').update(slice).digest('hex').slice(0, 16);
     }
 
+    /**
+     * Walks up from a call site to the function that contains it, so a call
+     * can be attributed to the caller rather than only to the file. Without
+     * this, impact analysis can say "auth.js uses verifyCredentials" but never
+     * "loginUser calls verifyCredentials".
+     */
+    function resolveEnclosingSymbol(
+      pathObj: NodePath<t.Node>
+    ): { name: string; scope?: string } | null {
+      // Callbacks are everywhere in JS (router.post('/x', async () => ...)), and
+      // an anonymous one has no symbol of its own. Keep climbing until a named
+      // function is found, otherwise every call inside a callback would be
+      // attributed to the file and break call chains at that boundary.
+      let fnPath: NodePath<t.Node> | null = pathObj.getFunctionParent();
+
+      while (fnPath) {
+        const fn = fnPath.node;
+
+        if (t.isFunctionDeclaration(fn) && fn.id) return { name: fn.id.name };
+
+        if (t.isClassMethod(fn) || t.isObjectMethod(fn)) {
+          const key = fn.key;
+          const name = t.isIdentifier(key) ? key.name : t.isStringLiteral(key) ? key.value : null;
+          if (name) {
+            if (t.isClassMethod(fn)) {
+              const classPath = fnPath.findParent((p) => p.isClassDeclaration());
+              const classNode = classPath?.node as t.ClassDeclaration | undefined;
+              return { name, scope: classNode?.id?.name };
+            }
+            return { name };
+          }
+        }
+
+        if (t.isArrowFunctionExpression(fn) || t.isFunctionExpression(fn)) {
+          const parent = fnPath.parent;
+          if (t.isVariableDeclarator(parent) && t.isIdentifier(parent.id)) {
+            return { name: parent.id.name };
+          }
+          if (
+            (t.isObjectProperty(parent) || t.isClassProperty(parent)) &&
+            t.isIdentifier(parent.key)
+          ) {
+            const classPath = fnPath.findParent((p) => p.isClassDeclaration());
+            const classNode = classPath?.node as t.ClassDeclaration | undefined;
+            return {
+              name: parent.key.name,
+              scope: t.isClassProperty(parent) ? classNode?.id?.name : undefined
+            };
+          }
+          if (t.isFunctionExpression(fn) && fn.id) return { name: fn.id.name };
+        }
+
+        fnPath = fnPath.parentPath?.getFunctionParent() ?? null;
+      }
+
+      return null;
+    }
+
+    function callerUrnFor(pathObj: NodePath<t.Node>): string | undefined {
+      const enclosing = resolveEnclosingSymbol(pathObj);
+      if (!enclosing) return undefined;
+      return createSymbolUrn(normPath, enclosing.name, enclosing.scope);
+    }
+
     // Next.js App Router Route Detection (e.g. app/api/payment/route.ts)
     const isNextAppRoute = /(?:^|\/)app\/(.+)\/route\.[jt]sx?$/.test(normPath);
     const nextRoutePrefix = isNextAppRoute
@@ -147,6 +211,10 @@ export class JavaScriptTypeScriptAnalyzer implements LanguageAnalyzer {
         const isHook = /^use[A-Z][A-Za-z0-9]*$/.test(name);
         const symbolKind: SymbolKind = isComponent ? 'component' : isHook ? 'hook' : 'function';
 
+        // Recorded as metadata only — the URN deliberately stays scope-free so
+        // that caller attribution keeps resolving to the same node.
+        const declaredInside = resolveEnclosingSymbol(pathObj);
+
         symbols.push({
           urn: createSymbolUrn(normPath, name),
           kind: 'symbol',
@@ -161,6 +229,7 @@ export class JavaScriptTypeScriptAnalyzer implements LanguageAnalyzer {
           endCol: node.loc?.end.column,
           contentHash: getSliceHash(startLine, endLine),
           isExported,
+          enclosingScope: declaredInside?.name,
           metadata: {},
           createdAt: new Date().toISOString(),
           updatedAt: new Date().toISOString()
@@ -389,11 +458,11 @@ export class JavaScriptTypeScriptAnalyzer implements LanguageAnalyzer {
           const objName = t.isIdentifier(node.callee.object) ? node.callee.object.name : '';
           const propName = node.callee.property.name;
           const calleeName = objName ? `${objName}.${propName}` : propName;
-          calls.push({ calleeName, line: startLine });
+          calls.push({ calleeName, line: startLine, callerUrn: callerUrnFor(pathObj) });
         } else if (t.isIdentifier(node.callee)) {
           // Direct function calls: callee()
           const calleeName = node.callee.name;
-          calls.push({ calleeName, line: startLine });
+          calls.push({ calleeName, line: startLine, callerUrn: callerUrnFor(pathObj) });
 
           // Test Detection: describe('...', () => {}), it('...', () => {}), test('...', () => {})
           if (['describe', 'suite'].includes(calleeName) && node.arguments.length >= 1) {
@@ -435,6 +504,18 @@ export class JavaScriptTypeScriptAnalyzer implements LanguageAnalyzer {
             });
           }
         }
+      },
+
+      // Instantiating a class is a real use of it. Without this, a class that
+      // is only ever reached via `new Foo()` looks unreferenced.
+      NewExpression(pathObj: NodePath<t.NewExpression>) {
+        const node = pathObj.node;
+        if (!t.isIdentifier(node.callee)) return;
+        calls.push({
+          calleeName: node.callee.name,
+          line: node.loc?.start.line ?? 0,
+          callerUrn: callerUrnFor(pathObj)
+        });
       }
     });
 

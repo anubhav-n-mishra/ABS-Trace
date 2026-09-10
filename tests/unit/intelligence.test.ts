@@ -191,6 +191,55 @@ describe('Intelligence Engine: Dead Code & Orphan Detection', () => {
     expect(finding?.caveat).toContain('dynamic');
   });
 
+  it('ignores locals and variables so intra-file bindings are not reported dead', () => {
+    const graph = new FeatureGraph();
+
+    const base = {
+      kind: 'symbol' as const,
+      path: 'src/service.ts',
+      status: 'active' as const,
+      aliases: [],
+      startLine: 1,
+      endLine: 4,
+      contentHash: 'h',
+      isExported: false,
+      metadata: {},
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    // A local inside a function: the linter's job, not the map's.
+    graph.addNode({
+      ...base,
+      urn: 'urn:trace:symbol:src/service.ts#doWork.result',
+      symbolKind: 'variable',
+      name: 'result',
+      enclosingScope: 'doWork'
+    } as SymbolNode);
+
+    // A module-scope import binding used only within its own file.
+    graph.addNode({
+      ...base,
+      urn: 'urn:trace:symbol:src/service.ts#express',
+      symbolKind: 'variable',
+      name: 'express'
+    } as SymbolNode);
+
+    // A genuinely unreferenced declaration should still be reported.
+    graph.addNode({
+      ...base,
+      urn: 'urn:trace:symbol:src/service.ts#orphanedHelper',
+      symbolKind: 'function',
+      name: 'orphanedHelper',
+      isExported: true
+    } as SymbolNode);
+
+    const names = detectDeadCode(graph).possiblyDeadSymbols.map((s) => s.name);
+    expect(names).toContain('orphanedHelper');
+    expect(names).not.toContain('result');
+    expect(names).not.toContain('express');
+  });
+
   it('reports zero retired node references after incremental update retires a node', () => {
     const graph = new FeatureGraph();
 

@@ -6,11 +6,15 @@ import crypto from 'node:crypto';
 import type { FeatureGraph } from '../core/graph.js';
 import type { LanguageAnalyzer, StructuralFacts } from '../analyzer/base.js';
 import { JavaScriptTypeScriptAnalyzer } from '../analyzer/js-ts-analyzer.js';
+import { PythonAnalyzer } from '../analyzer/python-analyzer.js';
+import { GoAnalyzer } from '../analyzer/go-analyzer.js';
+import { RustAnalyzer } from '../analyzer/rust-analyzer.js';
+import { JavaAnalyzer } from '../analyzer/java-analyzer.js';
 import { parsePrismaSchema } from '../analyzer/database.js';
 import { getGitStatus } from '../git/git-status.js';
 import { normalizeRepoPath } from '../core/urn.js';
 import type { SymbolNode } from '../core/types.js';
-import { resolveImportTargetFile, isStandardBuiltin } from './builtins.js';
+import { resolveImportTargetFile, resolveImportTargetFiles, isStandardBuiltin } from './builtins.js';
 
 export interface FileChangeDiff {
   added: string[];
@@ -25,7 +29,13 @@ export class IncrementalReconciler {
 
   constructor(repoRoot: string, analyzers?: LanguageAnalyzer[]) {
     this.repoRoot = repoRoot;
-    this.analyzers = analyzers || [new JavaScriptTypeScriptAnalyzer()];
+    this.analyzers = analyzers || [
+      new JavaScriptTypeScriptAnalyzer(),
+      new PythonAnalyzer(),
+      new GoAnalyzer(),
+      new RustAnalyzer(),
+      new JavaAnalyzer()
+    ];
   }
 
   computeFileHash(filePath: string): string {
@@ -307,19 +317,28 @@ export class IncrementalReconciler {
           if (!candidates || candidates.length === 0) continue;
 
           const importedFilePaths = new Set(
-            facts.imports
-              .map((i) => resolveImportTargetFile(facts.filePath, i.moduleSpecifier, knownFiles))
-              .filter(Boolean) as string[]
+            facts.imports.flatMap((i) =>
+              resolveImportTargetFiles(facts.filePath, i.moduleSpecifier, knownFiles)
+            )
           );
 
+          // A local definition shadows an import, so resolve same-file first.
           const targetSym =
+            candidates.find((c) => c.path === facts.filePath) ||
             candidates.find((c) => importedFilePaths.has(c.path)) ||
             (candidates.length === 1 ? candidates[0] : undefined);
 
-          if (targetSym && targetSym.path !== facts.filePath) {
+          if (targetSym) {
+            // Attribute the call to the calling function when it is a symbol we
+            // actually indexed; otherwise fall back to the containing file.
+            const callerUrn =
+              call.callerUrn && call.callerUrn !== targetSym.urn && graph.hasNode(call.callerUrn)
+                ? call.callerUrn
+                : fileUrn;
+
             graph.addEdge({
               id: `edge-struct-call-${structuralEdgeCount++}`,
-              sourceUrn: fileUrn,
+              sourceUrn: callerUrn,
               targetUrn: targetSym.urn,
               relationship: 'calls',
               confidence: 'DETECTED',
