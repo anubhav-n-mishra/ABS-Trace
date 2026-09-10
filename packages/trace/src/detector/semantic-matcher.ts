@@ -9,6 +9,45 @@ export interface SearchResult {
   matchReason: string;
 }
 
+/**
+ * Dropped from queries because they substring-match real identifiers: 'to'
+ * matches 'stock' and 'inventory', 'in' matches 'index', and a natural-language
+ * task description is mostly these. Without the filter, "add account lockout to
+ * login" resolves to the Inventory feature.
+ */
+const QUERY_STOPWORDS = new Set([
+  'a', 'an', 'the', 'to', 'in', 'on', 'at', 'of', 'for', 'and', 'or', 'is', 'are',
+  'be', 'it', 'as', 'by', 'we', 'i', 'my', 'do', 'can', 'add', 'new', 'use', 'set',
+  'get', 'make', 'need', 'want', 'with', 'from', 'into', 'this', 'that', 'when',
+  'how', 'what', 'where', 'should', 'would', 'please', 'change', 'update', 'fix'
+]);
+
+function queryTokens(query: string): string[] {
+  return query
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((t) => t.length >= 3 && !QUERY_STOPWORDS.has(t));
+}
+
+/** Splits an identifier or path into lowercase words. */
+function nodeWords(input: string): string[] {
+  return input
+    .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+    .split(/[^A-Za-z0-9]+/)
+    .map((w) => w.toLowerCase())
+    .filter(Boolean);
+}
+
+/** Word-boundary aware match: exact word, plural, or a prefix of a longer word. */
+function wordHit(words: string[], token: string): boolean {
+  return words.some(
+    (w) =>
+      w === token ||
+      (w.endsWith('s') && w.slice(0, -1) === token) ||
+      (token.length >= 4 && w.startsWith(token))
+  );
+}
+
 export class SemanticMatcher {
   private graph: FeatureGraph;
 
@@ -17,7 +56,7 @@ export class SemanticMatcher {
   }
 
   search(query: string, limit = 20): SearchResult[] {
-    const rawTokens = query.toLowerCase().split(/\s+/).filter(Boolean);
+    const rawTokens = queryTokens(query);
     if (rawTokens.length === 0) return [];
 
     const nodes = this.graph.getActiveNodes();
@@ -28,20 +67,20 @@ export class SemanticMatcher {
       const reasons: string[] = [];
 
       const nameLower = node.name.toLowerCase();
-      const pathLower = node.path.toLowerCase();
+      const nameWords = nodeWords(node.name);
+      const pathWords = nodeWords(node.path);
 
       // Exact name match
       if (rawTokens.includes(nameLower)) {
         score += 10;
         reasons.push(`Exact name match '${node.name}'`);
       } else {
-        // Substring / token matches
         for (const token of rawTokens) {
-          if (nameLower.includes(token)) {
+          if (wordHit(nameWords, token)) {
             score += 5;
             reasons.push(`Name contains '${token}'`);
           }
-          if (pathLower.includes(token)) {
+          if (wordHit(pathWords, token)) {
             score += 3;
             reasons.push(`Path contains '${token}'`);
           }
@@ -51,13 +90,13 @@ export class SemanticMatcher {
       // Feature specific matching
       if (node.kind === 'feature') {
         const feat = node as FeatureNode;
-        const displayLower = feat.displayName.toLowerCase();
+        const displayWords = nodeWords(feat.displayName);
         for (const token of rawTokens) {
-          if (displayLower.includes(token)) {
+          if (wordHit(displayWords, token)) {
             score += 6;
             reasons.push(`Feature display name matches '${token}'`);
           }
-          if (feat.tags.some((t) => t.toLowerCase().includes(token))) {
+          if (feat.tags.some((t) => wordHit(nodeWords(t), token))) {
             score += 4;
             reasons.push(`Tag matches '${token}'`);
           }
@@ -67,9 +106,9 @@ export class SemanticMatcher {
       // Route specific matching
       if (node.kind === 'route') {
         const route = node as RouteNode;
-        const routeLower = route.routePath.toLowerCase();
+        const routeWords = nodeWords(route.routePath);
         for (const token of rawTokens) {
-          if (routeLower.includes(token)) {
+          if (wordHit(routeWords, token)) {
             score += 7;
             reasons.push(`Route path matches '${token}'`);
           }

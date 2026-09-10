@@ -81,6 +81,72 @@ const DOMAIN_KEYWORDS: Record<string, { name: string; tags: string[] }> = {
   config: { name: 'Settings & Config', tags: ['preferences', 'config'] }
 };
 
+/** Splits an identifier or sentence into lowercase words across camelCase,
+ * PascalCase, snake_case, kebab-case and path separators. */
+export function splitWords(input: string): string[] {
+  return input
+    .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+    .split(/[^A-Za-z0-9]+/)
+    .flatMap((part) => part.split(/(?<=[A-Za-z])(?=[0-9])/))
+    .map((w) => w.toLowerCase())
+    .filter(Boolean);
+}
+
+/** Treats a trailing plural 's' as equivalent ('payments' matches 'payment'). */
+function wordEquals(word: string, keyword: string): boolean {
+  return word === keyword || (word.endsWith('s') && word.slice(0, -1) === keyword);
+}
+
+/**
+ * Scores how strongly a keyword describes a symbol, using word boundaries
+ * rather than raw substrings. Without this, 'auth' matches 'authorize' and
+ * 'ai' matches 'email'/'available', which silently misfiles whole domains.
+ * An exact domain word in the file path outranks a fuzzy prefix in the symbol
+ * name, so paymentsService.js#authorizeCharge lands in Payments, not Auth.
+ */
+const MIN_PREFIX_KEYWORD_LENGTH = 4;
+
+function scoreKeyword(
+  keyword: string,
+  symbolWords: string[],
+  pathWords: string[]
+): { score: number; fromPath: boolean } {
+  if (symbolWords.some((w) => wordEquals(w, keyword))) {
+    return { score: 100 + keyword.length, fromPath: false };
+  }
+  if (pathWords.some((w) => wordEquals(w, keyword))) {
+    return { score: 80 + keyword.length, fromPath: true };
+  }
+  if (keyword.length >= MIN_PREFIX_KEYWORD_LENGTH) {
+    if (symbolWords.some((w) => w.startsWith(keyword))) {
+      return { score: 40 + keyword.length, fromPath: false };
+    }
+    if (pathWords.some((w) => w.startsWith(keyword))) {
+      return { score: 30 + keyword.length, fromPath: true };
+    }
+  }
+  return { score: 0, fromPath: false };
+}
+
+/** Picks the single best-matching domain keyword, or null if none apply. */
+export function bestKeywordMatch(
+  symbolWords: string[],
+  pathWords: string[]
+): { keyword: string; meta: { name: string; tags: string[] }; fromPath: boolean } | null {
+  let best: {
+    keyword: string;
+    meta: { name: string; tags: string[] };
+    score: number;
+    fromPath: boolean;
+  } | null = null;
+  for (const [keyword, meta] of Object.entries(DOMAIN_KEYWORDS)) {
+    const { score, fromPath } = scoreKeyword(keyword, symbolWords, pathWords);
+    if (score === 0) continue;
+    if (!best || score > best.score) best = { keyword, meta, score, fromPath };
+  }
+  return best;
+}
+
 export class FeatureDetector {
   private explicitLoader: ExplicitFeatureLoader;
 
@@ -212,53 +278,42 @@ export class FeatureDetector {
         }
 
         // 3b. Match path components and symbol names with DOMAIN_KEYWORDS
-        for (const [kw, meta] of Object.entries(DOMAIN_KEYWORDS)) {
-          const inPath = lowerPath.includes(`/${kw}/`) || lowerPath.includes(`-${kw}`) || lowerPath.includes(`_${kw}`);
-          const inSymbol = lowerSym.includes(kw);
-
-          if (inPath || inSymbol) {
-            const cand = getOrCreateCandidate(kw, meta.name, meta.tags);
-            const isDir = inPath;
-            cand.nodes.push({
-              node: symbol,
-              confidence: isDir ? 'DETECTED' : 'INFERRED',
-              score: isDir ? 0.85 : 0.6,
-              evidence: {
-                type: isDir ? 'directory_cluster' : 'semantic_similarity',
-                file: symbol.path,
-                line: symbol.startLine,
-                symbol: symbol.name,
-                reason: isDir
-                  ? `File path '${symbol.path}' clusters in '${kw}' directory`
-                  : `Symbol '${symbol.name}' matches '${kw}' domain vocabulary`
-              }
-            });
-            break;
-          }
+        const match = bestKeywordMatch(splitWords(symbol.name), splitWords(symbol.path));
+        if (match) {
+          const cand = getOrCreateCandidate(match.keyword, match.meta.name, match.meta.tags);
+          cand.nodes.push({
+            node: symbol,
+            confidence: match.fromPath ? 'DETECTED' : 'INFERRED',
+            score: match.fromPath ? 0.85 : 0.6,
+            evidence: {
+              type: match.fromPath ? 'directory_cluster' : 'semantic_similarity',
+              file: symbol.path,
+              line: symbol.startLine,
+              symbol: symbol.name,
+              reason: match.fromPath
+                ? `File path '${symbol.path}' clusters in '${match.keyword}' directory`
+                : `Symbol '${symbol.name}' matches '${match.keyword}' domain vocabulary`
+            }
+          });
         }
       }
 
       // 4. Process tests
       for (const test of facts.tests) {
-        const lowerName = test.name.toLowerCase();
-        const lowerPath = test.path.toLowerCase();
-
-        for (const [kw, meta] of Object.entries(DOMAIN_KEYWORDS)) {
-          if (lowerPath.includes(kw) || lowerName.includes(kw)) {
-            const cand = getOrCreateCandidate(kw, meta.name, meta.tags);
-            cand.nodes.push({
-              node: test,
-              confidence: 'DETECTED',
-              score: 0.8,
-              evidence: {
-                type: 'ast_call',
-                file: test.path,
-                line: test.startLine,
-                reason: `Test suite/case '${test.name}' targets '${meta.name}' functionality`
-              }
-            });
-            break;
-          }
+        const testMatch = bestKeywordMatch(splitWords(test.name), splitWords(test.path));
+        if (testMatch) {
+          const cand = getOrCreateCandidate(testMatch.keyword, testMatch.meta.name, testMatch.meta.tags);
+          cand.nodes.push({
+            node: test,
+            confidence: 'DETECTED',
+            score: 0.8,
+            evidence: {
+              type: 'ast_call',
+              file: test.path,
+              line: test.startLine,
+              reason: `Test suite/case '${test.name}' targets '${testMatch.meta.name}' functionality`
+            }
+          });
         }
       }
     }

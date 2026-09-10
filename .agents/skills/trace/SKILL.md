@@ -14,20 +14,48 @@ You have access to **Amvelt TRACE** (`trace`), the living codebase map connectin
 
 ---
 
+## START HERE: one command, one tool call
+
+For almost any task, your **first and often only** discovery command is:
+
+```bash
+trace brief "<the task in your own words>"
+```
+
+This returns, in a single call: the matched feature, every entry point and core
+function with exact `file:startLine-endLine` ranges, which functions call which,
+the HTTP routes, the tests, and a **BLAST RADIUS** section listing shared
+functions whose change reaches beyond the obvious call site.
+
+Do **not** run `grep` for a feature name and start opening files. That costs
+roughly 6x the tokens and reliably misses consumers that use different naming
+(an `authenticateOperator` that never contains the word "login").
+
+Read the `!shared(n)` markers carefully. A function marked shared is called from
+multiple files; editing it changes behavior for every caller. Putting a guard in
+the obviously-named function instead of the shared one is how security fixes ship
+with bypasses still open.
+
+---
+
 ## 10-Step Agent Lifecycle
 
 When assigned any coding, debugging, refactoring, or feature task:
 
 1. **Understand Task Intent**: Identify what product capability, feature, bug, or behavior the user request mentions.
-2. **Query TRACE First**: Before exploring or reading random files, query TRACE:
+2. **Get the brief** (one tool call):
    ```bash
-   trace feature <feature-name>
+   trace brief "<task>"
    ```
-   If searching for a concept or keyword:
+   To list every function implementing a feature across all files:
+   ```bash
+   trace functions <feature-name>
+   ```
+   For a specific concept or keyword:
    ```bash
    trace search "<query>"
    ```
-3. **Inspect the Feature Surface**: Examine the returned UI components, API endpoints, core services, database models, and test locations.
+3. **Inspect the Feature Surface**: Examine the returned entry points, core functions, API endpoints, database models, and test locations.
 4. **Understand Why**: If relationships seem ambiguous, inspect the evidence:
    ```bash
    trace explain <feature-or-symbol>
@@ -35,6 +63,10 @@ When assigned any coding, debugging, refactoring, or feature task:
 5. **Inspect Impact Before Changing**: Check what depends on the symbols you plan to touch:
    ```bash
    trace impact <symbol-or-file>
+   ```
+   To see how one function actually reaches another:
+   ```bash
+   trace chain <fromSymbol> <toSymbol>
    ```
 6. **Read Actual Source Code**: Open and read the exact source files and line ranges identified by TRACE.
 7. **Make Code Changes**: Edit, add, or refactor the code according to requirements.
@@ -51,6 +83,11 @@ When assigned any coding, debugging, refactoring, or feature task:
 ---
 
 ## Core CLI Navigation & Intelligence Commands
+
+### Start here (lowest token cost per answer)
+- `trace brief "<task>"`: **One-shot task context.** Feature, functions with line ranges, call relationships, routes, tests and blast radius in a single tool call. Use this first.
+- `trace functions <feature>`: Every function implementing a feature across all files, entry points first, shared choke points flagged.
+- `trace chain <from> <to>`: Concrete call paths between two symbols — how a request actually reaches the thing you care about.
 
 ### For Architecture Understanding
 - `trace features`: List all mapped features with confidence ratings.

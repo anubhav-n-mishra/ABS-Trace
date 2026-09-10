@@ -14,40 +14,52 @@ It maps high-level product features to their exact implementations, APIs, databa
 - **Tags**: `ai`, `llm`, `agents`
 
 ### Services & Business Logic
-- `scripts/check-package-hygiene.js:21-21` — **failed** (variable)
-  - *Evidence: Symbol 'failed' matches 'ai' domain vocabulary*
-- `packages/trace/src/agent/skill-generator.ts:4-91` — **generateAgentSkillMarkdown** (function)
-  - *Evidence: Symbol 'generateAgentSkillMarkdown' matches 'llm' domain vocabulary*
-- `packages/trace/src/core/graph.ts:354-440` — **explain** (method)
-  - *Evidence: Symbol 'explain' matches 'ai' domain vocabulary*
-- `packages/trace/src/detector/auto-detector.ts:23-82` — **DOMAIN_KEYWORDS** (variable)
-  - *Evidence: Symbol 'DOMAIN_KEYWORDS' matches 'ai' domain vocabulary*
-- `packages/trace/src/detector/auto-detector.ts:126-126` — **domain** (variable)
-  - *Evidence: Symbol 'domain' matches 'ai' domain vocabulary*
-- `packages/trace/src/graph-ui/server.ts:97-109` — **details** (variable)
-  - *Evidence: Symbol 'details' matches 'ai' domain vocabulary*
-- `packages/trace/src/indexer/incremental.ts:87-87` — **remainingAdded** (variable)
-  - *Evidence: Symbol 'remainingAdded' matches 'ai' domain vocabulary*
-- `packages/trace/src/indexer/incremental.ts:88-88` — **remainingDeleted** (variable)
-  - *Evidence: Symbol 'remainingDeleted' matches 'ai' domain vocabulary*
-- `packages/trace/src/indexer/indexer.ts:276-276` — **agentSkillDir** (variable)
+- `packages/trace/src/agent/skill-generator.ts:4-128` — **generateAgentSkillMarkdown** (function)
+  - *Evidence: Symbol 'generateAgentSkillMarkdown' matches 'agent' domain vocabulary*
+- `packages/trace/src/indexer/indexer.ts:297-297` — **agentSkillDir** (variable)
   - *Evidence: Symbol 'agentSkillDir' matches 'agent' domain vocabulary*
-- `packages/trace/src/intelligence/cycles.ts:122-129` — **detailedNodes** (variable)
-  - *Evidence: Symbol 'detailedNodes' matches 'ai' domain vocabulary*
-- `packages/trace/src/intelligence/rules.ts:126-126` — **failedCount** (variable)
-  - *Evidence: Symbol 'failedCount' matches 'ai' domain vocabulary*
 - `packages/trace/src/renderers/llm-context.ts:7-9` — **LLMContextOptions** (interface)
-  - *Evidence: Symbol 'LLMContextOptions' matches 'llm' domain vocabulary*
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
 - `packages/trace/src/renderers/llm-context.ts:11-114` — **generateLLMContext** (function)
-  - *Evidence: Symbol 'generateLLMContext' matches 'llm' domain vocabulary*
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:16-16` — **maxTokens** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:17-17` — **manager** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:19-19` — **feat** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:23-23` — **allFeatures** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:24-24` — **summary** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:61-61` — **f** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:33-33` — **view** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:36-36` — **items** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:49-49` — **apiText** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:92-92` — **item** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:58-58` — **dbText** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:70-70` — **svcText** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:82-82` — **uiText** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:91-91` — **testText** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:100-100` — **conText** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:101-101` — **c** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
+- `packages/trace/src/renderers/llm-context.ts:110-110` — **fullText** (variable)
+  - *Evidence: File path 'packages/trace/src/renderers/llm-context.ts' clusters in 'llm' directory*
 
 ### Tests
-- `tests/fixtures/all-fixtures.test.ts:294` — **distinguishes EXPLICIT from DETECTED and explains evidence**
-  - *Evidence: Test suite/case 'distinguishes EXPLICIT from DETECTED and explains evidence' targets 'AI & Intelligence' functionality*
 - `tests/fixtures/vertical-slice.test.ts:69` — **generates token-bounded context for LLM**
   - *Evidence: Test suite/case 'generates token-bounded context for LLM' targets 'AI & Intelligence' functionality*
-- `tests/unit/analyzer.test.ts:153` — **sanitizes route domains and ignores static metadata extensions**
-  - *Evidence: Test suite/case 'sanitizes route domains and ignores static metadata extensions' targets 'AI & Intelligence' functionality*
 
 ---
 
@@ -61,13 +73,13 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'deadReport' matches 'report' domain vocabulary*
 - `tests/fixtures/vertical-slice.test.ts:84-84` — **report** (variable)
   - *Evidence: Symbol 'report' matches 'report' domain vocabulary*
-- `tests/unit/intelligence.test.ts:372-372` — **report** (variable)
+- `tests/unit/intelligence.test.ts:421-421` — **report** (variable)
   - *Evidence: Symbol 'report' matches 'report' domain vocabulary*
-- `tests/unit/intelligence.test.ts:310-310` — **reports** (variable)
+- `tests/unit/intelligence.test.ts:359-359` — **reports** (variable)
   - *Evidence: Symbol 'reports' matches 'report' domain vocabulary*
-- `packages/trace/src/cli/index.ts:852-852` — **report** (variable)
+- `packages/trace/src/cli/index.ts:863-863` — **report** (variable)
   - *Evidence: Symbol 'report' matches 'report' domain vocabulary*
-- `packages/trace/src/cli/index.ts:826-826` — **reports** (variable)
+- `packages/trace/src/cli/index.ts:837-837` — **reports** (variable)
   - *Evidence: Symbol 'reports' matches 'report' domain vocabulary*
 - `packages/trace/src/core/types.ts:153-168` — **DriftReport** (interface)
   - *Evidence: Symbol 'DriftReport' matches 'report' domain vocabulary*
@@ -91,6 +103,50 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'metricsList' matches 'metric' domain vocabulary*
 - `packages/trace/src/intelligence/rules.ts:29-35` — **RuleCheckReport** (interface)
   - *Evidence: Symbol 'RuleCheckReport' matches 'report' domain vocabulary*
+- `packages/trace/src/intelligence/telemetry.ts:6-6` — **TokenType** (type)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:8-20` — **TokenUsageRecord** (interface)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:22-29` — **TokenUsageSummary** (interface)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:31-34` — **TokenUsageProvider** (interface)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:40-121` — **LocalUsageLedger** (class)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:43-45` — **constructor** (method)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:47-59` — **record** (method)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:61-93` — **getSummary** (method)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:95-99` — **reset** (method)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:101-112` — **loadRecords** (method)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:114-120` — **saveRecords** (method)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:62-62` — **records** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:50-54` — **record** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:69-69` — **todayStr** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:74-74` — **byDay** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:75-75` — **byCommand** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:76-76` — **totalTokens** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:78-78` — **r** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:79-79` — **day** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:106-106` — **raw** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:107-107` — **parsed** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
+- `packages/trace/src/intelligence/telemetry.ts:115-115` — **codebaseDir** (variable)
+  - *Evidence: File path 'packages/trace/src/intelligence/telemetry.ts' clusters in 'telemetry' directory*
 - `packages/trace/src/renderers/terminal.ts:161-184` — **renderValidationReport** (function)
   - *Evidence: Symbol 'renderValidationReport' matches 'report' domain vocabulary*
 - `packages/trace/src/renderers/terminal.ts:202-220` — **renderCyclesReport** (function)
@@ -111,11 +167,15 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'renderRuleCheckReport' matches 'report' domain vocabulary*
 
 ### Tests
-- `tests/unit/intelligence.test.ts:194` — **reports zero retired node references after incremental update retires a node**
+- `tests/unit/core.test.ts:299` — **reports the feature and tests a symbol belongs to**
+  - *Evidence: Test suite/case 'reports the feature and tests a symbol belongs to' targets 'Analytics & Reporting' functionality*
+- `tests/unit/intelligence.test.ts:194` — **ignores locals and variables so intra-file bindings are not reported dead**
+  - *Evidence: Test suite/case 'ignores locals and variables so intra-file bindings are not reported dead' targets 'Analytics & Reporting' functionality*
+- `tests/unit/intelligence.test.ts:243` — **reports zero retired node references after incremental update retires a node**
   - *Evidence: Test suite/case 'reports zero retired node references after incremental update retires a node' targets 'Analytics & Reporting' functionality*
-- `tests/unit/intelligence.test.ts:318` — **reports forbidden import boundaries deterministically**
+- `tests/unit/intelligence.test.ts:367` — **reports forbidden import boundaries deterministically**
   - *Evidence: Test suite/case 'reports forbidden import boundaries deterministically' targets 'Analytics & Reporting' functionality*
-- `tests/unit/intelligence.test.ts:379` — **Intelligence Engine: Local Token Telemetry**
+- `tests/unit/intelligence.test.ts:428` — **Intelligence Engine: Local Token Telemetry**
   - *Evidence: Test suite/case 'Intelligence Engine: Local Token Telemetry' targets 'Analytics & Reporting' functionality*
 
 ---
@@ -142,12 +202,18 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'loginQuick' matches 'login' domain vocabulary*
 - `tests/fixtures/all-fixtures.test.ts:298-298` — **authFeat** (variable)
   - *Evidence: Symbol 'authFeat' matches 'auth' domain vocabulary*
+- `tests/unit/analyzer.test.ts:426-426` — **login** (variable)
+  - *Evidence: Symbol 'login' matches 'login' domain vocabulary*
 - `fixtures/01-small-js/tests/auth.test.js:5-5` — **session** (variable)
   - *Evidence: Symbol 'session' matches 'session' domain vocabulary*
+- `fixtures/01-small-js/src/routes/auth.js:4-4` — **router** (variable)
+  - *Evidence: File path 'fixtures/01-small-js/src/routes/auth.js' clusters in 'auth' directory*
 - `fixtures/01-small-js/src/routes/auth.js:9-9` — **session** (variable)
   - *Evidence: Symbol 'session' matches 'session' domain vocabulary*
 - `fixtures/01-small-js/src/services/auth.js:2-7` — **loginUser** (function)
   - *Evidence: Symbol 'loginUser' matches 'login' domain vocabulary*
+- `fixtures/01-small-js/src/services/auth.js:9-11` — **generateToken** (function)
+  - *Evidence: File path 'fixtures/01-small-js/src/services/auth.js' clusters in 'auth' directory*
 - `packages/trace/src/intelligence/telemetry.ts:73-73` — **uniqueSessions** (variable)
   - *Evidence: Symbol 'uniqueSessions' matches 'session' domain vocabulary*
 - `fixtures/07-monorepo/packages/shared-types/src/index.ts:1-4` — **SharedAuthUser** (interface)
@@ -156,7 +222,9 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: File path 'fixtures/11-ambiguous-features/src/features/auth/login.js' clusters in 'auth' feature directory*
 
 ### Tests
-- `tests/unit/intelligence.test.ts:391` — **records session usage locally and aggregates by command and date**
+- `tests/unit/analyzer.test.ts:264` — **still classifies genuine auth symbols by prefix**
+  - *Evidence: Test suite/case 'still classifies genuine auth symbols by prefix' targets 'Authentication' functionality*
+- `tests/unit/intelligence.test.ts:440` — **records session usage locally and aggregates by command and date**
   - *Evidence: Test suite/case 'records session usage locally and aggregates by command and date' targets 'Authentication' functionality*
 - `fixtures/01-small-js/tests/auth.test.js:3` — **Authentication**
   - *Evidence: Test suite/case 'Authentication' targets 'Authentication' functionality*
@@ -198,12 +266,22 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'checkoutService' matches 'checkout' domain vocabulary*
 - `tests/fixtures/all-fixtures.test.ts:113-113` — **checkoutRoute** (variable)
   - *Evidence: Symbol 'checkoutRoute' matches 'checkout' domain vocabulary*
+- `fixtures/05-fullstack-app/tests/checkout.test.ts:5-5` — **service** (variable)
+  - *Evidence: File path 'fixtures/05-fullstack-app/tests/checkout.test.ts' clusters in 'checkout' directory*
+- `fixtures/05-fullstack-app/tests/checkout.test.ts:6-6` — **res** (variable)
+  - *Evidence: File path 'fixtures/05-fullstack-app/tests/checkout.test.ts' clusters in 'checkout' directory*
+- `fixtures/05-fullstack-app/src/api/checkout.ts:4-4` — **router** (variable)
+  - *Evidence: File path 'fixtures/05-fullstack-app/src/api/checkout.ts' clusters in 'checkout' directory*
 - `fixtures/05-fullstack-app/src/api/checkout.ts:5-5` — **checkoutService** (variable)
   - *Evidence: Symbol 'checkoutService' matches 'checkout' domain vocabulary*
+- `fixtures/05-fullstack-app/src/api/checkout.ts:9-9` — **result** (variable)
+  - *Evidence: File path 'fixtures/05-fullstack-app/src/api/checkout.ts' clusters in 'checkout' directory*
 - `fixtures/05-fullstack-app/src/services/checkoutService.ts:1-11` — **CheckoutService** (class)
   - *Evidence: Symbol 'CheckoutService' matches 'checkout' domain vocabulary*
 - `fixtures/05-fullstack-app/src/services/checkoutService.ts:2-10` — **processCheckout** (method)
   - *Evidence: Symbol 'processCheckout' matches 'checkout' domain vocabulary*
+- `fixtures/05-fullstack-app/src/services/checkoutService.ts:3-3` — **total** (variable)
+  - *Evidence: File path 'fixtures/05-fullstack-app/src/services/checkoutService.ts' clusters in 'checkout' directory*
 - `fixtures/10-shared-services/src/features/checkout/checkoutService.js:3-8` — **CheckoutManager** (class)
   - *Evidence: File path 'fixtures/10-shared-services/src/features/checkout/checkoutService.js' clusters in 'checkout' feature directory*
 - `fixtures/10-shared-services/src/features/checkout/checkoutService.js:4-7` — **completeCheckout** (method)
@@ -257,6 +335,8 @@ It maps high-level product features to their exact implementations, APIs, databa
 ### Services & Business Logic
 - `fixtures/03-react-frontend/src/hooks/useNotification.ts:3-11` — **useNotification** (hook)
   - *Evidence: Symbol 'useNotification' matches 'notification' domain vocabulary*
+- `fixtures/03-react-frontend/src/hooks/useNotification.ts:6-8` — **notify** (variable)
+  - *Evidence: File path 'fixtures/03-react-frontend/src/hooks/useNotification.ts' clusters in 'notification' directory*
 
 ---
 
@@ -276,16 +356,24 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'orderService' matches 'order' domain vocabulary*
 - `tests/fixtures/all-fixtures.test.ts:85-85` — **createOrderRoute** (variable)
   - *Evidence: Symbol 'createOrderRoute' matches 'order' domain vocabulary*
+- `tests/unit/analyzer.test.ts:427-427` — **orders** (variable)
+  - *Evidence: Symbol 'orders' matches 'order' domain vocabulary*
+- `fixtures/04-node-backend/src/routes/orderRoutes.js:4-4` — **router** (variable)
+  - *Evidence: File path 'fixtures/04-node-backend/src/routes/orderRoutes.js' clusters in 'order' directory*
 - `fixtures/04-node-backend/src/routes/orderRoutes.js:5-5` — **orderService** (variable)
   - *Evidence: Symbol 'orderService' matches 'order' domain vocabulary*
 - `fixtures/04-node-backend/src/routes/orderRoutes.js:9-9` — **order** (variable)
   - *Evidence: Symbol 'order' matches 'order' domain vocabulary*
+- `fixtures/04-node-backend/src/routes/orderRoutes.js:15-15` — **result** (variable)
+  - *Evidence: File path 'fixtures/04-node-backend/src/routes/orderRoutes.js' clusters in 'order' directory*
 - `fixtures/04-node-backend/src/services/orderService.js:1-15` — **OrderService** (class)
   - *Evidence: Symbol 'OrderService' matches 'order' domain vocabulary*
 - `fixtures/04-node-backend/src/services/orderService.js:2-10` — **createOrder** (method)
   - *Evidence: Symbol 'createOrder' matches 'order' domain vocabulary*
 - `fixtures/04-node-backend/src/services/orderService.js:12-14` — **cancelOrder** (method)
   - *Evidence: Symbol 'cancelOrder' matches 'order' domain vocabulary*
+- `fixtures/04-node-backend/src/services/orderService.js:3-3` — **total** (variable)
+  - *Evidence: File path 'fixtures/04-node-backend/src/services/orderService.js' clusters in 'order' directory*
 - `packages/trace/src/intelligence/task-planner.ts:236-236` — **suggestedOrder** (variable)
   - *Evidence: Symbol 'suggestedOrder' matches 'order' domain vocabulary*
 
@@ -307,6 +395,10 @@ It maps high-level product features to their exact implementations, APIs, databa
 ### UI Components
 - `fixtures/01-small-js/src/components/PaymentForm.jsx:4-26` — **PaymentForm**
   - *Evidence: Symbol 'PaymentForm' matches 'payment' domain vocabulary*
+- `fixtures/01-small-js/src/components/PaymentForm.jsx:8-12` — **handleSubmit**
+  - *Evidence: File path 'fixtures/01-small-js/src/components/PaymentForm.jsx' clusters in 'payment' directory*
+- `fixtures/01-small-js/src/components/PaymentForm.jsx:10-10` — **res**
+  - *Evidence: File path 'fixtures/01-small-js/src/components/PaymentForm.jsx' clusters in 'payment' directory*
 
 ### API Endpoints
 - `POST /api/payment/pay_instant` in `fixtures/06-vibe-coded-mess/server.js:37`
@@ -333,22 +425,44 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'paymentFeat' matches 'payment' domain vocabulary*
 - `tests/fixtures/vertical-slice.test.ts:61-61` — **paymentService** (variable)
   - *Evidence: Symbol 'paymentService' matches 'payment' domain vocabulary*
+- `fixtures/01-small-js/tests/payment.test.js:11-11` — **service** (variable)
+  - *Evidence: File path 'fixtures/01-small-js/tests/payment.test.js' clusters in 'payment' directory*
+- `fixtures/01-small-js/tests/payment.test.js:6-6` — **res** (variable)
+  - *Evidence: File path 'fixtures/01-small-js/tests/payment.test.js' clusters in 'payment' directory*
+- `fixtures/01-small-js/tests/payment.test.js:12-12` — **verified** (variable)
+  - *Evidence: File path 'fixtures/01-small-js/tests/payment.test.js' clusters in 'payment' directory*
+- `fixtures/01-small-js/src/routes/payment.js:4-4` — **router** (variable)
+  - *Evidence: File path 'fixtures/01-small-js/src/routes/payment.js' clusters in 'payment' directory*
+- `fixtures/01-small-js/src/routes/payment.js:9-9` — **result** (variable)
+  - *Evidence: File path 'fixtures/01-small-js/src/routes/payment.js' clusters in 'payment' directory*
+- `fixtures/01-small-js/src/routes/payment.js:18-18` — **verified** (variable)
+  - *Evidence: File path 'fixtures/01-small-js/src/routes/payment.js' clusters in 'payment' directory*
 - `fixtures/01-small-js/src/services/payment.js:2-22` — **PaymentService** (class)
   - *Evidence: Symbol 'PaymentService' matches 'payment' domain vocabulary*
 - `fixtures/01-small-js/src/services/payment.js:3-12` — **processUPIPayment** (method)
-  - *Evidence: Symbol 'processUPIPayment' matches 'payment' domain vocabulary*
+  - *Evidence: File path 'fixtures/01-small-js/src/services/payment.js' clusters in 'payment' directory*
 - `fixtures/01-small-js/src/services/payment.js:14-16` — **verifyUPIResponse** (method)
-  - *Evidence: Symbol 'verifyUPIResponse' matches 'upi' domain vocabulary*
+  - *Evidence: File path 'fixtures/01-small-js/src/services/payment.js' clusters in 'payment' directory*
 - `fixtures/01-small-js/src/services/payment.js:18-21` — **refundUPIPayment** (method)
-  - *Evidence: Symbol 'refundUPIPayment' matches 'payment' domain vocabulary*
+  - *Evidence: File path 'fixtures/01-small-js/src/services/payment.js' clusters in 'payment' directory*
 - `fixtures/01-small-js/src/services/payment.js:24-24` — **defaultPaymentService** (variable)
   - *Evidence: Symbol 'defaultPaymentService' matches 'payment' domain vocabulary*
+- `fixtures/01-small-js/src/services/payment.js:26-28` — **calculateConvenienceFee** (function)
+  - *Evidence: File path 'fixtures/01-small-js/src/services/payment.js' clusters in 'payment' directory*
 - `fixtures/08-renamed-files/src/legacy/oldPaymentProcessor.js:1-6` — **LegacyPaymentProcessor** (class)
   - *Evidence: Symbol 'LegacyPaymentProcessor' matches 'payment' domain vocabulary*
+- `fixtures/08-renamed-files/src/legacy/oldPaymentProcessor.js:2-5` — **processOldTransaction** (method)
+  - *Evidence: File path 'fixtures/08-renamed-files/src/legacy/oldPaymentProcessor.js' clusters in 'payment' directory*
 - `fixtures/10-shared-services/src/services/paymentService.js:1-9` — **SharedPaymentService** (class)
   - *Evidence: Symbol 'SharedPaymentService' matches 'payment' domain vocabulary*
+- `fixtures/10-shared-services/src/services/paymentService.js:2-4` — **processCharge** (method)
+  - *Evidence: File path 'fixtures/10-shared-services/src/services/paymentService.js' clusters in 'payment' directory*
+- `fixtures/10-shared-services/src/services/paymentService.js:6-8` — **processRefund** (method)
+  - *Evidence: File path 'fixtures/10-shared-services/src/services/paymentService.js' clusters in 'payment' directory*
 - `fixtures/10-shared-services/src/services/paymentService.js:11-11` — **paymentService** (variable)
   - *Evidence: Symbol 'paymentService' matches 'payment' domain vocabulary*
+- `fixtures/11-ambiguous-features/src/routes/payment.js:3-3` — **router** (variable)
+  - *Evidence: File path 'fixtures/11-ambiguous-features/src/routes/payment.js' clusters in 'payment' directory*
 - `fixtures/07-monorepo/packages/shared-types/src/index.ts:6-9` — **SharedPaymentToken** (interface)
   - *Evidence: Symbol 'SharedPaymentToken' matches 'payment' domain vocabulary*
 
@@ -376,11 +490,11 @@ It maps high-level product features to their exact implementations, APIs, databa
 - **Tags**: `discovery`
 
 ### Services & Business Logic
-- `packages/trace/src/cli/index.ts:351-351` — **searchRes** (variable)
+- `packages/trace/src/cli/index.ts:353-353` — **searchRes** (variable)
   - *Evidence: Symbol 'searchRes' matches 'search' domain vocabulary*
 - `packages/trace/src/detector/semantic-matcher.ts:6-10` — **SearchResult** (interface)
   - *Evidence: Symbol 'SearchResult' matches 'search' domain vocabulary*
-- `packages/trace/src/detector/semantic-matcher.ts:19-89` — **search** (method)
+- `packages/trace/src/detector/semantic-matcher.ts:58-128` — **search** (method)
   - *Evidence: Symbol 'search' matches 'search' domain vocabulary*
 - `packages/trace/src/intelligence/task-planner.ts:49-49` — **searchResults** (variable)
   - *Evidence: Symbol 'searchResults' matches 'search' domain vocabulary*
@@ -401,13 +515,19 @@ It maps high-level product features to their exact implementations, APIs, databa
   - *Evidence: Symbol 'DEFAULT_CONFIG' matches 'config' domain vocabulary*
 - `packages/trace/src/core/config.ts:54-80` — **loadConfig** (function)
   - *Evidence: Symbol 'loadConfig' matches 'config' domain vocabulary*
+- `packages/trace/src/core/config.ts:55-58` — **possiblePaths** (variable)
+  - *Evidence: File path 'packages/trace/src/core/config.ts' clusters in 'config' directory*
 - `packages/trace/src/core/config.ts:60-60` — **configPath** (variable)
   - *Evidence: Symbol 'configPath' matches 'config' domain vocabulary*
+- `packages/trace/src/core/config.ts:63-63` — **raw** (variable)
+  - *Evidence: File path 'packages/trace/src/core/config.ts' clusters in 'config' directory*
+- `packages/trace/src/core/config.ts:64-64` — **parsed** (variable)
+  - *Evidence: File path 'packages/trace/src/core/config.ts' clusters in 'config' directory*
 - `packages/trace/src/indexer/drift.ts:14-14` — **config** (variable)
   - *Evidence: Symbol 'config' matches 'config' domain vocabulary*
-- `packages/trace/src/indexer/indexer.ts:39-39` — **config** (variable)
+- `packages/trace/src/indexer/indexer.ts:49-49` — **config** (variable)
   - *Evidence: Symbol 'config' matches 'config' domain vocabulary*
-- `packages/trace/src/intelligence/dead-code.ts:56-61` — **isTestOrConfig** (variable)
+- `packages/trace/src/intelligence/dead-code.ts:72-77` — **isTestOrConfig** (variable)
   - *Evidence: Symbol 'isTestOrConfig' matches 'config' domain vocabulary*
 - `packages/trace/src/intelligence/watcher.ts:30-30` — **config** (variable)
   - *Evidence: Symbol 'config' matches 'config' domain vocabulary*
@@ -433,23 +553,31 @@ It maps high-level product features to their exact implementations, APIs, databa
 - `tests/fixtures/all-fixtures.test.ts:31-31` — **userService** (variable)
   - *Evidence: Symbol 'userService' matches 'user' domain vocabulary*
 - `tests/fixtures/all-fixtures.test.ts:34-34` — **updateUserProfile** (variable)
-  - *Evidence: Symbol 'updateUserProfile' matches 'user' domain vocabulary*
+  - *Evidence: Symbol 'updateUserProfile' matches 'profile' domain vocabulary*
+- `tests/unit/analyzer.test.ts:340-340` — **profile** (variable)
+  - *Evidence: Symbol 'profile' matches 'profile' domain vocabulary*
+- `fixtures/02-typescript-app/tests/user.test.ts:5-5` — **service** (variable)
+  - *Evidence: File path 'fixtures/02-typescript-app/tests/user.test.ts' clusters in 'user' directory*
+- `fixtures/02-typescript-app/src/routes/user.ts:4-4` — **router** (variable)
+  - *Evidence: File path 'fixtures/02-typescript-app/src/routes/user.ts' clusters in 'user' directory*
 - `fixtures/02-typescript-app/src/routes/user.ts:5-5` — **userService** (variable)
   - *Evidence: Symbol 'userService' matches 'user' domain vocabulary*
 - `fixtures/02-typescript-app/src/routes/user.ts:8-8` — **user** (variable)
   - *Evidence: Symbol 'user' matches 'user' domain vocabulary*
+- `fixtures/02-typescript-app/src/routes/user.ts:17-17` — **updated** (variable)
+  - *Evidence: File path 'fixtures/02-typescript-app/src/routes/user.ts' clusters in 'user' directory*
 - `fixtures/02-typescript-app/src/services/UserService.ts:3-18` — **UserService** (class)
   - *Evidence: Symbol 'UserService' matches 'user' domain vocabulary*
 - `fixtures/02-typescript-app/src/services/UserService.ts:6-8` — **findUserById** (method)
   - *Evidence: Symbol 'findUserById' matches 'user' domain vocabulary*
 - `fixtures/02-typescript-app/src/services/UserService.ts:10-17` — **updateUserProfile** (method)
-  - *Evidence: Symbol 'updateUserProfile' matches 'user' domain vocabulary*
+  - *Evidence: Symbol 'updateUserProfile' matches 'profile' domain vocabulary*
 - `fixtures/02-typescript-app/src/services/UserService.ts:11-11` — **user** (variable)
   - *Evidence: Symbol 'user' matches 'user' domain vocabulary*
 - `fixtures/02-typescript-app/src/types/user.ts:1-1` — **UserRole** (type)
   - *Evidence: Symbol 'UserRole' matches 'user' domain vocabulary*
 - `fixtures/02-typescript-app/src/types/user.ts:3-7` — **UserProfile** (interface)
-  - *Evidence: Symbol 'UserProfile' matches 'user' domain vocabulary*
+  - *Evidence: Symbol 'UserProfile' matches 'profile' domain vocabulary*
 - `fixtures/02-typescript-app/src/types/user.ts:9-15` — **User** (interface)
   - *Evidence: Symbol 'User' matches 'user' domain vocabulary*
 - `fixtures/07-monorepo/packages/api-gateway/src/index.ts:7-7` — **user** (variable)

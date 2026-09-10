@@ -308,6 +308,11 @@ export class FeatureGraph {
     const affectedApis = new Set<RouteNode>();
     const affectedTests = new Set<TestNode>();
 
+    // Where the consuming calls physically are. Test frameworks in JS wrap
+    // bodies in anonymous callbacks, so there is no named caller symbol to
+    // anchor to — the call site line is the only precise signal available.
+    const callSitesByPath = new Map<string, number[]>();
+
     // BFS Queue to trace upstream consumers
     const visited = new Set<string>([resolved]);
     const queue: Array<{ urn: string; depth: number }> = [{ urn: resolved, depth: 0 }];
@@ -320,6 +325,13 @@ export class FeatureGraph {
         const caller = this.getNode(edge.sourceUrn);
         if (!caller || caller.status === 'retired') continue;
 
+        const siteLine = edge.evidence?.line;
+        const sitePath = edge.evidence?.file || caller.path;
+        if (siteLine && sitePath) {
+          if (!callSitesByPath.has(sitePath)) callSitesByPath.set(sitePath, []);
+          callSitesByPath.get(sitePath)!.push(siteLine);
+        }
+
         if (caller.kind === 'feature') {
           affectedFeatures.add(caller as FeatureNode);
         } else if (caller.kind === 'route') {
@@ -328,7 +340,8 @@ export class FeatureGraph {
           affectedTests.add(caller as TestNode);
         } else if (depth === 0) {
           directConsumers.add(caller);
-        } else {
+          indirectConsumers.delete(caller);
+        } else if (!directConsumers.has(caller)) {
           indirectConsumers.add(caller);
         }
 
@@ -339,10 +352,83 @@ export class FeatureGraph {
       }
     }
 
+    // Feature membership is recorded as an outgoing 'implements' edge from the
+    // implementing node to the feature, so it is invisible to the upstream BFS
+    // above. Collect it by walking outward from the target and every consumer.
+    const membershipRoots = [target, ...directConsumers, ...indirectConsumers];
+    for (const node of membershipRoots) {
+      for (const edge of this.getOutgoingEdges(node.urn)) {
+        if (edge.relationship !== 'implements' && edge.relationship !== 'belongs_to') continue;
+        const feature = this.getNode(edge.targetUrn);
+        if (feature && feature.kind === 'feature' && feature.status !== 'retired') {
+          affectedFeatures.add(feature as FeatureNode);
+        }
+      }
+    }
+
+    // Routes and test cases are separate nodes that live inside a consuming
+    // file rather than calling the target symbol directly. Prefer line-range
+    // containment: a test whose body encloses a consuming call site genuinely
+    // exercises the target, whereas every other test in the same file does not.
+    const impactedPaths = new Set(
+      membershipRoots.map((n) => n.path).filter((p): p is string => Boolean(p))
+    );
+
+    const consumerRanges = new Map<string, Array<{ start: number; end: number }>>();
+    for (const node of membershipRoots) {
+      const sym = node as SymbolNode;
+      if (node.kind !== 'symbol' || !node.path || !sym.startLine) continue;
+      if (!consumerRanges.has(node.path)) consumerRanges.set(node.path, []);
+      consumerRanges.get(node.path)!.push({ start: sym.startLine, end: sym.endLine ?? sym.startLine });
+    }
+
+    if (impactedPaths.size > 0) {
+      for (const node of this.nodes.values()) {
+        if (node.status === 'retired' || !node.path || !impactedPaths.has(node.path)) continue;
+
+        if (node.kind === 'route') {
+          affectedApis.add(node as RouteNode);
+          continue;
+        }
+        if (node.kind !== 'test') continue;
+
+        const test = node as TestNode;
+        const testEnd = test.endLine ?? test.startLine;
+        const ranges = consumerRanges.get(node.path);
+        const sites = callSitesByPath.get(node.path);
+
+        if (sites && sites.length > 0) {
+          if (sites.some((line) => line >= test.startLine && line <= testEnd)) {
+            affectedTests.add(test);
+          }
+          continue;
+        }
+        if (ranges && ranges.length > 0) {
+          if (ranges.some((r) => r.start >= test.startLine && r.start <= testEnd)) {
+            affectedTests.add(test);
+          }
+          continue;
+        }
+        // Nothing precise to anchor to: fall back to file scope.
+        affectedTests.add(test);
+      }
+    }
+
+    // With symbol-level call attribution, a file node adds nothing when one of
+    // its own symbols is already listed as a consumer.
+    const dropRedundantFiles = (nodes: Set<TraceNode>): TraceNode[] => {
+      const symbolPaths = new Set(
+        Array.from(nodes)
+          .filter((n) => n.kind !== 'file' && n.path)
+          .map((n) => n.path)
+      );
+      return Array.from(nodes).filter((n) => !(n.kind === 'file' && symbolPaths.has(n.path)));
+    };
+
     return {
       target,
-      directConsumers: Array.from(directConsumers),
-      indirectConsumers: Array.from(indirectConsumers),
+      directConsumers: dropRedundantFiles(directConsumers),
+      indirectConsumers: dropRedundantFiles(indirectConsumers),
       affectedFeatures: Array.from(affectedFeatures),
       affectedApis: Array.from(affectedApis),
       affectedTests: Array.from(affectedTests)

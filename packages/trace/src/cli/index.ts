@@ -33,6 +33,8 @@ import { detectDeadCode } from '../intelligence/dead-code.js';
 import { computeArchitecturalDiff } from '../intelligence/architectural-diff.js';
 import { mapTaskArchitecture, generateTaskPlan } from '../intelligence/task-planner.js';
 import { evaluateFeatureCoverage } from '../intelligence/coverage.js';
+import { mapFeatureFunctions, findCallPaths, resolveSymbolByName } from '../intelligence/function-map.js';
+import { buildTaskBrief, renderBriefCompact } from '../intelligence/brief.js';
 import { checkArchitectureRules } from '../intelligence/rules.js';
 import { LocalUsageLedger } from '../intelligence/telemetry.js';
 import { CodebaseWatcher } from '../intelligence/watcher.js';
@@ -384,6 +386,15 @@ export function createProgram(): Command {
           console.log(`  ${pc.dim('(None)')}`);
         } else {
           impact.affectedFeatures.forEach((f) => console.log(`  - ${pc.magenta(f.displayName)}`));
+        }
+
+        console.log(`\n${pc.bold('Affected APIs:')}`);
+        if (impact.affectedApis.length === 0) {
+          console.log(`  ${pc.dim('(None)')}`);
+        } else {
+          impact.affectedApis.forEach((a) =>
+            console.log(`  - ${pc.green(`${a.httpMethod} ${a.routePath}`)} [${a.path}:${a.startLine}]`)
+          );
         }
 
         console.log(`\n${pc.bold('Affected Tests:')}`);
@@ -912,6 +923,115 @@ export function createProgram(): Command {
       } else {
         console.log(renderUsageSummary(summary));
       }
+    });
+
+  // 24. brief <task> — one-shot agent context
+  program
+    .command('brief <task>')
+    .description('One-shot task context: feature, functions, routes, tests and blast radius')
+    .option('--json', 'Output brief as JSON')
+    .action(async (task, options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const graph = new FeatureGraph();
+      try {
+        new CodebaseIndexer(repoRoot).getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const brief = buildTaskBrief(graph, task);
+      console.log(options.json ? JSON.stringify(brief, null, 2) : renderBriefCompact(brief));
+    });
+
+  // 25. functions <feature> — every function implementing a feature
+  program
+    .command('functions <feature>')
+    .description('List every function implementing a feature, across all files')
+    .option('--json', 'Output as JSON')
+    .action(async (featureName, options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const graph = new FeatureGraph();
+      try {
+        new CodebaseIndexer(repoRoot).getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const feature = graph.getFeatureByName(featureName);
+      if (!feature) {
+        console.error(pc.red(`No feature named '${featureName}'. Run 'trace features' to list them.`));
+        process.exit(1);
+        return;
+      }
+
+      const map = mapFeatureFunctions(graph, feature.urn);
+      if (options.json) {
+        console.log(JSON.stringify(map, null, 2));
+        return;
+      }
+
+      console.log(`\n${pc.bold(pc.magenta(map.feature.displayName.toUpperCase()))} — ${map.functions.length} function(s) across ${map.files.length} file(s)\n`);
+      for (const fn of map.functions) {
+        const tags: string[] = [];
+        if (fn.isEntryPoint) tags.push(pc.green('entry'));
+        if (fn.isShared) tags.push(pc.yellow(`shared x${fn.consumerCount}`));
+        if (!fn.isExported) tags.push(pc.dim('local'));
+        const suffix = tags.length ? ` [${tags.join(' ')}]` : '';
+        console.log(`  ${pc.cyan(`${fn.path}:${fn.startLine}-${fn.endLine}`)} ${pc.bold(fn.name)}${suffix}`);
+        if (fn.callsInFeature.length) {
+          console.log(`    ${pc.dim(`calls: ${fn.callsInFeature.join(', ')}`)}`);
+        }
+      }
+      console.log();
+    });
+
+  // 26. chain <from> <to> — concrete call paths
+  program
+    .command('chain <from> <to>')
+    .description('Show concrete call paths between two symbols')
+    .option('--json', 'Output as JSON')
+    .option('--depth <n>', 'Maximum path depth', '8')
+    .action(async (from, to, options, cmd) => {
+      const repoRoot = path.resolve(cmd.optsWithGlobals().root);
+      const graph = new FeatureGraph();
+      try {
+        new CodebaseIndexer(repoRoot).getStore().loadGraph(graph);
+      } catch (err: any) {
+        handleError(err, cmd.optsWithGlobals().verbose);
+        return;
+      }
+
+      const fromNode = resolveSymbolByName(graph, from);
+      const toNode = resolveSymbolByName(graph, to);
+      if (!fromNode || !toNode) {
+        console.error(pc.red(`Could not resolve ${!fromNode ? `'${from}'` : `'${to}'`} in the index.`));
+        process.exit(1);
+        return;
+      }
+
+      const paths = findCallPaths(graph, fromNode.urn, toNode.urn, Number(options.depth));
+      if (options.json) {
+        console.log(JSON.stringify(paths, null, 2));
+        return;
+      }
+
+      if (paths.length === 0) {
+        console.log(`\nNo call path found from ${pc.cyan(fromNode.name)} to ${pc.cyan(toNode.name)}.`);
+        console.log(pc.dim('They may be connected dynamically, or through an unindexed language.\n'));
+        return;
+      }
+
+      console.log(`\n${pc.bold('CALL PATHS')} ${pc.cyan(fromNode.name)} → ${pc.cyan(toNode.name)}\n`);
+      paths.forEach((p, i) => {
+        console.log(pc.bold(`Path ${i + 1}:`));
+        p.nodes.forEach((n, depth) => {
+          const indent = '  '.repeat(depth + 1);
+          console.log(`${indent}${pc.bold(n.name)} ${pc.dim(`${n.path}:${n.line}`)}`);
+        });
+        console.log();
+      });
     });
 
   return program;

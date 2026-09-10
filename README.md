@@ -73,9 +73,47 @@ npm install -g @anubhavm/trace
 
 Once installed, the `trace` command is available everywhere.
 
+### The one command to know
+
+```bash
+trace brief "add account lockout to login"
+```
+
+One tool call returns the matched feature, every function implementing it with
+exact line ranges, which functions call which, the HTTP routes, the tests, and a
+**blast radius** list of shared functions whose change reaches beyond the obvious
+call site. On a 64-file benchmark this replaced a grep plus five file reads —
+**83% fewer tokens and 6x fewer tool calls**.
+
 ---
 
-## 4. Where TRACE Helps Like a Real Product
+## 4. Supported Languages
+
+| Language | Symbols | Imports | Call graph | Routes | Tests |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **JavaScript / TypeScript** (`.js .jsx .ts .tsx`) | Full AST (Babel) | ESM + CommonJS | Function-level | Express, Fastify, Next.js (App + Pages) | Jest, Vitest, Mocha |
+| **Python** (`.py`) | Structural | `import`, `from ... import` | Function-level | Flask, FastAPI, Django `path()` | pytest |
+| **Go** (`.go`) | Structural | single + grouped | Function-level | `net/http`, chi, gin, echo | `_test.go` |
+| **Rust** (`.rs`) | Structural | `use`, braced groups | Function-level | axum, actix attributes | `#[test]` |
+| **Java** (`.java`) | Structural | `import`, static, wildcard | Method-level | Spring `@GetMapping` / `@RequestMapping` | JUnit `@Test` |
+
+Database models are extracted from Prisma schemas, TypeORM, Drizzle, and Mongoose.
+
+Cross-file call resolution follows each language's own import system — dotted
+module paths for Python and Java, package directories for Go, `use` paths for
+Rust — so a call links to the function in the module you actually imported
+rather than to any same-named function elsewhere in the repository.
+
+> The Python, Go, Rust and Java analyzers are pattern-based structural readers
+> rather than full parsers. This is deliberate: a real parser for those
+> languages means a native tree-sitter dependency or a language runtime, and
+> TRACE's guarantee is that it runs offline with no native toolchain. They
+> extract declarations, imports, call edges, routes and tests — not
+> type-resolved semantics.
+
+---
+
+## 5. Where TRACE Helps Like a Real Product
 
 ### Use Case 1: Refactoring with Zero Fear (`trace impact`)
 Before modifying or deleting a symbol, function, or file, run impact analysis to see its blast radius:
@@ -237,7 +275,7 @@ Running `trace update` reconciles the AST in milliseconds incrementally without 
 
 ---
 
-## 5. Complete CLI Command Reference
+## 6. Complete CLI Command Reference
 
 | Command | Category | Description |
 | :--- | :--- | :--- |
@@ -270,7 +308,7 @@ Running `trace update` reconciles the AST in milliseconds incrementally without 
 
 ---
 
-## 6. Configuration & Customization
+## 7. Configuration & Customization
 
 ### Explicit Feature Definitions (`.codebase/features/*.yaml`)
 While TRACE automatically discovers features from route paths, directory structures, and AST symbols, you can declare explicit ground truth for critical domains:
@@ -308,7 +346,7 @@ Explicit features receive **`EXPLICIT (1.0)`** confidence ratings and take prece
 
 ---
 
-## 7. Architecture & Core Design Principles
+## 8. Architecture & Core Design Principles
 
 1. **Source Code is Canonical Truth:** TRACE never treats documentation or AI summaries as authoritative. Code ASTs, routes, Prisma schemas, and imports are the ground truth.
 2. **Deterministic & Zero Hallucination:** Graph edges are backed by structured evidence (`ast_import`, `ast_call`, `route_match`, `directory_cluster`) with verifiable line numbers.
@@ -318,7 +356,7 @@ Explicit features receive **`EXPLICIT (1.0)`** confidence ratings and take prece
 
 ---
 
-## 8. Contributing & Community
+## 9. Contributing & Community
 
 We welcome contributions from developers, architects, and AI researchers!
 * Read our [Contributing Guidelines](CONTRIBUTING.md).
@@ -327,7 +365,7 @@ We welcome contributions from developers, architects, and AI researchers!
 
 ---
 
-## 9. License
+## 10. License
 
 Amvelt TRACE is licensed under the **[Apache-2.0 License](LICENSE)**.
 
